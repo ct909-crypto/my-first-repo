@@ -1,0 +1,452 @@
+{
+  "verdict": "PASS",
+  "source_phase": "5",
+  "analysis_planning_engine": {
+    "skill": "scholar-auto-research",
+    "mode": "analysis_plan_compiler",
+    "compiled_at_utc": "2026-09-30T20:32:47Z"
+  },
+  "source_hashes": {
+    "design_manifest": "ff7372ac2aa189c6a57af6af4ef9bc8ac959bd1e6b3cac0caa97f77cbfba8816",
+    "identification_strategy": "1b2ff868518dfde85438b69d93c7ba32aef37da657a5fcac1df13f24a5d3d1b4",
+    "model_specs": "cd89fe50ba6027284625423ad43dccd3246541cbbbc84be22ec52db8786e0d04",
+    "data_status": "f4840c8e93c7de9ad3ce608ade73aa492ab1798ba778ebc3bce91e5410c5f7b5",
+    "variable_dictionary": "60cba07df3b9d421b3cebde63c4ad18cfc256ddb62e50d4ac96b9126a4214d14",
+    "data_measurement_manifest": "9e136208b825d8a9f460df7c6e7520f93bc0dc03d72c1e2d58aa8801416c6383",
+    "measurement_plan": "d8aaf3787b5cd61103ef84ac23ea5b9149a8de6af1684c54200ea7a847df4cbf"
+  },
+  "output_hashes": {
+    "analysis_plan": "1ae1e932dca0d6c5a076b813ca31669310ec2da333a60e28cc62c4f8617c312f",
+    "spec_registry": "640ae676ddbce71923ea24913a8c7dfd3ce5d004509644981626db737ceaa06e",
+    "scripts_inventory": "d2050072a5c789934876c31501e2d72219be41c387efccf0f1309ddd97df7e53"
+  },
+  "model_spec_coverage": [
+    {
+      "model_id": "M1",
+      "spec_ids": [
+        "S01"
+      ],
+      "covered": true
+    },
+    {
+      "model_id": "M2",
+      "spec_ids": [
+        "S02"
+      ],
+      "covered": true
+    },
+    {
+      "model_id": "M3",
+      "spec_ids": [
+        "S03",
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05a",
+        "R05b",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16"
+      ],
+      "covered": true
+    },
+    {
+      "model_id": "M4",
+      "spec_ids": [
+        "S04"
+      ],
+      "covered": true
+    },
+    {
+      "model_id": "M5",
+      "spec_ids": [
+        "S05",
+        "S06"
+      ],
+      "covered": true
+    },
+    {
+      "model_id": "M6",
+      "spec_ids": [
+        "S07",
+        "R11"
+      ],
+      "covered": true
+    },
+    {
+      "model_id": "M7",
+      "spec_ids": [
+        "S08"
+      ],
+      "covered": true
+    },
+    {
+      "model_id": "D1",
+      "spec_ids": [
+        "S09",
+        "S10"
+      ],
+      "covered": true
+    },
+    {
+      "model_id": "D2",
+      "spec_ids": [
+        "S11"
+      ],
+      "covered": true
+    }
+  ],
+  "hypothesis_spec_coverage": [
+    {
+      "hypothesis_id": "H5",
+      "spec_ids": [
+        "S01",
+        "S03",
+        "S09",
+        "S10"
+      ],
+      "covered": true
+    },
+    {
+      "hypothesis_id": "H1",
+      "spec_ids": [
+        "S02",
+        "S03",
+        "S09",
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05a",
+        "R05b",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16"
+      ],
+      "covered": true
+    },
+    {
+      "hypothesis_id": "H2",
+      "spec_ids": [
+        "S04",
+        "S08"
+      ],
+      "covered": true
+    },
+    {
+      "hypothesis_id": "H3",
+      "spec_ids": [
+        "S05",
+        "S06"
+      ],
+      "covered": true
+    },
+    {
+      "hypothesis_id": "H4",
+      "spec_ids": [
+        "S07",
+        "S08",
+        "S09",
+        "S11",
+        "R11"
+      ],
+      "covered": true
+    }
+  ],
+  "variable_coverage": [
+    {
+      "name": "emp",
+      "covered": true
+    },
+    {
+      "name": "ln_real_hourly",
+      "covered": true
+    },
+    {
+      "name": "ln_real_median",
+      "covered": true
+    },
+    {
+      "name": "ln_real_p10",
+      "covered": true
+    },
+    {
+      "name": "ln_real_p90",
+      "covered": true
+    },
+    {
+      "name": "ln_real_wage",
+      "covered": true
+    },
+    {
+      "name": "occ",
+      "covered": true
+    },
+    {
+      "name": "occ_class",
+      "covered": true
+    },
+    {
+      "name": "renewable",
+      "covered": true
+    },
+    {
+      "name": "soc_major",
+      "covered": true
+    },
+    {
+      "name": "technology",
+      "covered": true
+    },
+    {
+      "name": "year",
+      "covered": true
+    }
+  ],
+  "robustness_coverage": [
+    {
+      "design_item": "R1 balanced industry-occupation cells present in all five years",
+      "spec_ids": [
+        "R01"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "R2 precision weights emp/PRSE^2",
+      "spec_ids": [
+        "R02"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "R3 unweighted",
+      "spec_ids": [
+        "R03"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "R4 log real median wage outcome",
+      "spec_ids": [
+        "R04"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "R5 log real P10 and P90 (descriptive; censoring)",
+      "spec_ids": [
+        "R05a",
+        "R05b"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "R6 other generation as renewable",
+      "spec_ids": [
+        "R06"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "R7 other generation as nonrenewable",
+      "spec_ids": [
+        "R07"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "R8 drop top-coded cells",
+      "spec_ids": [
+        "R08"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "R9 drop cells with mean PRSE > 10",
+      "spec_ids": [
+        "R09"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "R10 nominal wages",
+      "spec_ids": [
+        "R10"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "R11 two-period sample 2021 and 2025 only",
+      "spec_ids": [
+        "R11"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "R12 new renewables vs legacy (hydro grouped with fossil and nuclear)",
+      "spec_ids": [
+        "R12"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "R13 exclude nuclear",
+      "spec_ids": [
+        "R13"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "R14 log real hourly mean wage",
+      "spec_ids": [
+        "R14"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "R15 drop five largest identifying occupations",
+      "spec_ids": [
+        "R15"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "R16 standard errors clustered by industry x occupation cell",
+      "spec_ids": [
+        "R16"
+      ],
+      "covered": true
+    }
+  ],
+  "missing_data_alignment": {
+    "strategy_matches_phase4": true,
+    "strategy": "drop BLS-suppressed cells; no imputation; coverage reported; top-code flagged",
+    "variable_dictionary_hash": "60cba07df3b9d421b3cebde63c4ad18cfc256ddb62e50d4ac96b9126a4214d14"
+  },
+  "dataset_design_plan": {
+    "reviewed": true,
+    "analytic_decision": "analyze published cell estimates with employment weights; non-overlapping estimate years for change contrasts; occupation-clustered wild bootstrap inference",
+    "decision_rationale": "published OEWS cells already embed sampling weights and no design variables are released; occupation clustering captures repetition of occupations across industries and years; overlapping panels handled by non-overlapping contrasts",
+    "weights_considered": true,
+    "design_variables_considered": true,
+    "clustering_considered": true,
+    "strata_considered": true,
+    "panel_structure_considered": true,
+    "denominator_rules_considered": true,
+    "accepted_limitations": [
+      "no worker or establishment adjustment possible",
+      "adjacent estimate years share panels",
+      "suppression concentrated in small renewable cells (coverage 45-92% vs 95-98% for fossil/nuclear)",
+      "private ownership and in-house employment only"
+    ]
+  },
+  "outcome_model_ladder": {
+    "outcome_family": "continuous positive right-skewed, modeled in logs; right-censored at top code",
+    "headline_estimator": "WLS on log real mean annual wage with occupation-by-year FE",
+    "sensitivity_specs": [
+      {
+        "spec_id": "R04",
+        "rationale": "median outcome less sensitive to skew"
+      },
+      {
+        "spec_id": "R05a",
+        "rationale": "lower tail of the reported within-cell wage distribution"
+      },
+      {
+        "spec_id": "R05b",
+        "rationale": "upper tail, censoring at top code reported"
+      },
+      {
+        "spec_id": "R08",
+        "rationale": "top-code sensitivity by dropping censored cells"
+      },
+      {
+        "spec_id": "R14",
+        "rationale": "hourly wage outcome avoids the 2080-hour annualization assumption"
+      }
+    ],
+    "distributional_diagnostics_planned": true,
+    "skewness_checked": true,
+    "top_code_checked": true
+  },
+  "missingness_sensitivity_plan": {
+    "post_restriction_diagnostics": true,
+    "denominator_checks": true,
+    "skip_vs_missing_reviewed": true,
+    "sensitivity_specs": [
+      "R01",
+      "S11"
+    ],
+    "rationale": "suppression concentrated in small renewable cells and declining over time; balanced cells and continuing-occupation decomposition bound its effect on levels and trend"
+  },
+  "script_dag": {
+    "valid": true,
+    "script_order": [
+      "analysis/scripts/00_functions.R",
+      "analysis/scripts/01_build_analytic_data.R",
+      "analysis/scripts/02_descriptives.R",
+      "analysis/scripts/03_main_models.R",
+      "analysis/scripts/04_decomposition.R",
+      "analysis/scripts/05_robustness.R",
+      "analysis/scripts/06_figures.R",
+      "analysis/scripts/07_registries.R"
+    ],
+    "checked": "each dependency precedes its dependent in script_order"
+  },
+  "test_coverage": {
+    "categories": [
+      "analytic_sample",
+      "data_loading",
+      "missingness",
+      "model_spec",
+      "output_registry",
+      "variable_construction"
+    ],
+    "spec_ids": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05a",
+      "R05b",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10",
+      "R11",
+      "R12",
+      "R13",
+      "R14",
+      "R15",
+      "R16",
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11"
+    ]
+  },
+  "ready_for_phase_6": true
+}

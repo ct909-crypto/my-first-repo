@@ -1,0 +1,157 @@
+{
+  "verdict": "PASS",
+  "source_phase": "4",
+  "data_engine": {
+    "skill": "scholar-data",
+    "workflows": [
+      "W0 dataset fit",
+      "W1 variable dictionary",
+      "W4 administrative/secondary documentation",
+      "W5 IRB determination",
+      "W6 data management"
+    ],
+    "task_invocation_id": "scholar-data-phase4-2026-09-30",
+    "invoked_at_utc": "2026-09-30T20:32:46Z",
+    "input_artifacts": [
+      "design/design-blueprint.md",
+      "design/model-specs.json",
+      "design/identification-strategy.json"
+    ],
+    "output_artifacts": [
+      "data/data-status.json",
+      "data/variable-dictionary.csv",
+      "data/measurement-plan.md",
+      "data/scholar-data-energy-wage-gap-2026-09-30.md",
+      "data/audit/phase4-data-audit.txt"
+    ]
+  },
+  "source_hashes": {
+    "safety_status": "dc9c3feac189c51f366aa5e477b58c25c33de2d675ce7f322c78a92540a2dbac",
+    "design_blueprint": "620e86abbdffd0a22baf224d657b57d7f933229d0b795f43fab6c0f7a93d1dba",
+    "design_manifest": "ff7372ac2aa189c6a57af6af4ef9bc8ac959bd1e6b3cac0caa97f77cbfba8816",
+    "identification_strategy": "1b2ff868518dfde85438b69d93c7ba32aef37da657a5fcac1df13f24a5d3d1b4",
+    "model_specs": "cd89fe50ba6027284625423ad43dccd3246541cbbbc84be22ec52db8786e0d04"
+  },
+  "output_hashes": {
+    "data_status": "f4840c8e93c7de9ad3ce608ade73aa492ab1798ba778ebc3bce91e5410c5f7b5",
+    "variable_dictionary": "60cba07df3b9d421b3cebde63c4ad18cfc256ddb62e50d4ac96b9126a4214d14",
+    "measurement_plan": "d8aaf3787b5cd61103ef84ac23ea5b9149a8de6af1684c54200ea7a847df4cbf"
+  },
+  "dataset_fit": {
+    "unit_of_analysis": "industry (NAICS 221111-221118) x detailed SOC occupation x May estimate year cell",
+    "time_period": "May 2021-May 2025 estimates (survey panels Nov 2018-May 2025)",
+    "sample_size_feasibility": "2,096 detailed cells; 2,006 usable across 8 industries; 59-77 identifying occupations per year",
+    "access_timeline": "immediate (files on disk)",
+    "verdict": "PASS",
+    "population": "in-house employees of private-ownership U.S. electric power generation establishments",
+    "key_variables_detail": "mean annual and hourly wage, percentiles, employment, PRSE, NAICS, SOC available all years",
+    "key_variables_available": true
+  },
+  "variable_coverage": {
+    "design_measures": [
+      {
+        "name": "renewable",
+        "covered": true
+      },
+      {
+        "name": "ln_real_wage",
+        "covered": true
+      }
+    ],
+    "model_variables": [
+      {
+        "name": "emp",
+        "covered": true
+      },
+      {
+        "name": "ln_real_wage",
+        "covered": true
+      },
+      {
+        "name": "occ",
+        "covered": true
+      },
+      {
+        "name": "occ_class",
+        "covered": true
+      },
+      {
+        "name": "renewable",
+        "covered": true
+      },
+      {
+        "name": "technology",
+        "covered": true
+      },
+      {
+        "name": "year",
+        "covered": true
+      }
+    ],
+    "accepted_limitations": []
+  },
+  "display_semantics": {
+    "reader_facing_labels_complete": true,
+    "machine_labels_eliminated": true,
+    "ready_for_tables": true,
+    "machine_like_variable_count": 8,
+    "label_source": "data/variable-dictionary.csv"
+  },
+  "codebook_validation": {
+    "reviewed": true,
+    "source": "Field Descriptions sheet in each OEWS file; data/audit/phase4-data-audit.txt",
+    "value_labels_checked": true,
+    "valid_ranges_checked": true,
+    "missing_codes_checked": true,
+    "skip_logic_checked": true,
+    "skip_logic_note": "published tables have no skip logic",
+    "measurement_units_checked": true,
+    "top_codes": {
+      "2021": "$208,000/yr ($100/hr)",
+      "2022-2025": "$239,200/yr ($115/hr)"
+    }
+  },
+  "dataset_design_review": {
+    "reviewed": true,
+    "structured_secondary_data": true,
+    "weights": "published cell estimates already incorporate OEWS sampling weights; no microdata weights available or needed; cell employment used as analytic weight",
+    "clusters": "no PSU/establishment identifiers released; inference clusters on detailed occupation (repeated across industries and years)",
+    "strata": "not released; not applicable to published cell estimates",
+    "panel_identifiers": "no establishment panel IDs; cells are repeated cross-sections keyed by NAICS x SOC x year; May estimates pool six semiannual panels, so adjacent years overlap (May 2021 shares no panels with May 2024 or May 2025)",
+    "sampling_frame": "OEWS establishment frame (UI records), private ownership code 5 for all rows in these industries",
+    "collection_mode": "establishment survey (mail/electronic), semiannual panels, ECI wage aging",
+    "denominator_rules": "published detailed-occupation employment; coverage share vs industry total reported; suppressed cells excluded",
+    "analytic_decision": "analyze published cell estimates with employment weights; non-overlapping estimate years for change contrasts; occupation-clustered wild bootstrap inference",
+    "accepted_limitations": [
+      "no worker or establishment adjustment possible",
+      "adjacent estimate years share panels",
+      "suppression concentrated in small renewable cells (coverage 45-92% vs 95-98% for fossil/nuclear)",
+      "private ownership and in-house employment only"
+    ],
+    "weights_reviewed": true,
+    "design_variables_reviewed": true,
+    "clustering_reviewed": true,
+    "strata_reviewed": true,
+    "sampling_frame_reviewed": true,
+    "panel_structure_reviewed": true,
+    "denominator_rules_reviewed": true
+  },
+  "outcome_family_screen": {
+    "screened": true,
+    "outcome_families": [
+      "continuous positive right-skewed (log-transformed)",
+      "right-censored at top code (2 mean-wage cells; P90 more often)"
+    ],
+    "phase5_implication": "Gaussian linear models on log wages are the headline; top-code sensitivity (drop top-coded cells) and percentile outcomes flagged as censored form the ladder."
+  },
+  "safety_provenance": {
+    "files_scanned": 6,
+    "high_risk_unresolved": 0
+  },
+  "post_treatment_review": {
+    "reviewed": true,
+    "unresolved_count": 0,
+    "note": "only occupation and year fixed effects; mechanisms not controlled"
+  },
+  "ready_for_phase_5": true
+}

@@ -1,0 +1,23 @@
+# Design Revision Log
+
+## Round 1 (resolved)
+- R1-1 panel overlap: 2025-2021 made primary contrast
+- R1-2/Theory-2 H4 four-way decision rule with TOST margin 0.05
+- R1-3/R3-5 headline estimand = Kitagawa within term; M3 as model-based counterpart
+- R5-2 power based on single non-overlapping years; MDES revised
+- R3-1/R1-5 coverage table, D2 continuing vs entering occupations
+- R3-4 hydro/nuclear robustness (R12, R13)
+- R4-4/R4-5 display plan, non-preregistration disclosure
+
+Affected: design/design-blueprint.md, design/model-specs.json, design/identification-strategy.json
+
+## Round 2 (resolved)
+- R5-1 restricted wild cluster bootstrap (Webb) as primary inference
+- R4-1 theory-to-test mapping table (section 1b)
+- R4-2 scope in title/abstract; external coverage benchmark vs USEER (section 1c)
+- R3-2 five-class secondary scheme (accepted limitation for primary)
+- Theory-4 H3 labor-demand rival prediction
+- R16 industry x occupation clustering
+- causal-gate.md trend contrast updated
+
+Affected: design/design-blueprint.md, design/causal-gate.md, design/model-specs.json, design/identification-strategy.json

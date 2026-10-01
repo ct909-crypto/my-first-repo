@@ -1,0 +1,111 @@
+{
+  "design_type": "observational descriptive: repeated national cross-sections of OEWS industry-by-occupation cells",
+  "claim_strength": "descriptive",
+  "estimand": "Employment-weighted within-occupation gap in log real mean annual wage between renewable and nonrenewable private generation establishments, by year (Kitagawa within term on common support), plus technology-, class-, and period-specific versions",
+  "identification_strategy": "Compositional standardization only: comparisons restricted to the same detailed occupation and estimate year via occupation-by-year standardization and decomposition; no causal identification is claimed; trend contrasts use non-overlapping OEWS estimate panels",
+  "outcome_mechanism_alignment": "prevalence-stock",
+  "journal_method_bar": "ERSS: transparent descriptive quantitative analysis with calibrated claims, robustness, and explicit scope conditions",
+  "hypothesis_model_coverage": [
+    {
+      "hypothesis_id": "H1",
+      "model_ids": [
+        "M2",
+        "M3",
+        "D1"
+      ]
+    },
+    {
+      "hypothesis_id": "H2",
+      "model_ids": [
+        "M4",
+        "M7"
+      ]
+    },
+    {
+      "hypothesis_id": "H3",
+      "model_ids": [
+        "M5"
+      ]
+    },
+    {
+      "hypothesis_id": "H4",
+      "model_ids": [
+        "M6",
+        "D1",
+        "D2",
+        "M7"
+      ]
+    },
+    {
+      "hypothesis_id": "H5",
+      "model_ids": [
+        "M1",
+        "M3",
+        "D1"
+      ]
+    }
+  ],
+  "power_or_feasibility_assessment": {
+    "status": "feasibility_limited",
+    "rationale": "Fixed secondary data with 59-77 identifying occupations per year; single-year within gap MDES about 0.04-0.07 log points and 2025-minus-2021 change MDES about 0.07-0.10 log points; smaller changes may be undetectable and H4 may be reported as inconclusive; biomass and geothermal pooled."
+  },
+  "causal_gate": {
+    "required": true,
+    "invoked": true,
+    "skill": "scholar-causal",
+    "outcome": "descriptive claim confirmed; fixed effects used for standardization, not identification; see design/causal-gate.md",
+    "report": "design/causal-gate.md"
+  },
+  "method_specialist_routing": {
+    "method_orientation": "quantitative observational panel of aggregate industry-by-occupation cells",
+    "primary_execution_skill": "scholar-analyze",
+    "premortem_skill": "scholar-analyze",
+    "supporting_skills": [],
+    "rationale": "Quantitative observational secondary-data analysis of public aggregate tables; standard regression and decomposition route."
+  },
+  "assumptions": [
+    "OEWS cell means are unbiased estimates of establishment-reported pay for the occupation-industry cell",
+    "Detailed SOC classification is applied consistently across industries and years",
+    "Suppression is unrelated to the within-occupation gap conditional on cell size (checked via coverage and balanced cells)",
+    "Non-overlapping May estimates provide distinct panel samples for change contrasts"
+  ],
+  "measures": {
+    "x": {
+      "name": "renewable",
+      "operationalization": "1 for hydroelectric, solar, wind, geothermal and biomass generation (NAICS 221111, 221114-221117); 0 for fossil fuel and nuclear generation (221112, 221113)"
+    },
+    "y": {
+      "name": "ln_real_wage",
+      "operationalization": "natural log of OEWS mean annual wage for the industry-occupation cell deflated to May 2025 dollars with CPI-U May values"
+    },
+    "w": {
+      "name": "occ_class / technology / year",
+      "operationalization": "SOC-major-based occupational class; six-digit NAICS technology; OEWS estimate year"
+    }
+  },
+  "threats": [
+    "Unobserved within-occupation composition (tenure, region, establishment size)",
+    "Overlapping OEWS panels and ECI wage aging smooth change",
+    "Changing publication and suppression of small renewable cells",
+    "Sparse biomass and geothermal cells",
+    "Private-ownership, in-house-employee scope excludes public utilities and contractors"
+  ],
+  "robustness_plan": [
+    "R1 balanced industry-occupation cells present in all five years",
+    "R2 precision weights emp/PRSE^2",
+    "R3 unweighted",
+    "R4 log real median wage outcome",
+    "R5 log real P10 and P90 (descriptive; censoring)",
+    "R6 other generation as renewable",
+    "R7 other generation as nonrenewable",
+    "R8 drop top-coded cells",
+    "R9 drop cells with mean PRSE > 10",
+    "R10 nominal wages",
+    "R11 two-period sample 2021 and 2025 only",
+    "R12 new renewables vs legacy (hydro grouped with fossil and nuclear)",
+    "R13 exclude nuclear",
+    "R14 log real hourly mean wage",
+    "R15 drop five largest identifying occupations",
+    "R16 standard errors clustered by industry x occupation cell"
+  ]
+}

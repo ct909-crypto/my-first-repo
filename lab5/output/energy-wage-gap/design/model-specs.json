@@ -1,0 +1,228 @@
+{
+  "verdict": "PASS",
+  "models": [
+    {
+      "id": "M1",
+      "outcome": "ln_real_wage",
+      "predictors": [
+        "renewable"
+      ],
+      "estimator": "WLS (fixest::feols)",
+      "covariates": [],
+      "fixed_effects": [
+        "year"
+      ],
+      "purpose": "Raw year-adjusted renewable-nonrenewable gap; benchmark for H5",
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "unit": "industry x detailed occupation x year cell",
+      "weights": "TOT_EMP",
+      "se": "clustered by detailed occupation; occupation-cluster pairs bootstrap (999, seed 20260930) for key contrasts",
+      "sample": "detailed SOC cells, NAICS 221111-221117 (221118 excluded in main), private ownership, May 2021-2025, numeric wage and employment"
+    },
+    {
+      "id": "M2",
+      "outcome": "ln_real_wage",
+      "predictors": [
+        "renewable"
+      ],
+      "estimator": "WLS (fixest::feols)",
+      "covariates": [],
+      "fixed_effects": [
+        "occ",
+        "year"
+      ],
+      "purpose": "Within-occupation gap pooled over years (descriptive step toward M3)",
+      "hypothesis_ids": [
+        "H1"
+      ],
+      "unit": "industry x detailed occupation x year cell",
+      "weights": "TOT_EMP",
+      "se": "clustered by detailed occupation; occupation-cluster pairs bootstrap (999, seed 20260930) for key contrasts",
+      "sample": "detailed SOC cells, NAICS 221111-221117 (221118 excluded in main), private ownership, May 2021-2025, numeric wage and employment"
+    },
+    {
+      "id": "M3",
+      "outcome": "ln_real_wage",
+      "predictors": [
+        "renewable"
+      ],
+      "estimator": "WLS (fixest::feols)",
+      "covariates": [],
+      "fixed_effects": [
+        "occ^year"
+      ],
+      "purpose": "Headline model-based within-occupation-year gap",
+      "hypothesis_ids": [
+        "H1",
+        "H5"
+      ],
+      "unit": "industry x detailed occupation x year cell",
+      "weights": "TOT_EMP",
+      "se": "WCR wild cluster bootstrap p-values (Webb weights, 9,999 draws, clusters = detailed occupation, seed 20260930) as primary; CR1 occupation-clustered SE and CI reported",
+      "sample": "detailed SOC cells, NAICS 221111-221117 (221118 excluded in main), private ownership, May 2021-2025, numeric wage and employment"
+    },
+    {
+      "id": "M4",
+      "outcome": "ln_real_wage",
+      "predictors": [
+        "technology"
+      ],
+      "estimator": "WLS (fixest::feols)",
+      "covariates": [],
+      "fixed_effects": [
+        "occ^year"
+      ],
+      "purpose": "Technology-specific gaps; Holm across 5; TOST for hydro",
+      "hypothesis_ids": [
+        "H2"
+      ],
+      "unit": "industry x detailed occupation x year cell",
+      "weights": "TOT_EMP",
+      "se": "WCR wild cluster bootstrap p-values (Webb weights, 9,999 draws, clusters = detailed occupation, seed 20260930) as primary; CR1 occupation-clustered SE and CI reported",
+      "sample": "detailed SOC cells, NAICS 221111-221117 (221118 excluded in main), private ownership, May 2021-2025, numeric wage and employment",
+      "predictor_note": "technology dummies, reference = fossil fuel; contrasts nuclear, hydro, solar, wind, biomass/geothermal"
+    },
+    {
+      "id": "M5",
+      "outcome": "ln_real_wage",
+      "predictors": [
+        "renewable",
+        "occ_class"
+      ],
+      "estimator": "WLS (fixest::feols)",
+      "covariates": [],
+      "fixed_effects": [
+        "occ^year"
+      ],
+      "purpose": "Gap by occupational class; primary contrast blue-collar minus professional/managerial; joint Wald",
+      "hypothesis_ids": [
+        "H3"
+      ],
+      "unit": "industry x detailed occupation x year cell",
+      "weights": "TOT_EMP",
+      "se": "WCR wild cluster bootstrap p-values (Webb weights, 9,999 draws, clusters = detailed occupation, seed 20260930) as primary; CR1 occupation-clustered SE and CI reported",
+      "sample": "detailed SOC cells, NAICS 221111-221117 (221118 excluded in main), private ownership, May 2021-2025, numeric wage and employment",
+      "interactions": [
+        "renewable:occ_class"
+      ]
+    },
+    {
+      "id": "M6",
+      "outcome": "ln_real_wage",
+      "predictors": [
+        "renewable",
+        "year"
+      ],
+      "estimator": "WLS (fixest::feols)",
+      "covariates": [],
+      "fixed_effects": [
+        "occ^year"
+      ],
+      "purpose": "Year-specific gaps; primary contrast 2025 minus 2021 with equivalence margin 0.05; secondary 2024 minus 2021",
+      "hypothesis_ids": [
+        "H4"
+      ],
+      "unit": "industry x detailed occupation x year cell",
+      "weights": "TOT_EMP",
+      "se": "WCR wild cluster bootstrap p-values (Webb weights, 9,999 draws, clusters = detailed occupation, seed 20260930) as primary; CR1 occupation-clustered SE and CI reported",
+      "sample": "detailed SOC cells, NAICS 221111-221117 (221118 excluded in main), private ownership, May 2021-2025, numeric wage and employment",
+      "interactions": [
+        "renewable:year"
+      ]
+    },
+    {
+      "id": "M7",
+      "outcome": "ln_real_wage",
+      "predictors": [
+        "technology",
+        "year"
+      ],
+      "estimator": "WLS (fixest::feols)",
+      "covariates": [],
+      "fixed_effects": [
+        "occ^year"
+      ],
+      "purpose": "Descriptive technology trends",
+      "hypothesis_ids": [
+        "H2",
+        "H4"
+      ],
+      "unit": "industry x detailed occupation x year cell",
+      "weights": "TOT_EMP",
+      "se": "clustered by detailed occupation; occupation-cluster pairs bootstrap (999, seed 20260930) for key contrasts",
+      "sample": "detailed SOC cells, NAICS 221111-221117 (221118 excluded in main), private ownership, May 2021-2025, numeric wage and employment",
+      "interactions": [
+        "technology:year (solar, wind, hydro, nuclear)"
+      ]
+    },
+    {
+      "id": "D1",
+      "outcome": "ln_real_wage",
+      "predictors": [
+        "renewable",
+        "occ",
+        "emp"
+      ],
+      "estimator": "Kitagawa midpoint decomposition on common support with occupation-cluster bootstrap",
+      "covariates": [],
+      "purpose": "Composition vs within-occupation components of raw gap (headline within estimand W_t)",
+      "hypothesis_ids": [
+        "H1",
+        "H5",
+        "H4"
+      ],
+      "unit": "industry x detailed occupation x year cell",
+      "weights": "TOT_EMP",
+      "se": "clustered by detailed occupation; occupation-cluster pairs bootstrap (999, seed 20260930) for key contrasts",
+      "sample": "detailed SOC cells, NAICS 221111-221117 (221118 excluded in main), private ownership, May 2021-2025, numeric wage and employment",
+      "predictor_note": "Kitagawa decomposition of employment-weighted mean log wage by sector-year"
+    },
+    {
+      "id": "D2",
+      "outcome": "ln_real_wage",
+      "predictors": [
+        "renewable",
+        "occ",
+        "year"
+      ],
+      "estimator": "accounting decomposition",
+      "covariates": [],
+      "purpose": "Separate pay change from support/publication change",
+      "hypothesis_ids": [
+        "H4"
+      ],
+      "unit": "industry x detailed occupation x year cell",
+      "weights": "TOT_EMP",
+      "se": "clustered by detailed occupation; occupation-cluster pairs bootstrap (999, seed 20260930) for key contrasts",
+      "sample": "detailed SOC cells, NAICS 221111-221117 (221118 excluded in main), private ownership, May 2021-2025, numeric wage and employment",
+      "predictor_note": "change in within term 2021 to 2025 split by continuing vs entering occupations"
+    }
+  ],
+  "analytic_strategy": {
+    "interaction_inference_policy": "joint_wald_test",
+    "equivalence_margin_log_points": 0.05,
+    "primary_trend_contrast": "2025 minus 2021",
+    "seed": 20260930,
+    "primary_inference": "restricted wild cluster bootstrap (Webb, 9,999) for pre-specified contrasts"
+  },
+  "robustness": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16"
+  ]
+}

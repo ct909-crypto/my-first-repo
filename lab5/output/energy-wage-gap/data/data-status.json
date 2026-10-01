@@ -1,0 +1,103 @@
+{
+  "verdict": "PASS",
+  "dataset_id": "BLS-OEWS-national-industry-specific-2021-2025",
+  "data_status": "existing-data",
+  "access_status": "available",
+  "irb_status": "not-human-subjects",
+  "source_type": "public",
+  "files": [
+    {
+      "path": "data/raw/nat5d_6d_M2021_dl.xlsx",
+      "sha256": "9269cc3956690762ab838b7c7fee87ec65c66373d55fb18ce9ec8a246485cde6",
+      "description": "BLS OEWS May 2021 national industry-specific estimates (5- and 6-digit NAICS)",
+      "provenance": "downloaded from https://www.bls.gov/oes/tables.htm by the author; copied into data/raw at project init",
+      "rows_used": "NAICS 2211xx, O_GROUP=detailed",
+      "source": "U.S. Bureau of Labor Statistics, Occupational Employment and Wage Statistics (public)",
+      "safety_status": "OVERRIDE",
+      "safety_rationale": "public BLS aggregate industry-by-occupation tables; RED regex hits were false positives; user-approved 2026-09-30"
+    },
+    {
+      "path": "data/raw/nat5d_6d_M2022_dl.xlsx",
+      "sha256": "6ccd38f2d0bc5e25b86544e0505e1939ed9334809019b07b97a9bbd1ab3d32e1",
+      "description": "BLS OEWS May 2022 national industry-specific estimates (5- and 6-digit NAICS)",
+      "provenance": "downloaded from https://www.bls.gov/oes/tables.htm by the author; copied into data/raw at project init",
+      "rows_used": "NAICS 2211xx, O_GROUP=detailed",
+      "source": "U.S. Bureau of Labor Statistics, Occupational Employment and Wage Statistics (public)",
+      "safety_status": "OVERRIDE",
+      "safety_rationale": "public BLS aggregate industry-by-occupation tables; RED regex hits were false positives; user-approved 2026-09-30"
+    },
+    {
+      "path": "data/raw/nat5d_6d_M2023_dl.xlsx",
+      "sha256": "3d69af43ef9df416834890346a67815a66670d0aab5be4265ca7d966babec3f3",
+      "description": "BLS OEWS May 2023 national industry-specific estimates (5- and 6-digit NAICS)",
+      "provenance": "downloaded from https://www.bls.gov/oes/tables.htm by the author; copied into data/raw at project init",
+      "rows_used": "NAICS 2211xx, O_GROUP=detailed",
+      "source": "U.S. Bureau of Labor Statistics, Occupational Employment and Wage Statistics (public)",
+      "safety_status": "OVERRIDE",
+      "safety_rationale": "public BLS aggregate industry-by-occupation tables; RED regex hits were false positives; user-approved 2026-09-30"
+    },
+    {
+      "path": "data/raw/nat5d_6d_M2024_dl.xlsx",
+      "sha256": "f5005fa75b634d73c7288cfb4886dc669bef65ba8a6e6c388ead40c030c3d87e",
+      "description": "BLS OEWS May 2024 national industry-specific estimates (5- and 6-digit NAICS)",
+      "provenance": "downloaded from https://www.bls.gov/oes/tables.htm by the author; copied into data/raw at project init",
+      "rows_used": "NAICS 2211xx, O_GROUP=detailed",
+      "source": "U.S. Bureau of Labor Statistics, Occupational Employment and Wage Statistics (public)",
+      "safety_status": "OVERRIDE",
+      "safety_rationale": "public BLS aggregate industry-by-occupation tables; RED regex hits were false positives; user-approved 2026-09-30"
+    },
+    {
+      "path": "data/raw/nat5d_6d_M2025_dl.xlsx",
+      "sha256": "dca9beafa91124701ea7afac6073cf491f926f47361e6c00a3f20c2e6a697419",
+      "description": "BLS OEWS May 2025 national industry-specific estimates (5- and 6-digit NAICS)",
+      "provenance": "downloaded from https://www.bls.gov/oes/tables.htm by the author; copied into data/raw at project init",
+      "rows_used": "NAICS 2211xx, O_GROUP=detailed",
+      "source": "U.S. Bureau of Labor Statistics, Occupational Employment and Wage Statistics (public)",
+      "safety_status": "OVERRIDE",
+      "safety_rationale": "public BLS aggregate industry-by-occupation tables; RED regex hits were false positives; user-approved 2026-09-30"
+    },
+    {
+      "path": "analysis/reference/cpi_u_may.csv",
+      "sha256": "e0b4249bd0ec5e0e5a5d569423ca41846b202a928a3a22acd7218e43fa04ca6c",
+      "description": "CPI-U NSA May values 2021-2025 (CUUR0000SA0)",
+      "provenance": "BLS Public API v1, retrieved 2026-09-30",
+      "source": "U.S. Bureau of Labor Statistics, CPI-U (public API)",
+      "safety_status": "SAFE"
+    }
+  ],
+  "dataset_fit": {
+    "unit_of_analysis": "industry (NAICS 221111-221118) x detailed SOC occupation x May estimate year cell",
+    "time_period": "May 2021-May 2025 estimates (survey panels Nov 2018-May 2025)",
+    "sample_size_feasibility": "2,096 detailed cells; 2,006 usable across 8 industries; 59-77 identifying occupations per year",
+    "access_timeline": "immediate (files on disk)",
+    "verdict": "PASS",
+    "population": "in-house employees of private-ownership U.S. electric power generation establishments",
+    "key_variables_detail": "mean annual and hourly wage, percentiles, employment, PRSE, NAICS, SOC available all years",
+    "key_variables_available": true
+  },
+  "dataset_design_review": {
+    "reviewed": true,
+    "structured_secondary_data": true,
+    "weights": "published cell estimates already incorporate OEWS sampling weights; no microdata weights available or needed; cell employment used as analytic weight",
+    "clusters": "no PSU/establishment identifiers released; inference clusters on detailed occupation (repeated across industries and years)",
+    "strata": "not released; not applicable to published cell estimates",
+    "panel_identifiers": "no establishment panel IDs; cells are repeated cross-sections keyed by NAICS x SOC x year; May estimates pool six semiannual panels, so adjacent years overlap (May 2021 shares no panels with May 2024 or May 2025)",
+    "sampling_frame": "OEWS establishment frame (UI records), private ownership code 5 for all rows in these industries",
+    "collection_mode": "establishment survey (mail/electronic), semiannual panels, ECI wage aging",
+    "denominator_rules": "published detailed-occupation employment; coverage share vs industry total reported; suppressed cells excluded",
+    "analytic_decision": "analyze published cell estimates with employment weights; non-overlapping estimate years for change contrasts; occupation-clustered wild bootstrap inference",
+    "accepted_limitations": [
+      "no worker or establishment adjustment possible",
+      "adjacent estimate years share panels",
+      "suppression concentrated in small renewable cells (coverage 45-92% vs 95-98% for fossil/nuclear)",
+      "private ownership and in-house employment only"
+    ],
+    "weights_reviewed": true,
+    "design_variables_reviewed": true,
+    "clustering_reviewed": true,
+    "strata_reviewed": true,
+    "sampling_frame_reviewed": true,
+    "panel_structure_reviewed": true,
+    "denominator_rules_reviewed": true
+  }
+}

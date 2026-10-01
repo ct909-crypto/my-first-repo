@@ -1,0 +1,68 @@
+=== QUERY: renewable energy wages occupation fossil fuel
+  [openalex] 2024 | Richard F. Hanna, Philip J. Heptonstall, Robert J. Gross | Job creation in a low carbon transition to renewables and energy efficiency: a review of international evidence | Sustainability Science | doi:10.1007/s11625-023-01440-y | cites:100
+  [openalex] 2019 | Spyridon Stavropoulos, Martijn Burger | Modelling strategy and net employment effects of renewable energy and energy efficiency: A meta-regression | Energy Policy | doi:10.1016/j.enpol.2019.111047 | cites:79
+  [openalex] 2018 | Miguel-Ángel Perea-Moreno, Quetzalcóatl Hernández-Escobedo, Alberto-Jesús Perea-Moreno | Renewable Energy in Urban Areas: Worldwide Research Trends | Energies | doi:10.3390/en11030577 | cites:75
+  [openalex] 1980 | John P. Holdren, G Morris, Irving M. Mintzer | Environmental Aspects of Renewable Energy Sources | Annual Review of Energy | doi:10.1146/annurev.eg.05.110180.001325 | cites:57
+  [openalex] 2020 | Cameron J. Hepburn, Brian O’Callaghan, Nicholas H. Stern | Will COVID-19 fiscal recovery packages accelerate or retard progress on climate change? | Oxford Review of Economic Policy | doi:10.1093/oxrep/graa015 | cites:788
+  [openalex] 2022 | Lara J. Cushing, Shiwen Li, Benjamin B. Steiger | Historical red-lining is associated with fossil fuel power plant siting and present-day inequalities in air pollutant emissions | Nature Energy | doi:10.1038/s41560-022-01162-y | cites:87
+  [openalex] 1979 | John P. Holdren, Kate H. Anderson, Peter H. Gleick | Risk of renewable energy sources: a critique of the Inhaber report | None | doi:10.2172/5565788 | cites:44
+  [openalex] 2021 | Gregory M Peters, Mengyu Li, Manfred Lenzen | The need to decelerate fast fashion in a hot climate - A global sustainability perspective on the garment industry | Journal of Cleaner Production | doi:10.1016/j.jclepro.2021.126390 | cites:229
+  [crossref] 2012 | R. W., R. A., A. N. | Energy-Efficient Standalone Fossil-Fuel Based Hybrid Power Systems Employing Renewable Energy Sources | Fossil Fuel and the Environment | doi:10.5772/36109 | cites:0
+  [crossref] 2015 | Espen Moe | Renewable Energy Transformation or Fossil Fuel Backlash |  | doi:10.1057/9781137298799 | cites:50
+  [crossref] 2020 | Ramprasad Sengupta | Transition from Fossil Fuel–Based Power to Renewable Energy | Entropy Law, Sustainability, and Third Industrial Revolution | doi:10.1093/oso/9780190121143.003.0009 | cites:1
+  [crossref] 2004 |  | 04/01750 Development of green-fuel production technology by combination of fossil fuel and renewable energy | Fuel and Energy Abstracts | doi:10.1016/s0140-6701(04)94337-8 | cites:0
+  [crossref] 2006 |  | 06/00236 Development of new green-fuel productiontechnology by combinaation of fossil fuel and renewable energy | Fuel and Energy Abstracts | doi:10.1016/s0140-6701(06)80236-5 | cites:0
+  [crossref] 2000 |  | 00/01583 Atmospheric environment responses to fossil energy and renewable energy alternatives | Fuel and Energy Abstracts | doi:10.1016/s0140-6701(00)93313-7 | cites:0
+  [crossref] 2018 | Damilola S Olawuyi | Advancing Innovations in Renewable Energy Technologies as Alternatives to Fossil Fuel Use in the Middle East | Oxford Scholarship Online | doi:10.1093/oso/9780198822080.003.0020 | cites:6
+  [crossref] 2019 |  | CHAPTER FOUR. Methods for Reducing Our Fossil Fuel Usage: Renewable Energy Sources and Uses | Our Energy Future | doi:10.1525/9780520964280-006 | cites:0
+=== QUERY: green wage premium
+  [openalex] 1999 | Marlene Kim | Where the Grass Is Greener: Voluntary Turnover and Wage Premiums | Industrial Relations A Journal of Economy and Society | doi:10.1111/0019-8676.00146 | cites:31
+  [openalex] 2005 | José A. F. Machado, José Mata | Counterfactual decomposition of changes in wage distributions using quantile regression | Journal of Applied Econometrics | doi:10.1002/jae.788 | cites:1419
+  [openalex] 2025 | Wenjing Kuai, Robert Elliott, Toshihiro Okubo | Estimating the Green Wage Premium | SSRN Electronic Journal | doi:10.2139/ssrn.5193269 | cites:1
+  [openalex] 1997 | Nicole M. Fortin, Thomas Lemieux | Institutional Changes and Rising Wage Inequality: Is There a Linkage? | The Journal of Economic Perspectives | doi:10.1257/jep.11.2.75 | cites:512
+  [openalex] 2016 | Joanne Kathryn Lindley, Stephen J. Machin | The Rising Postgraduate Wage Premium | Economica | doi:10.1111/ecca.12184 | cites:95
+  [openalex] 2021 | Christian Dustmann, Attila Lindner, Uta SchÃ¶nberg | Reallocation Effects of the Minimum Wage | The Quarterly Journal of Economics | doi:10.1093/qje/qjab028 | cites:328
+  [openalex] 2003 | Rajnish Mehra, Edward C. Prescott | The Equity Premium in Retrospect | National Bureau of Economic Research | doi:10.3386/w9525 | cites:260
+  [openalex] 2019 | Péter Harasztosi, Attila Lindner | Who Pays for the Minimum Wage? | American Economic Review | doi:10.1257/aer.20171445 | cites:302
+  [crossref] 2025 | Wenjing Kuai, Robert  J. R. Elliott, Toshihiro Okubo | Estimating the Green Wage Premium |  | doi:10.2139/ssrn.5240989 | cites:0
+  [crossref] 2025 | Wenjing Kuai, Robert  J. R. Elliott, Toshihiro Okubo | Estimating the Green Wage Premium |  | doi:10.2139/ssrn.5193269 | cites:1
+  [crossref] 2016 | Richard Blundell, David A. Green, Wenchao (Michelle) Jin | The UK wage premium puzzle: how did a large increase in university graduates leave the education premium unchanged? |  | doi:10.1920/wp.ifs.2016.1000 | cites:12
+  [crossref] None |  | Annex 2.2. Wage premium |  | doi:10.1787/888933496998 | cites:0
+  [crossref] 2025 | Joao Cerejeira Silva, Sergey Volozhenin, Rita Sousa | Unpacking the Green Wage Premium: The Role of Observable and Unobservable Characteristics in Green Job Wages |  | doi:10.2139/ssrn.5388885 | cites:0
+  [crossref] 2016 | David A. Green, Wenchao (Michelle) Jin, Richard Blundell | The UK wage premium puzzle: how did a large increase in university graduates leave the education premium unchanged? | Working Paper Series | doi:10.1920/wp.ifs.2016.1601 | cites:6
+  [crossref] None |  | Figure 3.2. The wage premium for apprenticeship graduates |  | doi:10.1787/888933828448 | cites:0
+  [crossref] None |  | Figure 4.10 Wage premium, by problem-solving proficiency |  | doi:10.1787/888933231738 | cites:0
+=== QUERY: clean energy jobs earnings workers transition
+  [openalex] 2013 | W. Reed Walker | The Transitional Costs of Sectoral Reallocation: Evidence From the Clean Air Act and the Workforce* | The Quarterly Journal of Economics | doi:10.1093/qje/qjt022 | cites:511
+  [openalex] 2020 | Adriana AnaMaria Davidescu, Simona Andreea Apostu, Andreea Paul | Work Flexibility, Job Satisfaction, and Job Performance among Romanian Employees—Implications for Sustainable Human Resource Management | Sustainability | doi:10.3390/su12156086 | cites:744
+  [openalex] 2019 | Tom Chang, Joshua Graff Zivin, Tal Gross | The Effect of Pollution on Worker Productivity: Evidence from Call Center Workers in China | American Economic Journal Applied Economics | doi:10.1257/app.20160436 | cites:511
+  [openalex] 2020 | Manfred Häfner, Simone Tagliapietra | The Geopolitics of the Global Energy Transition | Lecture notes in energy | doi:10.1007/978-3-030-39066-2 | cites:235
+  [openalex] 2023 | Zacharias Sautner, Laurence van Lent, Grigory Vilkov | Firm‐Level Climate Change Exposure | The Journal of Finance | doi:10.1111/jofi.13219 | cites:1355
+  [openalex] 2020 | Mohamed Bubaker Alsafi Almenfi, Ugo Gentilini, Ian Orton | Social Protection and Jobs Responses to COVID-19: A Real-Time Review of Country Measures | World Bank, Washington, DC eBooks | doi:10.1596/33635 | cites:627
+  [openalex] 2008 | Michael Renner, Sean Sweeney, Jill Kubit | Green Jobs: Towards Decent Work in a Sustainable, Low-Carbon World | University of North Texas Digital Library (University of North Texas) | doi: | cites:449
+  [openalex] 2018 | Andrew John Chapman, Benjamin Craig McLellan, Tetsuo Tezuka | Prioritizing mitigation efforts considering co-benefits, equity and energy justice: Fossil fuel to renewable energy transition pathways | Applied Energy | doi:10.1016/j.apenergy.2018.03.054 | cites:215
+  [crossref] None |  | Fed, States Should Protect Clean Energy Jobs for Black and Latino Workers | Climate Change and Law Collection | doi:10.1163/9789004322714_cclc_2020-0094-0456 | cites:0
+  [crossref] 2021 | None None | Regulators’ Energy Transition Primer: Economic Impacts of the Energy Transition on Energy Communities, Environmental Justice Considerations, and Implications on Clean Energy Jobs |  | doi:10.2172/1869933 | cites:0
+  [crossref] 2024 |   | Jobs for a Livable Planet: Job Creation Potential of the Clean Energy Transition |  | doi:10.1596/40962 | cites:0
+  [crossref] 2024 |   | Jobs Generated by the Rwanda Development Policy Operations: Job Creation Potential of the Clean Energy Transition |  | doi:10.1596/41260 | cites:0
+  [crossref] 2024 |   | Jobs generated by the Kosovo Energy Efficiency and Renewable Energy Project: Job Creation Potential of the Clean Energy Transition |  | doi:10.1596/41262 | cites:0
+  [crossref] 2024 |   | Jobs Generated by the Nigeria Electrification Project: Job Creation Potential of the Clean Energy Transition - Case Study |  | doi:10.1596/40954 | cites:0
+  [crossref] 2024 | Chris Briggs, Ruby Heard | Here’s how to create jobs for First Nations Australians in the clean energy transition |  | doi:10.64628/aa.hrdecgw6r | cites:0
+  [crossref] 2021 |  | Jobs, Jobs, Jobs | Electrify | doi:10.7551/mitpress/14054.003.0017 | cites:0
+=== QUERY: solar wind workers job quality union
+  [openalex] 2016 | Stephanie Weckend, USDOE Office of Energy Efficiency and Renewable Energy (EERE), Andreas Wade | End of Life Management: Solar Photovoltaic Panels | None | doi:10.2172/1561525 | cites:646
+  [openalex] 2017 | Leah Cardamore Stokes, Hanna L. Breetz | Politics in the U.S. energy transition: Case studies of solar, wind, biofuels and electric vehicles policy | Energy Policy | doi:10.1016/j.enpol.2017.10.057 | cites:331
+  [openalex] 2014 | Mariana Mazzucato | The entrepreneurial state: debunking public vs. private sector myths | Choice Reviews Online | doi:10.5860/choice.51-3359 | cites:2311
+  [openalex] 2008 | Michael Renner, Sean Sweeney, Jill Kubit | Green Jobs: Towards Decent Work in a Sustainable, Low-Carbon World | University of North Texas Digital Library (University of North Texas) | doi: | cites:449
+  [openalex] 2021 | Khaled Obaideen, Maryam Nooman AlMallahi, Abdul Hai Alami | On the contribution of solar energy to sustainable developments goals: Case study on Mohammed bin Rashid Al Maktoum Solar Park | International Journal of Thermofluids | doi:10.1016/j.ijft.2021.100123 | cites:288
+  [openalex] 2016 | Yousef M. Alhorr, Mohammed Arif, Amit Kant Kaushik | Occupant productivity and office indoor environment quality: A review of the literature | Building and Environment | doi:10.1016/j.buildenv.2016.06.001 | cites:852
+  [openalex] 2019 | Luigi Aldieri, Jonas Grafström, Kristoffer Sundström | Wind Power and Job Creation | Sustainability | doi:10.3390/su12010045 | cites:68
+  [openalex] 2020 | Nicole Mariotti, Matteo Bonomo, Lucia Fagiolari | Recent advances in eco-friendly and cost-effective materials towards sustainable dye-sensitized solar cells | Green Chemistry | doi:10.1039/d0gc01148g | cites:503
+  [crossref] 2017 | Hans De Witte | Job Insecurity, Union Attitudes and Workers' Union Participation: Conclusions and Suggestions for Practice and Research | Job Insecurity, Union Involvement and Union Activism | doi:10.4324/9781351154925-10 | cites:0
+  [crossref] 2017 | Hans De De Witte | Does Job Insecurity Affect the Union Attitudes of Workers and Their Participation in Unions? Introduction to this Volume | Job Insecurity, Union Involvement and Union Activism | doi:10.4324/9781351154925-1 | cites:3
+  [crossref] None |  | Figure 5.9. Job quality among formal and informal workers |  | doi:10.1787/888933240019 | cites:0
+  [crossref] 1996 | W.I. Axford, J.F. McKenzie | Implications of Observations of the Solar Wind and Corona for Solar Wind Models | International Astronomical Union Colloquium | doi:10.1017/s0252921100029882 | cites:0
+  [crossref] None |  | Figure 3.5. Job Quality Distribution for Formal and Informal Workers |  | doi:10.1787/533376445435 | cites:0
+  [crossref] None |  | Figure 2.4. Job quality is worst for informal than formal workers |  | doi:10.1787/888933776749 | cites:0
+  [crossref] 2023 | Stephanie Bell | AI and Job Quality: Insights from Frontline Workers |  | doi:10.2139/ssrn.4337611 | cites:5
+  [crossref] 2024 | Debbie J. Goldman | False Promises? Job Redesign through Union-Management Partnerships | Disconnected | doi:10.5622/illinois/9780252046056.003.0005 | cites:0

@@ -1,0 +1,30 @@
+# scholar-init default .gitignore
+# -----------------------------------------------------------------------
+# Keep sensitive material and per-user state out of version control.
+# If you need to share raw data, do it through a proper data repository
+# (ICPSR, Dataverse, OSF) with access controls — not git.
+
+# Raw, interim, and processed data never go in git.
+data/raw/
+data/interim/
+data/processed/
+
+# Per-user safety decisions include OVERRIDE rationales that reference
+# sensitive content by path. Do not commit them.
+.claude/safety-status.json
+
+# Output artifacts — commit these manually if you want; they are often
+# large and regenerable, so git-ignored by default.
+output/
+
+# Logs are per-user and include timestamps + decisions.
+logs/
+
+# Common OS/editor noise
+.DS_Store
+*.swp
+*~
+.Rhistory
+.Rproj.user/
+__pycache__/
+.ipynb_checkpoints/

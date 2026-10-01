@@ -1,0 +1,104 @@
+{
+  "verdict": "PASS",
+  "engine": "scholar-idea",
+  "input_mode": "idea",
+  "candidates": [
+    {
+      "rq_id": "RQ-A",
+      "question": "Among U.S. electric power generation workers in 2021-2025, how large is the gap in occupation-specific mean annual wage between the renewable versus nonrenewable generation sector when detailed occupation is held constant, how does that gap differ across generation technologies and occupational classes, and did it narrow, widen, or persist as renewable employment roughly doubled?",
+      "x": "renewable versus nonrenewable generation sector",
+      "y": "occupation-specific mean annual wage",
+      "mechanism": "Legacy generation (fossil, nuclear, large hydro) is organized in utility-owned, capital-intensive plants with high union coverage, internal labor markets and regulated cost recovery that support rent sharing; newer wind, solar and biomass generation is organized in smaller, merchant or project-financed firms with contracted, weakly unionized operations labor, so equally classified workers are paid less (durable-inequality / institutional pay-setting). Rival: ecological-modernization and subsidy-driven labor demand (IRA) that should raise renewable pay, especially for scarce skilled trades.",
+      "confounders": [
+        "occupational composition (detailed SOC mix)",
+        "within-occupation seniority/experience and task mix",
+        "regional labor-market wage levels (plant location)",
+        "establishment size and ownership form",
+        "OEWS 3-year panel pooling and wage aging",
+        "cell suppression and changing publication of small cells"
+      ],
+      "scope": {
+        "population": "Wage-and-salary workers employed in U.S. electric power generation establishments (NAICS 221111-221118)",
+        "place": "United States (national estimates)",
+        "time": "OEWS May 2021 through May 2025 reference periods (survey panels Nov 2018 - May 2025)",
+        "unit": "Industry-by-detailed-occupation-by-year cell (employment-weighted mean annual wage)"
+      },
+      "claim_strength": "descriptive",
+      "recommended_dataset": "BLS OEWS May 2021-2025 national industry-specific (5-/6-digit NAICS) occupational employment and wage estimates",
+      "novelty_risk": "moderate - adjacent green-wage-premium studies exist (Vona et al. 2019; Curtis & Marinescu 2023; Colmer et al. 2025) but none holds detailed occupation constant across generation technologies over 2021-2025",
+      "data_feasible": true,
+      "fatal_flaw": false,
+      "panel_verdict": "PROCEED (refined)"
+    },
+    {
+      "rq_id": "RQ-B",
+      "question": "How much of the raw renewable-nonrenewable wage gap in U.S. power generation in 2021-2025 is due to occupational composition versus within-occupation pay differences, and how did each component change as renewable employment doubled?",
+      "x": "sector occupational composition versus within-occupation pay",
+      "y": "raw employment-weighted mean wage gap",
+      "mechanism": "Offsetting shifts: renewable growth concentrated in lower-paid installation/technician jobs vs within-occupation catch-up.",
+      "confounders": [
+        "common-support restriction",
+        "suppressed employment cells"
+      ],
+      "scope": {
+        "population": "Wage-and-salary workers employed in U.S. electric power generation establishments (NAICS 221111-221118)",
+        "place": "United States (national estimates)",
+        "time": "OEWS May 2021 through May 2025 reference periods (survey panels Nov 2018 - May 2025)",
+        "unit": "Industry-by-detailed-occupation-by-year cell (employment-weighted mean annual wage)"
+      },
+      "claim_strength": "descriptive",
+      "recommended_dataset": "BLS OEWS May 2021-2025",
+      "novelty_risk": "moderate - standard decomposition; new application",
+      "data_feasible": true,
+      "fatal_flaw": false,
+      "panel_verdict": "FOLD INTO RQ-A as bridging decomposition"
+    },
+    {
+      "rq_id": "RQ-C",
+      "question": "Do renewable wage gaps within detailed occupations differ between blue-collar (production, installation/maintenance, construction) and professional/managerial occupations, and across solar, wind, hydro, nuclear and fossil generation?",
+      "x": "generation technology by occupational class",
+      "y": "within-occupation log wage gap",
+      "mechanism": "Institutional protections (unions, internal labor markets) historically benefit manual workers most, so gaps are largest for blue-collar jobs in new technologies.",
+      "confounders": [
+        "small geothermal/biomass cells",
+        "multiple comparisons"
+      ],
+      "scope": {
+        "population": "Wage-and-salary workers employed in U.S. electric power generation establishments (NAICS 221111-221118)",
+        "place": "United States (national estimates)",
+        "time": "OEWS May 2021 through May 2025 reference periods (survey panels Nov 2018 - May 2025)",
+        "unit": "Industry-by-detailed-occupation-by-year cell (employment-weighted mean annual wage)"
+      },
+      "claim_strength": "descriptive",
+      "recommended_dataset": "BLS OEWS May 2021-2025",
+      "novelty_risk": "low-moderate",
+      "data_feasible": true,
+      "fatal_flaw": false,
+      "panel_verdict": "FOLD INTO RQ-A as analytic core; pool geothermal+biomass"
+    },
+    {
+      "rq_id": "RQ-D",
+      "question": "Is the renewable wage penalty larger at the bottom (10th/25th percentile) than at the top (75th/90th percentile) of within-cell wage distributions?",
+      "x": "renewable sector",
+      "y": "cell-level wage percentiles",
+      "mechanism": "Union wage floors compress lower tail in legacy sectors.",
+      "confounders": [
+        "ecological inference from cell percentiles",
+        "top-coding",
+        "interpolated percentiles"
+      ],
+      "scope": {
+        "population": "Wage-and-salary workers employed in U.S. electric power generation establishments (NAICS 221111-221118)",
+        "place": "United States (national estimates)",
+        "time": "OEWS May 2021 through May 2025 reference periods (survey panels Nov 2018 - May 2025)",
+        "unit": "Industry-by-detailed-occupation-by-year cell (employment-weighted mean annual wage)"
+      },
+      "claim_strength": "descriptive",
+      "recommended_dataset": "BLS OEWS May 2021-2025",
+      "novelty_risk": "moderate",
+      "data_feasible": true,
+      "fatal_flaw": false,
+      "panel_verdict": "DEMOTE to robustness check"
+    }
+  ]
+}

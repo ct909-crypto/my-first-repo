@@ -1,0 +1,168 @@
+{
+  "schema": "claim-inventory/v1",
+  "rows": [
+    {
+      "row_id": "established-1",
+      "claim_kind": "map_cell",
+      "claim_text": "Industries and employers pay equally skilled workers different wages.",
+      "anchor_ids": [
+        "krueger1988efficiency-1e79b136",
+        "abowd1999high-741f5722",
+        "krueger1988efficiency-24268d09"
+      ]
+    },
+    {
+      "row_id": "established-2",
+      "claim_kind": "map_cell",
+      "claim_text": "Between-workplace pay differences account for a large share of rising earnings inequality.",
+      "anchor_ids": [
+        "card2013workplace-9192c57b",
+        "barth2016where-47597c57"
+      ]
+    },
+    {
+      "row_id": "established-3",
+      "claim_kind": "map_cell",
+      "claim_text": "Unions raise and compress wages and uphold pay norms.",
+      "anchor_ids": [
+        "western2011unions-27a5653b"
+      ]
+    },
+    {
+      "row_id": "established-4",
+      "claim_kind": "map_cell",
+      "claim_text": "Solar and wind hiring is concentrated in occupations with above-average economy-wide pay.",
+      "anchor_ids": [
+        "curtis2023green-0682269e",
+        "curtis2023green-1fd7f723"
+      ]
+    },
+    {
+      "row_id": "contested-1",
+      "claim_kind": "map_cell",
+      "claim_text": "Whether green jobs pay a premium depends on the comparison: task/occupation measures find premia; employer-based comparisons conditional on education do not.",
+      "anchor_ids": [
+        "vona2019measures-1f401b7f",
+        "kuai2025estimating-9721025d",
+        "godoy2025green-b81793c8",
+        "colmer2025nice-04e9fa2f",
+        "colmer2025nice-93aec07f",
+        "vona2019measures-9730eaa5"
+      ]
+    },
+    {
+      "row_id": "contested-2",
+      "claim_kind": "map_cell",
+      "claim_text": "Median wages differ by energy technology, with solar near the bottom.",
+      "anchor_ids": [
+        "lehmann2020wages-95736805"
+      ]
+    },
+    {
+      "row_id": "mechanism-1",
+      "claim_kind": "map_cell",
+      "claim_text": "Union/PLA coverage is lower in solar and wind generation than in coal, gas and nuclear generation.",
+      "anchor_ids": [
+        "doe2024useer-7867bd4b",
+        "doe2024useer-d6a78790"
+      ]
+    },
+    {
+      "row_id": "mechanism-2",
+      "claim_kind": "map_cell",
+      "claim_text": "Organizational pay structures and categorical distinctions are durable and relationally allocated.",
+      "anchor_ids": [
+        "tilly1998durable-b841e35f",
+        "tomaskovicdevey2019relational-8b181d62"
+      ]
+    },
+    {
+      "row_id": "mechanism-3",
+      "claim_kind": "map_cell",
+      "claim_text": "Ecological modernization predicts upgrading; critics dispute its institutional claims.",
+      "anchor_ids": [
+        "spaargaren1992sociology-d20a6358",
+        "york2003key-927ecfc9"
+      ]
+    },
+    {
+      "row_id": "gap-1",
+      "claim_kind": "map_cell",
+      "claim_text": "Transition scholarship calls for attention to distributive consequences for workers; workers judge transitions by bargaining power.",
+      "anchor_ids": [
+        "beckfield2023social-45b1338a",
+        "sicotte2022necessary-7a825122",
+        "carley2020justice-66729c5a",
+        "sicotte2022necessary-a6e0c50a"
+      ]
+    },
+    {
+      "row_id": "method-1",
+      "claim_kind": "map_cell",
+      "claim_text": "OEWS May estimates pool six semiannual panels over three years and are not designed as a time series.",
+      "anchor_ids": [
+        "bls2025oewsfaq-2b53f70b",
+        "bls2025oews-4b53ed44"
+      ]
+    },
+    {
+      "row_id": "method-2",
+      "claim_kind": "map_cell",
+      "claim_text": "Gaps can be decomposed into composition and within-category components.",
+      "anchor_ids": [
+        "kitagawa1955components-4097bd04",
+        "petersen1995separate-36edeb4f"
+      ]
+    },
+    {
+      "row_id": "derivation-h1",
+      "claim_kind": "hypothesis",
+      "claim_text": "Premise for H1",
+      "anchor_ids": [
+        "krueger1988efficiency-1e79b136",
+        "krueger1988efficiency-24268d09"
+      ]
+    },
+    {
+      "row_id": "derivation-h2",
+      "claim_kind": "hypothesis",
+      "claim_text": "Premise for H2",
+      "anchor_ids": [
+        "doe2024useer-d6a78790"
+      ]
+    },
+    {
+      "row_id": "derivation-h3",
+      "claim_kind": "hypothesis",
+      "claim_text": "Premise for H3",
+      "anchor_ids": [
+        "western2011unions-27a5653b"
+      ]
+    },
+    {
+      "row_id": "derivation-h4",
+      "claim_kind": "hypothesis",
+      "claim_text": "Premise for H4",
+      "anchor_ids": [
+        "bls2025oewsfaq-2b53f70b"
+      ]
+    },
+    {
+      "row_id": "derivation-h5",
+      "claim_kind": "hypothesis",
+      "claim_text": "Premise for H5",
+      "anchor_ids": [
+        "curtis2023green-0682269e",
+        "curtis2023green-1fd7f723"
+      ]
+    },
+    {
+      "row_id": "established-5",
+      "claim_kind": "map_cell",
+      "claim_text": "Few workers move from carbon-intensive into green jobs.",
+      "anchor_ids": [
+        "curtis2024workers-9034f59e"
+      ]
+    }
+  ]
+}
