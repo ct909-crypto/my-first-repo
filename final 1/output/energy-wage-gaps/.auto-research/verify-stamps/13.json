@@ -1,0 +1,17 @@
+{
+  "authority": "audit_only_not_completion_input",
+  "completed_at": "2026-10-10T13:48:29.037886+00:00",
+  "contract_sha256": "beb6125aa0b17e6505f99cc8950dc0a87a355f6ab5f886ef7b3f77b4702028f4",
+  "phase_id": "13",
+  "required_outputs": {
+    "manuscript/draft-manifest.json": "4cf189b6344d7b8e88b041d3f801d92527e12b6414abc07fb39d9a59229e5793",
+    "manuscript/draft-self-critique.json": "891bc6ebab737cd4ce7bf2c67bd152130b83deea4207633eb021924ba9295a6a",
+    "manuscript/drafting-plan.json": "35f31ea6ce53a148ab9c5d7f478599f3148878d315e91ba2c2ae28cb5c90ac52",
+    "manuscript/journal-spec.json": "ee67158d5c6cee32d31a5fd44040492b1e6d925476d2309f68d8582fb3667d81",
+    "manuscript/manuscript-draft.md": "78c749d6bb83a0e110bc51049d94489401e88cc86d4c80130c4451aaa835ace2",
+    "manuscript/polish-report.json": "538dd07542cd6d0dbebe10c2f6075f7aa8dbe1f7048f18eee2e3d4b7a337a731"
+  },
+  "run_nonce": "cd87aa181cdcd508120914d6f9b648f4",
+  "schema_version": "scholar-auto-research-completion-audit/v1",
+  "verdict": "PASS"
+}

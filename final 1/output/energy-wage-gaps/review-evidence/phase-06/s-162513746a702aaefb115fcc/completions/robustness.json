@@ -1,0 +1,49 @@
+{
+  "attempt_epoch": 7,
+  "dispatch_id": "d-5d24efa5e6696a44efdb4261",
+  "driver_completion": {
+    "observed_at": "2026-10-10T10:04:07.489329+00:00",
+    "status": "succeeded"
+  },
+  "host_backend": "claude-code",
+  "host_task_id": {
+    "reason": "subagent dispatch failed (API safeguard error); role review executed inline by orchestrating agent",
+    "status": "unavailable"
+  },
+  "host_verification": {
+    "adapter": {
+      "reason": "no trusted host adapter configured",
+      "status": "unsupported"
+    },
+    "claims": {
+      "completion_time": "unsupported",
+      "report_digest": "unsupported",
+      "reviewed_inputs_digest": "unsupported",
+      "task_identity": "unsupported",
+      "terminal_status": "unsupported"
+    }
+  },
+  "model_identity": {
+    "reason": "inline review by orchestrating agent (claude-opus-5-5)",
+    "status": "unavailable"
+  },
+  "phase_id": "6",
+  "report_path": "review-evidence/phase-06/s-162513746a702aaefb115fcc/reports/robustness.md",
+  "report_sha256": "4ae7079b2e23aabe3d60d087d09b38fdcd8b4044b23c71eeba0a073d673a59ea",
+  "reviewed_inputs": {
+    "analysis/analysis-plan-manifest.json": "411f25017298b160c878a075ddbf9be9f1d48657b5cac86c8b4bd5122bb666df",
+    "analysis/analysis-plan.md": "dcc3eb76aa247df64e7d4699b5047e0a61c53c405c1460f4274d22761876dc7c",
+    "analysis/scripts-inventory.json": "30192e1a862e6757e91d6dea937a851de8258450293643984334101628532edb",
+    "analysis/spec-registry.csv": "81f1f713bf03337ef2d8adfb8ce8e1bfff14ce298833886a823622ae556546f0",
+    "data/data-measurement-manifest.json": "d476efad06c842f96ca498cd440bbacd9e749b36e21936bc9299f4df3ca5e3f1",
+    "data/variable-dictionary.csv": "151576958aa39aa310383c319314daca71c83bf2aa69cefe3bd88c1b1329a4ee",
+    "design/identification-strategy.json": "dd29cabf09677a1cebebfbd9e6be73a6fe23dffd95880232e5bbb6dc27fcf493",
+    "design/model-specs.json": "d002a582b63fde12966fc3239b6bc8591a5f681aae521304e3b5b619f67677f4"
+  },
+  "role": "robustness",
+  "round": "initial_panel",
+  "schema_version": "scholar-auto-research-review-evidence/v1",
+  "session_id": "s-162513746a702aaefb115fcc",
+  "trace_path": "review-evidence/phase-06/s-162513746a702aaefb115fcc/traces/robustness.trace.ndjson",
+  "trace_sha256": "bb0ab2e63a28f84cd97fdeae1ed5b97c5302691debd66ad7855bb01cb71dff16"
+}

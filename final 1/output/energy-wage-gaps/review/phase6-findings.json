@@ -1,0 +1,203 @@
+{
+  "correctness": [
+    {
+      "finding_id": "COR-001",
+      "severity": "MAJOR",
+      "location": "analysis/scripts/06_figures.R:41",
+      "problem": "Script 06 reads tables/table4-decomposition.csv, which script 04 produces, but dependency_graph declares that 06 depends only on 03. Under the declared order, 06 could run before 04.",
+      "fix": "Add 04_decomposition.R to 06's dependencies in analysis/scripts-inventory.json."
+    },
+    {
+      "finding_id": "COR-002",
+      "severity": "MINOR",
+      "location": "analysis/scripts/01_build_panel.R:66-70",
+      "problem": "The special-code flags use `==` (for example `H_MEAN == \"*\"`). If a cell is NA, the flag is NA and coverage counts become NA.",
+      "fix": "Use `%in%` so the flags are always TRUE or FALSE."
+    },
+    {
+      "finding_id": "COR-003",
+      "severity": "MINOR",
+      "location": "analysis/scripts/07_registry.R:96",
+      "problem": "`interaction(occ_code, year)` creates every level combination, including unused ones, which makes the design matrix wide and rank-deficient.",
+      "fix": "Use `interaction(occ_code, year, drop = TRUE)`."
+    },
+    {
+      "finding_id": "COR-004",
+      "severity": "INFO",
+      "location": "03_main_models.R, 06_figures.R, 07_registry.R",
+      "problem": "Checked the fixest coefficient names produced by i() (`generation_source::Solar`, `occupational_group::<level>:renewable`, `year::2025:renewable`, `renewable:trend`) against coef_map, the regexes, and the row_from() lookups. They agree. row_from() no longer has the data.table `..` scoping bug.",
+      "fix": "None."
+    },
+    {
+      "finding_id": "COR-005",
+      "severity": "INFO",
+      "location": "analysis/scripts/04_decomposition.R:40-47",
+      "problem": "Composition plus within-occupation equals the common-occupation Kitagawa gap. The non-overlap term is defined as the residual, so the additivity assertion holds by construction.",
+      "fix": "Document in the manuscript that the non-overlap term is the gap contributed by occupations observed in only one group."
+    }
+  ],
+  "robustness": [
+    {
+      "finding_id": "ROB-001",
+      "severity": "MINOR",
+      "location": "analysis/scripts/01_build_panel.R:44-50",
+      "problem": "read_topcode() returns NA if the codebook wording changes. stopifnot checks only that a matching line exists, not that a number was parsed.",
+      "fix": "Add `stopifnot(!is.na(topcode), topcode >= 50)` after parsing."
+    },
+    {
+      "finding_id": "ROB-002",
+      "severity": "MINOR",
+      "location": "analysis/scripts/06_figures.R:27,58",
+      "problem": "geom_errorbarh() is deprecated in the installed ggplot2 (4.0.3). It still renders but emits warnings, and it could break in a future release.",
+      "fix": "Use geom_errorbar(orientation = \"y\") with xmin/xmax and `width`."
+    },
+    {
+      "finding_id": "ROB-003",
+      "severity": "INFO",
+      "location": "analysis/scripts/03_main_models.R:31",
+      "problem": "Geothermal (4-8 cells per year) and biomass (12-14) are thin. Their source coefficients in S04 rest on few occupation-year comparisons.",
+      "fix": "Report identifying cell counts by source next to S04 (interpretation constraint, no code change required)."
+    },
+    {
+      "finding_id": "ROB-004",
+      "severity": "INFO",
+      "location": "analysis/scripts/04_decomposition.R:53-60",
+      "problem": "The bootstrap subsets the table once per drawn occupation (about 200 x 500 subsets). It is slow but bounded, and the seed is set.",
+      "fix": "None."
+    }
+  ],
+  "statistical": [
+    {
+      "finding_id": "STA-001",
+      "severity": "MAJOR",
+      "location": "analysis/scripts/03_main_models.R:29",
+      "problem": "Standard errors are clustered only by detailed occupation. Cells in the same industry-year share industry-level shocks and overlapping survey panels, so occupation clustering alone may understate uncertainty for an industry-level contrast. With only seven industries, industry clustering is not feasible.",
+      "fix": "For S03 and S04, add standard-error sensitivity estimates clustered by industry-year (35 clusters) and two-way clustered by occupation and industry-year. Write them to analysis/outputs/se-sensitivity.csv and report them in the appendix."
+    },
+    {
+      "finding_id": "STA-002",
+      "severity": "MINOR",
+      "location": "analysis/scripts/03_main_models.R:38",
+      "problem": "S10 drops cells with P90 at or above $100 nominal. The estimate is therefore conditional on cells below the ceiling and likely attenuated for high-wage occupations.",
+      "fix": "State this interpretation constraint in the table notes and the manuscript (already partly noted in the Table 2 notes)."
+    },
+    {
+      "finding_id": "STA-003",
+      "severity": "MINOR",
+      "location": "analysis/scripts/03_main_models.R:84-91",
+      "problem": "AIC and BIC from weighted fixest models are not comparable across specs estimated on different samples (S09, S10, and the robustness subsets).",
+      "fix": "Treat R-squared and within R-squared as the primary fit statistics, and do not compare AIC across samples."
+    },
+    {
+      "finding_id": "STA-004",
+      "severity": "INFO",
+      "location": "analysis/scripts/05_robustness.R:31",
+      "problem": "The inverse-variance weight 1/(PRSE/100)^2 is the correct delta-method approximation to the variance of a log mean, given a relative standard error.",
+      "fix": "None."
+    },
+    {
+      "finding_id": "STA-005",
+      "severity": "INFO",
+      "location": "analysis/scripts/03_main_models.R:41-47",
+      "problem": "The equality Wald tests are correctly parameterized (main renewable term plus interactions against a reference category), so H0 is that the gaps are equal.",
+      "fix": "None."
+    },
+    {
+      "finding_id": "STA-006",
+      "severity": "MINOR",
+      "location": "analysis/scripts/07_registry.R:38",
+      "problem": "The S08 p-value uses a normal approximation to the bootstrap SE. This is acceptable, but the percentile interval should also be reported.",
+      "fix": "Optionally add percentile intervals; normal-approximation inference is acceptable for a descriptive component."
+    }
+  ],
+  "reproducibility": [
+    {
+      "finding_id": "REP-001",
+      "severity": "MAJOR",
+      "location": "analysis/scripts-inventory.json",
+      "problem": "The declared `produces` lists omit outputs the scripts write. 02: table1-descriptives.html, table1b-wage-by-year.csv, the fig1 PNG. 03: analysis/joint-tests.json, table3-heterogeneity-regression.html, fit-stats-main.csv, identifying-cells.csv, main-models.rds. 05: tableA1-robustness-regression.html, balanced-set.csv, fit-stats-robustness.csv, robustness-models.rds. 06: the PNG copies. 07: tables/model-fit-stats.csv.",
+      "fix": "Make each script's `produces` list match the files it actually writes."
+    },
+    {
+      "finding_id": "REP-002",
+      "severity": "MAJOR",
+      "location": "analysis/scripts-inventory.json dependency_graph",
+      "problem": "Two dependencies are undeclared. Script 06 reads 04's output, and script 07 reads data/processed/oews-generation-cells.csv from 01 and fit-stats files from 03 and 05.",
+      "fix": "Set the graph to 06 <- {03, 04} and 07 <- {01, 03, 04, 05}. The script order is unchanged (01-07)."
+    },
+    {
+      "finding_id": "REP-003",
+      "severity": "MINOR",
+      "location": "all scripts",
+      "problem": "No script writes session or package information.",
+      "fix": "Phase 8 must capture sessionInfo() in execution-report.json run_context."
+    },
+    {
+      "finding_id": "REP-004",
+      "severity": "INFO",
+      "location": "analysis/scripts/04_decomposition.R:13",
+      "problem": "The only stochastic step (the bootstrap) is seeded. All paths are relative to the project root, and output directories are created before writing.",
+      "fix": "None."
+    }
+  ],
+  "style_ai_patterns": [
+    {
+      "finding_id": "STY-001",
+      "severity": "MINOR",
+      "location": "analysis/scripts/06_figures.R:27,58",
+      "problem": "geom_errorbarh() is deprecated in ggplot2 4.0.3, and its `height` argument should become `width` in geom_errorbar(orientation = 'y').",
+      "fix": "Replace it."
+    },
+    {
+      "finding_id": "STY-002",
+      "severity": "INFO",
+      "location": "03_main_models.R, 05_robustness.R",
+      "problem": "Checked the API calls against the installed versions: fixest 0.14.2 wald(keep=, print=), fitstat types 'g'/'r2'/'ar2'/'wr2', coeftable, confint; modelsummary 2.6.0 coef_map, list-form gof_map, stars, notes, output. No invented arguments found.",
+      "fix": "None."
+    },
+    {
+      "finding_id": "STY-003",
+      "severity": "INFO",
+      "location": "02_descriptives.R; 03_main_models.R",
+      "problem": "Table and figure labels use reader-facing terms consistent with the dictionary's display labels. The registry keeps machine term names, which is acceptable for provenance.",
+      "fix": "None."
+    },
+    {
+      "finding_id": "STY-004",
+      "severity": "MINOR",
+      "location": "03_main_models.R; 05_robustness.R",
+      "problem": "The fit-statistic extraction code is duplicated across the two scripts.",
+      "fix": "Acceptable at this size. Optionally move it into a shared helper."
+    }
+  ],
+  "data_handling": [
+    {
+      "finding_id": "DAT-001",
+      "severity": "MINOR",
+      "location": "analysis/scripts/01_build_panel.R:71-74",
+      "problem": "\"#\" and \"*\" values in H_PCT10 and H_MEDIAN are coerced to NA without being counted, so coverage under-reports censoring in the P10 and median outcomes.",
+      "fix": "Add p10_topcoded and median_topcoded counts to tables/cell-coverage.csv."
+    },
+    {
+      "finding_id": "DAT-002",
+      "severity": "INFO",
+      "location": "analysis/scripts/01_build_panel.R:84-91",
+      "problem": "The occupational-group mapping covers SOC majors 11-53 as planned. Major 45 (farming) falls in the construction, installation, maintenance and repair group, as documented in the measurement plan.",
+      "fix": "None."
+    },
+    {
+      "finding_id": "DAT-003",
+      "severity": "INFO",
+      "location": "01-05",
+      "problem": "The analytic flag excludes 221118 and suppressed cells. Robustness, decomposition, and descriptive samples all derive from the same flag. S17 adds 221118 under the same wage and employment restrictions. Deflation uses the documented May CPI-U values.",
+      "fix": "None."
+    },
+    {
+      "finding_id": "DAT-004",
+      "severity": "MINOR",
+      "location": "analysis/scripts/02_descriptives.R:62",
+      "problem": "The 'Employment' row reports mean annual employment within the analytic sample only.",
+      "fix": "Make the label say 'analytic sample' (table note)."
+    }
+  ]
+}

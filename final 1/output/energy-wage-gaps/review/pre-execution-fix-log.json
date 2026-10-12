@@ -1,0 +1,143 @@
+{
+  "required_fixes_completed": true,
+  "unfixed_blocking_count": 0,
+  "final_verdict": "PASS",
+  "fixed_findings": [
+    {
+      "finding_id": "COR-001",
+      "original_role": "correctness",
+      "severity": "MAJOR",
+      "status": "fixed",
+      "blocker_type": "executable",
+      "action_taken": "Declared 04_decomposition.R as a dependency of 06_figures.R in the dependency graph.",
+      "affected_files": [
+        "analysis/scripts-inventory.json"
+      ]
+    },
+    {
+      "finding_id": "REP-001",
+      "original_role": "reproducibility",
+      "severity": "MAJOR",
+      "status": "fixed",
+      "blocker_type": "executable",
+      "action_taken": "Rewrote every script's produces list to match the files it writes (HTML tables, PNG copies, joint-tests.json, fit statistics, identifying-cell counts, SE sensitivity, RDS model objects, model-fit-stats.csv).",
+      "affected_files": [
+        "analysis/scripts-inventory.json",
+        "analysis/analysis-plan-manifest.json"
+      ]
+    },
+    {
+      "finding_id": "REP-002",
+      "original_role": "reproducibility",
+      "severity": "MAJOR",
+      "status": "fixed",
+      "blocker_type": "executable",
+      "action_taken": "Dependency graph now has 06 <- {03, 04} and 07 <- {01, 03, 04, 05}; uses lists updated; script order unchanged.",
+      "affected_files": [
+        "analysis/scripts-inventory.json",
+        "analysis/analysis-plan-manifest.json"
+      ]
+    },
+    {
+      "finding_id": "STA-001",
+      "original_role": "statistical",
+      "severity": "MAJOR",
+      "status": "fixed",
+      "blocker_type": "executable",
+      "action_taken": "03_main_models.R now re-estimates the S03 and S04 standard errors clustered by industry-year and two-way (occupation + industry-year) and writes analysis/outputs/se-sensitivity.csv. It also writes identifying-cell counts by source (analysis/outputs/identifying-cells-by-source.csv), addressing ROB-003.",
+      "affected_files": [
+        "analysis/scripts/03_main_models.R",
+        "analysis/scripts-inventory.json"
+      ]
+    },
+    {
+      "finding_id": "COR-002",
+      "original_role": "correctness",
+      "severity": "MINOR",
+      "status": "fixed",
+      "blocker_type": "non_blocking",
+      "action_taken": "Special-code flags use %in% and so are never NA.",
+      "affected_files": [
+        "analysis/scripts/01_build_panel.R"
+      ]
+    },
+    {
+      "finding_id": "ROB-001",
+      "original_role": "robustness",
+      "severity": "MINOR",
+      "status": "fixed",
+      "blocker_type": "non_blocking",
+      "action_taken": "Added stopifnot(!is.na(topcode), topcode >= 50) after parsing the top code.",
+      "affected_files": [
+        "analysis/scripts/01_build_panel.R"
+      ]
+    },
+    {
+      "finding_id": "DAT-001",
+      "original_role": "data_handling",
+      "severity": "MINOR",
+      "status": "fixed",
+      "blocker_type": "non_blocking",
+      "action_taken": "Added p10_topcoded and median_topcoded flags and coverage counts.",
+      "affected_files": [
+        "analysis/scripts/01_build_panel.R"
+      ]
+    },
+    {
+      "finding_id": "ROB-002/STY-001",
+      "original_role": "robustness; style_ai_patterns",
+      "severity": "MINOR",
+      "status": "fixed",
+      "blocker_type": "non_blocking",
+      "action_taken": "Replaced the deprecated geom_errorbarh() with geom_errorbar(orientation = 'y', width = 0.2).",
+      "affected_files": [
+        "analysis/scripts/06_figures.R"
+      ]
+    },
+    {
+      "finding_id": "COR-003",
+      "original_role": "correctness",
+      "severity": "MINOR",
+      "status": "fixed",
+      "blocker_type": "non_blocking",
+      "action_taken": "interaction(..., drop = TRUE) in the S08 composition benchmark.",
+      "affected_files": [
+        "analysis/scripts/07_registry.R"
+      ]
+    },
+    {
+      "finding_id": "DAT-004",
+      "original_role": "data_handling",
+      "severity": "MINOR",
+      "status": "fixed",
+      "blocker_type": "non_blocking",
+      "action_taken": "Table 1 employment row labeled 'analytic sample'.",
+      "affected_files": [
+        "analysis/scripts/02_descriptives.R"
+      ]
+    }
+  ],
+  "non_blocking_dispositions": [
+    {
+      "finding_id": "STA-002",
+      "disposition": "interpretation constraint carried to Phase 7 and the manuscript: P90 gap is conditional on uncensored cells"
+    },
+    {
+      "finding_id": "STA-003",
+      "disposition": "R-squared/within R-squared are the primary fit statistics; AIC/BIC are not compared across samples"
+    },
+    {
+      "finding_id": "STA-006",
+      "disposition": "normal-approximation p-value retained for the decomposition component; bootstrap SE reported"
+    },
+    {
+      "finding_id": "REP-003",
+      "disposition": "sessionInfo captured in Phase 8 execution-report run_context"
+    },
+    {
+      "finding_id": "STY-004",
+      "disposition": "duplication accepted at this script size"
+    }
+  ],
+  "inventory_hash_after_fix": "30192e1a862e6757e91d6dea937a851de8258450293643984334101628532edb"
+}

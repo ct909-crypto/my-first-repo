@@ -1,0 +1,17 @@
+{
+  "authority": "audit_only_not_completion_input",
+  "completed_at": "2026-10-10T10:03:31.616009+00:00",
+  "contract_sha256": "beb6125aa0b17e6505f99cc8950dc0a87a355f6ab5f886ef7b3f77b4702028f4",
+  "phase_id": "1",
+  "required_outputs": {
+    "idea/candidate-rqs.json": "f2025296877370fed978e54e882817d9cb635018cf760dfad0c8dadd08cd0425",
+    "idea/journal-fit.json": "82bee176c0d777bf5c231cb0239cbe0e7ba1641cb4322c218ce2622c39ac13c5",
+    "idea/research-question.json": "e8f58e0a8a1219172180a476071195faefe26aa88e4cfe8196705c68864aa6de",
+    "idea/research-question.md": "d03453c274340cae00e042b6e4b97a3de301ed7a6e25dd212f12ffcd4f55e507",
+    "idea/rq-evaluation-panel.json": "f97c9c4c83e9d7b059c5f9139c6e75f13053ad39b060f4b24943f4af6b76c2bb",
+    "idea/rq-selection-rationale.md": "531136365d315c986e2b268d62987e0372674940dd064eaed8b6eff2b6228947"
+  },
+  "run_nonce": "cd87aa181cdcd508120914d6f9b648f4",
+  "schema_version": "scholar-auto-research-completion-audit/v1",
+  "verdict": "PASS"
+}

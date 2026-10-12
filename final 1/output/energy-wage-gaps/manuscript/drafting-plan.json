@@ -1,0 +1,633 @@
+{
+  "verdict": "PASS",
+  "source_phase": "13",
+  "section_briefs": {
+    "abstract": {
+      "section_purpose": "state policy question, data, method, findings and implication",
+      "key_claim": "Between May 2021 and May 2025, U.S. renewable electricity generation industries paid about 11.5 percent less per hour than fossil fuel and nuclear generation for workers in the same detailed occupation; the gap was concentrated in solar, wind, geothermal and biomass (not hydroelectric) generation and in plant-operations and maintenance occupations, and it did not narrow while renewable generation employment doubled.",
+      "required_evidence": [
+        "headline gap",
+        "source and occupation heterogeneity",
+        "trend"
+      ],
+      "source_roles": [
+        "locked empirical results"
+      ],
+      "forbidden_moves": [
+        "display callouts",
+        "causal verbs"
+      ],
+      "blueprint_obligations": [
+        "purpose and policy relevance",
+        "data (OEWS May 2021-2025, NAICS 2211 cells)",
+        "method (employment-weighted occupation-by-year fixed effects; decomposition)",
+        "headline gap and source/occupation heterogeneity",
+        "trend result (no narrowing)",
+        "implication for just transition"
+      ]
+    },
+    "introduction": {
+      "section_purpose": "frame puzzle between green-premium and legacy-premium evidence and preview contribution",
+      "key_claim": "No study compares the same occupation across generation sources within one industry over 2021-2025",
+      "required_evidence": [
+        "prior estimates from literature"
+      ],
+      "source_roles": [
+        "context",
+        "rival"
+      ],
+      "forbidden_moves": [
+        "IRA attribution"
+      ],
+      "blueprint_obligations": [
+        "puzzle: green-premium claims vs legacy pay",
+        "gap in literature naming closest prior work (Curtis and Marinescu 2023; Colmer et al. 2025; Godoy and Isaksen 2025)",
+        "contribution",
+        "data and method preview",
+        "headline findings preview",
+        "roadmap"
+      ]
+    },
+    "literature review and theory": {
+      "section_purpose": "evaluate prior studies, build rent-sharing framework with rivals, state H1-H5 as written in the theory stage",
+      "key_claim": "Establishment wage-setting predicts lower renewable pay for the same occupation; skills scarcity predicts higher",
+      "required_evidence": [
+        "published green and brown premia from prior studies",
+        "firm wage-premium theory"
+      ],
+      "source_roles": [
+        "theory",
+        "mechanism",
+        "rival",
+        "empirical_prior"
+      ],
+      "forbidden_moves": [
+        "mentioning this paper's own empirical output",
+        "rewording the theory-stage hypotheses"
+      ],
+      "blueprint_obligations": [
+        "evaluate prior studies' strengths and weaknesses",
+        "rent-sharing framework",
+        "rival accounts",
+        "H1-H5 with derivation sentences"
+      ]
+    },
+    "data and methods": {
+      "section_purpose": "document data, sample descent, measures by role, estimating equations and inference",
+      "key_claim": "Occupation-by-year fixed effects compare the same job across industries",
+      "required_evidence": [
+        "Table 1",
+        "sample counts"
+      ],
+      "source_roles": [
+        "method",
+        "data"
+      ],
+      "forbidden_moves": [
+        "internal spec labels"
+      ],
+      "blueprint_obligations": [
+        "data source and OEWS design (six panels over three years, MB3)",
+        "sample construction with counts (2,096 cells -> 1,876 analytic)",
+        "variables: outcome, focal predictor, moderators, fixed effects, weights",
+        "estimating equations",
+        "inference (occupation clustering, two-way sensitivity)",
+        "decomposition",
+        "robustness plan"
+      ]
+    },
+    "results": {
+      "section_purpose": "interpret Tables 1-5 and Figures 1-4 in hypothesis order",
+      "key_claim": "Between May 2021 and May 2025, U.S. renewable electricity generation industries paid about 11.5 percent less per hour than fossil fuel and nuclear generation for workers in the same detailed occupation; the gap was concentrated in solar, wind, geothermal and biomass (not hydroelectric) generation and in plant-operations and maintenance occupations, and it did not narrow while renewable generation employment doubled.",
+      "required_evidence": [
+        "tables/table1-descriptives.html",
+        "tables/table2-main-regression.html",
+        "tables/table3-heterogeneity-regression.html",
+        "tables/table4-decomposition.csv",
+        "figures/fig1-wage-by-source-year.pdf",
+        "figures/fig2-source-gaps.pdf",
+        "figures/fig3-gap-by-year.pdf",
+        "figures/fig4-gap-by-occupation-group.pdf"
+      ],
+      "source_roles": [
+        "locked empirical results"
+      ],
+      "forbidden_moves": [
+        "causal verbs",
+        "ranking occupation groups by individual p-values"
+      ],
+      "blueprint_obligations": [
+        "descriptive patterns (Table 1, Figure 1)",
+        "headline ladder (Table 2)",
+        "decomposition (Table 4)",
+        "sources (Table 3, Figure 2)",
+        "occupational heterogeneity (Figure 4)",
+        "trend (Figure 3)",
+        "distribution (P10/P90)",
+        "robustness (Table A1)"
+      ]
+    },
+    "discussion": {
+      "section_purpose": "adjudicate theories, reconcile literature, state limitations",
+      "key_claim": "Evidence most consistent with establishment wage-setting",
+      "required_evidence": [
+        "hydro parity",
+        "occupation gradient",
+        "no narrowing"
+      ],
+      "source_roles": [
+        "rival",
+        "empirical_prior"
+      ],
+      "forbidden_moves": [
+        "policy effect claims",
+        "restating coefficients without interpretation"
+      ],
+      "blueprint_obligations": [
+        "answer RQ",
+        "adjudicate rent-sharing vs skills-scarcity vs compensating differentials",
+        "reconcile with prior literature",
+        "limitations",
+        "scope"
+      ]
+    },
+    "conclusion": {
+      "section_purpose": "synthesize contribution and policy implications",
+      "key_claim": "Wages follow employer institutions more than technology",
+      "required_evidence": [
+        "published literature cited in this section"
+      ],
+      "source_roles": [
+        "policy"
+      ],
+      "forbidden_moves": [
+        "new results",
+        "table/model reporting"
+      ],
+      "blueprint_obligations": [
+        "synthesis of contribution",
+        "policy implications for just-transition and labor standards",
+        "future research"
+      ]
+    }
+  },
+  "paragraph_purpose_map": [
+    {
+      "section": "introduction",
+      "paragraph_id": "Introduction paragraph block I1",
+      "purpose": "stakes of the section argument",
+      "claim": "transition promise of good jobs (planned claim)",
+      "evidence_artifacts": [],
+      "source_roles": [
+        "context"
+      ],
+      "theory_link": "job quality"
+    },
+    {
+      "section": "introduction",
+      "paragraph_id": "Introduction paragraph block I2",
+      "purpose": "gap of the section argument",
+      "claim": "literatures disagree because comparisons differ (planned claim)",
+      "evidence_artifacts": [],
+      "source_roles": [
+        "rival",
+        "empirical_prior"
+      ],
+      "theory_link": "green vs legacy premia"
+    },
+    {
+      "section": "introduction",
+      "paragraph_id": "Introduction paragraph block I3-I6",
+      "purpose": "data, method, findings, contribution, roadmap of the section argument",
+      "claim": "same-occupation design (planned claim)",
+      "evidence_artifacts": [
+        "tables/table2-main-regression.html"
+      ],
+      "source_roles": [],
+      "theory_link": "rent-sharing"
+    },
+    {
+      "section": "literature review and theory",
+      "paragraph_id": "Literature Review and Theory paragraph block T1-T9",
+      "purpose": "evaluate evidence, framework, hypotheses of the section argument",
+      "claim": "H1-H5 (planned claim)",
+      "evidence_artifacts": [],
+      "source_roles": [
+        "theory",
+        "mechanism",
+        "rival"
+      ],
+      "theory_link": "establishment wage-setting"
+    },
+    {
+      "section": "data and methods",
+      "paragraph_id": "Data and Methods paragraph block M1-M9",
+      "purpose": "data, sample flow, measures, equations, inference of the section argument",
+      "claim": "descriptive within-occupation estimand (planned claim)",
+      "evidence_artifacts": [
+        "tables/table1-descriptives.html"
+      ],
+      "source_roles": [
+        "method"
+      ],
+      "theory_link": "fixed effects isolate establishment-side differences"
+    },
+    {
+      "section": "results",
+      "paragraph_id": "Results paragraph block R1-R10",
+      "purpose": "descriptives, headline, decomposition, sources, occupations, trend, robustness of the section argument",
+      "claim": "H1, H3, H4 supported; H2, H5 not supported (planned claim)",
+      "evidence_artifacts": [
+        "figures/fig1-wage-by-source-year.pdf",
+        "figures/fig1-wage-by-source-year.png",
+        "figures/fig2-source-gaps.pdf",
+        "figures/fig2-source-gaps.png",
+        "figures/fig3-gap-by-year.pdf",
+        "figures/fig3-gap-by-year.png",
+        "figures/fig4-gap-by-occupation-group.pdf",
+        "figures/fig4-gap-by-occupation-group.png",
+        "tables/table1-descriptives.html",
+        "tables/table2-main-regression.html",
+        "tables/table3-heterogeneity-regression.html",
+        "tables/table4-decomposition.csv",
+        "tables/tableA1-robustness-regression.html"
+      ],
+      "source_roles": [],
+      "theory_link": "returns each result to H1-H5"
+    },
+    {
+      "section": "discussion",
+      "paragraph_id": "Discussion paragraph block D1-D4",
+      "purpose": "answer RQ, adjudicate, reconcile, limits of the section argument",
+      "claim": "rent-sharing favored (planned claim)",
+      "evidence_artifacts": [],
+      "source_roles": [
+        "rival"
+      ],
+      "theory_link": "mechanism interpretation"
+    },
+    {
+      "section": "conclusion",
+      "paragraph_id": "Conclusion paragraph block C1-C2",
+      "purpose": "synthesis and policy of the section argument",
+      "claim": "labor standards for operating workforce (planned claim)",
+      "evidence_artifacts": [],
+      "source_roles": [
+        "policy"
+      ],
+      "theory_link": "institutions"
+    }
+  ],
+  "source_use_plan": [
+    {
+      "argument_role": "theory",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "abowd1999high",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Data and Methods",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "blinder1973wage",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "data",
+      "target_section": "Data and Methods",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "bls2025cpi",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "data",
+      "target_section": "Data and Methods",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "bls2025oewsdata",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "method",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "bls2025oewstech",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "bowen2018characterising",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "theory",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "card2013workplace",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "theory",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "card2018firms",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "rival",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "colmer2025nice",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "consoli2016green",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "curtis2018loses",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "curtis2023green",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "curtis2024workers",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "context",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "doe2024useer",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Data and Methods",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "fortin2011decomposition",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "theory",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "freeman1980unionism",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "rival",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "gibbons1992does",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "rival",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "godoy2025green",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "gray2023environmental",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "context",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "haerer2015employment",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "hafstead2018unemployment",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "imf2024green",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "context",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "ira2022",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "method",
+      "target_section": "Data and Methods",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "kitagawa1955components",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "theory",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "krueger1988efficiency",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "kuai2025estimating",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "lim2023location",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "mechanism",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "mayfield2021influence",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "muro2019advancing",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "method",
+      "target_section": "Data and Methods",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "oaxaca1973male",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "pollin2019economics",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "rival",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "rosen1986theory",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "rival",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "saussay2022whos",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "theory",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "song2019firming",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "vona2018environmental",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "vona2019measures",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "walker2013transitional",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "wei2010putting",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "mechanism",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "western2011unions",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    },
+    {
+      "argument_role": "empirical_prior",
+      "target_section": "Literature Review and Theory",
+      "claim_supported": "the claim attributed to this source in its cited sentence (see source role matrix)",
+      "citation_key": "whittard2024working",
+      "why_necessary": "supports a specific claim in the cited sentence in the manuscript"
+    }
+  ],
+  "results_interpretation_plan": [
+    {
+      "artifact_path": "tables/table1-descriptives.html",
+      "uncertainty_language": "confidence intervals and clustered standard errors; descriptive",
+      "mechanism_link": "links the estimate to the establishment wage-setting interpretation and its rivals",
+      "limitation_language": "sorting, region, overtime, OEWS smoothing",
+      "interpretive_claim": "Table 1: analytic sample, wages, employment shares and occupational mix by generation technology interpreted against H1-H5"
+    },
+    {
+      "artifact_path": "tables/table2-main-regression.html",
+      "uncertainty_language": "confidence intervals and clustered standard errors; descriptive",
+      "mechanism_link": "links the estimate to the establishment wage-setting interpretation and its rivals",
+      "limitation_language": "sorting, region, overtime, OEWS smoothing",
+      "interpretive_claim": "Table 2: raw to within-occupation gap ladder and distributional gaps (Models 1-5) interpreted against H1-H5"
+    },
+    {
+      "artifact_path": "tables/table3-heterogeneity-regression.html",
+      "uncertainty_language": "confidence intervals and clustered standard errors; descriptive",
+      "mechanism_link": "links the estimate to the establishment wage-setting interpretation and its rivals",
+      "limitation_language": "sorting, region, overtime, OEWS smoothing",
+      "interpretive_claim": "Table 3: gaps by generation technology, occupation category and year (Models 6-9) interpreted against H1-H5"
+    },
+    {
+      "artifact_path": "tables/table4-decomposition.csv",
+      "uncertainty_language": "confidence intervals and clustered standard errors; descriptive",
+      "mechanism_link": "links the estimate to the establishment wage-setting interpretation and its rivals",
+      "limitation_language": "sorting, region, overtime, OEWS smoothing",
+      "interpretive_claim": "Table 4: decomposition of the raw gap into composition, within-occupation and non-overlap components interpreted against H1-H5"
+    },
+    {
+      "artifact_path": "tables/tableA1-robustness-regression.html",
+      "uncertainty_language": "confidence intervals and clustered standard errors; descriptive",
+      "mechanism_link": "links the estimate to the establishment wage-setting interpretation and its rivals",
+      "limitation_language": "sorting, region, overtime, OEWS smoothing",
+      "interpretive_claim": "Table A1: robustness of the headline gap interpreted against H1-H5"
+    },
+    {
+      "artifact_path": "figures/fig1-wage-by-source-year.pdf",
+      "uncertainty_language": "confidence intervals and clustered standard errors; descriptive",
+      "mechanism_link": "links the estimate to the establishment wage-setting interpretation and its rivals",
+      "limitation_language": "sorting, region, overtime, OEWS smoothing",
+      "interpretive_claim": "Figure 1: wage levels by technology and year interpreted against H1-H5"
+    },
+    {
+      "artifact_path": "figures/fig2-source-gaps.pdf",
+      "uncertainty_language": "confidence intervals and clustered standard errors; descriptive",
+      "mechanism_link": "links the estimate to the establishment wage-setting interpretation and its rivals",
+      "limitation_language": "sorting, region, overtime, OEWS smoothing",
+      "interpretive_claim": "Figure 2: within-occupation gaps by technology vs fossil fuel interpreted against H1-H5"
+    },
+    {
+      "artifact_path": "figures/fig3-gap-by-year.pdf",
+      "uncertainty_language": "confidence intervals and clustered standard errors; descriptive",
+      "mechanism_link": "links the estimate to the establishment wage-setting interpretation and its rivals",
+      "limitation_language": "sorting, region, overtime, OEWS smoothing",
+      "interpretive_claim": "Figure 3: raw and within-occupation gap by year interpreted against H1-H5"
+    },
+    {
+      "artifact_path": "figures/fig4-gap-by-occupation-group.pdf",
+      "uncertainty_language": "confidence intervals and clustered standard errors; descriptive",
+      "mechanism_link": "links the estimate to the establishment wage-setting interpretation and its rivals",
+      "limitation_language": "sorting, region, overtime, OEWS smoothing",
+      "interpretive_claim": "Figure 4: gap by broad occupation category interpreted against H1-H5"
+    }
+  ],
+  "revision_workflow": {
+    "outline_completed": true,
+    "draft_after_plan": true,
+    "self_critique_required": true
+  }
+}

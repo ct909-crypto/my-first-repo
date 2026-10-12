@@ -1,0 +1,78 @@
+{
+  "data_status": "existing-data",
+  "access_status": "available",
+  "irb_status": "not-human-subjects",
+  "source_type": "public",
+  "dataset_id": "BLS OEWS national industry-specific estimates",
+  "files": [
+    {
+      "path": "data/raw/nat5d_6d_M2021_dl.xlsx",
+      "source": "BLS OEWS May 2021 national industry-specific estimates (5- and 6-digit NAICS), public download",
+      "provenance": "public file supplied by user; copied into data/raw by scholar-init after safety scan",
+      "safety_status": "PASS",
+      "safety_note": "PASS (OVERRIDE with logged rationale: public aggregate data)"
+    },
+    {
+      "path": "data/raw/nat5d_6d_M2022_dl.xlsx",
+      "source": "BLS OEWS May 2022 national industry-specific estimates (5- and 6-digit NAICS), public download",
+      "provenance": "public file supplied by user; copied into data/raw by scholar-init after safety scan",
+      "safety_status": "PASS",
+      "safety_note": "PASS (OVERRIDE with logged rationale: public aggregate data)"
+    },
+    {
+      "path": "data/raw/nat5d_6d_M2023_dl.xlsx",
+      "source": "BLS OEWS May 2023 national industry-specific estimates (5- and 6-digit NAICS), public download",
+      "provenance": "public file supplied by user; copied into data/raw by scholar-init after safety scan",
+      "safety_status": "PASS",
+      "safety_note": "PASS (OVERRIDE with logged rationale: public aggregate data)"
+    },
+    {
+      "path": "data/raw/nat5d_6d_M2024_dl.xlsx",
+      "source": "BLS OEWS May 2024 national industry-specific estimates (5- and 6-digit NAICS), public download",
+      "provenance": "public file supplied by user; copied into data/raw by scholar-init after safety scan",
+      "safety_status": "PASS",
+      "safety_note": "PASS (OVERRIDE with logged rationale: public aggregate data)"
+    },
+    {
+      "path": "data/raw/nat5d_6d_M2025_dl.xlsx",
+      "source": "BLS OEWS May 2025 national industry-specific estimates (5- and 6-digit NAICS), public download",
+      "provenance": "public file supplied by user; copied into data/raw by scholar-init after safety scan",
+      "safety_status": "PASS",
+      "safety_note": "PASS (OVERRIDE with logged rationale: public aggregate data)"
+    },
+    {
+      "path": "CPI-U CUUR0000SA0 May 2021-2025 (BLS public API)",
+      "source": "BLS CPI-U U.S. city average, all items, NSA",
+      "provenance": "values fetched from api.bls.gov on 2026-10-10: 269.195, 292.296, 304.127, 314.069, 321.465",
+      "safety_status": "PASS",
+      "safety_note": "PASS (public statistic)"
+    }
+  ],
+  "dataset_fit": {
+    "verdict": "PASS",
+    "unit_of_analysis": "detailed occupation x six-digit generation industry x survey year cell",
+    "population": "wage and salary workers in U.S. electric power generation establishments (NAICS 221111-221117)",
+    "time_period": "May 2021-May 2025 OEWS estimates",
+    "key_variables_available": true,
+    "sample_size_feasibility": "about 2,075 detailed cells with published mean wages across 8 industries; about 1,850 in the 7 analytic industries; 1,500+ cells in occupation-years observed in more than one industry",
+    "access_timeline": "available immediately (public files in hand)"
+  },
+  "dataset_design_review": {
+    "reviewed": true,
+    "panel_structure_reviewed": true,
+    "weights_reviewed": true,
+    "clustering_reviewed": true,
+    "sampling_frame_reviewed": true,
+    "strata_reviewed": true,
+    "collection_mode_reviewed": true,
+    "denominator_rules_reviewed": true,
+    "design_notes": "OEWS samples about 1.1 million establishments in six semiannual panels over three years; estimates are design-weighted and, since May 2021, produced with the MB3 model-based method. Published cells are aggregate estimates, not microdata. Cells repeat across years and industries for the same occupation.",
+    "analytic_decision": "Treat each published cell as an observation; weight by estimated employment so results describe workers; cluster standard errors by detailed occupation because the same occupation appears across industries and years; use inverse-variance weights from MEAN_PRSE as robustness; do not interpret adjacent-year changes as independent because panels overlap.",
+    "accepted_limitations": [
+      "No access to OEWS microdata, establishment identifiers, or strata; cannot model within-cell variation or the survey design directly",
+      "Overlapping three-year panel pooling induces serial dependence across releases",
+      "Suppressed cells (wage '*' or employment '**') are excluded, so the sample is the set of publishable cells"
+    ],
+    "limitation_rationale": "Only public aggregate tables are available; the chosen weighting and clustering are the standard approach for analyzing published OEWS cells, and the limitations are carried forward to scope language."
+  }
+}

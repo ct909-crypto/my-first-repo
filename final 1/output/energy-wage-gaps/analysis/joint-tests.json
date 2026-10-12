@@ -1,0 +1,24 @@
+{
+  "joint_tests": [
+    {
+      "spec_id": "S05",
+      "interaction_terms": ["occupational_group::Professional and technical:renewable", "occupational_group::Office, sales, and service:renewable", "occupational_group::Construction, installation, maintenance, and repair:renewable", "occupational_group::Production and transportation:renewable"],
+      "method": "joint_wald_test",
+      "test_statistic": 29.0208410475875,
+      "df": 4,
+      "p_value": 6.50193497004515e-17,
+      "hypothesis": "renewable gap equal across the five broad occupation categories",
+      "interpretation": "joint reject"
+    },
+    {
+      "spec_id": "S06",
+      "interaction_terms": ["year::2022:renewable", "year::2023:renewable", "year::2024:renewable", "year::2025:renewable"],
+      "method": "joint_wald_test",
+      "test_statistic": 2.56944721375502,
+      "df": 4,
+      "p_value": 0.0413614983490495,
+      "hypothesis": "renewable gap equal in all five survey years",
+      "interpretation": "joint reject"
+    }
+  ]
+}

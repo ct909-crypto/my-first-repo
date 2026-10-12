@@ -1,0 +1,23 @@
+{
+  "verdict": "PASS",
+  "source_phase": "2",
+  "primary_skill": "scholar-lit-review-hypothesis",
+  "local_library_first": true,
+  "reference_backend_detected": [
+    "BibTeX"
+  ],
+  "knowledge_graph_checked": true,
+  "knowledge_graph_status": "not configured; zero hits",
+  "ref_queries": 5,
+  "author_queries": 3,
+  "web_queries": 4,
+  "crossref_queries": 2,
+  "annual_reviews_checked": true,
+  "search_log_path": "literature/search-log.md",
+  "source_integrity_completed": true,
+  "source_integrity_method": "every quoted or paraphrased finding from the nine local PDFs was string-matched against pdftotext output before anchoring (18 T1 anchors); all 28 journal DOIs and 6 bibliographic queries verified against CrossRef",
+  "verification_panel_completed": true,
+  "verification_panel_note": "Originality, claim-accuracy and attribution checks run inline by the drafting agent (exact-quote matching and DOI verification), not by three separate subagents.",
+  "prior_project_bibliographies_used": [],
+  "ready_for_phase_3": true
+}

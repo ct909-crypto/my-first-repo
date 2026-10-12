@@ -1,0 +1,175 @@
+{
+  "verdict": "PASS",
+  "source_phase": "4",
+  "data_engine": {
+    "skill": "scholar-data",
+    "mode": "data_measurement_plan",
+    "task_invocation_id": "phase4-data-energy-001",
+    "invoked_at_utc": "2026-10-10T12:00:00Z",
+    "input_artifacts": [
+      "design/design-blueprint.md",
+      "design/identification-strategy.json",
+      "design/model-specs.json",
+      "safety/safety-status.json"
+    ],
+    "output_artifacts": [
+      "data/data-status.json",
+      "data/variable-dictionary.csv",
+      "data/measurement-plan.md",
+      "data/data-measurement-manifest.json"
+    ]
+  },
+  "source_hashes": {
+    "safety_status": "13672215a2bbfd3197759d83a00ec6042e7e59a76a9138600951871f10b2603f",
+    "design_blueprint": "4fb9aa484239fea9421a52e439ea6c9bf352f3c5e0aaad121ec2a0d943023910",
+    "design_manifest": "9fc41a5618b93273a9a678305307d7ad00a2a9c3f3450d41218137451b888433",
+    "identification_strategy": "dd29cabf09677a1cebebfbd9e6be73a6fe23dffd95880232e5bbb6dc27fcf493",
+    "model_specs": "d002a582b63fde12966fc3239b6bc8591a5f681aae521304e3b5b619f67677f4"
+  },
+  "output_hashes": {
+    "data_status": "833d4d3ae22178a25048ea086a93b2dbcf73e67fc28d2021d8d290814350b873",
+    "variable_dictionary": "151576958aa39aa310383c319314daca71c83bf2aa69cefe3bd88c1b1329a4ee",
+    "measurement_plan": "fe72f3b262c9559a0cef2c278740f863e42c7bfb4d845d43b8bd9432606675ff"
+  },
+  "dataset_fit": {
+    "verdict": "PASS",
+    "unit_of_analysis": "detailed occupation x six-digit generation industry x survey year cell",
+    "population": "wage and salary workers in U.S. electric power generation establishments (NAICS 221111-221117)",
+    "time_period": "May 2021-May 2025 OEWS estimates",
+    "key_variables_available": true,
+    "sample_size_feasibility": "about 2,075 detailed cells with published mean wages across 8 industries; about 1,850 in the 7 analytic industries; 1,500+ cells in occupation-years observed in more than one industry",
+    "access_timeline": "available immediately (public files in hand)"
+  },
+  "variable_coverage": {
+    "accepted_limitations": [],
+    "design_measures": [
+      {
+        "name": "renewable generation industry",
+        "variable": "renewable",
+        "covered": true
+      },
+      {
+        "name": "log real mean hourly wage",
+        "variable": "log_real_hmean",
+        "covered": true
+      }
+    ],
+    "model_variables": [
+      {
+        "name": "cell employment",
+        "variable": "employment",
+        "covered": true
+      },
+      {
+        "name": "detailed occupation",
+        "variable": "occupation",
+        "covered": true
+      },
+      {
+        "name": "detailed occupation x year",
+        "variable": "occupation_year",
+        "covered": true
+      },
+      {
+        "name": "generation source",
+        "variable": "generation_source",
+        "covered": true
+      },
+      {
+        "name": "log real 10th percentile hourly wage",
+        "variable": "log_real_p10",
+        "covered": true
+      },
+      {
+        "name": "log real 90th percentile hourly wage",
+        "variable": "log_real_p90",
+        "covered": true
+      },
+      {
+        "name": "log real mean hourly wage",
+        "variable": "log_real_hmean",
+        "covered": true
+      },
+      {
+        "name": "occupational group",
+        "variable": "occupational_group",
+        "covered": true
+      },
+      {
+        "name": "renewable generation industry",
+        "variable": "renewable",
+        "covered": true
+      },
+      {
+        "name": "survey year",
+        "variable": "year",
+        "covered": true
+      }
+    ]
+  },
+  "display_semantics": {
+    "label_source": "data/variable-dictionary.csv",
+    "machine_labels_eliminated": true,
+    "machine_like_variable_count": 8,
+    "reader_facing_labels_complete": true,
+    "ready_for_tables": true
+  },
+  "codebook_validation": {
+    "reviewed": true,
+    "value_labels_checked": true,
+    "valid_ranges_checked": true,
+    "missing_codes_checked": true,
+    "skip_logic_checked": true,
+    "top_codes_checked": true,
+    "measurement_units_checked": true,
+    "source_documentation": "Field Descriptions sheet in each OEWS file (special codes *, **, #; top-code $100/hr in 2021, $115/hr in 2025) and BLS May 2025 technical notes",
+    "checked_counts": "annual-only cells 0; mean-wage '*' 0-8 per year; '#' mean 0-1 per year; employment '**' 8-20 per year; P90 '#' 26-40 per year 2021-2024 and 1 in 2025"
+  },
+  "dataset_design_review": {
+    "reviewed": true,
+    "panel_structure_reviewed": true,
+    "weights_reviewed": true,
+    "clustering_reviewed": true,
+    "sampling_frame_reviewed": true,
+    "strata_reviewed": true,
+    "collection_mode_reviewed": true,
+    "denominator_rules_reviewed": true,
+    "design_notes": "OEWS samples about 1.1 million establishments in six semiannual panels over three years; estimates are design-weighted and, since May 2021, produced with the MB3 model-based method. Published cells are aggregate estimates, not microdata. Cells repeat across years and industries for the same occupation.",
+    "analytic_decision": "Treat each published cell as an observation; weight by estimated employment so results describe workers; cluster standard errors by detailed occupation because the same occupation appears across industries and years; use inverse-variance weights from MEAN_PRSE as robustness; do not interpret adjacent-year changes as independent because panels overlap.",
+    "accepted_limitations": [
+      "No access to OEWS microdata, establishment identifiers, or strata; cannot model within-cell variation or the survey design directly",
+      "Overlapping three-year panel pooling induces serial dependence across releases",
+      "Suppressed cells (wage '*' or employment '**') are excluded, so the sample is the set of publishable cells"
+    ],
+    "limitation_rationale": "Only public aggregate tables are available; the chosen weighting and clustering are the standard approach for analyzing published OEWS cells, and the limitations are carried forward to scope language."
+  },
+  "outcome_family_screen": {
+    "screened": true,
+    "outcome_families": [
+      {
+        "outcome": "log real mean hourly wage",
+        "family": "approximately continuous (log of positive wage)",
+        "decision": "linear model in logs",
+        "planned_model": "employment-weighted least squares with fixed effects"
+      },
+      {
+        "outcome": "log real 10th and 90th percentile hourly wage",
+        "family": "continuous with right-censoring at the top code for P90",
+        "decision": "harmonized censoring at $100 nominal; censored cells excluded and counted",
+        "planned_model": "same as headline model"
+      }
+    ],
+    "phase5_implication": "No count/bounded/zero-inflated families; the model ladder varies fixed effects, weights, and samples rather than outcome distributions; P90 censoring must be reported."
+  },
+  "safety_provenance": {
+    "files_scanned": 14,
+    "high_risk_unresolved": 0
+  },
+  "post_treatment_review": {
+    "reviewed": true,
+    "post_treatment_controls": [],
+    "unresolved_count": 0,
+    "note": "Only occupation and year identifiers are adjusted; mechanism variables are unobserved and would not be controlled."
+  },
+  "ready_for_phase_5": true
+}

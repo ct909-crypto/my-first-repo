@@ -1,0 +1,187 @@
+{
+  "verdict": "PASS",
+  "degraded": false,
+  "lock_engine": {
+    "skill": "scholar-auto-research",
+    "mode": "results_lock",
+    "auto_research_contract": "phase_11",
+    "deterministic_lock": true
+  },
+  "lock_id": "lock-20261010T134805Z",
+  "created_at": "2026-10-10T13:48:05Z",
+  "source_hashes": {
+    "runtime_sanity": "0b2862bdafa3c4f358ff8e70067e569cce6e86b76a150592dafe20b736e2a6c0",
+    "runtime_sanity_md": "08b0764abd64e75c1e885a5641d68b3c9e40fb13f22a560a9c248d21588dfdc2",
+    "execution_report": "936993a74238d19ed5d457c3d593a5fadf2bfdcd689486ed4f844a38908bb13c",
+    "results_registry": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac",
+    "figure_registry": "893baca3b02f5be2f3295945d5db6d82cd13d7bd842ba62a4a5b33b89fe652c7",
+    "post_execution_review": "68000bf1f53dfe3d8e740704fa56d45c05237c40e172e4b7375446dbce6b466d"
+  },
+  "locked_artifacts": [
+    {
+      "source_path": "analysis/execution-report.json",
+      "locked_path": "results-locked/lock-20261010T134805Z/analysis/execution-report.json",
+      "sha256": "936993a74238d19ed5d457c3d593a5fadf2bfdcd689486ed4f844a38908bb13c",
+      "artifact_role": "execution_report",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "analysis/outputs/main-model-estimates.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/analysis/outputs/main-model-estimates.csv",
+      "sha256": "39b9002c6a08c24797f1d01fe6023ba9fa59adbc7b6ad2173a96dd305b1320c1",
+      "artifact_role": "diagnostic",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "figures/fig1-wage-by-source-year.pdf",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig1-wage-by-source-year.pdf",
+      "sha256": "a036be90465df24f96810fa4616f7271335a4eaa9078d46defe1b60140423c96",
+      "artifact_role": "figure_file",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "figures/fig1-wage-by-source-year.png",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig1-wage-by-source-year.png",
+      "sha256": "6f6a82e28c8414a3a796100b0a68e0ceaf19120d96c40a9f6fc73a9a8fe700a4",
+      "artifact_role": "figure_file",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "figures/fig2-source-gaps.pdf",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig2-source-gaps.pdf",
+      "sha256": "d6d37f424628ea683f677e4f70a8b10d198c1c510a32ab2c117ae4876cb06d3f",
+      "artifact_role": "figure_file",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "figures/fig2-source-gaps.png",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig2-source-gaps.png",
+      "sha256": "6d14f522385af923ef9806e99748f770dce319b0574682a6761cb2ce7e65c080",
+      "artifact_role": "figure_file",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "figures/fig3-gap-by-year.pdf",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig3-gap-by-year.pdf",
+      "sha256": "1edc983b1c23547389044206649f26c26ed0c226648dcfd80deed15ec6f827fd",
+      "artifact_role": "figure_file",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "figures/fig3-gap-by-year.png",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig3-gap-by-year.png",
+      "sha256": "5df1a85b661053a9933c300570d761c442d8e621df831b78b0f79c700177b597",
+      "artifact_role": "figure_file",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "figures/fig4-gap-by-occupation-group.pdf",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig4-gap-by-occupation-group.pdf",
+      "sha256": "51297ef0fdfd78388b04cf87b1e5e58f609e6fe6473b37675f38c8a6bd662591",
+      "artifact_role": "figure_file",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "figures/fig4-gap-by-occupation-group.png",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig4-gap-by-occupation-group.png",
+      "sha256": "b512e489dc4785cf0f05dda9adea61466230eee15e0f2bcfdabf8f1c96c53478",
+      "artifact_role": "figure_file",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "figures/figure-registry.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/figure-registry.csv",
+      "sha256": "893baca3b02f5be2f3295945d5db6d82cd13d7bd842ba62a4a5b33b89fe652c7",
+      "artifact_role": "figure_registry",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "review/post-execution-review.json",
+      "locked_path": "results-locked/lock-20261010T134805Z/review/post-execution-review.json",
+      "sha256": "68000bf1f53dfe3d8e740704fa56d45c05237c40e172e4b7375446dbce6b466d",
+      "artifact_role": "post_execution_review",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "tables/cell-coverage.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/cell-coverage.csv",
+      "sha256": "6b72d88a0b72cfb077a3aa83309ab37bbf7243fa6f05508b3ced370e286a067d",
+      "artifact_role": "diagnostic",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "tables/model-fit-stats.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/model-fit-stats.csv",
+      "sha256": "444c0c4fef41c557b90369162ff8bd7b25d555eb016c73e90ea6552788fe90ad",
+      "artifact_role": "diagnostic",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "tables/results-registry.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/results-registry.csv",
+      "sha256": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac",
+      "artifact_role": "results_registry",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "tables/table1-descriptives.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/table1-descriptives.csv",
+      "sha256": "a1a464753ff6a4a742394e013d8e37d1e4571a8f5a448c9ee4cc9a68f3359405",
+      "artifact_role": "diagnostic",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "tables/table1-descriptives.html",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/table1-descriptives.html",
+      "sha256": "d02db54cf8752efdc97949acf8da1ea73b12d93b9038583e061dc1de710f0262",
+      "artifact_role": "descriptive_table",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "tables/table1b-wage-by-year.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/table1b-wage-by-year.csv",
+      "sha256": "14288134130b379a965093041536fe8916e4a7ccbb1748cfc6ee7d922b55f2f8",
+      "artifact_role": "diagnostic",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "tables/table2-main-regression.html",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/table2-main-regression.html",
+      "sha256": "522c97859df70e25a348fe8315cc9296f6d0a62030817ce25959a1db332ab156",
+      "artifact_role": "main_regression_table",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "tables/table3-heterogeneity-regression.html",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/table3-heterogeneity-regression.html",
+      "sha256": "8a3fd19ffcac7d43f6ac609cfd0448d5837757df32e28dd6f381ccdf4975a50b",
+      "artifact_role": "regression_table",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "tables/table4-decomposition.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/table4-decomposition.csv",
+      "sha256": "05aad8ab437547cfc123a2b653b20671dea0e799043b55ff442449c744567376",
+      "artifact_role": "result_table",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "tables/tableA1-robustness-regression.html",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/tableA1-robustness-regression.html",
+      "sha256": "c8f01a838d7bbc1a1fd70d84f432b99dbdc38be51efe11f850d0e5dbd5a06e78",
+      "artifact_role": "sensitivity_regression_table",
+      "lock_status": "copied"
+    },
+    {
+      "source_path": "tables/tableA1-robustness.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/tableA1-robustness.csv",
+      "sha256": "492a413be6da59d26b54f3bb7b8b80fce131731cab6049db1c093dfbd0b23330",
+      "artifact_role": "diagnostic",
+      "lock_status": "copied"
+    }
+  ],
+  "latest_matches": true,
+  "stage1_verdict": "PASS",
+  "ready_for_phase_12": true,
+  "manifest_sha256": "57f6ea3b32e7365257191d47d83acfab997b88ada080a10918b7b3c8bf3c3756"
+}

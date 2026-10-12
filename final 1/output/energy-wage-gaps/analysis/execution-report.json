@@ -1,0 +1,864 @@
+{
+  "verdict": "PASS",
+  "degraded": false,
+  "ready_for_phase_9": true,
+  "execution_engine": {
+    "skill": "scholar-analyze",
+    "mode": "execute_analysis",
+    "auto_research_contract": "phase_8",
+    "phase7_handoff_only": true,
+    "task_invocation_id": "phase8-execution-energy-001",
+    "invoked_at_utc": "2026-10-10T13:45:07Z",
+    "input_artifacts": [
+      "analysis/analysis-plan.md",
+      "analysis/spec-registry.csv",
+      "analysis/scripts-inventory.json",
+      "review/analysis-premortem.json"
+    ],
+    "output_artifacts": [
+      "analysis/execution-report.json",
+      "tables/results-registry.csv",
+      "figures/figure-registry.csv"
+    ]
+  },
+  "run_context": {
+    "started_at_utc": "2026-10-10T13:45:07Z",
+    "completed_at_utc": "2026-10-10T13:46:08Z",
+    "working_directory": "/Users/tu/Documents/GitHub/my-first-repo/final 1/output/energy-wage-gaps",
+    "seed": "20261010 (04_decomposition.R bootstrap); all other steps deterministic",
+    "environment": "macOS (Darwin 24.6.0), Rscript run from project root",
+    "session_info": "R version 4.6.1 (2026-06-24) | readxl 1.5.0.1; ggplot2 4.0.3; modelsummary 2.6.0; fixest 0.14.2; data.table 1.18.6.1",
+    "execution_deviations": [
+      "02_descriptives halt: PNG device font family 'Helvetica Neue' unavailable (exit 1); fixed by theme_Publication(base_family = \"sans\") in 02 and 06; rerun from 01",
+      "06_figures/02_descriptives: cairo_pdf device unavailable (cairo DLL failed to load) so PDFs were silently missing and 07 registry halted (exit 1); fixed by device = \"pdf\" plus file.exists assertions after each save; full rerun from 01",
+      "06_figures: shortened Figure 2 x-axis label (clipped in first render); full rerun from 01 for consistent output hashes",
+      "07_registry: figure registry extended to list PNG copies (verifier requires every figure file registered); full rerun from 01",
+      "02/03/05/06: added deterministic output helpers (pdf timestamp = FALSE; sequential tinytable HTML IDs) so the Phase 10 clean-room rerun is byte-identical; full rerun from 01",
+      "07_registry: results registry written with scipen = 999 so p-values are plain decimals (manuscript numeric policy forbids scientific notation); full rerun from 01"
+    ],
+    "final_run_note": "The final, recorded run is a clean full rerun of all seven scripts after the deviations listed; earlier partial runs halted and their outputs were deleted before the final run."
+  },
+  "source_hashes": {
+    "analysis_plan": "d956ca8c4e7fe43fa46755f3bdcf3fbad4d83730e053b6fe8e705e475083044d",
+    "spec_registry": "ecaad7c04f7d95fee77504207032ae59747066838f62a12593838676d5b72f04",
+    "scripts_inventory": "30192e1a862e6757e91d6dea937a851de8258450293643984334101628532edb",
+    "analysis_premortem": "6ab521643c044c2d6c2765063a7867b14cb0ad10afcb1f8e47e23a56cc4f3b29",
+    "analysis_premortem_fix_log": "b8c2d9b65f48595d396476189492564ad49cf7d7d001757b7e9388853dcd7e79"
+  },
+  "phase7_source_hash_check": {
+    "checked": true,
+    "status": "PASS",
+    "checked_sources": [
+      "analysis_plan",
+      "spec_registry",
+      "scripts_inventory",
+      "pre_execution_review",
+      "pre_execution_fix_log",
+      "pre_execution_rereview"
+    ],
+    "mismatches": []
+  },
+  "phase7_go": {
+    "decision": "GO",
+    "ready_for_phase_8": true,
+    "route_back_phase": null
+  },
+  "command_trace": [
+    {
+      "path": "analysis/scripts/01_build_panel.R",
+      "command": "Rscript analysis/scripts/01_build_panel.R",
+      "cwd": ".",
+      "started_at": "2026-10-10T13:45:07Z",
+      "ended_at": "2026-10-10T13:45:08Z",
+      "exit_code": 0,
+      "stdout_log": "analysis/logs/01_build_panel.stdout.log",
+      "stderr_log": "analysis/logs/01_build_panel.stderr.log"
+    },
+    {
+      "path": "analysis/scripts/02_descriptives.R",
+      "command": "Rscript analysis/scripts/02_descriptives.R",
+      "cwd": ".",
+      "started_at": "2026-10-10T13:45:08Z",
+      "ended_at": "2026-10-10T13:45:09Z",
+      "exit_code": 0,
+      "stdout_log": "analysis/logs/02_descriptives.stdout.log",
+      "stderr_log": "analysis/logs/02_descriptives.stderr.log"
+    },
+    {
+      "path": "analysis/scripts/03_main_models.R",
+      "command": "Rscript analysis/scripts/03_main_models.R",
+      "cwd": ".",
+      "started_at": "2026-10-10T13:45:09Z",
+      "ended_at": "2026-10-10T13:45:11Z",
+      "exit_code": 0,
+      "stdout_log": "analysis/logs/03_main_models.stdout.log",
+      "stderr_log": "analysis/logs/03_main_models.stderr.log"
+    },
+    {
+      "path": "analysis/scripts/04_decomposition.R",
+      "command": "Rscript analysis/scripts/04_decomposition.R",
+      "cwd": ".",
+      "started_at": "2026-10-10T13:45:11Z",
+      "ended_at": "2026-10-10T13:46:04Z",
+      "exit_code": 0,
+      "stdout_log": "analysis/logs/04_decomposition.stdout.log",
+      "stderr_log": "analysis/logs/04_decomposition.stderr.log"
+    },
+    {
+      "path": "analysis/scripts/05_robustness.R",
+      "command": "Rscript analysis/scripts/05_robustness.R",
+      "cwd": ".",
+      "started_at": "2026-10-10T13:46:04Z",
+      "ended_at": "2026-10-10T13:46:06Z",
+      "exit_code": 0,
+      "stdout_log": "analysis/logs/05_robustness.stdout.log",
+      "stderr_log": "analysis/logs/05_robustness.stderr.log"
+    },
+    {
+      "path": "analysis/scripts/06_figures.R",
+      "command": "Rscript analysis/scripts/06_figures.R",
+      "cwd": ".",
+      "started_at": "2026-10-10T13:46:06Z",
+      "ended_at": "2026-10-10T13:46:08Z",
+      "exit_code": 0,
+      "stdout_log": "analysis/logs/06_figures.stdout.log",
+      "stderr_log": "analysis/logs/06_figures.stderr.log"
+    },
+    {
+      "path": "analysis/scripts/07_registry.R",
+      "command": "Rscript analysis/scripts/07_registry.R",
+      "cwd": ".",
+      "started_at": "2026-10-10T13:46:08Z",
+      "ended_at": "2026-10-10T13:46:08Z",
+      "exit_code": 0,
+      "stdout_log": "analysis/logs/07_registry.stdout.log",
+      "stderr_log": "analysis/logs/07_registry.stderr.log"
+    }
+  ],
+  "executed_scripts": [
+    {
+      "path": "analysis/scripts/01_build_panel.R",
+      "command": "Rscript analysis/scripts/01_build_panel.R",
+      "script_hash": "7bbcb38c7ff890efa6e8ed85ade2bc359b4aefc745fa18c3409c41f2d6fff799",
+      "exit_code": 0,
+      "status": "success",
+      "started_at": "2026-10-10T13:45:07Z",
+      "ended_at": "2026-10-10T13:45:08Z",
+      "outputs": [
+        "data/processed/oews-generation-cells.csv",
+        "tables/cell-coverage.csv"
+      ],
+      "output_hashes": {
+        "data/processed/oews-generation-cells.csv": "99f1aa9c1e36e1cbc1c969a4f6d6157d4f65803cb62cfd9106d13f403e2fec53",
+        "tables/cell-coverage.csv": "6b72d88a0b72cfb077a3aa83309ab37bbf7243fa6f05508b3ced370e286a067d"
+      }
+    },
+    {
+      "path": "analysis/scripts/02_descriptives.R",
+      "command": "Rscript analysis/scripts/02_descriptives.R",
+      "script_hash": "727a94f6b6e47cacc63ddfe6f811d4e94396c9968db0d581d57a54e0f367402d",
+      "exit_code": 0,
+      "status": "success",
+      "started_at": "2026-10-10T13:45:08Z",
+      "ended_at": "2026-10-10T13:45:09Z",
+      "outputs": [
+        "tables/table1-descriptives.csv",
+        "tables/table1-descriptives.html",
+        "tables/table1b-wage-by-year.csv",
+        "figures/fig1-wage-by-source-year.pdf",
+        "figures/fig1-wage-by-source-year.png"
+      ],
+      "output_hashes": {
+        "tables/table1-descriptives.csv": "a1a464753ff6a4a742394e013d8e37d1e4571a8f5a448c9ee4cc9a68f3359405",
+        "tables/table1-descriptives.html": "d02db54cf8752efdc97949acf8da1ea73b12d93b9038583e061dc1de710f0262",
+        "tables/table1b-wage-by-year.csv": "14288134130b379a965093041536fe8916e4a7ccbb1748cfc6ee7d922b55f2f8",
+        "figures/fig1-wage-by-source-year.pdf": "a036be90465df24f96810fa4616f7271335a4eaa9078d46defe1b60140423c96",
+        "figures/fig1-wage-by-source-year.png": "6f6a82e28c8414a3a796100b0a68e0ceaf19120d96c40a9f6fc73a9a8fe700a4"
+      }
+    },
+    {
+      "path": "analysis/scripts/03_main_models.R",
+      "command": "Rscript analysis/scripts/03_main_models.R",
+      "script_hash": "a1f930747364833a72f4a6151f263e2608a0b743b1230cedae6afd88e9ab2185",
+      "exit_code": 0,
+      "status": "success",
+      "started_at": "2026-10-10T13:45:09Z",
+      "ended_at": "2026-10-10T13:45:11Z",
+      "outputs": [
+        "analysis/outputs/main-model-estimates.csv",
+        "analysis/joint-tests.json",
+        "tables/table2-main-regression.html",
+        "tables/table3-heterogeneity-regression.html",
+        "analysis/outputs/fit-stats-main.csv",
+        "analysis/outputs/identifying-cells.csv",
+        "analysis/outputs/identifying-cells-by-source.csv",
+        "analysis/outputs/se-sensitivity.csv",
+        "analysis/outputs/main-models.rds"
+      ],
+      "output_hashes": {
+        "analysis/outputs/main-model-estimates.csv": "39b9002c6a08c24797f1d01fe6023ba9fa59adbc7b6ad2173a96dd305b1320c1",
+        "analysis/joint-tests.json": "b1e18a48dba0d6509ec0bc2076a581ceec4a08a42f8e9752a70535ec08ad592a",
+        "tables/table2-main-regression.html": "522c97859df70e25a348fe8315cc9296f6d0a62030817ce25959a1db332ab156",
+        "tables/table3-heterogeneity-regression.html": "8a3fd19ffcac7d43f6ac609cfd0448d5837757df32e28dd6f381ccdf4975a50b",
+        "analysis/outputs/fit-stats-main.csv": "557a872df635cb56d5ee3f5e0442cb45422ece5c2bd60b3c31f3a0d872ca0c60",
+        "analysis/outputs/identifying-cells.csv": "861be47f85af17f473446eefc6447a2411c1584d66231ace168042068b036d15",
+        "analysis/outputs/identifying-cells-by-source.csv": "82f012adc8c9c704cbd7db954bd1965276ffdf3a502d9c3c2296cabe1b85d2ee",
+        "analysis/outputs/se-sensitivity.csv": "e03c33fce7b11c2a7b1e45e73f80e51630aa8816292f80be9d6d9d0642e5584e",
+        "analysis/outputs/main-models.rds": "4f12c02656ae4d356d60bddbd19465ee78e87d8886172f33af32fbba73ad8c74"
+      }
+    },
+    {
+      "path": "analysis/scripts/04_decomposition.R",
+      "command": "Rscript analysis/scripts/04_decomposition.R",
+      "script_hash": "335fee9bfc2a5d0e64201f54ba0bc9dc4d481a3c36230f6aa503d884c9894781",
+      "exit_code": 0,
+      "status": "success",
+      "started_at": "2026-10-10T13:45:11Z",
+      "ended_at": "2026-10-10T13:46:04Z",
+      "outputs": [
+        "tables/table4-decomposition.csv"
+      ],
+      "output_hashes": {
+        "tables/table4-decomposition.csv": "05aad8ab437547cfc123a2b653b20671dea0e799043b55ff442449c744567376"
+      }
+    },
+    {
+      "path": "analysis/scripts/05_robustness.R",
+      "command": "Rscript analysis/scripts/05_robustness.R",
+      "script_hash": "a4c00c861055d758b98633cf45426e8a27f415c638e4deda1455d116f2450ec5",
+      "exit_code": 0,
+      "status": "success",
+      "started_at": "2026-10-10T13:46:04Z",
+      "ended_at": "2026-10-10T13:46:06Z",
+      "outputs": [
+        "tables/tableA1-robustness.csv",
+        "tables/tableA1-robustness-regression.html",
+        "analysis/outputs/balanced-set.csv",
+        "analysis/outputs/fit-stats-robustness.csv",
+        "analysis/outputs/robustness-models.rds"
+      ],
+      "output_hashes": {
+        "tables/tableA1-robustness.csv": "492a413be6da59d26b54f3bb7b8b80fce131731cab6049db1c093dfbd0b23330",
+        "tables/tableA1-robustness-regression.html": "c8f01a838d7bbc1a1fd70d84f432b99dbdc38be51efe11f850d0e5dbd5a06e78",
+        "analysis/outputs/balanced-set.csv": "db0f499fe04e47e021dc792b7b9a2e697aff575333eb5899dddda2f91e2c744f",
+        "analysis/outputs/fit-stats-robustness.csv": "b1385f21436638c4cdc58769fd70b6a40c8907bd619ad2a35e54be8cafe48470",
+        "analysis/outputs/robustness-models.rds": "012fdb0daaea697367ffe56a49f69d478c50be06595aa514de26614a728dd5da"
+      }
+    },
+    {
+      "path": "analysis/scripts/06_figures.R",
+      "command": "Rscript analysis/scripts/06_figures.R",
+      "script_hash": "90b7e5b41f4f9422b46375a19160d5e8385d1eb2d15021188dfb4ff95c2861bf",
+      "exit_code": 0,
+      "status": "success",
+      "started_at": "2026-10-10T13:46:06Z",
+      "ended_at": "2026-10-10T13:46:08Z",
+      "outputs": [
+        "figures/fig2-source-gaps.pdf",
+        "figures/fig2-source-gaps.png",
+        "figures/fig3-gap-by-year.pdf",
+        "figures/fig3-gap-by-year.png",
+        "figures/fig4-gap-by-occupation-group.pdf",
+        "figures/fig4-gap-by-occupation-group.png"
+      ],
+      "output_hashes": {
+        "figures/fig2-source-gaps.pdf": "d6d37f424628ea683f677e4f70a8b10d198c1c510a32ab2c117ae4876cb06d3f",
+        "figures/fig2-source-gaps.png": "6d14f522385af923ef9806e99748f770dce319b0574682a6761cb2ce7e65c080",
+        "figures/fig3-gap-by-year.pdf": "1edc983b1c23547389044206649f26c26ed0c226648dcfd80deed15ec6f827fd",
+        "figures/fig3-gap-by-year.png": "5df1a85b661053a9933c300570d761c442d8e621df831b78b0f79c700177b597",
+        "figures/fig4-gap-by-occupation-group.pdf": "51297ef0fdfd78388b04cf87b1e5e58f609e6fe6473b37675f38c8a6bd662591",
+        "figures/fig4-gap-by-occupation-group.png": "b512e489dc4785cf0f05dda9adea61466230eee15e0f2bcfdabf8f1c96c53478"
+      }
+    },
+    {
+      "path": "analysis/scripts/07_registry.R",
+      "command": "Rscript analysis/scripts/07_registry.R",
+      "script_hash": "a5cdfe92bfdce3cc56873d405043d0e68877c29674c3095b3a47d9035daeafb6",
+      "exit_code": 0,
+      "status": "success",
+      "started_at": "2026-10-10T13:46:08Z",
+      "ended_at": "2026-10-10T13:46:08Z",
+      "outputs": [
+        "tables/results-registry.csv",
+        "tables/model-fit-stats.csv",
+        "figures/figure-registry.csv"
+      ],
+      "output_hashes": {
+        "tables/results-registry.csv": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac",
+        "tables/model-fit-stats.csv": "444c0c4fef41c557b90369162ff8bd7b25d555eb016c73e90ea6552788fe90ad",
+        "figures/figure-registry.csv": "893baca3b02f5be2f3295945d5db6d82cd13d7bd842ba62a4a5b33b89fe652c7"
+      }
+    }
+  ],
+  "exit_codes": {
+    "analysis/scripts/01_build_panel.R": 0,
+    "analysis/scripts/02_descriptives.R": 0,
+    "analysis/scripts/03_main_models.R": 0,
+    "analysis/scripts/04_decomposition.R": 0,
+    "analysis/scripts/05_robustness.R": 0,
+    "analysis/scripts/06_figures.R": 0,
+    "analysis/scripts/07_registry.R": 0
+  },
+  "tests_run": [
+    {
+      "id": "T1",
+      "category": "data_loading",
+      "status": "pass",
+      "evidence": "01_build_panel.R stopifnot: files exist, required columns, 8 industries per year"
+    },
+    {
+      "id": "T2",
+      "category": "analytic_sample",
+      "status": "pass",
+      "evidence": "01 stopifnot: no duplicate occupation-industry-year; SOC detailed codes"
+    },
+    {
+      "id": "T3",
+      "category": "variable_construction",
+      "status": "pass",
+      "evidence": "01 stopifnot: occupational group non-missing; deflation identity; renewable mapping"
+    },
+    {
+      "id": "T4",
+      "category": "missingness",
+      "status": "pass",
+      "evidence": "01 stopifnot: special codes map to NA; top-code parsed (100 in 2021-2024, 115 in 2025)"
+    },
+    {
+      "id": "T5",
+      "category": "model_spec",
+      "status": "pass",
+      "evidence": "03 stopifnot: all main specs estimated, >30 clusters; 04/05 additivity and row-count assertions"
+    },
+    {
+      "id": "T6",
+      "category": "output_registry",
+      "status": "pass",
+      "evidence": "07 stopifnot: one registry row per spec (20), valid SE/p/n; figure files exist"
+    }
+  ],
+  "halt_checks": [
+    {
+      "check": "nonzero exit code from any script",
+      "status": "pass"
+    },
+    {
+      "check": "any stopifnot assertion (tests T1-T6) fails",
+      "status": "pass"
+    },
+    {
+      "check": "any expected output missing after its script",
+      "status": "pass"
+    },
+    {
+      "check": "results registry rows != 20 or spec set differs from spec-registry.csv",
+      "status": "pass"
+    },
+    {
+      "check": "non-finite estimate or standard error in any registry row",
+      "status": "pass"
+    },
+    {
+      "check": "Phase 7 source hash drift for analysis plan, spec registry, scripts inventory, or premortem fix log",
+      "status": "pass"
+    }
+  ],
+  "expected_outputs": [
+    {
+      "path": "data/processed/oews-generation-cells.csv",
+      "status": "present",
+      "sha256": "99f1aa9c1e36e1cbc1c969a4f6d6157d4f65803cb62cfd9106d13f403e2fec53"
+    },
+    {
+      "path": "tables/cell-coverage.csv",
+      "status": "present",
+      "sha256": "6b72d88a0b72cfb077a3aa83309ab37bbf7243fa6f05508b3ced370e286a067d"
+    },
+    {
+      "path": "tables/table1-descriptives.csv",
+      "status": "present",
+      "sha256": "a1a464753ff6a4a742394e013d8e37d1e4571a8f5a448c9ee4cc9a68f3359405"
+    },
+    {
+      "path": "tables/table1-descriptives.html",
+      "status": "present",
+      "sha256": "d02db54cf8752efdc97949acf8da1ea73b12d93b9038583e061dc1de710f0262"
+    },
+    {
+      "path": "tables/table1b-wage-by-year.csv",
+      "status": "present",
+      "sha256": "14288134130b379a965093041536fe8916e4a7ccbb1748cfc6ee7d922b55f2f8"
+    },
+    {
+      "path": "figures/fig1-wage-by-source-year.pdf",
+      "status": "present",
+      "sha256": "a036be90465df24f96810fa4616f7271335a4eaa9078d46defe1b60140423c96"
+    },
+    {
+      "path": "figures/fig1-wage-by-source-year.png",
+      "status": "present",
+      "sha256": "6f6a82e28c8414a3a796100b0a68e0ceaf19120d96c40a9f6fc73a9a8fe700a4"
+    },
+    {
+      "path": "analysis/outputs/main-model-estimates.csv",
+      "status": "present",
+      "sha256": "39b9002c6a08c24797f1d01fe6023ba9fa59adbc7b6ad2173a96dd305b1320c1"
+    },
+    {
+      "path": "analysis/joint-tests.json",
+      "status": "present",
+      "sha256": "b1e18a48dba0d6509ec0bc2076a581ceec4a08a42f8e9752a70535ec08ad592a"
+    },
+    {
+      "path": "tables/table2-main-regression.html",
+      "status": "present",
+      "sha256": "522c97859df70e25a348fe8315cc9296f6d0a62030817ce25959a1db332ab156"
+    },
+    {
+      "path": "tables/table3-heterogeneity-regression.html",
+      "status": "present",
+      "sha256": "8a3fd19ffcac7d43f6ac609cfd0448d5837757df32e28dd6f381ccdf4975a50b"
+    },
+    {
+      "path": "analysis/outputs/fit-stats-main.csv",
+      "status": "present",
+      "sha256": "557a872df635cb56d5ee3f5e0442cb45422ece5c2bd60b3c31f3a0d872ca0c60"
+    },
+    {
+      "path": "analysis/outputs/identifying-cells.csv",
+      "status": "present",
+      "sha256": "861be47f85af17f473446eefc6447a2411c1584d66231ace168042068b036d15"
+    },
+    {
+      "path": "analysis/outputs/identifying-cells-by-source.csv",
+      "status": "present",
+      "sha256": "82f012adc8c9c704cbd7db954bd1965276ffdf3a502d9c3c2296cabe1b85d2ee"
+    },
+    {
+      "path": "analysis/outputs/se-sensitivity.csv",
+      "status": "present",
+      "sha256": "e03c33fce7b11c2a7b1e45e73f80e51630aa8816292f80be9d6d9d0642e5584e"
+    },
+    {
+      "path": "analysis/outputs/main-models.rds",
+      "status": "present",
+      "sha256": "4f12c02656ae4d356d60bddbd19465ee78e87d8886172f33af32fbba73ad8c74"
+    },
+    {
+      "path": "tables/table4-decomposition.csv",
+      "status": "present",
+      "sha256": "05aad8ab437547cfc123a2b653b20671dea0e799043b55ff442449c744567376"
+    },
+    {
+      "path": "tables/tableA1-robustness.csv",
+      "status": "present",
+      "sha256": "492a413be6da59d26b54f3bb7b8b80fce131731cab6049db1c093dfbd0b23330"
+    },
+    {
+      "path": "tables/tableA1-robustness-regression.html",
+      "status": "present",
+      "sha256": "c8f01a838d7bbc1a1fd70d84f432b99dbdc38be51efe11f850d0e5dbd5a06e78"
+    },
+    {
+      "path": "analysis/outputs/balanced-set.csv",
+      "status": "present",
+      "sha256": "db0f499fe04e47e021dc792b7b9a2e697aff575333eb5899dddda2f91e2c744f"
+    },
+    {
+      "path": "analysis/outputs/fit-stats-robustness.csv",
+      "status": "present",
+      "sha256": "b1385f21436638c4cdc58769fd70b6a40c8907bd619ad2a35e54be8cafe48470"
+    },
+    {
+      "path": "analysis/outputs/robustness-models.rds",
+      "status": "present",
+      "sha256": "012fdb0daaea697367ffe56a49f69d478c50be06595aa514de26614a728dd5da"
+    },
+    {
+      "path": "figures/fig2-source-gaps.pdf",
+      "status": "present",
+      "sha256": "d6d37f424628ea683f677e4f70a8b10d198c1c510a32ab2c117ae4876cb06d3f"
+    },
+    {
+      "path": "figures/fig2-source-gaps.png",
+      "status": "present",
+      "sha256": "6d14f522385af923ef9806e99748f770dce319b0574682a6761cb2ce7e65c080"
+    },
+    {
+      "path": "figures/fig3-gap-by-year.pdf",
+      "status": "present",
+      "sha256": "1edc983b1c23547389044206649f26c26ed0c226648dcfd80deed15ec6f827fd"
+    },
+    {
+      "path": "figures/fig3-gap-by-year.png",
+      "status": "present",
+      "sha256": "5df1a85b661053a9933c300570d761c442d8e621df831b78b0f79c700177b597"
+    },
+    {
+      "path": "figures/fig4-gap-by-occupation-group.pdf",
+      "status": "present",
+      "sha256": "51297ef0fdfd78388b04cf87b1e5e58f609e6fe6473b37675f38c8a6bd662591"
+    },
+    {
+      "path": "figures/fig4-gap-by-occupation-group.png",
+      "status": "present",
+      "sha256": "b512e489dc4785cf0f05dda9adea61466230eee15e0f2bcfdabf8f1c96c53478"
+    },
+    {
+      "path": "tables/results-registry.csv",
+      "status": "present",
+      "sha256": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac"
+    },
+    {
+      "path": "tables/model-fit-stats.csv",
+      "status": "present",
+      "sha256": "444c0c4fef41c557b90369162ff8bd7b25d555eb016c73e90ea6552788fe90ad"
+    },
+    {
+      "path": "figures/figure-registry.csv",
+      "status": "present",
+      "sha256": "893baca3b02f5be2f3295945d5db6d82cd13d7bd842ba62a4a5b33b89fe652c7"
+    }
+  ],
+  "results_registry": {
+    "path": "tables/results-registry.csv",
+    "row_count": 20,
+    "covered_spec_ids": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19",
+      "S20"
+    ]
+  },
+  "figure_registry": {
+    "path": "figures/figure-registry.csv",
+    "row_count": 8,
+    "covered_figure_ids": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F1-png",
+      "F2-png",
+      "F3-png",
+      "F4-png"
+    ]
+  },
+  "analysis_stack": {
+    "primary_language": "R",
+    "table_engine": "modelsummary",
+    "figure_engine": "ggplot2",
+    "packages_used": [
+      "data.table",
+      "fixest",
+      "modelsummary",
+      "ggplot2",
+      "readxl",
+      "jsonlite"
+    ],
+    "nonlinear_probability_models": false,
+    "marginal_effects_engine": null,
+    "viz_style_source": "analysis/scripts/viz_setting.R",
+    "viz_style_reference": "references/viz_setting.R",
+    "viz_style_sha256": "43de20cd0ce84b23e99d84930026b78cff7e5022ae925ccf7551632f81fd8daf",
+    "ggplot2_style_consistency": true,
+    "reader_facing_label_source": "data/variable-dictionary.csv",
+    "table_label_translation_applied": true,
+    "figure_label_translation_applied": true,
+    "deviation_justification": "No nonlinear probability models, so marginaleffects is not used. theme_Publication() is called with base_family = 'sans' and the base pdf device, because the vendored default font (Helvetica Neue) and the cairo PDF device were unavailable on this machine (see run_context.execution_deviations)."
+  },
+  "publication_regression_tables": [
+    {
+      "path": "tables/table2-main-regression.html",
+      "role": "main_regression_table",
+      "source_script": "analysis/scripts/03_main_models.R",
+      "table_engine": "modelsummary",
+      "model_columns": [
+        "Model 1",
+        "Model 2",
+        "Model 3",
+        "Model 4 (P10)",
+        "Model 5 (P90)"
+      ],
+      "statistic_rows": [
+        "Renewable generation industry"
+      ],
+      "placement": "main_text"
+    },
+    {
+      "path": "tables/table3-heterogeneity-regression.html",
+      "role": "regression_table",
+      "source_script": "analysis/scripts/03_main_models.R",
+      "table_engine": "modelsummary",
+      "model_columns": [
+        "Model 6 (sources)",
+        "Model 7 (occupation groups)",
+        "Model 8 (years)",
+        "Model 9 (trend)"
+      ],
+      "statistic_rows": [
+        "Generation technology vs. fossil fuel",
+        "Renewable x occupation category",
+        "Renewable x year",
+        "Renewable x years since 2021"
+      ],
+      "placement": "main_text"
+    },
+    {
+      "path": "tables/tableA1-robustness-regression.html",
+      "role": "sensitivity_regression_table",
+      "source_script": "analysis/scripts/05_robustness.R",
+      "table_engine": "modelsummary",
+      "model_columns": [
+        "Model A1",
+        "Model A2",
+        "Model A3",
+        "Model A4",
+        "Model A5",
+        "Model A6",
+        "Model A7",
+        "Model A8"
+      ],
+      "statistic_rows": [
+        "Renewable generation industry"
+      ],
+      "placement": "appendix"
+    }
+  ],
+  "artifact_manifest": [
+    {
+      "path": "data/processed/oews-generation-cells.csv",
+      "sha256": "99f1aa9c1e36e1cbc1c969a4f6d6157d4f65803cb62cfd9106d13f403e2fec53",
+      "artifact_role": "intermediate_data",
+      "produced_by": "analysis/scripts/01_build_panel.R",
+      "registered": true
+    },
+    {
+      "path": "tables/cell-coverage.csv",
+      "sha256": "6b72d88a0b72cfb077a3aa83309ab37bbf7243fa6f05508b3ced370e286a067d",
+      "artifact_role": "diagnostic",
+      "produced_by": "analysis/scripts/01_build_panel.R",
+      "registered": true
+    },
+    {
+      "path": "tables/table1-descriptives.csv",
+      "sha256": "a1a464753ff6a4a742394e013d8e37d1e4571a8f5a448c9ee4cc9a68f3359405",
+      "artifact_role": "descriptive_table",
+      "produced_by": "analysis/scripts/02_descriptives.R",
+      "registered": true
+    },
+    {
+      "path": "tables/table1-descriptives.html",
+      "sha256": "d02db54cf8752efdc97949acf8da1ea73b12d93b9038583e061dc1de710f0262",
+      "artifact_role": "descriptive_table",
+      "produced_by": "analysis/scripts/02_descriptives.R",
+      "registered": true
+    },
+    {
+      "path": "tables/table1b-wage-by-year.csv",
+      "sha256": "14288134130b379a965093041536fe8916e4a7ccbb1748cfc6ee7d922b55f2f8",
+      "artifact_role": "descriptive_table",
+      "produced_by": "analysis/scripts/02_descriptives.R",
+      "registered": true
+    },
+    {
+      "path": "figures/fig1-wage-by-source-year.pdf",
+      "sha256": "a036be90465df24f96810fa4616f7271335a4eaa9078d46defe1b60140423c96",
+      "artifact_role": "figure_file",
+      "produced_by": "analysis/scripts/02_descriptives.R",
+      "registered": true
+    },
+    {
+      "path": "figures/fig1-wage-by-source-year.png",
+      "sha256": "6f6a82e28c8414a3a796100b0a68e0ceaf19120d96c40a9f6fc73a9a8fe700a4",
+      "artifact_role": "figure_file",
+      "produced_by": "analysis/scripts/02_descriptives.R",
+      "registered": true
+    },
+    {
+      "path": "analysis/outputs/main-model-estimates.csv",
+      "sha256": "39b9002c6a08c24797f1d01fe6023ba9fa59adbc7b6ad2173a96dd305b1320c1",
+      "artifact_role": "diagnostic",
+      "produced_by": "analysis/scripts/03_main_models.R",
+      "registered": true
+    },
+    {
+      "path": "analysis/joint-tests.json",
+      "sha256": "b1e18a48dba0d6509ec0bc2076a581ceec4a08a42f8e9752a70535ec08ad592a",
+      "artifact_role": "diagnostic",
+      "produced_by": "analysis/scripts/03_main_models.R",
+      "registered": true
+    },
+    {
+      "path": "tables/table2-main-regression.html",
+      "sha256": "522c97859df70e25a348fe8315cc9296f6d0a62030817ce25959a1db332ab156",
+      "artifact_role": "main_regression_table",
+      "produced_by": "analysis/scripts/03_main_models.R",
+      "registered": true
+    },
+    {
+      "path": "tables/table3-heterogeneity-regression.html",
+      "sha256": "8a3fd19ffcac7d43f6ac609cfd0448d5837757df32e28dd6f381ccdf4975a50b",
+      "artifact_role": "regression_table",
+      "produced_by": "analysis/scripts/03_main_models.R",
+      "registered": true
+    },
+    {
+      "path": "analysis/outputs/fit-stats-main.csv",
+      "sha256": "557a872df635cb56d5ee3f5e0442cb45422ece5c2bd60b3c31f3a0d872ca0c60",
+      "artifact_role": "diagnostic",
+      "produced_by": "analysis/scripts/03_main_models.R",
+      "registered": true
+    },
+    {
+      "path": "analysis/outputs/identifying-cells.csv",
+      "sha256": "861be47f85af17f473446eefc6447a2411c1584d66231ace168042068b036d15",
+      "artifact_role": "diagnostic",
+      "produced_by": "analysis/scripts/03_main_models.R",
+      "registered": true
+    },
+    {
+      "path": "analysis/outputs/identifying-cells-by-source.csv",
+      "sha256": "82f012adc8c9c704cbd7db954bd1965276ffdf3a502d9c3c2296cabe1b85d2ee",
+      "artifact_role": "diagnostic",
+      "produced_by": "analysis/scripts/03_main_models.R",
+      "registered": true
+    },
+    {
+      "path": "analysis/outputs/se-sensitivity.csv",
+      "sha256": "e03c33fce7b11c2a7b1e45e73f80e51630aa8816292f80be9d6d9d0642e5584e",
+      "artifact_role": "diagnostic",
+      "produced_by": "analysis/scripts/03_main_models.R",
+      "registered": true
+    },
+    {
+      "path": "analysis/outputs/main-models.rds",
+      "sha256": "4f12c02656ae4d356d60bddbd19465ee78e87d8886172f33af32fbba73ad8c74",
+      "artifact_role": "model_output",
+      "produced_by": "analysis/scripts/03_main_models.R",
+      "registered": true
+    },
+    {
+      "path": "tables/table4-decomposition.csv",
+      "sha256": "05aad8ab437547cfc123a2b653b20671dea0e799043b55ff442449c744567376",
+      "artifact_role": "result_table",
+      "produced_by": "analysis/scripts/04_decomposition.R",
+      "registered": true
+    },
+    {
+      "path": "tables/tableA1-robustness.csv",
+      "sha256": "492a413be6da59d26b54f3bb7b8b80fce131731cab6049db1c093dfbd0b23330",
+      "artifact_role": "result_table",
+      "produced_by": "analysis/scripts/05_robustness.R",
+      "registered": true
+    },
+    {
+      "path": "tables/tableA1-robustness-regression.html",
+      "sha256": "c8f01a838d7bbc1a1fd70d84f432b99dbdc38be51efe11f850d0e5dbd5a06e78",
+      "artifact_role": "sensitivity_regression_table",
+      "produced_by": "analysis/scripts/05_robustness.R",
+      "registered": true
+    },
+    {
+      "path": "analysis/outputs/balanced-set.csv",
+      "sha256": "db0f499fe04e47e021dc792b7b9a2e697aff575333eb5899dddda2f91e2c744f",
+      "artifact_role": "diagnostic",
+      "produced_by": "analysis/scripts/05_robustness.R",
+      "registered": true
+    },
+    {
+      "path": "analysis/outputs/fit-stats-robustness.csv",
+      "sha256": "b1385f21436638c4cdc58769fd70b6a40c8907bd619ad2a35e54be8cafe48470",
+      "artifact_role": "diagnostic",
+      "produced_by": "analysis/scripts/05_robustness.R",
+      "registered": true
+    },
+    {
+      "path": "analysis/outputs/robustness-models.rds",
+      "sha256": "012fdb0daaea697367ffe56a49f69d478c50be06595aa514de26614a728dd5da",
+      "artifact_role": "model_output",
+      "produced_by": "analysis/scripts/05_robustness.R",
+      "registered": true
+    },
+    {
+      "path": "figures/fig2-source-gaps.pdf",
+      "sha256": "d6d37f424628ea683f677e4f70a8b10d198c1c510a32ab2c117ae4876cb06d3f",
+      "artifact_role": "figure_file",
+      "produced_by": "analysis/scripts/06_figures.R",
+      "registered": true
+    },
+    {
+      "path": "figures/fig2-source-gaps.png",
+      "sha256": "6d14f522385af923ef9806e99748f770dce319b0574682a6761cb2ce7e65c080",
+      "artifact_role": "figure_file",
+      "produced_by": "analysis/scripts/06_figures.R",
+      "registered": true
+    },
+    {
+      "path": "figures/fig3-gap-by-year.pdf",
+      "sha256": "1edc983b1c23547389044206649f26c26ed0c226648dcfd80deed15ec6f827fd",
+      "artifact_role": "figure_file",
+      "produced_by": "analysis/scripts/06_figures.R",
+      "registered": true
+    },
+    {
+      "path": "figures/fig3-gap-by-year.png",
+      "sha256": "5df1a85b661053a9933c300570d761c442d8e621df831b78b0f79c700177b597",
+      "artifact_role": "figure_file",
+      "produced_by": "analysis/scripts/06_figures.R",
+      "registered": true
+    },
+    {
+      "path": "figures/fig4-gap-by-occupation-group.pdf",
+      "sha256": "51297ef0fdfd78388b04cf87b1e5e58f609e6fe6473b37675f38c8a6bd662591",
+      "artifact_role": "figure_file",
+      "produced_by": "analysis/scripts/06_figures.R",
+      "registered": true
+    },
+    {
+      "path": "figures/fig4-gap-by-occupation-group.png",
+      "sha256": "b512e489dc4785cf0f05dda9adea61466230eee15e0f2bcfdabf8f1c96c53478",
+      "artifact_role": "figure_file",
+      "produced_by": "analysis/scripts/06_figures.R",
+      "registered": true
+    },
+    {
+      "path": "tables/results-registry.csv",
+      "sha256": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac",
+      "artifact_role": "results_registry",
+      "produced_by": "analysis/scripts/07_registry.R",
+      "registered": true
+    },
+    {
+      "path": "tables/model-fit-stats.csv",
+      "sha256": "444c0c4fef41c557b90369162ff8bd7b25d555eb016c73e90ea6552788fe90ad",
+      "artifact_role": "diagnostic",
+      "produced_by": "analysis/scripts/07_registry.R",
+      "registered": true
+    },
+    {
+      "path": "figures/figure-registry.csv",
+      "sha256": "893baca3b02f5be2f3295945d5db6d82cd13d7bd842ba62a4a5b33b89fe652c7",
+      "artifact_role": "figure_registry",
+      "produced_by": "analysis/scripts/07_registry.R",
+      "registered": true
+    }
+  ],
+  "errors": []
+}

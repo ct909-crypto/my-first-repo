@@ -1,0 +1,46 @@
+{
+  "attempt_epoch": 10,
+  "dispatch_id": "d-537307ad3276a396670ef10b",
+  "driver_completion": {
+    "observed_at": "2026-10-10T13:47:07.534136+00:00",
+    "status": "succeeded"
+  },
+  "host_backend": "claude-code",
+  "host_task_id": {
+    "reason": "subagent dispatch failed (API safeguard error); role executed inline by orchestrating agent",
+    "status": "unavailable"
+  },
+  "host_verification": {
+    "adapter": {
+      "reason": "no trusted host adapter configured",
+      "status": "unsupported"
+    },
+    "claims": {
+      "completion_time": "unsupported",
+      "report_digest": "unsupported",
+      "reviewed_inputs_digest": "unsupported",
+      "task_identity": "unsupported",
+      "terminal_status": "unsupported"
+    }
+  },
+  "model_identity": {
+    "reason": "inline review by orchestrating agent (claude-opus-5-5)",
+    "status": "unavailable"
+  },
+  "phase_id": "9",
+  "report_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/reports/interpretation_claims.md",
+  "report_sha256": "e9c655b2200407686d6b62a0863a34675d8d91b9ef44942efbad8ca9149cf2c2",
+  "reviewed_inputs": {
+    "analysis/execution-report.json": "936993a74238d19ed5d457c3d593a5fadf2bfdcd689486ed4f844a38908bb13c",
+    "analysis/spec-registry.csv": "ecaad7c04f7d95fee77504207032ae59747066838f62a12593838676d5b72f04",
+    "figures/figure-registry.csv": "893baca3b02f5be2f3295945d5db6d82cd13d7bd842ba62a4a5b33b89fe652c7",
+    "review/analysis-premortem.json": "6ab521643c044c2d6c2765063a7867b14cb0ad10afcb1f8e47e23a56cc4f3b29",
+    "tables/results-registry.csv": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac"
+  },
+  "role": "interpretation_claims",
+  "round": "post_execution_panel",
+  "schema_version": "scholar-auto-research-review-evidence/v1",
+  "session_id": "s-3526750e96b8587536b02500",
+  "trace_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/traces/interpretation_claims.trace.ndjson",
+  "trace_sha256": "3dd0683dcb5d2d6d4ec786a9bc526041c7d79615e06711cb413e792a92dccfed"
+}

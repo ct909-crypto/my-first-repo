@@ -1,0 +1,135 @@
+{
+  "schema": "claim-inventory/v1",
+  "rows": [
+    {
+      "row_id": "established-1",
+      "claim_kind": "map_cell",
+      "claim_text": "Solar and wind job postings are concentrated in occupations that pay above-average wages (occupational premium about 21%).",
+      "anchor_ids": [
+        "curtis2023green-05263fb4",
+        "muro2019advancing-efc7a6fa"
+      ]
+    },
+    {
+      "row_id": "contested-1",
+      "claim_kind": "map_cell",
+      "claim_text": "Occupational premium for wind/solar postings exceeds that for fossil extraction postings.",
+      "anchor_ids": [
+        "colmer2025nice-f3df4852",
+        "curtis2023green-2288e93c",
+        "godoy2025green-5a21d849",
+        "godoy2025green-ca7a7edb",
+        "saussay2022whos-92d6d5f5"
+      ]
+    },
+    {
+      "row_id": "mechanism-2",
+      "claim_kind": "map_cell",
+      "claim_text": "Solar jobs have a distinctive occupational mix (sales-heavy).",
+      "anchor_ids": [
+        "colmer2025nice-454300da",
+        "curtis2023green-ee091fb9",
+        "gibbons1992does-277786ee",
+        "kuai2025estimating-1b56169b"
+      ]
+    },
+    {
+      "row_id": "established-2",
+      "claim_kind": "map_cell",
+      "claim_text": "Norway AKM: green firm premium consistent with rent-sharing.",
+      "anchor_ids": [
+        "godoy2025green-1653a46a",
+        "imf2024green-8fd7a081",
+        "kuai2025estimating-d746bdca",
+        "whittard2024working-a74205f2"
+      ]
+    },
+    {
+      "row_id": "mechanism-1",
+      "claim_kind": "map_cell",
+      "claim_text": "Firm characteristics (size, revenue, innovation) absorb green and brown premia: rent-sharing mechanism.",
+      "anchor_ids": [
+        "card2018firms-6ac538eb",
+        "godoy2025green-4cccda1a",
+        "krueger1988efficiency-1e79b136",
+        "western2011unions-d23f88c3"
+      ]
+    },
+    {
+      "row_id": "mechanism-3",
+      "claim_kind": "map_cell",
+      "claim_text": "Compensating-differential account predicts a negative green gap.",
+      "anchor_ids": [
+        "godoy2025green-4f76ff95",
+        "rosen1986theory-1ddc8ee6"
+      ]
+    },
+    {
+      "row_id": "contested-2",
+      "claim_kind": "map_cell",
+      "claim_text": "Clean energy union density rose above traditional energy in 2023.",
+      "anchor_ids": [
+        "doe2024useer-8379e885"
+      ]
+    },
+    {
+      "row_id": "gap-1",
+      "claim_kind": "map_cell",
+      "claim_text": "Rapid solar employment growth in 2023.",
+      "anchor_ids": [
+        "curtis2024workers-94ad6f44",
+        "doe2024useer-54facebf",
+        "haerer2015employment-98bb7196"
+      ]
+    },
+    {
+      "row_id": "derivation-h5",
+      "claim_kind": "hypothesis",
+      "claim_text": "High-road labor standards in renewable deployment raise labor outcomes at modest cost.",
+      "anchor_ids": [
+        "doe2024useer-8379e885",
+        "ira2022-43046650",
+        "mayfield2021influence-f4fcf906"
+      ]
+    },
+    {
+      "row_id": "derivation-h1",
+      "claim_kind": "hypothesis",
+      "claim_text": "Key empirical premise for H1",
+      "anchor_ids": [
+        "card2018firms-6ac538eb",
+        "colmer2025nice-f3df4852",
+        "godoy2025green-1653a46a"
+      ]
+    },
+    {
+      "row_id": "derivation-h2",
+      "claim_kind": "hypothesis",
+      "claim_text": "Key empirical premise for H2",
+      "anchor_ids": [
+        "colmer2025nice-f3df4852",
+        "gibbons1992does-277786ee",
+        "kuai2025estimating-d746bdca"
+      ]
+    },
+    {
+      "row_id": "derivation-h3",
+      "claim_kind": "hypothesis",
+      "claim_text": "Key empirical premise for H3",
+      "anchor_ids": [
+        "doe2024useer-8379e885",
+        "haerer2015employment-98bb7196",
+        "western2011unions-d23f88c3"
+      ]
+    },
+    {
+      "row_id": "derivation-h4",
+      "claim_kind": "hypothesis",
+      "claim_text": "Key empirical premise for H4",
+      "anchor_ids": [
+        "card2018firms-6ac538eb",
+        "western2011unions-d23f88c3"
+      ]
+    }
+  ]
+}

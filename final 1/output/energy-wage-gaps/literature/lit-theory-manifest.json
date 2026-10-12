@@ -1,0 +1,65 @@
+{
+  "verdict": "PASS",
+  "source_phase": "2",
+  "engine_handoff": {
+    "lit_review_engine": {
+      "skill": "scholar-lit-review-hypothesis",
+      "mode": "integrated_literature_theory_hypotheses",
+      "task_invocation_id": "phase2-lrh-energy-001",
+      "invoked_at_utc": "2026-10-10T10:00:00Z",
+      "input_artifacts": [
+        "idea/research-question.json",
+        "idea/journal-fit.json",
+        "literature/local-library.bib"
+      ],
+      "output_artifacts": [
+        "literature/literature-coverage-matrix.json",
+        "literature/references.bib",
+        "literature/search-log.md",
+        "literature/review-protocol.json",
+        "evidence/claim-anchors.ndjson",
+        "evidence/claim-inventory.json"
+      ],
+      "protocol_artifacts": [
+        "literature/review-protocol.json",
+        "literature/search-log.md"
+      ],
+      "protocol_followed": true
+    },
+    "writing_engine": {
+      "skill": "scholar-write",
+      "mode": "draft",
+      "section": "Literature Review and Theory",
+      "task_invocation_id": "phase2-write-energy-001",
+      "invoked_at_utc": "2026-10-10T10:40:00Z",
+      "input_artifacts": [
+        "literature/literature-coverage-matrix.json",
+        "idea/journal-fit.json",
+        "evidence/claim-anchors.ndjson"
+      ],
+      "output_artifacts": [
+        "literature/lit-theory.md",
+        "literature/lit-theory-manifest.json"
+      ]
+    },
+    "target_journal": "Energy Policy"
+  },
+  "selected_rq_hash": "e8f58e0a8a1219172180a476071195faefe26aa88e4cfe8196705c68864aa6de",
+  "journal_fit_hash": "82bee176c0d777bf5c231cb0239cbe0e7ba1641cb4322c218ce2622c39ac13c5",
+  "coverage_matrix_hash": "76bcdd94df8988451dd082928f09c84b42dbdcde7a768ec1e062ce55ca81a4e5",
+  "lit_theory_hash": "f7a7cc2e75d2864fd9e4654fa379de70759fa2608dcc6f1191fe43b0a42c4c99",
+  "references_bib_hash": "657cf3493e40fbfcba72a7a433d2ef61ad1cedfb1e28e1caa9ed98da94b1de66",
+  "source_hashes": {
+    "research_question": "e8f58e0a8a1219172180a476071195faefe26aa88e4cfe8196705c68864aa6de",
+    "journal_fit": "82bee176c0d777bf5c231cb0239cbe0e7ba1641cb4322c218ce2622c39ac13c5"
+  },
+  "protocol_artifacts": {
+    "search_log": "literature/search-log.md",
+    "review_protocol": "literature/review-protocol.json"
+  },
+  "evidence_ledger": {
+    "path": "evidence/claim-anchors.ndjson",
+    "records": 27
+  },
+  "ready_for_phase_3": true
+}

@@ -1,0 +1,50 @@
+{
+  "attempt_epoch": 8,
+  "dispatch_id": "d-0f435b38a1bd0265346d347b",
+  "driver_completion": {
+    "observed_at": "2026-10-10T13:28:56.307646+00:00",
+    "status": "succeeded"
+  },
+  "host_backend": "claude-code",
+  "host_task_id": {
+    "reason": "subagent dispatch failed (API safeguard error); fix verification executed inline by orchestrating agent",
+    "status": "unavailable"
+  },
+  "host_verification": {
+    "adapter": {
+      "reason": "no trusted host adapter configured",
+      "status": "unsupported"
+    },
+    "claims": {
+      "completion_time": "unsupported",
+      "report_digest": "unsupported",
+      "reviewed_inputs_digest": "unsupported",
+      "task_identity": "unsupported",
+      "terminal_status": "unsupported"
+    }
+  },
+  "model_identity": {
+    "reason": "inline review by orchestrating agent (claude-opus-5-5)",
+    "status": "unavailable"
+  },
+  "phase_id": "6",
+  "report_path": "review-evidence/phase-06/s-746d8f414cb589e0418028dc/reports/fix_verifier.md",
+  "report_sha256": "985ed580b7e3f320d4b63dc5e42abacf41498d33bf9cd42ae3737953a04251da",
+  "reviewed_inputs": {
+    "analysis/analysis-plan-manifest.json": "0066532eaddb70227138e28ebe0390c334b8d2a72ce025ae137b14c177a149d9",
+    "analysis/analysis-plan.md": "d956ca8c4e7fe43fa46755f3bdcf3fbad4d83730e053b6fe8e705e475083044d",
+    "analysis/scripts-inventory.json": "30192e1a862e6757e91d6dea937a851de8258450293643984334101628532edb",
+    "analysis/spec-registry.csv": "ecaad7c04f7d95fee77504207032ae59747066838f62a12593838676d5b72f04",
+    "data/data-measurement-manifest.json": "71e337af7959a29c4846d570669c55476b0b3033b102a96d740068a2ea155c9f",
+    "data/variable-dictionary.csv": "151576958aa39aa310383c319314daca71c83bf2aa69cefe3bd88c1b1329a4ee",
+    "design/identification-strategy.json": "f073a51809e76598a80568ad2d57b67544b5fa717d49fdd222250a3c8b2dbf0d",
+    "design/model-specs.json": "d002a582b63fde12966fc3239b6bc8591a5f681aae521304e3b5b619f67677f4",
+    "review/pre-execution-fix-log.json": "778df42cd4a3891ad5832bcff7e9d246bc3903fc5716887e75103c3d6214ffd5"
+  },
+  "role": "fix_verifier",
+  "round": "fix_rereview",
+  "schema_version": "scholar-auto-research-review-evidence/v1",
+  "session_id": "s-746d8f414cb589e0418028dc",
+  "trace_path": "review-evidence/phase-06/s-746d8f414cb589e0418028dc/traces/fix_verifier.trace.ndjson",
+  "trace_sha256": "53fbd1e21a310503276b692e5b239045502697d0522271db5431735a3ad59275"
+}

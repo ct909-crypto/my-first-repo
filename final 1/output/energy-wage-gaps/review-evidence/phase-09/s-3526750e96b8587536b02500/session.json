@@ -1,0 +1,44 @@
+{
+  "attempt_epoch": 10,
+  "host_backend": "claude-code",
+  "phase_id": "9",
+  "project_run_nonce": "cd87aa181cdcd508120914d6f9b648f4",
+  "registered_at": "2026-10-10T13:47:07.339029+00:00",
+  "requested_profile": "normal",
+  "reservations": [
+    {
+      "dispatch_id": "d-b062d605fee0710cc53408a1",
+      "report_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/reports/statistical_results.md",
+      "role": "statistical_results",
+      "trace_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/traces/statistical_results.trace.ndjson"
+    },
+    {
+      "dispatch_id": "d-8a4ffd1ef90c2a0e82aea520",
+      "report_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/reports/robustness_consistency.md",
+      "role": "robustness_consistency",
+      "trace_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/traces/robustness_consistency.trace.ndjson"
+    },
+    {
+      "dispatch_id": "d-5420621f1669d53fc7953f3b",
+      "report_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/reports/sample_data_integrity.md",
+      "role": "sample_data_integrity",
+      "trace_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/traces/sample_data_integrity.trace.ndjson"
+    },
+    {
+      "dispatch_id": "d-537307ad3276a396670ef10b",
+      "report_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/reports/interpretation_claims.md",
+      "role": "interpretation_claims",
+      "trace_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/traces/interpretation_claims.trace.ndjson"
+    }
+  ],
+  "reviewed_inputs": {
+    "analysis/execution-report.json": "936993a74238d19ed5d457c3d593a5fadf2bfdcd689486ed4f844a38908bb13c",
+    "analysis/spec-registry.csv": "ecaad7c04f7d95fee77504207032ae59747066838f62a12593838676d5b72f04",
+    "figures/figure-registry.csv": "893baca3b02f5be2f3295945d5db6d82cd13d7bd842ba62a4a5b33b89fe652c7",
+    "review/analysis-premortem.json": "6ab521643c044c2d6c2765063a7867b14cb0ad10afcb1f8e47e23a56cc4f3b29",
+    "tables/results-registry.csv": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac"
+  },
+  "round": "post_execution_panel",
+  "schema_version": "scholar-auto-research-review-evidence/v1",
+  "session_id": "s-3526750e96b8587536b02500"
+}

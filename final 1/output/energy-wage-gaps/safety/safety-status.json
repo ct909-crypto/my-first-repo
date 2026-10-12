@@ -1,0 +1,134 @@
+{
+  "counts": {
+    "anonymized": 0,
+    "cleared": 1,
+    "halted": 0,
+    "local_mode": 0,
+    "needs_review": 0,
+    "other": 0,
+    "override": 14
+  },
+  "files_scanned": 15,
+  "high_risk_unresolved": 0,
+  "imported_at": "2026-10-10T10:03:25.708910+00:00",
+  "meta": {},
+  "no_data_declared": false,
+  "policy": {
+    "halted_blocks": true,
+    "local_mode_allowed": true,
+    "needs_review_blocks": true,
+    "override_requires_scholar_init_rationale": true
+  },
+  "safety_status": "PASS",
+  "schema_version": "2.0.0",
+  "source": "scholar-init",
+  "source_path": ".claude/safety-status.json",
+  "status_by_file": {
+    "data/processed/oews-generation-cells.csv": {
+      "category": "cleared",
+      "content_sha256": "99f1aa9c1e36e1cbc1c969a4f6d6157d4f65803cb62cfd9106d13f403e2fec53",
+      "destination_identity": "data/processed/oews-generation-cells.csv",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/final 1/output/energy-wage-gaps/data/processed/oews-generation-cells.csv",
+      "source_status": "CLEARED"
+    },
+    "data/raw/nat5d_6d_M2021_dl.xlsx": {
+      "category": "override",
+      "content_sha256": "9269cc3956690762ab838b7c7fee87ec65c66373d55fb18ce9ec8a246485cde6",
+      "destination_identity": "data/raw/nat5d_6d_M2021_dl.xlsx",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/final 1/output/energy-wage-gaps/data/raw/nat5d_6d_M2021_dl.xlsx",
+      "source_status": "OVERRIDE: False positive: public BLS OEWS aggregate wage tables (no individual records) and published literature PDFs; flags matched occupation titles/contact info. Approved by user 2026-10-10."
+    },
+    "data/raw/nat5d_6d_M2022_dl.xlsx": {
+      "category": "override",
+      "content_sha256": "6ccd38f2d0bc5e25b86544e0505e1939ed9334809019b07b97a9bbd1ab3d32e1",
+      "destination_identity": "data/raw/nat5d_6d_M2022_dl.xlsx",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/final 1/output/energy-wage-gaps/data/raw/nat5d_6d_M2022_dl.xlsx",
+      "source_status": "OVERRIDE: False positive: public BLS OEWS aggregate wage tables (no individual records) and published literature PDFs; flags matched occupation titles/contact info. Approved by user 2026-10-10."
+    },
+    "data/raw/nat5d_6d_M2023_dl.xlsx": {
+      "category": "override",
+      "content_sha256": "3d69af43ef9df416834890346a67815a66670d0aab5be4265ca7d966babec3f3",
+      "destination_identity": "data/raw/nat5d_6d_M2023_dl.xlsx",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/final 1/output/energy-wage-gaps/data/raw/nat5d_6d_M2023_dl.xlsx",
+      "source_status": "OVERRIDE: False positive: public BLS OEWS aggregate wage tables (no individual records) and published literature PDFs; flags matched occupation titles/contact info. Approved by user 2026-10-10."
+    },
+    "data/raw/nat5d_6d_M2024_dl.xlsx": {
+      "category": "override",
+      "content_sha256": "f5005fa75b634d73c7288cfb4886dc669bef65ba8a6e6c388ead40c030c3d87e",
+      "destination_identity": "data/raw/nat5d_6d_M2024_dl.xlsx",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/final 1/output/energy-wage-gaps/data/raw/nat5d_6d_M2024_dl.xlsx",
+      "source_status": "OVERRIDE: False positive: public BLS OEWS aggregate wage tables (no individual records) and published literature PDFs; flags matched occupation titles/contact info. Approved by user 2026-10-10."
+    },
+    "data/raw/nat5d_6d_M2025_dl.xlsx": {
+      "category": "override",
+      "content_sha256": "dca9beafa91124701ea7afac6073cf491f926f47361e6c00a3f20c2e6a697419",
+      "destination_identity": "data/raw/nat5d_6d_M2025_dl.xlsx",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/final 1/output/energy-wage-gaps/data/raw/nat5d_6d_M2025_dl.xlsx",
+      "source_status": "OVERRIDE: False positive: public BLS OEWS aggregate wage tables (no individual records) and published literature PDFs; flags matched occupation titles/contact info. Approved by user 2026-10-10."
+    },
+    "materials/-Estimating the Green Wage Premium.pdf": {
+      "category": "override",
+      "content_sha256": "64f6dde21fd48e40784eed081ad98308c0fa3711f7a84c58db60d8990f85a43b",
+      "destination_identity": "materials/-Estimating the Green Wage Premium.pdf",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/final 1/output/energy-wage-gaps/materials/-Estimating the Green Wage Premium.pdf",
+      "source_status": "OVERRIDE: False positive: public BLS OEWS aggregate wage tables (no individual records) and published literature PDFs; flags matched occupation titles/contact info. Approved by user 2026-10-10."
+    },
+    "materials/-Green Energy Jobs in the United States What Are They, and Where Are They?.pdf": {
+      "category": "override",
+      "content_sha256": "6e322e3dfb820f9d913a7b788d687a3720c2ed786854802e6e56f17ef091b45a",
+      "destination_identity": "materials/-Green Energy Jobs in the United States What Are They, and Where Are They?.pdf",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/final 1/output/energy-wage-gaps/materials/-Green Energy Jobs in the United States What Are They, and Where Are They?.pdf",
+      "source_status": "OVERRIDE: False positive: public BLS OEWS aggregate wage tables (no individual records) and published literature PDFs; flags matched occupation titles/contact info. Approved by user 2026-10-10."
+    },
+    "materials/-Nice work if you can get it? The distribution of employment and earnings during the early years of the clean energy transition.pdf": {
+      "category": "override",
+      "content_sha256": "46bb0e3e1307ddad6fcead534d1b294607299f86b9079756a3f305ac91593ef1",
+      "destination_identity": "materials/-Nice work if you can get it? The distribution of employment and earnings during the early years of the clean energy transition.pdf",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/final 1/output/energy-wage-gaps/materials/-Nice work if you can get it? The distribution of employment and earnings during the early years of the clean energy transition.pdf",
+      "source_status": "OVERRIDE: False positive: public BLS OEWS aggregate wage tables (no individual records) and published literature PDFs; flags matched occupation titles/contact info. Approved by user 2026-10-10."
+    },
+    "materials/-working-paper-432-Godoy-Isaksen A green wage premium?.pdf": {
+      "category": "override",
+      "content_sha256": "f858ba722f10b0a0e7f112a413f1d212656f692a2689fc94eb5d084b196a6f3c",
+      "destination_identity": "materials/-working-paper-432-Godoy-Isaksen A green wage premium?.pdf",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/final 1/output/energy-wage-gaps/materials/-working-paper-432-Godoy-Isaksen A green wage premium?.pdf",
+      "source_status": "OVERRIDE: False positive: public BLS OEWS aggregate wage tables (no individual records) and published literature PDFs; flags matched occupation titles/contact info. Approved by user 2026-10-10."
+    },
+    "materials/Green Jobs and the Future of Work for Women and Men.pdf": {
+      "category": "override",
+      "content_sha256": "b5915acafea42592113f177d07abc536995e62671f821329783de3ed5e9e9f39",
+      "destination_identity": "materials/Green Jobs and the Future of Work for Women and Men.pdf",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/final 1/output/energy-wage-gaps/materials/Green Jobs and the Future of Work for Women and Men.pdf",
+      "source_status": "OVERRIDE: False positive: public BLS OEWS aggregate wage tables (no individual records) and published literature PDFs; flags matched occupation titles/contact info. Approved by user 2026-10-10."
+    },
+    "materials/USEER 2024_COMPLETE_1002.pdf": {
+      "category": "override",
+      "content_sha256": "398db645ebaa131663dec47ea3ac66094676263dc02b888f6432a69a6b31efe8",
+      "destination_identity": "materials/USEER 2024_COMPLETE_1002.pdf",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/final 1/output/energy-wage-gaps/materials/USEER 2024_COMPLETE_1002.pdf",
+      "source_status": "OVERRIDE: False positive: public BLS OEWS aggregate wage tables (no individual records) and published literature PDFs; flags matched occupation titles/contact info. Approved by user 2026-10-10."
+    },
+    "materials/Workers and the Green-Energy Transition Evidence from 300 Million Job Transitions.pdf": {
+      "category": "override",
+      "content_sha256": "380db1d354dfa8075ef79d45d27c608cd577e450d53ce2bf5effd462d8b56163",
+      "destination_identity": "materials/Workers and the Green-Energy Transition Evidence from 300 Million Job Transitions.pdf",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/final 1/output/energy-wage-gaps/materials/Workers and the Green-Energy Transition Evidence from 300 Million Job Transitions.pdf",
+      "source_status": "OVERRIDE: False positive: public BLS OEWS aggregate wage tables (no individual records) and published literature PDFs; flags matched occupation titles/contact info. Approved by user 2026-10-10."
+    },
+    "materials/_2019.04_metro_Clean-Energy-Jobs_Report_Muro-Tomer-Shivaran-Kane_updated.pdf": {
+      "category": "override",
+      "content_sha256": "480ed19235a15574aa0f7fcd94942c6fa58bc1284b6057ca441bc13c3a2e1764",
+      "destination_identity": "materials/_2019.04_metro_Clean-Energy-Jobs_Report_Muro-Tomer-Shivaran-Kane_updated.pdf",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/final 1/output/energy-wage-gaps/materials/_2019.04_metro_Clean-Energy-Jobs_Report_Muro-Tomer-Shivaran-Kane_updated.pdf",
+      "source_status": "OVERRIDE: False positive: public BLS OEWS aggregate wage tables (no individual records) and published literature PDFs; flags matched occupation titles/contact info. Approved by user 2026-10-10."
+    },
+    "materials/working-towards-an-environmentally-sustainable-and-equitable-future.pdf": {
+      "category": "override",
+      "content_sha256": "04dc4bddea76279ce66225e7116951bca8c59ff13b62118e281eeb73b2273bd2",
+      "destination_identity": "materials/working-towards-an-environmentally-sustainable-and-equitable-future.pdf",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/final 1/output/energy-wage-gaps/materials/working-towards-an-environmentally-sustainable-and-equitable-future.pdf",
+      "source_status": "OVERRIDE: False positive: public BLS OEWS aggregate wage tables (no individual records) and published literature PDFs; flags matched occupation titles/contact info. Approved by user 2026-10-10."
+    }
+  },
+  "unresolved_files": []
+}

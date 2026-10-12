@@ -1,0 +1,157 @@
+{
+  "verdict": "PASS",
+  "source_phase": "3",
+  "design_engine": {
+    "skill": "scholar-design",
+    "mode": "design_blueprint",
+    "task_invocation_id": "phase3-design-energy-001",
+    "invoked_at_utc": "2026-10-10T11:10:00Z",
+    "input_artifacts": [
+      "idea/research-question.json",
+      "idea/journal-fit.json",
+      "literature/lit-theory.md",
+      "literature/literature-coverage-matrix.json"
+    ],
+    "output_artifacts": [
+      "design/design-blueprint.md",
+      "design/identification-strategy.json",
+      "design/model-specs.json"
+    ]
+  },
+  "causal_engine": {
+    "required": true,
+    "invoked": true,
+    "skill": "scholar-causal",
+    "mode": "fixed_effects_descriptive_audit",
+    "task_invocation_id": "phase3-causal-energy-001",
+    "invoked_at_utc": "2026-10-10T11:30:00Z",
+    "input_artifacts": [
+      "design/identification-strategy.json",
+      "design/model-specs.json"
+    ],
+    "output_artifacts": [
+      "design/causal-audit.md",
+      "design/diagnostic_plan.json",
+      "design/identification-strategy.json"
+    ]
+  },
+  "method_specialist_engines": [],
+  "target_journal": "Energy Policy",
+  "claim_strength": "descriptive",
+  "source_hashes": {
+    "research_question": "e8f58e0a8a1219172180a476071195faefe26aa88e4cfe8196705c68864aa6de",
+    "journal_fit": "82bee176c0d777bf5c231cb0239cbe0e7ba1641cb4322c218ce2622c39ac13c5",
+    "lit_theory": "f7a7cc2e75d2864fd9e4654fa379de70759fa2608dcc6f1191fe43b0a42c4c99",
+    "lit_theory_manifest": "2bafc1eccd0050890b1644676e2f0802dabd15dc6c70c90180cc81d86010fb74",
+    "literature_coverage_matrix": "76bcdd94df8988451dd082928f09c84b42dbdcde7a768ec1e062ce55ca81a4e5"
+  },
+  "output_hashes": {
+    "design_blueprint": "3fd4c84b753ebfe46c54a8890ae05a4e06eebb65d1053df9cc67a907894d4fe5",
+    "identification_strategy": "f073a51809e76598a80568ad2d57b67544b5fa717d49fdd222250a3c8b2dbf0d",
+    "model_specs": "d002a582b63fde12966fc3239b6bc8591a5f681aae521304e3b5b619f67677f4"
+  },
+  "claim_continuity": {
+    "claim_strength": "descriptive",
+    "hypotheses_carried_forward": true,
+    "mechanisms_carried_forward": true,
+    "robustness_carried_forward": true,
+    "limitations_carried_forward": true,
+    "manuscript_claim_boundary": "The manuscript may report descriptive within-occupation wage gaps across generation industries; it must not claim that working in renewable generation causes lower or higher pay, and establishment mechanisms are interpretation, not measured pathways."
+  },
+  "mechanism_result_matrix": [
+    {
+      "mechanism": "Legacy rent-sharing and institutional wage-setting raise pay in fossil and nuclear plants.",
+      "model_or_spec": "M3 headline renewable coefficient with occupation x year fixed effects.",
+      "expected_pattern": "Negative renewable coefficient that remains after occupation controls.",
+      "manuscript_implication": "Interpret a negative gap as consistent with establishment wage premia, not as proof of rent-sharing."
+    },
+    {
+      "mechanism": "Source-specific institutional maturity (hydro legacy-like, nuclear highest).",
+      "model_or_spec": "M4 source indicators relative to fossil fuel.",
+      "expected_pattern": "Nuclear positive, hydro near zero, solar and wind negative.",
+      "manuscript_implication": "Show that the renewable divide is not a single green-versus-brown contrast."
+    },
+    {
+      "mechanism": "Establishment premia matter most for plant-based occupations.",
+      "model_or_spec": "M5 renewable x occupational group interactions with joint Wald test.",
+      "expected_pattern": "Larger negative gaps for installation/maintenance/repair and production occupations.",
+      "manuscript_implication": "Discuss which workers bear the largest pay differences in a fossil-to-renewable shift."
+    },
+    {
+      "mechanism": "Maturation and labor standards (IRA) narrow the gap.",
+      "model_or_spec": "M6 renewable x year and linear trend.",
+      "expected_pattern": "Gap shrinking toward zero over 2021-2025.",
+      "manuscript_implication": "If not observed, state that the gap persisted through the IRA period within the limits of pooled OEWS data."
+    }
+  ],
+  "robustness_claim_matrix": [
+    {
+      "robustness_check": "Unweighted estimates with equal cell weights",
+      "claim_implication": "Strengthens H1 if the gap does not depend on employment weighting.",
+      "weaken_or_bound_rule": "If the sign reverses, describe the headline as driven by large cells."
+    },
+    {
+      "robustness_check": "Inverse sampling-variance weights based on reported mean-wage relative standard errors",
+      "claim_implication": "Strengthens H1 by down-weighting noisy cells.",
+      "weaken_or_bound_rule": "If estimates shrink materially, report precision-weighted gap as a bound."
+    },
+    {
+      "robustness_check": "Median hourly wage as outcome",
+      "claim_implication": "Shows the gap is not driven by skewed upper tails.",
+      "weaken_or_bound_rule": "If the median gap differs, discuss where in the distribution the gap sits."
+    },
+    {
+      "robustness_check": "Restrict to occupations observed in both renewable and non-renewable industries in every year (balanced set)",
+      "claim_implication": "Strengthens H5 by holding occupation coverage fixed.",
+      "weaken_or_bound_rule": "If trends differ, attribute raw trend to changing coverage."
+    },
+    {
+      "robustness_check": "Alternative categorization: nuclear excluded (renewable vs fossil only)",
+      "claim_implication": "Shows whether the renewable gap is a nuclear premium.",
+      "weaken_or_bound_rule": "If the gap vanishes, reframe headline as a nuclear premium."
+    },
+    {
+      "robustness_check": "Alternative categorization: hydroelectric excluded from renewable group",
+      "claim_implication": "Shows whether hydro dilutes the renewable gap.",
+      "weaken_or_bound_rule": "If the gap grows, emphasise solar/wind as the low-paying segment."
+    },
+    {
+      "robustness_check": "Include 221118 other generation as renewable",
+      "claim_implication": "Checks sensitivity to the ambiguous other category.",
+      "weaken_or_bound_rule": "If results change, keep other excluded and report."
+    },
+    {
+      "robustness_check": "Drop cells with employment below 50",
+      "claim_implication": "Guards against small-cell noise.",
+      "weaken_or_bound_rule": "If estimates change, report as sensitive to small cells."
+    },
+    {
+      "robustness_check": "Leave-one-source-out for the renewable group",
+      "claim_implication": "Shows no single renewable source drives H1.",
+      "weaken_or_bound_rule": "If one source drives it, state source-specific claims only."
+    }
+  ],
+  "limitation_scope_matrix": [
+    {
+      "limitation": "No worker-level controls; within-occupation gaps can reflect sorting on unmeasured skill.",
+      "affected_claim": "Gaps cannot be read as the pay change a given worker would experience.",
+      "scope_language": "Describe gaps as differences in average pay for the same occupation across industries."
+    },
+    {
+      "limitation": "National cells do not adjust for regional cost of living or plant location.",
+      "affected_claim": "Part of gaps may reflect geography.",
+      "scope_language": "State regional composition as an untested alternative explanation."
+    },
+    {
+      "limitation": "OEWS pools six panels over three years; adjacent releases overlap.",
+      "affected_claim": "Year-to-year trend estimates are smoothed.",
+      "scope_language": "Describe trends as gradual, smoothed changes; avoid attributing shifts to single policy dates."
+    },
+    {
+      "limitation": "Petroleum generation is not separable from fossil fuel; transmission and distribution not covered.",
+      "affected_claim": "Results do not speak to petroleum separately or to grid occupations.",
+      "scope_language": "Define scope as six-digit generation industries."
+    }
+  ],
+  "ready_for_phase_4": true
+}

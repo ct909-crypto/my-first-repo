@@ -1,0 +1,3 @@
+{"step": "inputs", "reasoning": "post-execution review must bind to executed outputs", "action": "read registries, execution report, premortem constraints", "observation": "20 specs, 8 figure files", "refs": ["tables/results-registry.csv"], "status": "ok"}
+{"step": "checks", "reasoning": "robustness_consistency lens", "action": "compare outputs with registry and Phase 7 rules", "observation": "3 findings, 0 blocking", "refs": ["analysis/execution-report.json"], "status": "ok"}
+{"step": "verdict", "reasoning": "valid but partly unexpected results are carried forward, not rerun", "action": "assign verdict", "observation": "PASS", "refs": ["review-evidence/phase-09//reports/robustness_consistency.md"], "status": "ok"}

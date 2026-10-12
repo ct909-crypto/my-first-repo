@@ -1,0 +1,219 @@
+{
+  "no_execution_yet": true,
+  "language": "R",
+  "script_order": [
+    "analysis/scripts/01_build_panel.R",
+    "analysis/scripts/02_descriptives.R",
+    "analysis/scripts/03_main_models.R",
+    "analysis/scripts/04_decomposition.R",
+    "analysis/scripts/05_robustness.R",
+    "analysis/scripts/06_figures.R",
+    "analysis/scripts/07_registry.R"
+  ],
+  "dependency_graph": {
+    "analysis/scripts/01_build_panel.R": [],
+    "analysis/scripts/02_descriptives.R": [
+      "analysis/scripts/01_build_panel.R"
+    ],
+    "analysis/scripts/03_main_models.R": [
+      "analysis/scripts/01_build_panel.R"
+    ],
+    "analysis/scripts/04_decomposition.R": [
+      "analysis/scripts/01_build_panel.R"
+    ],
+    "analysis/scripts/05_robustness.R": [
+      "analysis/scripts/01_build_panel.R"
+    ],
+    "analysis/scripts/06_figures.R": [
+      "analysis/scripts/03_main_models.R",
+      "analysis/scripts/04_decomposition.R"
+    ],
+    "analysis/scripts/07_registry.R": [
+      "analysis/scripts/01_build_panel.R",
+      "analysis/scripts/03_main_models.R",
+      "analysis/scripts/04_decomposition.R",
+      "analysis/scripts/05_robustness.R"
+    ]
+  },
+  "scripts": [
+    {
+      "path": "analysis/scripts/01_build_panel.R",
+      "purpose": "read five OEWS files, keep NAICS 2211 detailed-occupation cells, parse special codes, deflate with CPI-U, construct dictionary variables",
+      "uses": [
+        "data/raw/nat5d_6d_M{2021..2025}_dl.xlsx",
+        "data/variable-dictionary.csv"
+      ],
+      "produces": [
+        "data/processed/oews-generation-cells.csv",
+        "tables/cell-coverage.csv"
+      ],
+      "status": "planned"
+    },
+    {
+      "path": "analysis/scripts/02_descriptives.R",
+      "purpose": "Table 1 descriptives by generation source and year; coverage and suppression counts; Figure 1 wage trends",
+      "uses": [
+        "data/processed/oews-generation-cells.csv",
+        "analysis/scripts/viz_setting.R"
+      ],
+      "produces": [
+        "tables/table1-descriptives.csv",
+        "tables/table1-descriptives.html",
+        "tables/table1b-wage-by-year.csv",
+        "figures/fig1-wage-by-source-year.pdf",
+        "figures/fig1-wage-by-source-year.png"
+      ],
+      "status": "planned"
+    },
+    {
+      "path": "analysis/scripts/03_main_models.R",
+      "purpose": "estimate S01-S07, S09, S10 with fixest; export main regression table with modelsummary",
+      "uses": [
+        "data/processed/oews-generation-cells.csv",
+        "analysis/spec-registry.csv"
+      ],
+      "produces": [
+        "analysis/outputs/main-model-estimates.csv",
+        "analysis/joint-tests.json",
+        "tables/table2-main-regression.html",
+        "tables/table3-heterogeneity-regression.html",
+        "analysis/outputs/fit-stats-main.csv",
+        "analysis/outputs/identifying-cells.csv",
+        "analysis/outputs/identifying-cells-by-source.csv",
+        "analysis/outputs/se-sensitivity.csv",
+        "analysis/outputs/main-models.rds"
+      ],
+      "status": "planned"
+    },
+    {
+      "path": "analysis/scripts/04_decomposition.R",
+      "purpose": "Kitagawa-Oaxaca decomposition by year with occupation-cluster bootstrap (S08)",
+      "uses": [
+        "data/processed/oews-generation-cells.csv"
+      ],
+      "produces": [
+        "tables/table4-decomposition.csv"
+      ],
+      "status": "planned"
+    },
+    {
+      "path": "analysis/scripts/05_robustness.R",
+      "purpose": "estimate robustness specs S11-S20",
+      "uses": [
+        "data/processed/oews-generation-cells.csv"
+      ],
+      "produces": [
+        "tables/tableA1-robustness.csv",
+        "tables/tableA1-robustness-regression.html",
+        "analysis/outputs/balanced-set.csv",
+        "analysis/outputs/fit-stats-robustness.csv",
+        "analysis/outputs/robustness-models.rds"
+      ],
+      "status": "planned"
+    },
+    {
+      "path": "analysis/scripts/06_figures.R",
+      "purpose": "coefficient plots: source gaps, occupational-group gaps, year-specific gaps",
+      "uses": [
+        "analysis/outputs/main-model-estimates.csv",
+        "tables/table4-decomposition.csv",
+        "analysis/scripts/viz_setting.R"
+      ],
+      "produces": [
+        "figures/fig2-source-gaps.pdf",
+        "figures/fig2-source-gaps.png",
+        "figures/fig3-gap-by-year.pdf",
+        "figures/fig3-gap-by-year.png",
+        "figures/fig4-gap-by-occupation-group.pdf",
+        "figures/fig4-gap-by-occupation-group.png"
+      ],
+      "status": "planned"
+    },
+    {
+      "path": "analysis/scripts/07_registry.R",
+      "purpose": "write results registry and figure registry covering every planned spec",
+      "uses": [
+        "analysis/spec-registry.csv",
+        "data/processed/oews-generation-cells.csv",
+        "analysis/outputs/main-model-estimates.csv",
+        "analysis/outputs/fit-stats-main.csv",
+        "analysis/outputs/fit-stats-robustness.csv",
+        "tables/table4-decomposition.csv",
+        "tables/tableA1-robustness.csv"
+      ],
+      "produces": [
+        "tables/results-registry.csv",
+        "tables/model-fit-stats.csv",
+        "figures/figure-registry.csv"
+      ],
+      "status": "planned"
+    }
+  ],
+  "test_inventory": [
+    {
+      "id": "T1",
+      "target": "analysis/scripts/01_build_panel.R",
+      "category": "data_loading",
+      "assertion": "all five files load; required columns (NAICS, OCC_CODE, O_GROUP, TOT_EMP, H_MEAN, MEAN_PRSE, H_PCT10, H_MEDIAN, H_PCT90) present; eight 2211 industries found each year",
+      "status": "planned"
+    },
+    {
+      "id": "T2",
+      "target": "analysis/scripts/01_build_panel.R",
+      "category": "analytic_sample",
+      "assertion": "only O_GROUP == detailed rows and NAICS 221111-221118 retained; one row per occupation-industry-year; cell counts per industry-year written",
+      "status": "planned"
+    },
+    {
+      "id": "T3",
+      "target": "analysis/scripts/01_build_panel.R",
+      "category": "variable_construction",
+      "assertion": "renewable indicator matches NAICS mapping; real wages equal nominal x CPI ratio; occupational group derived from SOC major code covers all cells",
+      "status": "planned"
+    },
+    {
+      "id": "T4",
+      "target": "analysis/scripts/01_build_panel.R",
+      "category": "missingness",
+      "assertion": "counts of *, **, # cells match codebook checks from Phase 4; P90 censoring at $100 nominal applied in every year",
+      "status": "planned"
+    },
+    {
+      "id": "T5",
+      "target": "analysis/scripts/03_main_models.R",
+      "category": "model_spec",
+      "spec_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20"
+      ],
+      "assertion": "each planned spec estimated with stated weights, fixed effects and clustering; N and clusters recorded",
+      "status": "planned"
+    },
+    {
+      "id": "T6",
+      "target": "analysis/scripts/07_registry.R",
+      "category": "output_registry",
+      "assertion": "results registry has one row per spec_id S01-S20; figure registry lists every produced figure",
+      "status": "planned"
+    }
+  ],
+  "phase6_revision": "produces/uses/dependency_graph corrected per Phase 6 findings REP-001, REP-002, COR-001"
+}

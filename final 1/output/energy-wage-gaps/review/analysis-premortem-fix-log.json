@@ -1,0 +1,57 @@
+{
+  "required_fixes_completed": true,
+  "unresolved_blocking_count": 0,
+  "final_verdict": "PASS",
+  "fixed_risks": [
+    {
+      "risk_id": "PM-01",
+      "status": "mitigated",
+      "action_taken": "Interpretation constraint plus a reporting rule. The manuscript names regional composition as an untested alternative, describes gaps as differences in average pay for the same occupation (never as the pay effect of renewable work), and cites the hydroelectric contrast (old, geographically distinct plants) as partial evidence. Decision rule DR-05 governs wording.",
+      "affected_files": [
+        "analysis/scripts/03_main_models.R"
+      ]
+    },
+    {
+      "risk_id": "PM-02",
+      "status": "mitigated",
+      "action_taken": "Reporting rule DR-02: the headline is stated alongside the fossil-only contrast (S15) and the source estimates (S04, Figure 2). If S15 is near zero, the paper is reframed as a nuclear premium.",
+      "affected_files": [
+        "analysis/scripts/03_main_models.R",
+        "analysis/scripts/05_robustness.R"
+      ]
+    },
+    {
+      "risk_id": "PM-06",
+      "status": "mitigated",
+      "action_taken": "Decision rule DR-03: report identifying-cell counts by source (identifying-cells-by-source.csv) next to S04, and do not interpret source coefficients that rest on fewer than 30 identifying cells beyond their sign and uncertainty.",
+      "affected_files": [
+        "analysis/scripts/03_main_models.R",
+        "analysis/scripts/05_robustness.R"
+      ]
+    },
+    {
+      "risk_id": "PM-08",
+      "status": "mitigated",
+      "action_taken": "Decision rule DR-04: report industry-year and two-way clustered SEs for S03 and S04 in the appendix. If the headline loses significance at the 5% level under two-way clustering, the main text reports the conservative SE.",
+      "affected_files": [
+        "analysis/scripts/03_main_models.R"
+      ]
+    },
+    {
+      "risk_id": "PM-09",
+      "status": "mitigated",
+      "action_taken": "Decision rule DR-01: H5 is judged on the S07 trend coefficient and the S06 joint test. A null or opposite-sign trend is reported as no detectable narrowing over a smoothed window, never as evidence that policy had no effect.",
+      "affected_files": [
+        "analysis/scripts/03_main_models.R"
+      ]
+    },
+    {
+      "risk_id": "PM-10",
+      "status": "mitigated",
+      "action_taken": "Decision rule DR-05 sets language constraints that carry into Phases 12-14. Mechanism statements are framed as interpretation consistent with establishment wage-setting theory.",
+      "affected_files": [
+        "manuscript interpretation constraints (Phase 12-13)"
+      ]
+    }
+  ]
+}

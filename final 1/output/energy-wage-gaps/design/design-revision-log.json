@@ -1,0 +1,82 @@
+{
+  "required_revisions_completed": true,
+  "unresolved_critical_count": 0,
+  "final_verdict": "PASS",
+  "revision_rounds": [
+    {
+      "round": 1,
+      "status": "resolved",
+      "issue_id": "D-001",
+      "severity": "major",
+      "issue": "Draft design lacked a source-specific model for H3 and an ex ante occupational grouping for H4.",
+      "action_taken": "Added M4 (source indicators vs fossil) and M5 (five SOC-based occupational groups fixed ex ante).",
+      "affected_files": [
+        "design/model-specs.json",
+        "design/identification-strategy.json",
+        "design/design-blueprint.md"
+      ]
+    },
+    {
+      "round": 1,
+      "status": "resolved",
+      "issue_id": "D-002",
+      "severity": "major",
+      "issue": "Trend claims vulnerable to OEWS three-year pooling.",
+      "action_taken": "Added linear-trend specification and blueprint language treating trends as smoothed; joint Wald test for year interactions.",
+      "affected_files": [
+        "design/model-specs.json",
+        "design/design-blueprint.md"
+      ]
+    },
+    {
+      "round": 1,
+      "status": "resolved",
+      "issue_id": "D-003",
+      "severity": "minor",
+      "issue": "Categorization sensitivity (nuclear, hydro, other).",
+      "action_taken": "Added three alternative categorizations and leave-one-source-out to robustness plan.",
+      "affected_files": [
+        "design/identification-strategy.json"
+      ]
+    },
+    {
+      "round": 2,
+      "status": "resolved",
+      "issue_id": "D-004",
+      "severity": "critical",
+      "issue": "Fixed-effects design required a scholar-causal audit; causal gate was initially recorded as not required.",
+      "action_taken": "Invoked scholar-causal; wrote design/causal-audit.md and design/diagnostic_plan.json; set causal_gate required=true, invoked=true; added suppression-share diagnostic.",
+      "affected_files": [
+        "design/identification-strategy.json",
+        "design/design-manifest.json",
+        "design/causal-audit.md",
+        "design/diagnostic_plan.json"
+      ]
+    },
+    {
+      "round": 3,
+      "status": "resolved",
+      "issue_id": "D-005",
+      "severity": "minor",
+      "issue": "Model-spec predictor/covariate names did not match variable-dictionary constructs; percentile outcomes combined in one model.",
+      "action_taken": "Renamed model terms to dictionary constructs, recorded interactions explicitly, split M8 into M8 (P10) and M9 (P90).",
+      "affected_files": [
+        "design/model-specs.json",
+        "design/identification-strategy.json"
+      ]
+    },
+    {
+      "round": 4,
+      "status": "resolved",
+      "issue_id": "D-006",
+      "severity": "minor",
+      "issue": "The word 'classification' (industry categories) caused a downstream method-family detector to treat the design as supervised machine learning.",
+      "action_taken": "Renamed to 'categorization' in design, diagnostic and spec-registry text; no change to models or samples.",
+      "affected_files": [
+        "design/identification-strategy.json",
+        "design/design-manifest.json",
+        "analysis/spec-registry.csv"
+      ]
+    }
+  ]
+}

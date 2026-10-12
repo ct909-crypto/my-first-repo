@@ -1,0 +1,386 @@
+{
+  "verdict": "PASS",
+  "source_phase": "5",
+  "analysis_planning_engine": {
+    "skill": "scholar-auto-research",
+    "mode": "analysis_plan_compiler",
+    "invoked_at_utc": "2026-10-10T12:40:00Z",
+    "no_execution": true
+  },
+  "source_hashes": {
+    "design_manifest": "1bd5ceecd2824e09ab9f0e18e1d0545f5e308ab5b7e1d6cea97b0d0230df6757",
+    "identification_strategy": "f073a51809e76598a80568ad2d57b67544b5fa717d49fdd222250a3c8b2dbf0d",
+    "model_specs": "d002a582b63fde12966fc3239b6bc8591a5f681aae521304e3b5b619f67677f4",
+    "variable_dictionary": "151576958aa39aa310383c319314daca71c83bf2aa69cefe3bd88c1b1329a4ee",
+    "data_measurement_manifest": "71e337af7959a29c4846d570669c55476b0b3033b102a96d740068a2ea155c9f",
+    "measurement_plan": "fe72f3b262c9559a0cef2c278740f863e42c7bfb4d845d43b8bd9432606675ff",
+    "data_status": "833d4d3ae22178a25048ea086a93b2dbcf73e67fc28d2021d8d290814350b873"
+  },
+  "output_hashes": {
+    "analysis_plan": "d956ca8c4e7fe43fa46755f3bdcf3fbad4d83730e053b6fe8e705e475083044d",
+    "spec_registry": "ecaad7c04f7d95fee77504207032ae59747066838f62a12593838676d5b72f04",
+    "scripts_inventory": "30192e1a862e6757e91d6dea937a851de8258450293643984334101628532edb"
+  },
+  "model_spec_coverage": [
+    {
+      "model_id": "M1",
+      "spec_ids": [
+        "S01"
+      ],
+      "covered": true
+    },
+    {
+      "model_id": "M2",
+      "spec_ids": [
+        "S02"
+      ],
+      "covered": true
+    },
+    {
+      "model_id": "M3",
+      "spec_ids": [
+        "S03",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19"
+      ],
+      "covered": true
+    },
+    {
+      "model_id": "M4",
+      "spec_ids": [
+        "S04"
+      ],
+      "covered": true
+    },
+    {
+      "model_id": "M5",
+      "spec_ids": [
+        "S05"
+      ],
+      "covered": true
+    },
+    {
+      "model_id": "M6",
+      "spec_ids": [
+        "S06",
+        "S07",
+        "S20"
+      ],
+      "covered": true
+    },
+    {
+      "model_id": "M7",
+      "spec_ids": [
+        "S08"
+      ],
+      "covered": true
+    },
+    {
+      "model_id": "M8",
+      "spec_ids": [
+        "S09"
+      ],
+      "covered": true
+    },
+    {
+      "model_id": "M9",
+      "spec_ids": [
+        "S10"
+      ],
+      "covered": true
+    }
+  ],
+  "hypothesis_spec_coverage": [
+    {
+      "hypothesis_id": "H1",
+      "spec_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19"
+      ],
+      "covered": true
+    },
+    {
+      "hypothesis_id": "H2",
+      "spec_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S08"
+      ],
+      "covered": true
+    },
+    {
+      "hypothesis_id": "H3",
+      "spec_ids": [
+        "S04"
+      ],
+      "covered": true
+    },
+    {
+      "hypothesis_id": "H4",
+      "spec_ids": [
+        "S05",
+        "S09",
+        "S10"
+      ],
+      "covered": true
+    },
+    {
+      "hypothesis_id": "H5",
+      "spec_ids": [
+        "S06",
+        "S07",
+        "S14",
+        "S20"
+      ],
+      "covered": true
+    }
+  ],
+  "variable_coverage": [
+    {
+      "name": "cell employment",
+      "covered": true
+    },
+    {
+      "name": "detailed occupation",
+      "covered": true
+    },
+    {
+      "name": "detailed occupation x year",
+      "covered": true
+    },
+    {
+      "name": "generation source",
+      "covered": true
+    },
+    {
+      "name": "log real 10th percentile hourly wage",
+      "covered": true
+    },
+    {
+      "name": "log real 90th percentile hourly wage",
+      "covered": true
+    },
+    {
+      "name": "log real mean hourly wage",
+      "covered": true
+    },
+    {
+      "name": "log real median hourly wage",
+      "covered": true
+    },
+    {
+      "name": "occupational group",
+      "covered": true
+    },
+    {
+      "name": "renewable generation industry",
+      "covered": true
+    },
+    {
+      "name": "survey year",
+      "covered": true
+    }
+  ],
+  "robustness_coverage": [
+    {
+      "design_item": "Unweighted estimates with equal cell weights",
+      "spec_ids": [
+        "S11"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "Inverse sampling-variance weights based on reported mean-wage relative standard errors",
+      "spec_ids": [
+        "S12"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "Median hourly wage as outcome",
+      "spec_ids": [
+        "S13"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "Restrict to occupations observed in both renewable and non-renewable industries in every year (balanced set)",
+      "spec_ids": [
+        "S14",
+        "S20"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "Alternative categorization: nuclear excluded (renewable vs fossil only)",
+      "spec_ids": [
+        "S15"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "Alternative categorization: hydroelectric excluded from renewable group",
+      "spec_ids": [
+        "S16"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "Include 221118 other generation as renewable",
+      "spec_ids": [
+        "S17"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "Drop cells with employment below 50",
+      "spec_ids": [
+        "S18"
+      ],
+      "covered": true
+    },
+    {
+      "design_item": "Leave-one-source-out for the renewable group",
+      "spec_ids": [
+        "S19"
+      ],
+      "covered": true
+    }
+  ],
+  "missing_data_alignment": {
+    "strategy_matches_phase4": true,
+    "variable_dictionary_hash": "151576958aa39aa310383c319314daca71c83bf2aa69cefe3bd88c1b1329a4ee",
+    "note": "exclude *, **, # cells; harmonized P90 censoring at $100 nominal; counts reported"
+  },
+  "dataset_design_plan": {
+    "reviewed": true,
+    "weights_considered": true,
+    "clustering_considered": true,
+    "panel_structure_considered": true,
+    "denominator_rules_considered": true,
+    "analytic_decision": "Treat each published cell as an observation; weight by estimated employment so results describe workers; cluster standard errors by detailed occupation because the same occupation appears across industries and years; use inverse-variance weights from MEAN_PRSE as robustness; do not interpret adjacent-year changes as independent because panels overlap.",
+    "decision_rationale": "Inherits the Phase 4 review: published cells are design-weighted aggregates, employment weights describe workers, occupation clustering handles repeated occupations, overlapping panels limit trend claims."
+  },
+  "outcome_model_ladder": {
+    "outcome_family": "approximately continuous log wage",
+    "headline_estimator": "employment-weighted least squares with occupation x year fixed effects",
+    "bounded_scale_checked": true,
+    "distributional_diagnostics_planned": true,
+    "sensitivity_specs": [
+      {
+        "spec_id": "S13",
+        "rationale": "median outcome guards against skew in the mean"
+      },
+      {
+        "spec_id": "S09",
+        "rationale": "estimates the within-occupation gap at the 10th percentile to show whether low-paid workers face the same gap"
+      },
+      {
+        "spec_id": "S10",
+        "rationale": "gap at the 90th percentile with harmonized top-code censoring"
+      }
+    ]
+  },
+  "missingness_sensitivity_plan": {
+    "post_restriction_diagnostics": true,
+    "skip_vs_missing_reviewed": true,
+    "denominator_checks": true,
+    "sensitivity_specs": [
+      "S14",
+      "S18",
+      "S20"
+    ],
+    "rationale": "Suppression is a publication rule rather than a skip; denominators and excluded-cell shares by renewable status are reported before models; balanced-set and minimum-cell-size specs test denominator sensitivity."
+  },
+  "script_dag": {
+    "script_order": [
+      "analysis/scripts/01_build_panel.R",
+      "analysis/scripts/02_descriptives.R",
+      "analysis/scripts/03_main_models.R",
+      "analysis/scripts/04_decomposition.R",
+      "analysis/scripts/05_robustness.R",
+      "analysis/scripts/06_figures.R",
+      "analysis/scripts/07_registry.R"
+    ],
+    "valid": true,
+    "dependency_graph": {
+      "analysis/scripts/01_build_panel.R": [],
+      "analysis/scripts/02_descriptives.R": [
+        "analysis/scripts/01_build_panel.R"
+      ],
+      "analysis/scripts/03_main_models.R": [
+        "analysis/scripts/01_build_panel.R"
+      ],
+      "analysis/scripts/04_decomposition.R": [
+        "analysis/scripts/01_build_panel.R"
+      ],
+      "analysis/scripts/05_robustness.R": [
+        "analysis/scripts/01_build_panel.R"
+      ],
+      "analysis/scripts/06_figures.R": [
+        "analysis/scripts/03_main_models.R",
+        "analysis/scripts/04_decomposition.R"
+      ],
+      "analysis/scripts/07_registry.R": [
+        "analysis/scripts/01_build_panel.R",
+        "analysis/scripts/03_main_models.R",
+        "analysis/scripts/04_decomposition.R",
+        "analysis/scripts/05_robustness.R"
+      ]
+    }
+  },
+  "test_coverage": {
+    "categories": [
+      "analytic_sample",
+      "data_loading",
+      "missingness",
+      "model_spec",
+      "output_registry",
+      "variable_construction"
+    ],
+    "spec_ids": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19",
+      "S20"
+    ]
+  },
+  "ready_for_phase_6": true,
+  "phase6_inventory_repair": "scripts-inventory produces/uses/dependency_graph corrected in Phase 6 (REP-001, REP-002, COR-001); script_order unchanged"
+}

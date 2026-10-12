@@ -1,0 +1,831 @@
+{
+  "verdict": "PASS",
+  "degraded": false,
+  "review_engine": {
+    "skill": "scholar-code-review",
+    "mode": "pre_execution_planned",
+    "task_invocation_id": "phase6-code-review-energy-001",
+    "invoked_at_utc": "2026-10-10T09:45:00Z",
+    "input_artifacts": [
+      "analysis/analysis-plan.md",
+      "analysis/analysis-plan-manifest.json",
+      "analysis/scripts-inventory.json",
+      "analysis/spec-registry.csv",
+      "design/identification-strategy.json",
+      "design/model-specs.json",
+      "data/variable-dictionary.csv",
+      "data/data-measurement-manifest.json"
+    ],
+    "output_artifacts": [
+      "review/pre-execution-review.json",
+      "review/pre-execution-fix-log.json",
+      "review/pre-execution-rereview.json"
+    ]
+  },
+  "reviewer_independence": {
+    "independent_subagents": false,
+    "reason": "13 subagent dispatch attempts failed with API safeguard errors before starting; each role was reviewed in a separate inline pass by the orchestrating agent",
+    "disclosed_in": "review/pre-execution-review.md"
+  },
+  "source_hashes": {
+    "analysis_plan": "d956ca8c4e7fe43fa46755f3bdcf3fbad4d83730e053b6fe8e705e475083044d",
+    "analysis_plan_manifest": "0066532eaddb70227138e28ebe0390c334b8d2a72ce025ae137b14c177a149d9",
+    "scripts_inventory": "30192e1a862e6757e91d6dea937a851de8258450293643984334101628532edb",
+    "spec_registry": "ecaad7c04f7d95fee77504207032ae59747066838f62a12593838676d5b72f04",
+    "identification_strategy": "f073a51809e76598a80568ad2d57b67544b5fa717d49fdd222250a3c8b2dbf0d",
+    "model_specs": "d002a582b63fde12966fc3239b6bc8591a5f681aae521304e3b5b619f67677f4",
+    "variable_dictionary": "151576958aa39aa310383c319314daca71c83bf2aa69cefe3bd88c1b1329a4ee",
+    "data_measurement_manifest": "71e337af7959a29c4846d570669c55476b0b3033b102a96d740068a2ea155c9f"
+  },
+  "inventory_hash": "30192e1a862e6757e91d6dea937a851de8258450293643984334101628532edb",
+  "ready_for_phase_7": true,
+  "reviewers": [
+    {
+      "reviewer_id": "R6-1",
+      "role": "correctness",
+      "agent_type": "inline-orchestrator-role-pass (subagent dispatch unavailable)",
+      "task_invocation_id": "d-5d2f66ecf13e84a219c021b1",
+      "report_path": "review-evidence/phase-06/s-198f8f4df419bdef25fb862d/reports/correctness.md",
+      "reviewed_scripts": [
+        "analysis/scripts/01_build_panel.R",
+        "analysis/scripts/02_descriptives.R",
+        "analysis/scripts/03_main_models.R",
+        "analysis/scripts/04_decomposition.R",
+        "analysis/scripts/05_robustness.R",
+        "analysis/scripts/06_figures.R",
+        "analysis/scripts/07_registry.R"
+      ],
+      "reviewed_specs": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20"
+      ],
+      "reviewed_tests": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6"
+      ],
+      "reviewed_upstream_artifacts": [
+        "analysis/analysis-plan.md",
+        "analysis/analysis-plan-manifest.json",
+        "analysis/scripts-inventory.json",
+        "analysis/spec-registry.csv",
+        "design/identification-strategy.json",
+        "design/model-specs.json",
+        "data/variable-dictionary.csv",
+        "data/data-measurement-manifest.json"
+      ],
+      "findings": [
+        {
+          "finding_id": "COR-001",
+          "severity": "MAJOR",
+          "location": "analysis/scripts/06_figures.R:41",
+          "problem": "Script 06 reads tables/table4-decomposition.csv, which script 04 produces, but dependency_graph declares that 06 depends only on 03. Under the declared order, 06 could run before 04.",
+          "fix": "Add 04_decomposition.R to 06's dependencies in analysis/scripts-inventory.json.",
+          "status": "fixed"
+        },
+        {
+          "finding_id": "COR-002",
+          "severity": "MINOR",
+          "location": "analysis/scripts/01_build_panel.R:66-70",
+          "problem": "The special-code flags use `==` (for example `H_MEAN == \"*\"`). If a cell is NA, the flag is NA and coverage counts become NA.",
+          "fix": "Use `%in%` so the flags are always TRUE or FALSE.",
+          "status": "fixed"
+        },
+        {
+          "finding_id": "COR-003",
+          "severity": "MINOR",
+          "location": "analysis/scripts/07_registry.R:96",
+          "problem": "`interaction(occ_code, year)` creates every level combination, including unused ones, which makes the design matrix wide and rank-deficient.",
+          "fix": "Use `interaction(occ_code, year, drop = TRUE)`.",
+          "status": "fixed"
+        },
+        {
+          "finding_id": "COR-004",
+          "severity": "INFO",
+          "location": "03_main_models.R, 06_figures.R, 07_registry.R",
+          "problem": "Checked the fixest coefficient names produced by i() (`generation_source::Solar`, `occupational_group::<level>:renewable`, `year::2025:renewable`, `renewable:trend`) against coef_map, the regexes, and the row_from() lookups. They agree. row_from() no longer has the data.table `..` scoping bug.",
+          "fix": "None.",
+          "status": "informational"
+        },
+        {
+          "finding_id": "COR-005",
+          "severity": "INFO",
+          "location": "analysis/scripts/04_decomposition.R:40-47",
+          "problem": "Composition plus within-occupation equals the common-occupation Kitagawa gap. The non-overlap term is defined as the residual, so the additivity assertion holds by construction.",
+          "fix": "Document in the manuscript that the non-overlap term is the gap contributed by occupations observed in only one group.",
+          "status": "informational"
+        }
+      ],
+      "verdict": "PASS",
+      "initial_verdict": "FAIL"
+    },
+    {
+      "reviewer_id": "R6-2",
+      "role": "robustness",
+      "agent_type": "inline-orchestrator-role-pass (subagent dispatch unavailable)",
+      "task_invocation_id": "d-6b5e83ab93429e4d02c3139f",
+      "report_path": "review-evidence/phase-06/s-198f8f4df419bdef25fb862d/reports/robustness.md",
+      "reviewed_scripts": [
+        "analysis/scripts/01_build_panel.R",
+        "analysis/scripts/02_descriptives.R",
+        "analysis/scripts/03_main_models.R",
+        "analysis/scripts/04_decomposition.R",
+        "analysis/scripts/05_robustness.R",
+        "analysis/scripts/06_figures.R",
+        "analysis/scripts/07_registry.R"
+      ],
+      "reviewed_specs": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20"
+      ],
+      "reviewed_tests": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6"
+      ],
+      "reviewed_upstream_artifacts": [
+        "analysis/analysis-plan.md",
+        "analysis/analysis-plan-manifest.json",
+        "analysis/scripts-inventory.json",
+        "analysis/spec-registry.csv",
+        "design/identification-strategy.json",
+        "design/model-specs.json",
+        "data/variable-dictionary.csv",
+        "data/data-measurement-manifest.json"
+      ],
+      "findings": [
+        {
+          "finding_id": "ROB-001",
+          "severity": "MINOR",
+          "location": "analysis/scripts/01_build_panel.R:44-50",
+          "problem": "read_topcode() returns NA if the codebook wording changes. stopifnot checks only that a matching line exists, not that a number was parsed.",
+          "fix": "Add `stopifnot(!is.na(topcode), topcode >= 50)` after parsing.",
+          "status": "fixed"
+        },
+        {
+          "finding_id": "ROB-002",
+          "severity": "MINOR",
+          "location": "analysis/scripts/06_figures.R:27,58",
+          "problem": "geom_errorbarh() is deprecated in the installed ggplot2 (4.0.3). It still renders but emits warnings, and it could break in a future release.",
+          "fix": "Use geom_errorbar(orientation = \"y\") with xmin/xmax and `width`.",
+          "status": "fixed"
+        },
+        {
+          "finding_id": "ROB-003",
+          "severity": "INFO",
+          "location": "analysis/scripts/03_main_models.R:31",
+          "problem": "Geothermal (4-8 cells per year) and biomass (12-14) are thin. Their source coefficients in S04 rest on few occupation-year comparisons.",
+          "fix": "Report identifying cell counts by source next to S04 (interpretation constraint, no code change required).",
+          "status": "informational"
+        },
+        {
+          "finding_id": "ROB-004",
+          "severity": "INFO",
+          "location": "analysis/scripts/04_decomposition.R:53-60",
+          "problem": "The bootstrap subsets the table once per drawn occupation (about 200 x 500 subsets). It is slow but bounded, and the seed is set.",
+          "fix": "None.",
+          "status": "informational"
+        }
+      ],
+      "verdict": "PASS",
+      "initial_verdict": "PASS"
+    },
+    {
+      "reviewer_id": "R6-3",
+      "role": "statistical",
+      "agent_type": "inline-orchestrator-role-pass (subagent dispatch unavailable)",
+      "task_invocation_id": "d-ee3b872714181f599ef152b8",
+      "report_path": "review-evidence/phase-06/s-198f8f4df419bdef25fb862d/reports/statistical.md",
+      "reviewed_scripts": [
+        "analysis/scripts/01_build_panel.R",
+        "analysis/scripts/02_descriptives.R",
+        "analysis/scripts/03_main_models.R",
+        "analysis/scripts/04_decomposition.R",
+        "analysis/scripts/05_robustness.R",
+        "analysis/scripts/06_figures.R",
+        "analysis/scripts/07_registry.R"
+      ],
+      "reviewed_specs": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20"
+      ],
+      "reviewed_tests": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6"
+      ],
+      "reviewed_upstream_artifacts": [
+        "analysis/analysis-plan.md",
+        "analysis/analysis-plan-manifest.json",
+        "analysis/scripts-inventory.json",
+        "analysis/spec-registry.csv",
+        "design/identification-strategy.json",
+        "design/model-specs.json",
+        "data/variable-dictionary.csv",
+        "data/data-measurement-manifest.json"
+      ],
+      "findings": [
+        {
+          "finding_id": "STA-001",
+          "severity": "MAJOR",
+          "location": "analysis/scripts/03_main_models.R:29",
+          "problem": "Standard errors are clustered only by detailed occupation. Cells in the same industry-year share industry-level shocks and overlapping survey panels, so occupation clustering alone may understate uncertainty for an industry-level contrast. With only seven industries, industry clustering is not feasible.",
+          "fix": "For S03 and S04, add standard-error sensitivity estimates clustered by industry-year (35 clusters) and two-way clustered by occupation and industry-year. Write them to analysis/outputs/se-sensitivity.csv and report them in the appendix.",
+          "status": "fixed"
+        },
+        {
+          "finding_id": "STA-002",
+          "severity": "MINOR",
+          "location": "analysis/scripts/03_main_models.R:38",
+          "problem": "S10 drops cells with P90 at or above $100 nominal. The estimate is therefore conditional on cells below the ceiling and likely attenuated for high-wage occupations.",
+          "fix": "State this interpretation constraint in the table notes and the manuscript (already partly noted in the Table 2 notes).",
+          "status": "non_blocking_disposition"
+        },
+        {
+          "finding_id": "STA-003",
+          "severity": "MINOR",
+          "location": "analysis/scripts/03_main_models.R:84-91",
+          "problem": "AIC and BIC from weighted fixest models are not comparable across specs estimated on different samples (S09, S10, and the robustness subsets).",
+          "fix": "Treat R-squared and within R-squared as the primary fit statistics, and do not compare AIC across samples.",
+          "status": "non_blocking_disposition"
+        },
+        {
+          "finding_id": "STA-004",
+          "severity": "INFO",
+          "location": "analysis/scripts/05_robustness.R:31",
+          "problem": "The inverse-variance weight 1/(PRSE/100)^2 is the correct delta-method approximation to the variance of a log mean, given a relative standard error.",
+          "fix": "None.",
+          "status": "informational"
+        },
+        {
+          "finding_id": "STA-005",
+          "severity": "INFO",
+          "location": "analysis/scripts/03_main_models.R:41-47",
+          "problem": "The equality Wald tests are correctly parameterized (main renewable term plus interactions against a reference category), so H0 is that the gaps are equal.",
+          "fix": "None.",
+          "status": "informational"
+        },
+        {
+          "finding_id": "STA-006",
+          "severity": "MINOR",
+          "location": "analysis/scripts/07_registry.R:38",
+          "problem": "The S08 p-value uses a normal approximation to the bootstrap SE. This is acceptable, but the percentile interval should also be reported.",
+          "fix": "Optionally add percentile intervals; normal-approximation inference is acceptable for a descriptive component.",
+          "status": "non_blocking_disposition"
+        }
+      ],
+      "verdict": "PASS",
+      "initial_verdict": "FAIL"
+    },
+    {
+      "reviewer_id": "R6-4",
+      "role": "reproducibility",
+      "agent_type": "inline-orchestrator-role-pass (subagent dispatch unavailable)",
+      "task_invocation_id": "d-eb31b64b8e610b1e735915d5",
+      "report_path": "review-evidence/phase-06/s-198f8f4df419bdef25fb862d/reports/reproducibility.md",
+      "reviewed_scripts": [
+        "analysis/scripts/01_build_panel.R",
+        "analysis/scripts/02_descriptives.R",
+        "analysis/scripts/03_main_models.R",
+        "analysis/scripts/04_decomposition.R",
+        "analysis/scripts/05_robustness.R",
+        "analysis/scripts/06_figures.R",
+        "analysis/scripts/07_registry.R"
+      ],
+      "reviewed_specs": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20"
+      ],
+      "reviewed_tests": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6"
+      ],
+      "reviewed_upstream_artifacts": [
+        "analysis/analysis-plan.md",
+        "analysis/analysis-plan-manifest.json",
+        "analysis/scripts-inventory.json",
+        "analysis/spec-registry.csv",
+        "design/identification-strategy.json",
+        "design/model-specs.json",
+        "data/variable-dictionary.csv",
+        "data/data-measurement-manifest.json"
+      ],
+      "findings": [
+        {
+          "finding_id": "REP-001",
+          "severity": "MAJOR",
+          "location": "analysis/scripts-inventory.json",
+          "problem": "The declared `produces` lists omit outputs the scripts write. 02: table1-descriptives.html, table1b-wage-by-year.csv, the fig1 PNG. 03: analysis/joint-tests.json, table3-heterogeneity-regression.html, fit-stats-main.csv, identifying-cells.csv, main-models.rds. 05: tableA1-robustness-regression.html, balanced-set.csv, fit-stats-robustness.csv, robustness-models.rds. 06: the PNG copies. 07: tables/model-fit-stats.csv.",
+          "fix": "Make each script's `produces` list match the files it actually writes.",
+          "status": "fixed"
+        },
+        {
+          "finding_id": "REP-002",
+          "severity": "MAJOR",
+          "location": "analysis/scripts-inventory.json dependency_graph",
+          "problem": "Two dependencies are undeclared. Script 06 reads 04's output, and script 07 reads data/processed/oews-generation-cells.csv from 01 and fit-stats files from 03 and 05.",
+          "fix": "Set the graph to 06 <- {03, 04} and 07 <- {01, 03, 04, 05}. The script order is unchanged (01-07).",
+          "status": "fixed"
+        },
+        {
+          "finding_id": "REP-003",
+          "severity": "MINOR",
+          "location": "all scripts",
+          "problem": "No script writes session or package information.",
+          "fix": "Phase 8 must capture sessionInfo() in execution-report.json run_context.",
+          "status": "non_blocking_disposition"
+        },
+        {
+          "finding_id": "REP-004",
+          "severity": "INFO",
+          "location": "analysis/scripts/04_decomposition.R:13",
+          "problem": "The only stochastic step (the bootstrap) is seeded. All paths are relative to the project root, and output directories are created before writing.",
+          "fix": "None.",
+          "status": "informational"
+        }
+      ],
+      "verdict": "PASS",
+      "initial_verdict": "FAIL"
+    },
+    {
+      "reviewer_id": "R6-5",
+      "role": "style_ai_patterns",
+      "agent_type": "inline-orchestrator-role-pass (subagent dispatch unavailable)",
+      "task_invocation_id": "d-25bc8367495b405ad085f2ce",
+      "report_path": "review-evidence/phase-06/s-198f8f4df419bdef25fb862d/reports/style_ai_patterns.md",
+      "reviewed_scripts": [
+        "analysis/scripts/01_build_panel.R",
+        "analysis/scripts/02_descriptives.R",
+        "analysis/scripts/03_main_models.R",
+        "analysis/scripts/04_decomposition.R",
+        "analysis/scripts/05_robustness.R",
+        "analysis/scripts/06_figures.R",
+        "analysis/scripts/07_registry.R"
+      ],
+      "reviewed_specs": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20"
+      ],
+      "reviewed_tests": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6"
+      ],
+      "reviewed_upstream_artifacts": [
+        "analysis/analysis-plan.md",
+        "analysis/analysis-plan-manifest.json",
+        "analysis/scripts-inventory.json",
+        "analysis/spec-registry.csv",
+        "design/identification-strategy.json",
+        "design/model-specs.json",
+        "data/variable-dictionary.csv",
+        "data/data-measurement-manifest.json"
+      ],
+      "findings": [
+        {
+          "finding_id": "STY-001",
+          "severity": "MINOR",
+          "location": "analysis/scripts/06_figures.R:27,58",
+          "problem": "geom_errorbarh() is deprecated in ggplot2 4.0.3, and its `height` argument should become `width` in geom_errorbar(orientation = 'y').",
+          "fix": "Replace it.",
+          "status": "fixed"
+        },
+        {
+          "finding_id": "STY-002",
+          "severity": "INFO",
+          "location": "03_main_models.R, 05_robustness.R",
+          "problem": "Checked the API calls against the installed versions: fixest 0.14.2 wald(keep=, print=), fitstat types 'g'/'r2'/'ar2'/'wr2', coeftable, confint; modelsummary 2.6.0 coef_map, list-form gof_map, stars, notes, output. No invented arguments found.",
+          "fix": "None.",
+          "status": "informational"
+        },
+        {
+          "finding_id": "STY-003",
+          "severity": "INFO",
+          "location": "02_descriptives.R; 03_main_models.R",
+          "problem": "Table and figure labels use reader-facing terms consistent with the dictionary's display labels. The registry keeps machine term names, which is acceptable for provenance.",
+          "fix": "None.",
+          "status": "informational"
+        },
+        {
+          "finding_id": "STY-004",
+          "severity": "MINOR",
+          "location": "03_main_models.R; 05_robustness.R",
+          "problem": "The fit-statistic extraction code is duplicated across the two scripts.",
+          "fix": "Acceptable at this size. Optionally move it into a shared helper.",
+          "status": "non_blocking_disposition"
+        }
+      ],
+      "verdict": "PASS",
+      "initial_verdict": "PASS"
+    },
+    {
+      "reviewer_id": "R6-6",
+      "role": "data_handling",
+      "agent_type": "inline-orchestrator-role-pass (subagent dispatch unavailable)",
+      "task_invocation_id": "d-970366a3deb4166299448207",
+      "report_path": "review-evidence/phase-06/s-198f8f4df419bdef25fb862d/reports/data_handling.md",
+      "reviewed_scripts": [
+        "analysis/scripts/01_build_panel.R",
+        "analysis/scripts/02_descriptives.R",
+        "analysis/scripts/03_main_models.R",
+        "analysis/scripts/04_decomposition.R",
+        "analysis/scripts/05_robustness.R",
+        "analysis/scripts/06_figures.R",
+        "analysis/scripts/07_registry.R"
+      ],
+      "reviewed_specs": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20"
+      ],
+      "reviewed_tests": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6"
+      ],
+      "reviewed_upstream_artifacts": [
+        "analysis/analysis-plan.md",
+        "analysis/analysis-plan-manifest.json",
+        "analysis/scripts-inventory.json",
+        "analysis/spec-registry.csv",
+        "design/identification-strategy.json",
+        "design/model-specs.json",
+        "data/variable-dictionary.csv",
+        "data/data-measurement-manifest.json"
+      ],
+      "findings": [
+        {
+          "finding_id": "DAT-001",
+          "severity": "MINOR",
+          "location": "analysis/scripts/01_build_panel.R:71-74",
+          "problem": "\"#\" and \"*\" values in H_PCT10 and H_MEDIAN are coerced to NA without being counted, so coverage under-reports censoring in the P10 and median outcomes.",
+          "fix": "Add p10_topcoded and median_topcoded counts to tables/cell-coverage.csv.",
+          "status": "fixed"
+        },
+        {
+          "finding_id": "DAT-002",
+          "severity": "INFO",
+          "location": "analysis/scripts/01_build_panel.R:84-91",
+          "problem": "The occupational-group mapping covers SOC majors 11-53 as planned. Major 45 (farming) falls in the construction, installation, maintenance and repair group, as documented in the measurement plan.",
+          "fix": "None.",
+          "status": "informational"
+        },
+        {
+          "finding_id": "DAT-003",
+          "severity": "INFO",
+          "location": "01-05",
+          "problem": "The analytic flag excludes 221118 and suppressed cells. Robustness, decomposition, and descriptive samples all derive from the same flag. S17 adds 221118 under the same wage and employment restrictions. Deflation uses the documented May CPI-U values.",
+          "fix": "None.",
+          "status": "informational"
+        },
+        {
+          "finding_id": "DAT-004",
+          "severity": "MINOR",
+          "location": "analysis/scripts/02_descriptives.R:62",
+          "problem": "The 'Employment' row reports mean annual employment within the analytic sample only.",
+          "fix": "Make the label say 'analytic sample' (table note).",
+          "status": "fixed"
+        }
+      ],
+      "verdict": "PASS",
+      "initial_verdict": "PASS"
+    }
+  ],
+  "reviewed_scripts": [
+    {
+      "path": "analysis/scripts/01_build_panel.R",
+      "status_in_inventory": "planned",
+      "exists_or_stub_declared": true,
+      "reviewed_by": [
+        "correctness",
+        "robustness",
+        "statistical",
+        "reproducibility",
+        "style_ai_patterns",
+        "data_handling"
+      ]
+    },
+    {
+      "path": "analysis/scripts/02_descriptives.R",
+      "status_in_inventory": "planned",
+      "exists_or_stub_declared": true,
+      "reviewed_by": [
+        "correctness",
+        "robustness",
+        "statistical",
+        "reproducibility",
+        "style_ai_patterns",
+        "data_handling"
+      ]
+    },
+    {
+      "path": "analysis/scripts/03_main_models.R",
+      "status_in_inventory": "planned",
+      "exists_or_stub_declared": true,
+      "reviewed_by": [
+        "correctness",
+        "robustness",
+        "statistical",
+        "reproducibility",
+        "style_ai_patterns",
+        "data_handling"
+      ]
+    },
+    {
+      "path": "analysis/scripts/04_decomposition.R",
+      "status_in_inventory": "planned",
+      "exists_or_stub_declared": true,
+      "reviewed_by": [
+        "correctness",
+        "robustness",
+        "statistical",
+        "reproducibility",
+        "style_ai_patterns",
+        "data_handling"
+      ]
+    },
+    {
+      "path": "analysis/scripts/05_robustness.R",
+      "status_in_inventory": "planned",
+      "exists_or_stub_declared": true,
+      "reviewed_by": [
+        "correctness",
+        "robustness",
+        "statistical",
+        "reproducibility",
+        "style_ai_patterns",
+        "data_handling"
+      ]
+    },
+    {
+      "path": "analysis/scripts/06_figures.R",
+      "status_in_inventory": "planned",
+      "exists_or_stub_declared": true,
+      "reviewed_by": [
+        "correctness",
+        "robustness",
+        "statistical",
+        "reproducibility",
+        "style_ai_patterns",
+        "data_handling"
+      ]
+    },
+    {
+      "path": "analysis/scripts/07_registry.R",
+      "status_in_inventory": "planned",
+      "exists_or_stub_declared": true,
+      "reviewed_by": [
+        "correctness",
+        "robustness",
+        "statistical",
+        "reproducibility",
+        "style_ai_patterns",
+        "data_handling"
+      ]
+    }
+  ],
+  "reviewed_tests": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6"
+  ],
+  "reviewed_specs": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "S15",
+    "S16",
+    "S17",
+    "S18",
+    "S19",
+    "S20"
+  ],
+  "reviewed_script_dag": {
+    "reviewed": true,
+    "reviewed_by": [
+      "correctness",
+      "robustness",
+      "statistical",
+      "reproducibility",
+      "style_ai_patterns",
+      "data_handling"
+    ],
+    "status": "PASS"
+  },
+  "reviewed_spec_coverage": {
+    "reviewed": true,
+    "reviewed_by": [
+      "correctness",
+      "robustness",
+      "statistical",
+      "reproducibility",
+      "style_ai_patterns",
+      "data_handling"
+    ],
+    "status": "PASS"
+  },
+  "reviewed_robustness_coverage": {
+    "reviewed": true,
+    "reviewed_by": [
+      "correctness",
+      "robustness",
+      "statistical",
+      "reproducibility",
+      "style_ai_patterns",
+      "data_handling"
+    ],
+    "status": "PASS"
+  },
+  "reviewed_missing_data_alignment": {
+    "reviewed": true,
+    "reviewed_by": [
+      "correctness",
+      "robustness",
+      "statistical",
+      "reproducibility",
+      "style_ai_patterns",
+      "data_handling"
+    ],
+    "status": "PASS"
+  },
+  "reviewed_no_execution_boundary": {
+    "reviewed": true,
+    "reviewed_by": [
+      "correctness",
+      "robustness",
+      "statistical",
+      "reproducibility",
+      "style_ai_patterns",
+      "data_handling"
+    ],
+    "status": "PASS"
+  },
+  "blocking_findings": [],
+  "first_round_blocking_findings": [
+    "COR-001",
+    "REP-001",
+    "REP-002",
+    "STA-001"
+  ],
+  "unresolved_critical_count": 0,
+  "fix_status": {
+    "required": true,
+    "all_blocking_fixed": true,
+    "fix_log": "review/pre-execution-fix-log.json",
+    "rereview": "review/pre-execution-rereview.json"
+  },
+  "review_evidence": {
+    "profile": "normal",
+    "attempt_epoch": 9,
+    "rounds": {
+      "initial_panel": {
+        "session_id": "s-198f8f4df419bdef25fb862d",
+        "achieved_assurance": "process_recorded"
+      },
+      "fix_rereview": {
+        "session_id": "s-6873b81e79432a6d39672bfd",
+        "achieved_assurance": "process_recorded"
+      }
+    }
+  }
+}

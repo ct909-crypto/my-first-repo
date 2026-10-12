@@ -1,0 +1,2 @@
+{"verdict":"FAIL","source_phase":"4","route_back_phase":"3","owner_phase":"3",
+ "findings":[{"finding_id":"P4-F001","status":"open","route_back_phase":"3","owner_phase":"3","severity":"minor","summary":"Phase 3 model-spec term names did not match Phase 4 variable-dictionary constructs; percentile outcomes combined in one model.","affected_artifacts":["design/model-specs.json","design/identification-strategy.json"],"required_fix":"Rename model terms to dictionary constructs; split M8 into P10 and P90 models; re-verify Phase 3."}]}

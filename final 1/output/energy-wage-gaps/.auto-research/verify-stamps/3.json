@@ -1,0 +1,19 @@
+{
+  "authority": "audit_only_not_completion_input",
+  "completed_at": "2026-10-10T13:46:22.093837+00:00",
+  "contract_sha256": "beb6125aa0b17e6505f99cc8950dc0a87a355f6ab5f886ef7b3f77b4702028f4",
+  "phase_id": "3",
+  "required_outputs": {
+    "design/design-blueprint.md": "3fd4c84b753ebfe46c54a8890ae05a4e06eebb65d1053df9cc67a907894d4fe5",
+    "design/design-evaluation.json": "695a74f19dffabe04f6c397d065ce8483a1730291f526326dcb8df82e93e14c6",
+    "design/design-evaluation.md": "84fca19bf6c931586eb43e8bd2519dfb77d5b4d85f1a725cf87aefc339f88566",
+    "design/design-manifest.json": "1bd5ceecd2824e09ab9f0e18e1d0545f5e308ab5b7e1d6cea97b0d0230df6757",
+    "design/design-revision-log.json": "4044295077c3ce728ee893262d9d4b823c59acf0ecc7ccb8eaa567a6293a2821",
+    "design/design-revision-log.md": "a95916641c266888187eb057950218f3892b55926428df62176b1b71faeecea1",
+    "design/identification-strategy.json": "f073a51809e76598a80568ad2d57b67544b5fa717d49fdd222250a3c8b2dbf0d",
+    "design/model-specs.json": "d002a582b63fde12966fc3239b6bc8591a5f681aae521304e3b5b619f67677f4"
+  },
+  "run_nonce": "cd87aa181cdcd508120914d6f9b648f4",
+  "schema_version": "scholar-auto-research-completion-audit/v1",
+  "verdict": "PASS"
+}

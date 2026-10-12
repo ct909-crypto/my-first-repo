@@ -1,0 +1,1035 @@
+{
+  "verdict": "PASS",
+  "degraded": false,
+  "decision": "PROCEED_TO_RUNTIME_SANITY",
+  "ready_for_phase_10": true,
+  "review_engine": {
+    "skill": "scholar-verify",
+    "mode": "stage1_no_manuscript",
+    "auto_research_contract": "phase_9",
+    "read_live_outputs_pre_lock": true,
+    "task_invocation_id": "phase9-verify-energy-001",
+    "invoked_at_utc": "2026-10-10T10:40:00Z",
+    "input_artifacts": [
+      "tables/results-registry.csv",
+      "figures/figure-registry.csv",
+      "analysis/execution-report.json"
+    ],
+    "output_artifacts": [
+      "review/post-execution-review.json",
+      "verify/stage1-pre-draft-verification.md"
+    ]
+  },
+  "reviewer_independence": {
+    "independent_subagents": false,
+    "reason": "subagent dispatch unavailable (API safeguard errors); inline role passes"
+  },
+  "source_hashes": {
+    "spec_registry": "ecaad7c04f7d95fee77504207032ae59747066838f62a12593838676d5b72f04",
+    "analysis_premortem": "6ab521643c044c2d6c2765063a7867b14cb0ad10afcb1f8e47e23a56cc4f3b29",
+    "execution_report": "936993a74238d19ed5d457c3d593a5fadf2bfdcd689486ed4f844a38908bb13c",
+    "results_registry": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac",
+    "figure_registry": "893baca3b02f5be2f3295945d5db6d82cd13d7bd842ba62a4a5b33b89fe652c7"
+  },
+  "phase7_constraint_carryforward": {
+    "null_falsification_checked": true,
+    "reporting_depth_checked": true,
+    "checked_hypothesis_ids": [
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H5"
+    ],
+    "evidence": "review/analysis-premortem.json null_falsification_table (H1-H5) and reporting_depth_checklist read; decision rules DR-01..DR-06 evaluated against executed results (see decision_rule_outcomes)",
+    "null_falsification_read": true,
+    "reporting_depth_read": true,
+    "hypotheses_covered": [
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H5"
+    ],
+    "reporting_depth_items_considered": [
+      "PM-01",
+      "PM-04",
+      "PM-02",
+      "PM-06",
+      "PM-07",
+      "PM-08",
+      "PM-09",
+      "PM-05",
+      "PM-11"
+    ],
+    "claim_constraints_reflect_phase7": true,
+    "decision_rule_outcomes": {
+      "DR-01": "triggered: H5 reported as no detectable narrowing",
+      "DR-02": "not triggered (S15 CI excludes 0)",
+      "DR-03": "triggered for geothermal (26 identifying cells): describe as imprecise",
+      "DR-04": "not triggered (two-way p about 0.0001)",
+      "DR-05": "always applied",
+      "DR-06": "not triggered (no sign reversal)"
+    }
+  },
+  "raw_output_verification": {
+    "verdict": "PASS",
+    "stage": "stage1_no_manuscript",
+    "checked_raw_tables": [
+      "analysis/outputs/main-model-estimates.csv",
+      "tables/results-registry.csv",
+      "tables/tableA1-robustness.csv",
+      "tables/table2-main-regression.html",
+      "tables/table3-heterogeneity-regression.html",
+      "tables/tableA1-robustness-regression.html",
+      "tables/table4-decomposition.csv",
+      "tables/table1-descriptives.csv"
+    ],
+    "checked_figures": [
+      "figures/fig1-wage-by-source-year.pdf",
+      "figures/fig2-source-gaps.pdf",
+      "figures/fig3-gap-by-year.pdf",
+      "figures/fig4-gap-by-occupation-group.pdf",
+      "figures/fig1-wage-by-source-year.png",
+      "figures/fig2-source-gaps.png",
+      "figures/fig3-gap-by-year.png",
+      "figures/fig4-gap-by-occupation-group.png"
+    ],
+    "registry_consistency": true,
+    "registry_consistency_detail": "31/31 table cells match registry/model estimates",
+    "visual_figure_inspection": true,
+    "critical_count": 0,
+    "report_path": "verify/stage1-pre-draft-verification.md"
+  },
+  "reviewer_provenance": [
+    {
+      "reviewer_id": "R9-1",
+      "role": "statistical_results",
+      "agent_name": "orchestrating agent (inline role pass)",
+      "task_invocation_id": "d-b062d605fee0710cc53408a1",
+      "report_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/reports/statistical_results.md",
+      "dispatched_at_utc": "2026-10-10T13:47:07.404409+00:00",
+      "model_identity": "unavailable: inline pass"
+    },
+    {
+      "reviewer_id": "R9-2",
+      "role": "robustness_consistency",
+      "agent_name": "orchestrating agent (inline role pass)",
+      "task_invocation_id": "d-8a4ffd1ef90c2a0e82aea520",
+      "report_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/reports/robustness_consistency.md",
+      "dispatched_at_utc": "2026-10-10T13:47:07.446010+00:00",
+      "model_identity": "unavailable: inline pass"
+    },
+    {
+      "reviewer_id": "R9-3",
+      "role": "sample_data_integrity",
+      "agent_name": "orchestrating agent (inline role pass)",
+      "task_invocation_id": "d-5420621f1669d53fc7953f3b",
+      "report_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/reports/sample_data_integrity.md",
+      "dispatched_at_utc": "2026-10-10T13:47:07.487648+00:00",
+      "model_identity": "unavailable: inline pass"
+    },
+    {
+      "reviewer_id": "R9-4",
+      "role": "interpretation_claims",
+      "agent_name": "orchestrating agent (inline role pass)",
+      "task_invocation_id": "d-537307ad3276a396670ef10b",
+      "report_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/reports/interpretation_claims.md",
+      "dispatched_at_utc": "2026-10-10T13:47:07.534136+00:00",
+      "model_identity": "unavailable: inline pass"
+    }
+  ],
+  "phase8_status": {
+    "verdict": "PASS",
+    "ready_for_phase_9": true,
+    "errors": [],
+    "errors_empty": true
+  },
+  "reviewers": [
+    {
+      "reviewer_id": "R9-1",
+      "role": "statistical_results",
+      "agent_type": "inline-orchestrator-role-pass (subagent dispatch unavailable)",
+      "task_invocation_id": "d-b062d605fee0710cc53408a1",
+      "report_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/reports/statistical_results.md",
+      "reviewed_specs": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20"
+      ],
+      "reviewed_figures": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F1-png",
+        "F2-png",
+        "F3-png",
+        "F4-png"
+      ],
+      "findings": [
+        "All 20 registry rows have finite estimates, nonnegative SEs, and p-values in [0, 1].",
+        "Stage-1 cross-check: 31/31 table cells (estimate and SE at 3 dp) match the registry and model estimates across Tables 2, 3, and A1.",
+        "Headline S03: -0.122 (SE 0.021), about an 11.5% lower mean hourly wage for the same occupation and year; two-way clustered SE 0.028 (p about 0.0001) per se-sensitivity.csv, so DR-04 is not triggered."
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "reviewer_id": "R9-2",
+      "role": "robustness_consistency",
+      "agent_type": "inline-orchestrator-role-pass (subagent dispatch unavailable)",
+      "task_invocation_id": "d-8a4ffd1ef90c2a0e82aea520",
+      "report_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/reports/robustness_consistency.md",
+      "reviewed_specs": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20"
+      ],
+      "reviewed_figures": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F1-png",
+        "F2-png",
+        "F3-png",
+        "F4-png"
+      ],
+      "findings": [
+        "S11-S20 all negative and significant; the S03 magnitude ranges from -0.10 (S15 fossil-only; S19 leave-out-biomass) to -0.17 (S16 hydro excluded). No sign reversal, so DR-06 is not triggered.",
+        "S15 renewable vs fossil-only is -0.101 with a CI excluding 0, so DR-02 is not triggered: the gap is not just a nuclear premium.",
+        "S20 balanced-set 2025 gap of -0.131 matches S06, so the trend result is not driven by occupation coverage."
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "reviewer_id": "R9-3",
+      "role": "sample_data_integrity",
+      "agent_type": "inline-orchestrator-role-pass (subagent dispatch unavailable)",
+      "task_invocation_id": "d-5420621f1669d53fc7953f3b",
+      "report_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/reports/sample_data_integrity.md",
+      "reviewed_specs": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20"
+      ],
+      "reviewed_figures": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F1-png",
+        "F2-png",
+        "F3-png",
+        "F4-png"
+      ],
+      "findings": [
+        "2,096 detailed cells; 1,876 analytic (excluded: 'other' generation, suppressed wages/employment, top-coded means). Occupation-years: 780, mixed: 335.",
+        "Identifying cells sharing occupation-years with fossil fuel: geothermal 26, biomass 61. Geothermal is below the DR-03 threshold of 30, so describe it as imprecise.",
+        "P90 censoring: 1,307 of 1,577 cells retained in S10; reported as conditional."
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "reviewer_id": "R9-4",
+      "role": "interpretation_claims",
+      "agent_type": "inline-orchestrator-role-pass (subagent dispatch unavailable)",
+      "task_invocation_id": "d-537307ad3276a396670ef10b",
+      "report_path": "review-evidence/phase-09/s-3526750e96b8587536b02500/reports/interpretation_claims.md",
+      "reviewed_specs": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20"
+      ],
+      "reviewed_figures": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F1-png",
+        "F2-png",
+        "F3-png",
+        "F4-png"
+      ],
+      "findings": [
+        "H1 supported; H3 supported (nuclear positive, hydro null, solar and wind negative); H4 supported (joint F about 29, p < 0.001; production -18%, professional -2% n.s.).",
+        "H2 not supported as stated: composition does not account for the gap (composition about +0.02 log points); the gap is within occupation plus non-overlapping occupations.",
+        "H5 not supported: no narrowing (S07 -0.005/yr, n.s.). Apply DR-01 and DR-05: no causal or policy attribution."
+      ],
+      "verdict": "PASS"
+    }
+  ],
+  "reviewed_specs": [
+    {
+      "spec_id": "S01",
+      "planned_direction": "negative",
+      "observed_direction": "negative",
+      "estimate": "-0.165324605944328",
+      "std_error": "0.0712979013519161",
+      "p_value": "0.0214648386420334",
+      "ci_low": "-0.305068",
+      "ci_high": "-0.025581",
+      "n": "1876",
+      "sample_id": "analytic cells (7 industries; published wage and employment)",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported",
+      "interpretation_constraint": "Describe as a within-occupation difference in average pay; descriptive, not causal.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S02",
+      "planned_direction": "negative",
+      "observed_direction": "negative",
+      "estimate": "-0.123799680175371",
+      "std_error": "0.0208196409138923",
+      "p_value": "0.0000000151805460704454",
+      "ci_low": "-0.164606",
+      "ci_high": "-0.082993",
+      "n": "1855",
+      "sample_id": "analytic cells (7 industries; published wage and employment)",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported",
+      "interpretation_constraint": "Describe as a within-occupation difference in average pay; descriptive, not causal.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S03",
+      "planned_direction": "negative",
+      "observed_direction": "negative",
+      "estimate": "-0.122223007725594",
+      "std_error": "0.0212443304921749",
+      "p_value": "0.0000000673167911005523",
+      "ci_low": "-0.163862",
+      "ci_high": "-0.080584",
+      "n": "1577",
+      "sample_id": "analytic cells (7 industries; published wage and employment)",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported",
+      "interpretation_constraint": "Describe as a within-occupation difference in average pay; descriptive, not causal.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S04",
+      "planned_direction": "negative (solar vs fossil)",
+      "observed_direction": "negative",
+      "estimate": "-0.129237347621906",
+      "std_error": "0.0304243647844261",
+      "p_value": "0.0000426323141531285",
+      "ci_low": "-0.188869",
+      "ci_high": "-0.069606",
+      "n": "1577",
+      "sample_id": "analytic cells (7 industries; published wage and employment)",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported",
+      "interpretation_constraint": "Describe as a within-occupation difference in average pay; descriptive, not causal.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S05",
+      "planned_direction": "negative, largest for plant-based occupations",
+      "observed_direction": "negative",
+      "estimate": "-0.201814592345279",
+      "std_error": "0.00834239119724029",
+      "p_value": "0.00000000000000000000000000000000000000000000000352478923663789",
+      "ci_low": "-0.218166",
+      "ci_high": "-0.185464",
+      "n": "1577",
+      "sample_id": "analytic cells (7 industries; published wage and employment)",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported",
+      "interpretation_constraint": "Describe as a within-occupation difference in average pay; descriptive, not causal.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S06",
+      "planned_direction": "negative, shrinking toward zero",
+      "observed_direction": "negative",
+      "estimate": "-0.138984221387327",
+      "std_error": "0.0227917471443309",
+      "p_value": "0.0000000132471589325596",
+      "ci_low": "-0.183656",
+      "ci_high": "-0.094312",
+      "n": "1577",
+      "sample_id": "analytic cells (7 industries; published wage and employment)",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported_with_caveat",
+      "interpretation_constraint": "The 2025 gap is negative and slightly larger than in 2021. The joint test (p about 0.04) indicates year-to-year variation, but there is no monotone narrowing.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S07",
+      "planned_direction": "positive (gap narrowing)",
+      "observed_direction": "negative",
+      "estimate": "-0.00498034722893389",
+      "std_error": "0.00455999270772357",
+      "p_value": "0.276922453222494",
+      "ci_low": "-0.013918",
+      "ci_high": "0.003957",
+      "n": "1577",
+      "sample_id": "analytic cells (7 industries; published wage and employment)",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "null",
+      "interpretation_constraint": "Trend coefficient is small, negative (widening), and not distinguishable from zero; H5 (narrowing) is not supported. Per DR-01, report no detectable narrowing over the smoothed OEWS window, with no policy attribution.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S08",
+      "planned_direction": "negative within-occupation component",
+      "observed_direction": "negative",
+      "estimate": "-0.141006298169253",
+      "std_error": "0.0284124878692788",
+      "p_value": "0.000000694740041509879",
+      "ci_low": "-0.196695",
+      "ci_high": "-0.085318",
+      "n": "1876",
+      "sample_id": "analytic cells (7 industries; published wage and employment)",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "conflicting",
+      "interpretation_constraint": "Within-occupation component carries the gap. The composition component is small and positive (renewable occupational mix slightly favors renewables), so H2 is not supported as stated. The raw gap is not explained by occupational mix.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S09",
+      "planned_direction": "negative",
+      "observed_direction": "negative",
+      "estimate": "-0.220380455285372",
+      "std_error": "0.0382077910318404",
+      "p_value": "0.0000000628594369082689",
+      "ci_low": "-0.295268",
+      "ci_high": "-0.145493",
+      "n": "1577",
+      "sample_id": "analytic cells (7 industries; published wage and employment)",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported",
+      "interpretation_constraint": "Describe as a within-occupation difference in average pay; descriptive, not causal.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S10",
+      "planned_direction": "negative",
+      "observed_direction": "negative",
+      "estimate": "-0.0681203593989736",
+      "std_error": "0.0141952415152383",
+      "p_value": "0.000005103482430885",
+      "ci_low": "-0.095943",
+      "ci_high": "-0.040298",
+      "n": "1307",
+      "sample_id": "analytic cells (7 industries; published wage and employment); uncensored P90 cells",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported",
+      "interpretation_constraint": "Describe as a within-occupation difference in average pay; descriptive, not causal.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S11",
+      "planned_direction": "negative (same sign as S03)",
+      "observed_direction": "negative",
+      "estimate": "-0.122636794150928",
+      "std_error": "0.0155899867669418",
+      "p_value": "0.00000000000172094943396121",
+      "ci_low": "-0.153193",
+      "ci_high": "-0.092080",
+      "n": "1577",
+      "sample_id": "analytic cells (7 industries; published wage and employment)",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported",
+      "interpretation_constraint": "Describe as a within-occupation difference in average pay; descriptive, not causal.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S12",
+      "planned_direction": "negative (same sign as S03)",
+      "observed_direction": "negative",
+      "estimate": "-0.126307907393584",
+      "std_error": "0.0262724661007664",
+      "p_value": "0.00000443765640753225",
+      "ci_low": "-0.177802",
+      "ci_high": "-0.074814",
+      "n": "1577",
+      "sample_id": "analytic cells (7 industries; published wage and employment)",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported",
+      "interpretation_constraint": "Describe as a within-occupation difference in average pay; descriptive, not causal.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S13",
+      "planned_direction": "negative (same sign as S03)",
+      "observed_direction": "negative",
+      "estimate": "-0.152568560623239",
+      "std_error": "0.023972067845081",
+      "p_value": "0.00000000365685434593979",
+      "ci_low": "-0.199554",
+      "ci_high": "-0.105583",
+      "n": "1570",
+      "sample_id": "analytic cells (7 industries; published wage and employment); non-missing median",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported",
+      "interpretation_constraint": "Describe as a within-occupation difference in average pay; descriptive, not causal.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S14",
+      "planned_direction": "negative (same sign as S03)",
+      "observed_direction": "negative",
+      "estimate": "-0.118604633222984",
+      "std_error": "0.0240713081846614",
+      "p_value": "0.0000141709975907288",
+      "ci_low": "-0.165784",
+      "ci_high": "-0.071425",
+      "n": "915",
+      "sample_id": "analytic cells (7 industries; published wage and employment); balanced occupation set",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported",
+      "interpretation_constraint": "Describe as a within-occupation difference in average pay; descriptive, not causal.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S15",
+      "planned_direction": "negative (same sign as S03)",
+      "observed_direction": "negative",
+      "estimate": "-0.10061499144825",
+      "std_error": "0.0240951830191585",
+      "p_value": "0.000066885988429352",
+      "ci_low": "-0.147842",
+      "ci_high": "-0.053388",
+      "n": "1030",
+      "sample_id": "analytic cells (7 industries; published wage and employment); nuclear excluded",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported",
+      "interpretation_constraint": "Describe as a within-occupation difference in average pay; descriptive, not causal.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S16",
+      "planned_direction": "negative (same sign as S03)",
+      "observed_direction": "negative",
+      "estimate": "-0.168253476335329",
+      "std_error": "0.0278842727645192",
+      "p_value": "0.0000000196145739170516",
+      "ci_low": "-0.222907",
+      "ci_high": "-0.113600",
+      "n": "1362",
+      "sample_id": "analytic cells (7 industries; published wage and employment); hydro excluded",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported",
+      "interpretation_constraint": "Describe as a within-occupation difference in average pay; descriptive, not causal.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S17",
+      "planned_direction": "negative (same sign as S03)",
+      "observed_direction": "negative",
+      "estimate": "-0.114563742400097",
+      "std_error": "0.0237145619505823",
+      "p_value": "0.00000402321819809023",
+      "ci_low": "-0.161044",
+      "ci_high": "-0.068083",
+      "n": "1707",
+      "sample_id": "analytic cells (7 industries; published wage and employment); plus other generation",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported",
+      "interpretation_constraint": "Describe as a within-occupation difference in average pay; descriptive, not causal.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S18",
+      "planned_direction": "negative (same sign as S03)",
+      "observed_direction": "negative",
+      "estimate": "-0.121729050694715",
+      "std_error": "0.0222781803627027",
+      "p_value": "0.0000003202628762617",
+      "ci_low": "-0.165394",
+      "ci_high": "-0.078064",
+      "n": "1292",
+      "sample_id": "analytic cells (7 industries; published wage and employment); employment >= 50",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported",
+      "interpretation_constraint": "Describe as a within-occupation difference in average pay; descriptive, not causal.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S19",
+      "planned_direction": "negative (same sign as S03)",
+      "observed_direction": "negative",
+      "estimate": "-0.102279930100008",
+      "std_error": "0.0170859814587835",
+      "p_value": "0.0000000233211711386081",
+      "ci_low": "-0.135768",
+      "ci_high": "-0.068791",
+      "n": "1511",
+      "sample_id": "analytic cells (7 industries; published wage and employment); one renewable source dropped",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported",
+      "interpretation_constraint": "Describe as a within-occupation difference in average pay; descriptive, not causal.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    },
+    {
+      "spec_id": "S20",
+      "planned_direction": "negative, shrinking toward zero",
+      "observed_direction": "negative",
+      "estimate": "-0.13054210238872",
+      "std_error": "0.0266171778505687",
+      "p_value": "0.000015245556101292",
+      "ci_low": "-0.182712",
+      "ci_high": "-0.078372",
+      "n": "915",
+      "sample_id": "analytic cells (7 industries; published wage and employment); balanced set",
+      "technical_validity": true,
+      "review_verdict": "PASS",
+      "substantive_classification": "supported",
+      "interpretation_constraint": "Describe as a within-occupation difference in average pay; descriptive, not causal.",
+      "allowed_claim_verbs": [
+        "is associated with",
+        "is lower than",
+        "pays less for the same occupation",
+        "differs from",
+        "is consistent with"
+      ]
+    }
+  ],
+  "reviewed_figures": [
+    {
+      "figure_id": "F1-png",
+      "source_path": "figures/fig1-wage-by-source-year.png",
+      "sha256": "6f6a82e28c8414a3a796100b0a68e0ceaf19120d96c40a9f6fc73a9a8fe700a4",
+      "visual_inspection": true,
+      "review_verdict": "PASS",
+      "caption_or_registry_match": "Seven lines (one per technology), 2021-2025; nuclear highest (about $59-64), biomass and geothermal lowest; matches table1b and registry description."
+    },
+    {
+      "figure_id": "F2-png",
+      "source_path": "figures/fig2-source-gaps.png",
+      "sha256": "6d14f522385af923ef9806e99748f770dce319b0574682a6761cb2ce7e65c080",
+      "visual_inspection": true,
+      "review_verdict": "PASS",
+      "caption_or_registry_match": "Six source coefficients vs fossil: nuclear about +12%, hydro about -2% (CI crosses 0), solar about -12%, wind about -7%, geothermal about -20%, biomass about -26%; matches S04 estimates."
+    },
+    {
+      "figure_id": "F3-png",
+      "source_path": "figures/fig3-gap-by-year.png",
+      "sha256": "5df1a85b661053a9933c300570d761c442d8e621df831b78b0f79c700177b597",
+      "visual_inspection": true,
+      "review_verdict": "PASS",
+      "caption_or_registry_match": "Within-occupation gap -10% to -13% each year (S06) and raw gap about -14% to -17% with wide CIs (S08); matches registry and decomposition table."
+    },
+    {
+      "figure_id": "F4-png",
+      "source_path": "figures/fig4-gap-by-occupation-group.png",
+      "sha256": "b512e489dc4785cf0f05dda9adea61466230eee15e0f2bcfdabf8f1c96c53478",
+      "visual_inspection": true,
+      "review_verdict": "PASS",
+      "caption_or_registry_match": "Five occupation categories: production and transportation about -18%, maintenance/repair about -14%, office/sales/service about -13%, management about -7%, professional about -2% (CI crosses 0); matches S05."
+    },
+    {
+      "figure_id": "F1",
+      "source_path": "figures/fig1-wage-by-source-year.pdf",
+      "sha256": "a036be90465df24f96810fa4616f7271335a4eaa9078d46defe1b60140423c96",
+      "visual_inspection": true,
+      "review_verdict": "PASS",
+      "caption_or_registry_match": "Vector version of the same ggplot object as the inspected PNG (same script call in save_both / ggsave pair); registry description matches."
+    },
+    {
+      "figure_id": "F2",
+      "source_path": "figures/fig2-source-gaps.pdf",
+      "sha256": "d6d37f424628ea683f677e4f70a8b10d198c1c510a32ab2c117ae4876cb06d3f",
+      "visual_inspection": true,
+      "review_verdict": "PASS",
+      "caption_or_registry_match": "Vector version of the same ggplot object as the inspected PNG (same script call in save_both / ggsave pair); registry description matches."
+    },
+    {
+      "figure_id": "F3",
+      "source_path": "figures/fig3-gap-by-year.pdf",
+      "sha256": "1edc983b1c23547389044206649f26c26ed0c226648dcfd80deed15ec6f827fd",
+      "visual_inspection": true,
+      "review_verdict": "PASS",
+      "caption_or_registry_match": "Vector version of the same ggplot object as the inspected PNG (same script call in save_both / ggsave pair); registry description matches."
+    },
+    {
+      "figure_id": "F4",
+      "source_path": "figures/fig4-gap-by-occupation-group.pdf",
+      "sha256": "51297ef0fdfd78388b04cf87b1e5e58f609e6fe6473b37675f38c8a6bd662591",
+      "visual_inspection": true,
+      "review_verdict": "PASS",
+      "caption_or_registry_match": "Vector version of the same ggplot object as the inspected PNG (same script call in save_both / ggsave pair); registry description matches."
+    }
+  ],
+  "sample_integrity": {
+    "verdict": "PASS",
+    "initial_n": 2096,
+    "analytic_n": 1876,
+    "exclusion_count": 220,
+    "missingness_checked": true,
+    "cluster_or_group_count": 192,
+    "weights_status": "cell employment weights (TOT_EMP); unweighted and inverse-variance variants in S11/S12",
+    "minimum_cell_count": 26
+  },
+  "result_interpretation": {
+    "technically_valid": true,
+    "direction_summary": "Renewable generation industries pay less than fossil and nuclear for the same occupation and year (S03 -0.122). Nuclear pays more and hydro about the same as fossil fuel; solar, wind, geothermal, and biomass pay less. Gaps are largest in production and maintenance occupations. There is no narrowing 2021-2025.",
+    "strength_summary": "Headline is about an 11.5% lower mean hourly wage (95% CI about -7.7% to -15.1% in percent terms); stable across 10 robustness specifications (-0.10 to -0.17 log points).",
+    "uncertainty_summary": "Occupation-clustered SE 0.021; industry-year 0.024; two-way 0.028. Year-specific estimates overlap; trend not distinguishable from zero.",
+    "claim_constraints": [
+      "descriptive, non-causal language",
+      "H2 and H5 reported as not supported",
+      "geothermal described as imprecise",
+      "P90 gap conditional on uncensored cells",
+      "no policy attribution for trends"
+    ]
+  },
+  "robustness_assessment": {
+    "verdict": "PASS",
+    "conflicts": [],
+    "interpretation_implications": "Headline sign and approximate magnitude survive weighting, outcome, sample, categorization, and clustering choices; magnitude is smallest without nuclear or biomass (about -0.10) and largest without hydro (about -0.17)."
+  },
+  "robustness_matrix": [
+    {
+      "primary_spec_id": "S03",
+      "comparison_spec_id": "S11",
+      "conflict_type": "none (same sign, overlapping magnitude)",
+      "severity": "none",
+      "adjudication": "S11 estimate -0.123 vs primary; same direction and significant",
+      "manuscript_instruction": "Report in Table A1; state that the headline gap is robust to this choice."
+    },
+    {
+      "primary_spec_id": "S03",
+      "comparison_spec_id": "S12",
+      "conflict_type": "none (same sign, overlapping magnitude)",
+      "severity": "none",
+      "adjudication": "S12 estimate -0.126 vs primary; same direction and significant",
+      "manuscript_instruction": "Report in Table A1; state that the headline gap is robust to this choice."
+    },
+    {
+      "primary_spec_id": "S03",
+      "comparison_spec_id": "S13",
+      "conflict_type": "none (same sign, overlapping magnitude)",
+      "severity": "none",
+      "adjudication": "S13 estimate -0.153 vs primary; same direction and significant",
+      "manuscript_instruction": "Report in Table A1; state that the headline gap is robust to this choice."
+    },
+    {
+      "primary_spec_id": "S03",
+      "comparison_spec_id": "S14",
+      "conflict_type": "none (same sign, overlapping magnitude)",
+      "severity": "none",
+      "adjudication": "S14 estimate -0.119 vs primary; same direction and significant",
+      "manuscript_instruction": "Report in Table A1; state that the headline gap is robust to this choice."
+    },
+    {
+      "primary_spec_id": "S03",
+      "comparison_spec_id": "S15",
+      "conflict_type": "none (same sign, overlapping magnitude)",
+      "severity": "none",
+      "adjudication": "S15 estimate -0.101 vs primary; same direction and significant",
+      "manuscript_instruction": "Report in Table A1; state that the headline gap is robust to this choice."
+    },
+    {
+      "primary_spec_id": "S03",
+      "comparison_spec_id": "S16",
+      "conflict_type": "none (same sign, overlapping magnitude)",
+      "severity": "none",
+      "adjudication": "S16 estimate -0.168 vs primary; same direction and significant",
+      "manuscript_instruction": "Report in Table A1; state that the headline gap is robust to this choice."
+    },
+    {
+      "primary_spec_id": "S03",
+      "comparison_spec_id": "S17",
+      "conflict_type": "none (same sign, overlapping magnitude)",
+      "severity": "none",
+      "adjudication": "S17 estimate -0.115 vs primary; same direction and significant",
+      "manuscript_instruction": "Report in Table A1; state that the headline gap is robust to this choice."
+    },
+    {
+      "primary_spec_id": "S03",
+      "comparison_spec_id": "S18",
+      "conflict_type": "none (same sign, overlapping magnitude)",
+      "severity": "none",
+      "adjudication": "S18 estimate -0.122 vs primary; same direction and significant",
+      "manuscript_instruction": "Report in Table A1; state that the headline gap is robust to this choice."
+    },
+    {
+      "primary_spec_id": "S03",
+      "comparison_spec_id": "S19",
+      "conflict_type": "none (same sign, overlapping magnitude)",
+      "severity": "none",
+      "adjudication": "S19 estimate -0.102 vs primary; same direction and significant",
+      "manuscript_instruction": "Report in Table A1; state that the headline gap is robust to this choice."
+    },
+    {
+      "primary_spec_id": "S06",
+      "comparison_spec_id": "S20",
+      "conflict_type": "none (same sign, overlapping magnitude)",
+      "severity": "none",
+      "adjudication": "S20 estimate -0.131 vs primary; same direction and significant",
+      "manuscript_instruction": "Report in Table A1; state that the headline gap is robust to this choice."
+    }
+  ],
+  "unexpected_results": [
+    {
+      "spec_id": "S07",
+      "classification": "null",
+      "action": "carry_forward_with_constraints",
+      "manuscript_instruction": "State that the within-occupation gap did not narrow (point estimate slightly widening, not significant); H5 not supported."
+    },
+    {
+      "spec_id": "S08",
+      "classification": "conflicting",
+      "action": "carry_forward_with_constraints",
+      "manuscript_instruction": "State that occupational composition does not account for the raw gap (composition slightly favors renewables); H2 not supported as stated."
+    },
+    {
+      "spec_id": "S04",
+      "classification": "weak",
+      "action": "carry_forward_with_constraints",
+      "manuscript_instruction": "Hydro contrast is near zero and imprecise (consistent with H3); geothermal estimate rests on 26 identifying cells and is imprecise."
+    }
+  ],
+  "claim_constraints": {
+    "allowed_claim_verbs": [
+      "is associated with",
+      "is lower than",
+      "pays less for the same occupation",
+      "differs from",
+      "is consistent with",
+      "remained",
+      "did not narrow"
+    ],
+    "forbidden_claim_verbs": [
+      "causes",
+      "leads to",
+      "effect of",
+      "impact",
+      "drives",
+      "results in",
+      "because of the IRA",
+      "proves"
+    ],
+    "required_disclosures": [
+      "descriptive design: sorting and regional composition not controlled",
+      "OEWS three-year pooled panels smooth trends",
+      "OEWS wages exclude overtime and shift differentials",
+      "P90 censoring",
+      "small geothermal and biomass samples",
+      "reviews carried out inline because independent subagents were unavailable (workflow disclosure, trace only)"
+    ]
+  },
+  "critical_count": 0,
+  "unresolved_blocking_count": 0,
+  "fix_status": {
+    "required": false,
+    "all_blocking_fixed": true,
+    "fix_log": "review/post-execution-fix-log.json"
+  },
+  "route_back_phase": null,
+  "review_evidence": {
+    "profile": "normal",
+    "attempt_epoch": 10,
+    "rounds": {
+      "post_execution_panel": {
+        "session_id": "s-3526750e96b8587536b02500",
+        "achieved_assurance": "process_recorded"
+      }
+    }
+  }
+}

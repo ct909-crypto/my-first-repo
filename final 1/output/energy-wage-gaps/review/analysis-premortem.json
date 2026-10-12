@@ -1,0 +1,820 @@
+{
+  "verdict": "PASS",
+  "degraded": false,
+  "ready_for_phase_8": true,
+  "premortem_engine": {
+    "skill": "scholar-analyze",
+    "mode": "premortem",
+    "auto_research_contract": "phase_7",
+    "skip_premortem_ignored": true,
+    "task_invocation_id": "phase7-premortem-energy-001",
+    "invoked_at_utc": "2026-10-10T10:05:00Z",
+    "input_artifacts": [
+      "design/identification-strategy.json",
+      "design/model-specs.json",
+      "data/measurement-plan.md",
+      "data/variable-dictionary.csv",
+      "analysis/analysis-plan.md",
+      "analysis/spec-registry.csv",
+      "analysis/scripts-inventory.json",
+      "review/pre-execution-review.json",
+      "review/pre-execution-fix-log.json",
+      "review/pre-execution-rereview.json"
+    ],
+    "output_artifacts": [
+      "review/analysis-premortem.json",
+      "review/analysis-premortem.md",
+      "review/analysis-premortem-fix-log.json"
+    ]
+  },
+  "reviewer_independence": {
+    "independent_subagents": false,
+    "reason": "subagent dispatch unavailable (API safeguard errors); inline role passes"
+  },
+  "iteration": 1,
+  "source_hashes": {
+    "identification_strategy": "f073a51809e76598a80568ad2d57b67544b5fa717d49fdd222250a3c8b2dbf0d",
+    "model_specs": "d002a582b63fde12966fc3239b6bc8591a5f681aae521304e3b5b619f67677f4",
+    "measurement_plan": "fe72f3b262c9559a0cef2c278740f863e42c7bfb4d845d43b8bd9432606675ff",
+    "variable_dictionary": "151576958aa39aa310383c319314daca71c83bf2aa69cefe3bd88c1b1329a4ee",
+    "analysis_plan": "d956ca8c4e7fe43fa46755f3bdcf3fbad4d83730e053b6fe8e705e475083044d",
+    "spec_registry": "ecaad7c04f7d95fee77504207032ae59747066838f62a12593838676d5b72f04",
+    "scripts_inventory": "30192e1a862e6757e91d6dea937a851de8258450293643984334101628532edb",
+    "pre_execution_review": "d116c891b969d7db35da689a341ab53a9961b439101a6e3a0d13a4271326a11e",
+    "pre_execution_fix_log": "778df42cd4a3891ad5832bcff7e9d246bc3903fc5716887e75103c3d6214ffd5",
+    "pre_execution_rereview": "219ea6ba1fb208d0034b5ed0c9d419acf813e8a260becd278ddcf71c61e62527",
+    "analysis_premortem_fix_log": "b8c2d9b65f48595d396476189492564ad49cf7d7d001757b7e9388853dcd7e79"
+  },
+  "reviewer_provenance": [
+    {
+      "reviewer_id": "R7-1",
+      "role": "identification",
+      "agent_name": "orchestrating agent (inline role pass)",
+      "task_invocation_id": "d-2b75d4593b70db70eebc3dc7",
+      "report_path": "review-evidence/phase-07/s-44352a0826dced1b9af4173e/reports/identification.md",
+      "dispatched_at_utc": "2026-10-10T13:47:05.843306+00:00",
+      "model_identity": "unavailable: inline pass by orchestrating agent"
+    },
+    {
+      "reviewer_id": "R7-2",
+      "role": "measurement_missingness",
+      "agent_name": "orchestrating agent (inline role pass)",
+      "task_invocation_id": "d-d8e0a1d744992d6161d1377c",
+      "report_path": "review-evidence/phase-07/s-44352a0826dced1b9af4173e/reports/measurement_missingness.md",
+      "dispatched_at_utc": "2026-10-10T13:47:05.891895+00:00",
+      "model_identity": "unavailable: inline pass by orchestrating agent"
+    },
+    {
+      "reviewer_id": "R7-3",
+      "role": "model_robustness",
+      "agent_name": "orchestrating agent (inline role pass)",
+      "task_invocation_id": "d-fec224379559826797cb8b00",
+      "report_path": "review-evidence/phase-07/s-44352a0826dced1b9af4173e/reports/model_robustness.md",
+      "dispatched_at_utc": "2026-10-10T13:47:05.934557+00:00",
+      "model_identity": "unavailable: inline pass by orchestrating agent"
+    },
+    {
+      "reviewer_id": "R7-4",
+      "role": "interpretation_claims",
+      "agent_name": "orchestrating agent (inline role pass)",
+      "task_invocation_id": "d-3e8e2c956533f33f9ed5dc0a",
+      "report_path": "review-evidence/phase-07/s-44352a0826dced1b9af4173e/reports/interpretation_claims.md",
+      "dispatched_at_utc": "2026-10-10T13:47:05.978078+00:00",
+      "model_identity": "unavailable: inline pass by orchestrating agent"
+    }
+  ],
+  "reviewers": [
+    {
+      "reviewer_id": "R7-1",
+      "role": "identification",
+      "agent_type": "inline-orchestrator-role-pass (subagent dispatch unavailable)",
+      "task_invocation_id": "d-2b75d4593b70db70eebc3dc7",
+      "report_path": "review-evidence/phase-07/s-44352a0826dced1b9af4173e/reports/identification.md",
+      "reviewed_inputs": [
+        "design/identification-strategy.json",
+        "design/model-specs.json",
+        "data/measurement-plan.md",
+        "data/variable-dictionary.csv",
+        "analysis/analysis-plan.md",
+        "analysis/spec-registry.csv",
+        "analysis/scripts-inventory.json",
+        "review/pre-execution-review.json",
+        "review/pre-execution-fix-log.json",
+        "review/pre-execution-rereview.json"
+      ],
+      "risks": [
+        "PM-01",
+        "PM-02"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "reviewer_id": "R7-2",
+      "role": "measurement_missingness",
+      "agent_type": "inline-orchestrator-role-pass (subagent dispatch unavailable)",
+      "task_invocation_id": "d-d8e0a1d744992d6161d1377c",
+      "report_path": "review-evidence/phase-07/s-44352a0826dced1b9af4173e/reports/measurement_missingness.md",
+      "reviewed_inputs": [
+        "design/identification-strategy.json",
+        "design/model-specs.json",
+        "data/measurement-plan.md",
+        "data/variable-dictionary.csv",
+        "analysis/analysis-plan.md",
+        "analysis/spec-registry.csv",
+        "analysis/scripts-inventory.json",
+        "review/pre-execution-review.json",
+        "review/pre-execution-fix-log.json",
+        "review/pre-execution-rereview.json"
+      ],
+      "risks": [
+        "PM-03",
+        "PM-04",
+        "PM-05"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "reviewer_id": "R7-3",
+      "role": "model_robustness",
+      "agent_type": "inline-orchestrator-role-pass (subagent dispatch unavailable)",
+      "task_invocation_id": "d-fec224379559826797cb8b00",
+      "report_path": "review-evidence/phase-07/s-44352a0826dced1b9af4173e/reports/model_robustness.md",
+      "reviewed_inputs": [
+        "design/identification-strategy.json",
+        "design/model-specs.json",
+        "data/measurement-plan.md",
+        "data/variable-dictionary.csv",
+        "analysis/analysis-plan.md",
+        "analysis/spec-registry.csv",
+        "analysis/scripts-inventory.json",
+        "review/pre-execution-review.json",
+        "review/pre-execution-fix-log.json",
+        "review/pre-execution-rereview.json"
+      ],
+      "risks": [
+        "PM-06",
+        "PM-07",
+        "PM-08",
+        "PM-12"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "reviewer_id": "R7-4",
+      "role": "interpretation_claims",
+      "agent_type": "inline-orchestrator-role-pass (subagent dispatch unavailable)",
+      "task_invocation_id": "d-3e8e2c956533f33f9ed5dc0a",
+      "report_path": "review-evidence/phase-07/s-44352a0826dced1b9af4173e/reports/interpretation_claims.md",
+      "reviewed_inputs": [
+        "design/identification-strategy.json",
+        "design/model-specs.json",
+        "data/measurement-plan.md",
+        "data/variable-dictionary.csv",
+        "analysis/analysis-plan.md",
+        "analysis/spec-registry.csv",
+        "analysis/scripts-inventory.json",
+        "review/pre-execution-review.json",
+        "review/pre-execution-fix-log.json",
+        "review/pre-execution-rereview.json"
+      ],
+      "risks": [
+        "PM-09",
+        "PM-10",
+        "PM-11"
+      ],
+      "verdict": "PASS"
+    }
+  ],
+  "traffic_light_summary": [
+    {
+      "dimension": "identification",
+      "verdict": "YELLOW",
+      "lead_reviewer": "identification",
+      "evidence": "Descriptive design; region is an open alternative (PM-01); nuclear handled by DR-02"
+    },
+    {
+      "dimension": "variable_construction",
+      "verdict": "GREEN",
+      "lead_reviewer": "measurement_missingness",
+      "evidence": "Dictionary-aligned construction; Phase 6 data-handling fixes applied"
+    },
+    {
+      "dimension": "sample_restrictions",
+      "verdict": "GREEN",
+      "lead_reviewer": "measurement_missingness",
+      "evidence": "Analytic flag consistent across scripts; suppression counts reported"
+    },
+    {
+      "dimension": "model_specification",
+      "verdict": "GREEN",
+      "lead_reviewer": "model_robustness",
+      "evidence": "Fixed-effects ladder matches design M1-M9"
+    },
+    {
+      "dimension": "standard_errors",
+      "verdict": "YELLOW",
+      "lead_reviewer": "model_robustness",
+      "evidence": "Occupation clustering plus industry-year and two-way sensitivity (PM-08, DR-04)"
+    },
+    {
+      "dimension": "missing_data",
+      "verdict": "GREEN",
+      "lead_reviewer": "measurement_missingness",
+      "evidence": "Publication suppression handled; bounded by S14 and S18"
+    },
+    {
+      "dimension": "robustness",
+      "verdict": "GREEN",
+      "lead_reviewer": "model_robustness",
+      "evidence": "S11-S20 cover the full robustness plan"
+    },
+    {
+      "dimension": "power_effect_size",
+      "verdict": "YELLOW",
+      "lead_reviewer": "model_robustness",
+      "evidence": "Thin geothermal and biomass cells (PM-06, DR-03)"
+    },
+    {
+      "dimension": "heterogeneity_multi_comparison",
+      "verdict": "YELLOW",
+      "lead_reviewer": "interpretation_claims",
+      "evidence": "Joint Wald test as the inferential basis for H4 (PM-11)"
+    },
+    {
+      "dimension": "mechanism_evidence",
+      "verdict": "YELLOW",
+      "lead_reviewer": "interpretation_claims",
+      "evidence": "No direct establishment measures; mechanism framed as interpretation (PM-10)"
+    },
+    {
+      "dimension": "table_figure_plan",
+      "verdict": "GREEN",
+      "lead_reviewer": "interpretation_claims",
+      "evidence": "Tables 1-4, A1 and Figures 1-4 mapped to hypotheses"
+    },
+    {
+      "dimension": "preregistration_deviation",
+      "verdict": "GREEN",
+      "lead_reviewer": "identification",
+      "evidence": "Plan fixed before execution; SE sensitivity added as a diagnostic, not a new spec"
+    },
+    {
+      "dimension": "interpretive_reach",
+      "verdict": "YELLOW",
+      "lead_reviewer": "interpretation_claims",
+      "evidence": "Descriptive language rules DR-05; H5 null wording rule DR-01"
+    }
+  ],
+  "null_falsification_table": [
+    {
+      "hypothesis_id": "H1",
+      "null_pattern": "S03 renewable coefficient >= 0, or its 95% CI includes 0, with the S15 fossil-only contrast also including 0",
+      "precommitted": true,
+      "discussion_concedes_null": true,
+      "status": "PASS"
+    },
+    {
+      "hypothesis_id": "H2",
+      "null_pattern": "S03 gap equal to or larger than S01 raw gap, and the S08 composition component near 0 or opposite-signed",
+      "precommitted": true,
+      "discussion_concedes_null": true,
+      "status": "PASS"
+    },
+    {
+      "hypothesis_id": "H3",
+      "null_pattern": "S04: nuclear not above fossil fuel, hydroelectric clearly below fossil fuel, or solar and wind not below fossil fuel",
+      "precommitted": true,
+      "discussion_concedes_null": true,
+      "status": "PASS"
+    },
+    {
+      "hypothesis_id": "H4",
+      "null_pattern": "S05 joint Wald test fails to reject equal gaps, or production and maintenance gaps not more negative than management and professional gaps",
+      "precommitted": true,
+      "discussion_concedes_null": true,
+      "status": "PASS"
+    },
+    {
+      "hypothesis_id": "H5",
+      "null_pattern": "S07 trend coefficient <= 0 (gap not shrinking) or S06 joint test fails to reject equal gaps across years",
+      "precommitted": true,
+      "discussion_concedes_null": true,
+      "status": "PASS"
+    }
+  ],
+  "reporting_depth_checklist": [
+    {
+      "risk_id": "PM-01",
+      "diagnostic_outputs": [
+        "S04 hydroelectric vs fossil contrast",
+        "causal-audit identification paragraph"
+      ],
+      "sensitivity_range": "hydro-excluded (S16) and fossil-only (S15) contrasts",
+      "failure_mode_disclosure": "regional composition is an untested alternative explanation; gaps are not pay effects of switching industries",
+      "reporting_location": "Data and Methods (analytic strategy); Discussion limitations"
+    },
+    {
+      "risk_id": "PM-04",
+      "diagnostic_outputs": [
+        "tables/cell-coverage.csv suppression counts by industry and year",
+        "S14 balanced set",
+        "S18 minimum cell size"
+      ],
+      "sensitivity_range": "full vs balanced vs cells with employment of 50 or more",
+      "failure_mode_disclosure": "identifying sample over-represents large occupations",
+      "reporting_location": "Data section sample paragraph; Table A1"
+    },
+    {
+      "risk_id": "PM-02",
+      "diagnostic_outputs": [
+        "S04 source coefficients",
+        "S15 fossil-only coefficient"
+      ],
+      "sensitivity_range": "binary gap with and without nuclear",
+      "failure_mode_disclosure": "if S15 is near zero, the headline is reframed as a nuclear premium",
+      "reporting_location": "Table 3, Table A1, Figure 2, Results section 'Gaps by generation source'"
+    },
+    {
+      "risk_id": "PM-06",
+      "diagnostic_outputs": [
+        "identifying-cells-by-source.csv",
+        "S19 leave-one-out estimates"
+      ],
+      "sensitivity_range": "five leave-one-source-out estimates",
+      "failure_mode_disclosure": "sources with fewer than 30 identifying cells described as imprecise",
+      "reporting_location": "Table A1 note; Results text for Figure 2"
+    },
+    {
+      "risk_id": "PM-07",
+      "diagnostic_outputs": [
+        "S11 unweighted estimate"
+      ],
+      "sensitivity_range": "weighted vs unweighted gap",
+      "failure_mode_disclosure": "if they diverge, report that large fossil cells drive the weighted gap",
+      "reporting_location": "Table A1; Robustness paragraph"
+    },
+    {
+      "risk_id": "PM-08",
+      "diagnostic_outputs": [
+        "se-sensitivity.csv (occupation, industry-year, two-way)"
+      ],
+      "sensitivity_range": "three clustering schemes for S03 and S04",
+      "failure_mode_disclosure": "if two-way clustering removes significance, the main text uses the conservative SE",
+      "reporting_location": "Appendix table note; Data and Methods (inference)"
+    },
+    {
+      "risk_id": "PM-09",
+      "diagnostic_outputs": [
+        "S06 year gaps",
+        "S07 trend",
+        "joint-tests.json",
+        "S20 balanced-set year gaps"
+      ],
+      "sensitivity_range": "full vs balanced occupation set",
+      "failure_mode_disclosure": "overlapping OEWS panels smooth trends; no policy attribution",
+      "reporting_location": "Figure 3; Results 'Trends 2021-2025'; Discussion limitations"
+    },
+    {
+      "risk_id": "PM-05",
+      "diagnostic_outputs": [
+        "P90 censored-cell counts (cell-coverage.csv)",
+        "S10"
+      ],
+      "sensitivity_range": "P10, median, mean, P90 gaps",
+      "failure_mode_disclosure": "P90 gap conditional on uncensored cells",
+      "reporting_location": "Table 2 note; Results distribution paragraph"
+    },
+    {
+      "risk_id": "PM-11",
+      "diagnostic_outputs": [
+        "S05 group gaps",
+        "joint Wald test"
+      ],
+      "sensitivity_range": "five occupational groups",
+      "failure_mode_disclosure": "group estimates descriptive; inference via joint test",
+      "reporting_location": "Table 3, Figure 4"
+    }
+  ],
+  "reviewed_scripts": [
+    "analysis/scripts/01_build_panel.R",
+    "analysis/scripts/02_descriptives.R",
+    "analysis/scripts/03_main_models.R",
+    "analysis/scripts/04_decomposition.R",
+    "analysis/scripts/05_robustness.R",
+    "analysis/scripts/06_figures.R",
+    "analysis/scripts/07_registry.R"
+  ],
+  "reviewed_specs": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "S15",
+    "S16",
+    "S17",
+    "S18",
+    "S19",
+    "S20"
+  ],
+  "reviewed_tests": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6"
+  ],
+  "risk_register": [
+    {
+      "risk_id": "PM-01",
+      "domain": "identification",
+      "severity": "major",
+      "description": "A within-occupation gap may reflect regional location rather than industry pay-setting. Solar and wind capacity is concentrated in lower-wage states, and national cells cannot adjust for geography.",
+      "evidence": "design/causal-audit.md lists region as an open backdoor path; OEWS national files carry no geography.",
+      "affected_specs": [
+        "S03",
+        "S04"
+      ],
+      "affected_scripts": [
+        "analysis/scripts/03_main_models.R"
+      ],
+      "mitigation": "Interpretation constraint plus a reporting rule. The manuscript names regional composition as an untested alternative, describes gaps as differences in average pay for the same occupation (never as the pay effect of renewable work), and cites the hydroelectric contrast (old, geographically distinct plants) as partial evidence. Decision rule DR-05 governs wording.",
+      "status": "mitigated",
+      "owner_phase": "3",
+      "route_back_phase": null
+    },
+    {
+      "risk_id": "PM-02",
+      "domain": "design_plan_alignment",
+      "severity": "major",
+      "description": "The non-renewable group combines fossil fuel and nuclear. If nuclear pays a large premium, the binary renewable gap could mainly reflect a nuclear premium.",
+      "evidence": "Design H3 expects nuclear to pay more than fossil fuel; S15 drops nuclear.",
+      "affected_specs": [
+        "S03",
+        "S04",
+        "S15"
+      ],
+      "affected_scripts": [
+        "analysis/scripts/03_main_models.R",
+        "analysis/scripts/05_robustness.R"
+      ],
+      "mitigation": "Reporting rule DR-02: the headline is stated alongside the fossil-only contrast (S15) and the source estimates (S04, Figure 2). If S15 is near zero, the paper is reframed as a nuclear premium.",
+      "status": "mitigated",
+      "owner_phase": "3",
+      "route_back_phase": null
+    },
+    {
+      "risk_id": "PM-03",
+      "domain": "measurement",
+      "severity": "moderate",
+      "description": "OEWS wages exclude overtime and shift differentials, which are common for fossil and nuclear plant operators. Gaps in total pay may therefore be larger than gaps in straight-time wages.",
+      "evidence": "data/measurement-plan.md (measurement validity).",
+      "affected_specs": [
+        "S03"
+      ],
+      "affected_scripts": [
+        "analysis/scripts/03_main_models.R"
+      ],
+      "mitigation": "Accepted limitation, stated in the Data section and the Discussion.",
+      "status": "accepted_limitation",
+      "owner_phase": "4",
+      "route_back_phase": null
+    },
+    {
+      "risk_id": "PM-04",
+      "domain": "missing_data",
+      "severity": "moderate",
+      "description": "Suppressed and top-coded cells are excluded. Suppression is more common in small renewable industries, so the identifying sample over-represents large occupations.",
+      "evidence": "cell-coverage.csv will report suppression by industry-year; employment '**' affects 8-20 cells per year.",
+      "affected_specs": [
+        "S03",
+        "S14",
+        "S18"
+      ],
+      "affected_scripts": [
+        "analysis/scripts/01_build_panel.R"
+      ],
+      "mitigation": "Report suppression counts by renewable status (Table A2 / coverage). The balanced-set (S14) and minimum-cell-size (S18) specifications bound the sensitivity.",
+      "status": "mitigated",
+      "owner_phase": "4",
+      "route_back_phase": null
+    },
+    {
+      "risk_id": "PM-05",
+      "domain": "measurement",
+      "severity": "moderate",
+      "description": "P90 censoring at $100 nominal removes high-wage cells, which are disproportionately fossil and nuclear engineering and management. The P90 gap therefore conditions on lower-paid occupations.",
+      "evidence": "Phase 4 counts of 26-40 censored P90 cells per year.",
+      "affected_specs": [
+        "S10"
+      ],
+      "affected_scripts": [
+        "analysis/scripts/01_build_panel.R",
+        "analysis/scripts/03_main_models.R"
+      ],
+      "mitigation": "The Table 2 note and Results text state that the P90 estimate covers uncensored cells only and is a conservative description of the upper tail.",
+      "status": "mitigated",
+      "owner_phase": "4",
+      "route_back_phase": null
+    },
+    {
+      "risk_id": "PM-06",
+      "domain": "model_fragility",
+      "severity": "major",
+      "description": "Geothermal and biomass contribute few cells. Their source estimates may be driven by a handful of occupations, and the leave-one-out check could flip the sign.",
+      "evidence": "Feasibility notes: 4-8 geothermal and 12-14 biomass cells per year.",
+      "affected_specs": [
+        "S04",
+        "S19"
+      ],
+      "affected_scripts": [
+        "analysis/scripts/03_main_models.R",
+        "analysis/scripts/05_robustness.R"
+      ],
+      "mitigation": "Decision rule DR-03: report identifying-cell counts by source (identifying-cells-by-source.csv) next to S04, and do not interpret source coefficients that rest on fewer than 30 identifying cells beyond their sign and uncertainty.",
+      "status": "mitigated",
+      "owner_phase": "7",
+      "route_back_phase": null
+    },
+    {
+      "risk_id": "PM-07",
+      "domain": "model_fragility",
+      "severity": "moderate",
+      "description": "Fossil fuel cells are large, so employment weights let fossil-heavy occupations dominate.",
+      "evidence": "Employment share of fossil fuel in NAICS 2211 is the largest.",
+      "affected_specs": [
+        "S03",
+        "S11"
+      ],
+      "affected_scripts": [
+        "analysis/scripts/05_robustness.R"
+      ],
+      "mitigation": "Compare S11 (unweighted) with S03 and report both in Table A1.",
+      "status": "mitigated",
+      "owner_phase": "7",
+      "route_back_phase": null
+    },
+    {
+      "risk_id": "PM-08",
+      "domain": "robustness",
+      "severity": "major",
+      "description": "Clustering by occupation alone may understate uncertainty for an industry-level contrast (Phase 6 STA-001).",
+      "evidence": "Phase 6 fix added SE sensitivity output.",
+      "affected_specs": [
+        "S03",
+        "S04"
+      ],
+      "affected_scripts": [
+        "analysis/scripts/03_main_models.R"
+      ],
+      "mitigation": "Decision rule DR-04: report industry-year and two-way clustered SEs for S03 and S04 in the appendix. If the headline loses significance at the 5% level under two-way clustering, the main text reports the conservative SE.",
+      "status": "mitigated",
+      "owner_phase": "7",
+      "route_back_phase": null
+    },
+    {
+      "risk_id": "PM-09",
+      "domain": "null_or_conflicting_results",
+      "severity": "major",
+      "description": "H5 (narrowing) may be untestable because OEWS releases share four of six panels, which smooths year-to-year change and inflates apparent stability.",
+      "evidence": "BLS technical notes: each release pools six semiannual panels over three years.",
+      "affected_specs": [
+        "S06",
+        "S07",
+        "S20"
+      ],
+      "affected_scripts": [
+        "analysis/scripts/03_main_models.R"
+      ],
+      "mitigation": "Decision rule DR-01: H5 is judged on the S07 trend coefficient and the S06 joint test. A null or opposite-sign trend is reported as no detectable narrowing over a smoothed window, never as evidence that policy had no effect.",
+      "status": "mitigated",
+      "owner_phase": "7",
+      "route_back_phase": null
+    },
+    {
+      "risk_id": "PM-10",
+      "domain": "claim_support",
+      "severity": "major",
+      "description": "Overclaiming: describing results as a causal renewable wage penalty, or attributing trends to the IRA.",
+      "evidence": "Design claim strength is descriptive; causal audit bans causal language.",
+      "affected_specs": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20"
+      ],
+      "affected_scripts": [
+        "analysis/scripts/03_main_models.R"
+      ],
+      "mitigation": "Decision rule DR-05 sets language constraints that carry into Phases 12-14. Mechanism statements are framed as interpretation consistent with establishment wage-setting theory.",
+      "status": "mitigated",
+      "owner_phase": "3",
+      "route_back_phase": null
+    },
+    {
+      "risk_id": "PM-11",
+      "domain": "claim_support",
+      "severity": "moderate",
+      "description": "Comparing five occupational groups invites multiple-comparison false positives.",
+      "evidence": "S05 has five group-specific gaps.",
+      "affected_specs": [
+        "S05"
+      ],
+      "affected_scripts": [
+        "analysis/scripts/03_main_models.R"
+      ],
+      "mitigation": "The joint Wald equality test is the inferential basis for H4. Group estimates are described with confidence intervals and not ranked on individual p-values.",
+      "status": "mitigated",
+      "owner_phase": "3",
+      "route_back_phase": null
+    },
+    {
+      "risk_id": "PM-12",
+      "domain": "execution_readiness",
+      "severity": "minor",
+      "description": "The decomposition bootstrap (500 draws) is slow but deterministic under its seed.",
+      "evidence": "04_decomposition.R sets seed 20261010.",
+      "affected_specs": [
+        "S08"
+      ],
+      "affected_scripts": [
+        "analysis/scripts/04_decomposition.R"
+      ],
+      "mitigation": "Accept; record runtime.",
+      "status": "accepted_limitation",
+      "owner_phase": "7",
+      "route_back_phase": null
+    }
+  ],
+  "blocking_items_resolved": true,
+  "unresolved_blocking_count": 0,
+  "accepted_limitations": [
+    {
+      "limitation_id": "PM-03",
+      "severity": "moderate",
+      "rationale": "OEWS wages exclude overtime and shift differentials, which are common for fossil and nuclear plant operators. Gaps in total pay may therefore be larger than gaps in straight-time wages.",
+      "monitoring_plan": "Accepted limitation, stated in the Data section and the Discussion."
+    },
+    {
+      "limitation_id": "PM-12",
+      "severity": "minor",
+      "rationale": "The decomposition bootstrap (500 draws) is slow but deterministic under its seed.",
+      "monitoring_plan": "Accept; record runtime."
+    }
+  ],
+  "decision_rules": [
+    {
+      "rule_id": "DR-01",
+      "condition": "S07 trend <= 0 or S06 joint test p >= 0.05",
+      "action": "Report H5 as not supported (no detectable narrowing in smoothed OEWS data); no policy attribution"
+    },
+    {
+      "rule_id": "DR-02",
+      "condition": "S15 renewable-vs-fossil estimate's 95% CI includes 0",
+      "action": "Reframe the headline as a nuclear premium plus renewable-fossil parity"
+    },
+    {
+      "rule_id": "DR-03",
+      "condition": "a source has fewer than 30 identifying cells sharing occupation-years with fossil fuel",
+      "action": "Describe that source estimate as imprecise; no substantive ranking"
+    },
+    {
+      "rule_id": "DR-04",
+      "condition": "S03 p >= 0.05 under two-way clustering",
+      "action": "Main text reports the two-way SE and softens the H1 claim"
+    },
+    {
+      "rule_id": "DR-05",
+      "condition": "always",
+      "action": "Associational and descriptive language only; no causal verbs; mechanisms framed as interpretation"
+    },
+    {
+      "rule_id": "DR-06",
+      "condition": "any robustness spec reverses the sign of S03",
+      "action": "Report the reversal in the main text and narrow the H1 claim to the specifications where it holds"
+    }
+  ],
+  "phase8_handoff": {
+    "script_order": [
+      "analysis/scripts/01_build_panel.R",
+      "analysis/scripts/02_descriptives.R",
+      "analysis/scripts/03_main_models.R",
+      "analysis/scripts/04_decomposition.R",
+      "analysis/scripts/05_robustness.R",
+      "analysis/scripts/06_figures.R",
+      "analysis/scripts/07_registry.R"
+    ],
+    "expected_outputs": [
+      "data/processed/oews-generation-cells.csv",
+      "tables/cell-coverage.csv",
+      "tables/table1-descriptives.csv",
+      "tables/table1-descriptives.html",
+      "tables/table1b-wage-by-year.csv",
+      "figures/fig1-wage-by-source-year.pdf",
+      "figures/fig1-wage-by-source-year.png",
+      "analysis/outputs/main-model-estimates.csv",
+      "analysis/joint-tests.json",
+      "tables/table2-main-regression.html",
+      "tables/table3-heterogeneity-regression.html",
+      "analysis/outputs/fit-stats-main.csv",
+      "analysis/outputs/identifying-cells.csv",
+      "analysis/outputs/identifying-cells-by-source.csv",
+      "analysis/outputs/se-sensitivity.csv",
+      "analysis/outputs/main-models.rds",
+      "tables/table4-decomposition.csv",
+      "tables/tableA1-robustness.csv",
+      "tables/tableA1-robustness-regression.html",
+      "analysis/outputs/balanced-set.csv",
+      "analysis/outputs/fit-stats-robustness.csv",
+      "analysis/outputs/robustness-models.rds",
+      "figures/fig2-source-gaps.pdf",
+      "figures/fig2-source-gaps.png",
+      "figures/fig3-gap-by-year.pdf",
+      "figures/fig3-gap-by-year.png",
+      "figures/fig4-gap-by-occupation-group.pdf",
+      "figures/fig4-gap-by-occupation-group.png",
+      "tables/results-registry.csv",
+      "tables/model-fit-stats.csv",
+      "figures/figure-registry.csv"
+    ],
+    "expected_result_registry": "tables/results-registry.csv",
+    "expected_result_spec_ids": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19",
+      "S20"
+    ],
+    "expected_figure_registry": "figures/figure-registry.csv",
+    "expected_figure_ids": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+    ],
+    "halt_checks": [
+      "nonzero exit code from any script",
+      "any stopifnot assertion (tests T1-T6) fails",
+      "any expected output missing after its script",
+      "results registry rows != 20 or spec set differs from spec-registry.csv",
+      "non-finite estimate or standard error in any registry row",
+      "Phase 7 source hash drift for analysis plan, spec registry, scripts inventory, or premortem fix log"
+    ]
+  },
+  "go_no_go": {
+    "decision": "GO",
+    "route_back_phase": null,
+    "ready_for_phase_8": true
+  },
+  "review_evidence": {
+    "profile": "normal",
+    "attempt_epoch": 8,
+    "rounds": {
+      "premortem_panel": {
+        "session_id": "s-44352a0826dced1b9af4173e",
+        "achieved_assurance": "process_recorded"
+      }
+    }
+  }
+}

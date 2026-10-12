@@ -1,0 +1,125 @@
+<!-- preamble start -->
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinytable_id001</title>
+    
+  </head>
+  <body>
+<!-- preamble end -->
+
+    <script src="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.js"></script>
+
+    <script>
+      // Create table-specific functions using external factory
+      const tableFns_id002 = TinyTable.createTableFunctions("tinytable_id001");
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: '4', j: 2 }, { i: '4', j: 3 }, { i: '4', j: 4 }, { i: '4', j: 5 }, { i: '4', j: 6 }, { i: '4', j: 7 }, { i: '4', j: 8 }, { i: '4', j: 9 } ], css_id: 'tinytable_css_id003',}, 
+          { positions: [ { i: '2', j: 2 }, { i: '2', j: 3 }, { i: '2', j: 4 }, { i: '2', j: 5 }, { i: '2', j: 6 }, { i: '2', j: 7 }, { i: '2', j: 8 }, { i: '2', j: 9 } ], css_id: 'tinytable_css_id004',}, 
+          { positions: [ { i: '1', j: 2 }, { i: '3', j: 2 }, { i: '1', j: 3 }, { i: '3', j: 3 }, { i: '1', j: 4 }, { i: '3', j: 4 }, { i: '1', j: 5 }, { i: '3', j: 5 }, { i: '1', j: 6 }, { i: '3', j: 6 }, { i: '1', j: 7 }, { i: '3', j: 7 }, { i: '1', j: 8 }, { i: '3', j: 8 }, { i: '1', j: 9 }, { i: '3', j: 9 } ], css_id: 'tinytable_css_id005',}, 
+          { positions: [ { i: '0', j: 2 }, { i: '0', j: 3 }, { i: '0', j: 4 }, { i: '0', j: 5 }, { i: '0', j: 6 }, { i: '0', j: 7 }, { i: '0', j: 8 }, { i: '0', j: 9 } ], css_id: 'tinytable_css_id006',}, 
+          { positions: [ { i: '4', j: 1 } ], css_id: 'tinytable_css_id007',}, 
+          { positions: [ { i: '2', j: 1 } ], css_id: 'tinytable_css_id008',}, 
+          { positions: [ { i: '1', j: 1 }, { i: '3', j: 1 } ], css_id: 'tinytable_css_id009',}, 
+          { positions: [ { i: '0', j: 1 } ], css_id: 'tinytable_css_id010',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  tableFns_id002.styleCell(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
+    <style>
+    /* tinytable css entries after */
+    #tinytable_id001 td.tinytable_css_id003, #tinytable_id001 th.tinytable_css_id003 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --line-type-bottom: solid; --line-type-left: solid; --line-type-right: solid; --line-type-top: solid; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_id001 td.tinytable_css_id004, #tinytable_id001 th.tinytable_css_id004 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --line-type-bottom: solid; --line-type-left: solid; --line-type-right: solid; --line-type-top: solid; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_id001 td.tinytable_css_id005, #tinytable_id001 th.tinytable_css_id005 { text-align: center }
+    #tinytable_id001 td.tinytable_css_id006, #tinytable_id001 th.tinytable_css_id006 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --line-type-bottom: solid; --line-type-left: solid; --line-type-right: solid; --line-type-top: solid; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_id001 td.tinytable_css_id007, #tinytable_id001 th.tinytable_css_id007 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --line-type-bottom: solid; --line-type-left: solid; --line-type-right: solid; --line-type-top: solid; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_id001 td.tinytable_css_id008, #tinytable_id001 th.tinytable_css_id008 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --line-type-bottom: solid; --line-type-left: solid; --line-type-right: solid; --line-type-top: solid; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_id001 td.tinytable_css_id009, #tinytable_id001 th.tinytable_css_id009 { text-align: left }
+    #tinytable_id001 td.tinytable_css_id010, #tinytable_id001 th.tinytable_css_id010 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --line-type-bottom: solid; --line-type-left: solid; --line-type-right: solid; --line-type-top: solid; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    </style>
+    <div class="container">
+      <table class="tinytable" id="tinytable_id001" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing='true'>
+        <caption>Table A1. Robustness of the within-occupation renewable wage gap</caption>
+        <thead>
+              <tr>
+                <th scope="col" data-row="0" data-col="1"> </th>
+                <th scope="col" data-row="0" data-col="2">Model A1</th>
+                <th scope="col" data-row="0" data-col="3">Model A2</th>
+                <th scope="col" data-row="0" data-col="4">Model A3</th>
+                <th scope="col" data-row="0" data-col="5">Model A4</th>
+                <th scope="col" data-row="0" data-col="6">Model A5</th>
+                <th scope="col" data-row="0" data-col="7">Model A6</th>
+                <th scope="col" data-row="0" data-col="8">Model A7</th>
+                <th scope="col" data-row="0" data-col="9">Model A8</th>
+              </tr>
+        </thead>
+        <tfoot><tr><td colspan='9'>* p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td></tr>
+<tr><td colspan='9'>Model A1: Unweighted (equal cell weights); Model A2: Inverse sampling-variance weights; Model A3: Outcome: log real median hourly wage; Model A4: Balanced occupation set; Model A5: Nuclear excluded (renewable vs. fossil fuel); Model A6: Hydroelectric excluded; Model A7: Other generation coded renewable; Model A8: Cells with employment of 50 or more</td></tr>
+<tr><td colspan='9'>All models include occupation-by-year fixed effects; SE clustered by detailed occupation. Outcome is log real mean hourly wage except Model A3.</td></tr></tfoot>
+        <tbody>
+                <tr>
+                  <td data-row="1" data-col="1">Renewable generation industry</td>
+                  <td data-row="1" data-col="2">-0.123***</td>
+                  <td data-row="1" data-col="3">-0.126***</td>
+                  <td data-row="1" data-col="4">-0.153***</td>
+                  <td data-row="1" data-col="5">-0.119***</td>
+                  <td data-row="1" data-col="6">-0.101***</td>
+                  <td data-row="1" data-col="7">-0.168***</td>
+                  <td data-row="1" data-col="8">-0.115***</td>
+                  <td data-row="1" data-col="9">-0.122***</td>
+                </tr>
+                <tr>
+                  <td data-row="2" data-col="1"></td>
+                  <td data-row="2" data-col="2">(0.016)</td>
+                  <td data-row="2" data-col="3">(0.026)</td>
+                  <td data-row="2" data-col="4">(0.024)</td>
+                  <td data-row="2" data-col="5">(0.024)</td>
+                  <td data-row="2" data-col="6">(0.024)</td>
+                  <td data-row="2" data-col="7">(0.028)</td>
+                  <td data-row="2" data-col="8">(0.024)</td>
+                  <td data-row="2" data-col="9">(0.022)</td>
+                </tr>
+                <tr>
+                  <td data-row="3" data-col="1">Cells (N)</td>
+                  <td data-row="3" data-col="2">1577</td>
+                  <td data-row="3" data-col="3">1577</td>
+                  <td data-row="3" data-col="4">1570</td>
+                  <td data-row="3" data-col="5">915</td>
+                  <td data-row="3" data-col="6">1030</td>
+                  <td data-row="3" data-col="7">1362</td>
+                  <td data-row="3" data-col="8">1707</td>
+                  <td data-row="3" data-col="9">1292</td>
+                </tr>
+                <tr>
+                  <td data-row="4" data-col="1">Within R-squared</td>
+                  <td data-row="4" data-col="2">0.154</td>
+                  <td data-row="4" data-col="3">0.149</td>
+                  <td data-row="4" data-col="4">0.248</td>
+                  <td data-row="4" data-col="5">0.223</td>
+                  <td data-row="4" data-col="6">0.203</td>
+                  <td data-row="4" data-col="7">0.287</td>
+                  <td data-row="4" data-col="8">0.181</td>
+                  <td data-row="4" data-col="9">0.210</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- postamble start -->
+  </body>
+
+</html>
+<!-- postamble end -->
+<!-- hack to avoid NA insertion in last line -->

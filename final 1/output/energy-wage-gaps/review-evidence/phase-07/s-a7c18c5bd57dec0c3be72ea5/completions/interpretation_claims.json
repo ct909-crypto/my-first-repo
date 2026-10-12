@@ -1,0 +1,51 @@
+{
+  "attempt_epoch": 3,
+  "dispatch_id": "d-175d5f1d4ca36dd5f42a32be",
+  "driver_completion": {
+    "observed_at": "2026-10-10T09:53:21.717120+00:00",
+    "status": "succeeded"
+  },
+  "host_backend": "claude-code",
+  "host_task_id": {
+    "reason": "subagent dispatch failed (API safeguard error); premortem role executed inline by orchestrating agent",
+    "status": "unavailable"
+  },
+  "host_verification": {
+    "adapter": {
+      "reason": "no trusted host adapter configured",
+      "status": "unsupported"
+    },
+    "claims": {
+      "completion_time": "unsupported",
+      "report_digest": "unsupported",
+      "reviewed_inputs_digest": "unsupported",
+      "task_identity": "unsupported",
+      "terminal_status": "unsupported"
+    }
+  },
+  "model_identity": {
+    "reason": "inline review by orchestrating agent (claude-opus-5-5)",
+    "status": "unavailable"
+  },
+  "phase_id": "7",
+  "report_path": "review-evidence/phase-07/s-a7c18c5bd57dec0c3be72ea5/reports/interpretation_claims.md",
+  "report_sha256": "395e239096024ef239beb6ab2b832479c35a90650bb6f71121227dad88af86a0",
+  "reviewed_inputs": {
+    "analysis/analysis-plan.md": "dcc3eb76aa247df64e7d4699b5047e0a61c53c405c1460f4274d22761876dc7c",
+    "analysis/scripts-inventory.json": "30192e1a862e6757e91d6dea937a851de8258450293643984334101628532edb",
+    "analysis/spec-registry.csv": "81f1f713bf03337ef2d8adfb8ce8e1bfff14ce298833886a823622ae556546f0",
+    "data/measurement-plan.md": "fe72f3b262c9559a0cef2c278740f863e42c7bfb4d845d43b8bd9432606675ff",
+    "data/variable-dictionary.csv": "151576958aa39aa310383c319314daca71c83bf2aa69cefe3bd88c1b1329a4ee",
+    "design/identification-strategy.json": "dd29cabf09677a1cebebfbd9e6be73a6fe23dffd95880232e5bbb6dc27fcf493",
+    "design/model-specs.json": "d002a582b63fde12966fc3239b6bc8591a5f681aae521304e3b5b619f67677f4",
+    "review/pre-execution-fix-log.json": "778df42cd4a3891ad5832bcff7e9d246bc3903fc5716887e75103c3d6214ffd5",
+    "review/pre-execution-rereview.json": "cfcbf7d87d558bdc7782690ff7bcc3619393b293766ac0100de635a5a1af4ed8",
+    "review/pre-execution-review.json": "04c6c193a7a4960ebdc83e9558cb5bef6601ff77e6948fc13e994bb5fe5465f9"
+  },
+  "role": "interpretation_claims",
+  "round": "premortem_panel",
+  "schema_version": "scholar-auto-research-review-evidence/v1",
+  "session_id": "s-a7c18c5bd57dec0c3be72ea5",
+  "trace_path": "review-evidence/phase-07/s-a7c18c5bd57dec0c3be72ea5/traces/interpretation_claims.trace.ndjson",
+  "trace_sha256": "be8f0b9d8ff20d1058880377d80c2061c034e7d16e0ed83ca809435b3dceba56"
+}

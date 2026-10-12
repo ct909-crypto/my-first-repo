@@ -1,0 +1,318 @@
+<!-- preamble start -->
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinytable_id001</title>
+    
+  </head>
+  <body>
+<!-- preamble end -->
+
+    <script src="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.js"></script>
+
+    <script>
+      // Create table-specific functions using external factory
+      const tableFns_id002 = TinyTable.createTableFunctions("tinytable_id001");
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: '19', j: 1 }, { i: '19', j: 2 }, { i: '19', j: 3 }, { i: '19', j: 4 }, { i: '19', j: 5 }, { i: '19', j: 6 }, { i: '19', j: 7 }, { i: '19', j: 8 }, { i: '19', j: 9 }, { i: '19', j: 10 }, { i: '19', j: 11 } ], css_id: 'tinytable_css_id003',}, 
+          { positions: [ { i: '1', j: 1 }, { i: '2', j: 1 }, { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '5', j: 1 }, { i: '6', j: 1 }, { i: '7', j: 1 }, { i: '8', j: 1 }, { i: '9', j: 1 }, { i: '10', j: 1 }, { i: '11', j: 1 }, { i: '12', j: 1 }, { i: '13', j: 1 }, { i: '14', j: 1 }, { i: '15', j: 1 }, { i: '16', j: 1 }, { i: '17', j: 1 }, { i: '18', j: 1 }, { i: '1', j: 2 }, { i: '2', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '5', j: 2 }, { i: '6', j: 2 }, { i: '7', j: 2 }, { i: '8', j: 2 }, { i: '9', j: 2 }, { i: '10', j: 2 }, { i: '11', j: 2 }, { i: '12', j: 2 }, { i: '13', j: 2 }, { i: '14', j: 2 }, { i: '15', j: 2 }, { i: '16', j: 2 }, { i: '17', j: 2 }, { i: '18', j: 2 }, { i: '1', j: 3 }, { i: '2', j: 3 }, { i: '3', j: 3 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '6', j: 3 }, { i: '7', j: 3 }, { i: '8', j: 3 }, { i: '9', j: 3 }, { i: '10', j: 3 }, { i: '11', j: 3 }, { i: '12', j: 3 }, { i: '13', j: 3 }, { i: '14', j: 3 }, { i: '15', j: 3 }, { i: '16', j: 3 }, { i: '17', j: 3 }, { i: '18', j: 3 }, { i: '1', j: 4 }, { i: '2', j: 4 }, { i: '3', j: 4 }, { i: '4', j: 4 }, { i: '5', j: 4 }, { i: '6', j: 4 }, { i: '7', j: 4 }, { i: '8', j: 4 }, { i: '9', j: 4 }, { i: '10', j: 4 }, { i: '11', j: 4 }, { i: '12', j: 4 }, { i: '13', j: 4 }, { i: '14', j: 4 }, { i: '15', j: 4 }, { i: '16', j: 4 }, { i: '17', j: 4 }, { i: '18', j: 4 }, { i: '1', j: 5 }, { i: '2', j: 5 }, { i: '3', j: 5 }, { i: '4', j: 5 }, { i: '5', j: 5 }, { i: '6', j: 5 }, { i: '7', j: 5 }, { i: '8', j: 5 }, { i: '9', j: 5 }, { i: '10', j: 5 }, { i: '11', j: 5 }, { i: '12', j: 5 }, { i: '13', j: 5 }, { i: '14', j: 5 }, { i: '15', j: 5 }, { i: '16', j: 5 }, { i: '17', j: 5 }, { i: '18', j: 5 }, { i: '1', j: 6 }, { i: '2', j: 6 }, { i: '3', j: 6 }, { i: '4', j: 6 }, { i: '5', j: 6 }, { i: '6', j: 6 }, { i: '7', j: 6 }, { i: '8', j: 6 }, { i: '9', j: 6 }, { i: '10', j: 6 }, { i: '11', j: 6 }, { i: '12', j: 6 }, { i: '13', j: 6 }, { i: '14', j: 6 }, { i: '15', j: 6 }, { i: '16', j: 6 }, { i: '17', j: 6 }, { i: '18', j: 6 }, { i: '1', j: 7 }, { i: '2', j: 7 }, { i: '3', j: 7 }, { i: '4', j: 7 }, { i: '5', j: 7 }, { i: '6', j: 7 }, { i: '7', j: 7 }, { i: '8', j: 7 }, { i: '9', j: 7 }, { i: '10', j: 7 }, { i: '11', j: 7 }, { i: '12', j: 7 }, { i: '13', j: 7 }, { i: '14', j: 7 }, { i: '15', j: 7 }, { i: '16', j: 7 }, { i: '17', j: 7 }, { i: '18', j: 7 }, { i: '1', j: 8 }, { i: '2', j: 8 }, { i: '3', j: 8 }, { i: '4', j: 8 }, { i: '5', j: 8 }, { i: '6', j: 8 }, { i: '7', j: 8 }, { i: '8', j: 8 }, { i: '9', j: 8 }, { i: '10', j: 8 }, { i: '11', j: 8 }, { i: '12', j: 8 }, { i: '13', j: 8 }, { i: '14', j: 8 }, { i: '15', j: 8 }, { i: '16', j: 8 }, { i: '17', j: 8 }, { i: '18', j: 8 }, { i: '1', j: 9 }, { i: '2', j: 9 }, { i: '3', j: 9 }, { i: '4', j: 9 }, { i: '5', j: 9 }, { i: '6', j: 9 }, { i: '7', j: 9 }, { i: '8', j: 9 }, { i: '9', j: 9 }, { i: '10', j: 9 }, { i: '11', j: 9 }, { i: '12', j: 9 }, { i: '13', j: 9 }, { i: '14', j: 9 }, { i: '15', j: 9 }, { i: '16', j: 9 }, { i: '17', j: 9 }, { i: '18', j: 9 }, { i: '1', j: 10 }, { i: '2', j: 10 }, { i: '3', j: 10 }, { i: '4', j: 10 }, { i: '5', j: 10 }, { i: '6', j: 10 }, { i: '7', j: 10 }, { i: '8', j: 10 }, { i: '9', j: 10 }, { i: '10', j: 10 }, { i: '11', j: 10 }, { i: '12', j: 10 }, { i: '13', j: 10 }, { i: '14', j: 10 }, { i: '15', j: 10 }, { i: '16', j: 10 }, { i: '17', j: 10 }, { i: '18', j: 10 }, { i: '1', j: 11 }, { i: '2', j: 11 }, { i: '3', j: 11 }, { i: '4', j: 11 }, { i: '5', j: 11 }, { i: '6', j: 11 }, { i: '7', j: 11 }, { i: '8', j: 11 }, { i: '9', j: 11 }, { i: '10', j: 11 }, { i: '11', j: 11 }, { i: '12', j: 11 }, { i: '13', j: 11 }, { i: '14', j: 11 }, { i: '15', j: 11 }, { i: '16', j: 11 }, { i: '17', j: 11 }, { i: '18', j: 11 } ], css_id: 'tinytable_css_id004',}, 
+          { positions: [ { i: '0', j: 1 }, { i: '0', j: 2 }, { i: '0', j: 3 }, { i: '0', j: 4 }, { i: '0', j: 5 }, { i: '0', j: 6 }, { i: '0', j: 7 }, { i: '0', j: 8 }, { i: '0', j: 9 }, { i: '0', j: 10 }, { i: '0', j: 11 } ], css_id: 'tinytable_css_id005',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  tableFns_id002.styleCell(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
+    <style>
+    /* tinytable css entries after */
+    #tinytable_id001 td.tinytable_css_id003, #tinytable_id001 th.tinytable_css_id003 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --line-type-bottom: solid; --line-type-left: solid; --line-type-right: solid; --line-type-top: solid; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_id001 td.tinytable_css_id004, #tinytable_id001 th.tinytable_css_id004 { text-align: left }
+    #tinytable_id001 td.tinytable_css_id005, #tinytable_id001 th.tinytable_css_id005 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --line-type-bottom: solid; --line-type-left: solid; --line-type-right: solid; --line-type-top: solid; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    </style>
+    <div class="container">
+      <table class="tinytable" id="tinytable_id001" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing='true'>
+        <caption>Table 1. Descriptive statistics by generation source, May 2021-May 2025 (pooled)</caption>
+        <thead>
+              <tr>
+                <th scope="col" data-row="0" data-col="1">variable</th>
+                <th scope="col" data-row="0" data-col="2">statistic</th>
+                <th scope="col" data-row="0" data-col="3">Fossil fuel</th>
+                <th scope="col" data-row="0" data-col="4">Nuclear</th>
+                <th scope="col" data-row="0" data-col="5">Hydroelectric</th>
+                <th scope="col" data-row="0" data-col="6">Solar</th>
+                <th scope="col" data-row="0" data-col="7">Wind</th>
+                <th scope="col" data-row="0" data-col="8">Geothermal</th>
+                <th scope="col" data-row="0" data-col="9">Biomass</th>
+                <th scope="col" data-row="0" data-col="10">All non-renewable</th>
+                <th scope="col" data-row="0" data-col="11">All renewable</th>
+              </tr>
+        </thead>
+        <tfoot><tr><td colspan='11'>Employment-weighted statistics over occupation-industry-year cells in the analytic sample. Wages in May 2025 dollars (CPI-U).</td></tr></tfoot>
+        <tbody>
+                <tr>
+                  <td data-row="1" data-col="1">Log real mean hourly wage</td>
+                  <td data-row="1" data-col="2">weighted mean</td>
+                  <td data-row="1" data-col="3">3.96</td>
+                  <td data-row="1" data-col="4">4.07</td>
+                  <td data-row="1" data-col="5">3.95</td>
+                  <td data-row="1" data-col="6">3.82</td>
+                  <td data-row="1" data-col="7">3.80</td>
+                  <td data-row="1" data-col="8">3.73</td>
+                  <td data-row="1" data-col="9">3.71</td>
+                  <td data-row="1" data-col="10">4.00</td>
+                  <td data-row="1" data-col="11">3.84</td>
+                </tr>
+                <tr>
+                  <td data-row="2" data-col="1">Log real mean hourly wage</td>
+                  <td data-row="2" data-col="2">weighted SD</td>
+                  <td data-row="2" data-col="3">0.23</td>
+                  <td data-row="2" data-col="4">0.27</td>
+                  <td data-row="2" data-col="5">0.22</td>
+                  <td data-row="2" data-col="6">0.44</td>
+                  <td data-row="2" data-col="7">0.37</td>
+                  <td data-row="2" data-col="8">0.20</td>
+                  <td data-row="2" data-col="9">0.31</td>
+                  <td data-row="2" data-col="10">0.25</td>
+                  <td data-row="2" data-col="11">0.37</td>
+                </tr>
+                <tr>
+                  <td data-row="3" data-col="1">Real mean hourly wage (2025 $)</td>
+                  <td data-row="3" data-col="2">weighted mean</td>
+                  <td data-row="3" data-col="3">54.03</td>
+                  <td data-row="3" data-col="4">60.84</td>
+                  <td data-row="3" data-col="5">53.17</td>
+                  <td data-row="3" data-col="6">50.16</td>
+                  <td data-row="3" data-col="7">48.28</td>
+                  <td data-row="3" data-col="8">42.78</td>
+                  <td data-row="3" data-col="9">42.98</td>
+                  <td data-row="3" data-col="10">56.32</td>
+                  <td data-row="3" data-col="11">49.70</td>
+                </tr>
+                <tr>
+                  <td data-row="4" data-col="1">Log real median hourly wage</td>
+                  <td data-row="4" data-col="2">weighted mean</td>
+                  <td data-row="4" data-col="3">3.96</td>
+                  <td data-row="4" data-col="4">4.06</td>
+                  <td data-row="4" data-col="5">3.94</td>
+                  <td data-row="4" data-col="6">3.72</td>
+                  <td data-row="4" data-col="7">3.74</td>
+                  <td data-row="4" data-col="8">3.71</td>
+                  <td data-row="4" data-col="9">3.66</td>
+                  <td data-row="4" data-col="10">4.00</td>
+                  <td data-row="4" data-col="11">3.78</td>
+                </tr>
+                <tr>
+                  <td data-row="5" data-col="1">Log real 10th percentile wage</td>
+                  <td data-row="5" data-col="2">weighted mean</td>
+                  <td data-row="5" data-col="3">3.61</td>
+                  <td data-row="5" data-col="4">3.75</td>
+                  <td data-row="5" data-col="5">3.49</td>
+                  <td data-row="5" data-col="6">3.30</td>
+                  <td data-row="5" data-col="7">3.46</td>
+                  <td data-row="5" data-col="8">3.46</td>
+                  <td data-row="5" data-col="9">3.34</td>
+                  <td data-row="5" data-col="10">3.66</td>
+                  <td data-row="5" data-col="11">3.40</td>
+                </tr>
+                <tr>
+                  <td data-row="6" data-col="1">Log real 90th percentile wage</td>
+                  <td data-row="6" data-col="2">weighted mean (uncensored cells)</td>
+                  <td data-row="6" data-col="3">4.18</td>
+                  <td data-row="6" data-col="4">4.25</td>
+                  <td data-row="6" data-col="5">4.25</td>
+                  <td data-row="6" data-col="6">4.00</td>
+                  <td data-row="6" data-col="7">3.97</td>
+                  <td data-row="6" data-col="8">3.94</td>
+                  <td data-row="6" data-col="9">3.95</td>
+                  <td data-row="6" data-col="10">4.21</td>
+                  <td data-row="6" data-col="11">4.05</td>
+                </tr>
+                <tr>
+                  <td data-row="7" data-col="1">Log real 90th percentile wage</td>
+                  <td data-row="7" data-col="2">share of cells censored</td>
+                  <td data-row="7" data-col="3">0.09</td>
+                  <td data-row="7" data-col="4">0.15</td>
+                  <td data-row="7" data-col="5">0.09</td>
+                  <td data-row="7" data-col="6">0.25</td>
+                  <td data-row="7" data-col="7">0.21</td>
+                  <td data-row="7" data-col="8">0.08</td>
+                  <td data-row="7" data-col="9">0.08</td>
+                  <td data-row="7" data-col="10">0.12</td>
+                  <td data-row="7" data-col="11">0.17</td>
+                </tr>
+                <tr>
+                  <td data-row="8" data-col="1">Renewable generation</td>
+                  <td data-row="8" data-col="2">share of employment</td>
+                  <td data-row="8" data-col="3">0.00</td>
+                  <td data-row="8" data-col="4">0.00</td>
+                  <td data-row="8" data-col="5">1.00</td>
+                  <td data-row="8" data-col="6">1.00</td>
+                  <td data-row="8" data-col="7">1.00</td>
+                  <td data-row="8" data-col="8">1.00</td>
+                  <td data-row="8" data-col="9">1.00</td>
+                  <td data-row="8" data-col="10">0.00</td>
+                  <td data-row="8" data-col="11">1.00</td>
+                </tr>
+                <tr>
+                  <td data-row="9" data-col="1">Electricity generation technology</td>
+                  <td data-row="9" data-col="2">share of all generation employment</td>
+                  <td data-row="9" data-col="3">0.53</td>
+                  <td data-row="9" data-col="4">0.27</td>
+                  <td data-row="9" data-col="5">0.05</td>
+                  <td data-row="9" data-col="6">0.08</td>
+                  <td data-row="9" data-col="7">0.06</td>
+                  <td data-row="9" data-col="8">0.00</td>
+                  <td data-row="9" data-col="9">0.01</td>
+                  <td data-row="9" data-col="10">0.80</td>
+                  <td data-row="9" data-col="11">0.20</td>
+                </tr>
+                <tr>
+                  <td data-row="10" data-col="1">Broad occupation category: Construction, installation, maintenance, and repair</td>
+                  <td data-row="10" data-col="2">share of employment</td>
+                  <td data-row="10" data-col="3">0.32</td>
+                  <td data-row="10" data-col="4">0.14</td>
+                  <td data-row="10" data-col="5">0.33</td>
+                  <td data-row="10" data-col="6">0.36</td>
+                  <td data-row="10" data-col="7">0.54</td>
+                  <td data-row="10" data-col="8">0.20</td>
+                  <td data-row="10" data-col="9">0.19</td>
+                  <td data-row="10" data-col="10">0.26</td>
+                  <td data-row="10" data-col="11">0.39</td>
+                </tr>
+                <tr>
+                  <td data-row="11" data-col="1">Broad occupation category: Management, business, and financial</td>
+                  <td data-row="11" data-col="2">share of employment</td>
+                  <td data-row="11" data-col="3">0.16</td>
+                  <td data-row="11" data-col="4">0.18</td>
+                  <td data-row="11" data-col="5">0.14</td>
+                  <td data-row="11" data-col="6">0.36</td>
+                  <td data-row="11" data-col="7">0.28</td>
+                  <td data-row="11" data-col="8">0.08</td>
+                  <td data-row="11" data-col="9">0.17</td>
+                  <td data-row="11" data-col="10">0.17</td>
+                  <td data-row="11" data-col="11">0.26</td>
+                </tr>
+                <tr>
+                  <td data-row="12" data-col="1">Broad occupation category: Office, sales, and service</td>
+                  <td data-row="12" data-col="2">share of employment</td>
+                  <td data-row="12" data-col="3">0.09</td>
+                  <td data-row="12" data-col="4">0.16</td>
+                  <td data-row="12" data-col="5">0.06</td>
+                  <td data-row="12" data-col="6">0.14</td>
+                  <td data-row="12" data-col="7">0.05</td>
+                  <td data-row="12" data-col="8">0.00</td>
+                  <td data-row="12" data-col="9">0.01</td>
+                  <td data-row="12" data-col="10">0.12</td>
+                  <td data-row="12" data-col="11">0.08</td>
+                </tr>
+                <tr>
+                  <td data-row="13" data-col="1">Broad occupation category: Production and transportation</td>
+                  <td data-row="13" data-col="2">share of employment</td>
+                  <td data-row="13" data-col="3">0.26</td>
+                  <td data-row="13" data-col="4">0.19</td>
+                  <td data-row="13" data-col="5">0.34</td>
+                  <td data-row="13" data-col="6">0.04</td>
+                  <td data-row="13" data-col="7">0.06</td>
+                  <td data-row="13" data-col="8">0.72</td>
+                  <td data-row="13" data-col="9">0.62</td>
+                  <td data-row="13" data-col="10">0.24</td>
+                  <td data-row="13" data-col="11">0.16</td>
+                </tr>
+                <tr>
+                  <td data-row="14" data-col="1">Broad occupation category: Professional and technical</td>
+                  <td data-row="14" data-col="2">share of employment</td>
+                  <td data-row="14" data-col="3">0.16</td>
+                  <td data-row="14" data-col="4">0.33</td>
+                  <td data-row="14" data-col="5">0.12</td>
+                  <td data-row="14" data-col="6">0.10</td>
+                  <td data-row="14" data-col="7">0.08</td>
+                  <td data-row="14" data-col="8">0.00</td>
+                  <td data-row="14" data-col="9">0.00</td>
+                  <td data-row="14" data-col="10">0.22</td>
+                  <td data-row="14" data-col="11">0.09</td>
+                </tr>
+                <tr>
+                  <td data-row="15" data-col="1">Detailed occupation</td>
+                  <td data-row="15" data-col="2">distinct occupations</td>
+                  <td data-row="15" data-col="3">166.00</td>
+                  <td data-row="15" data-col="4">123.00</td>
+                  <td data-row="15" data-col="5">62.00</td>
+                  <td data-row="15" data-col="6">74.00</td>
+                  <td data-row="15" data-col="7">61.00</td>
+                  <td data-row="15" data-col="8">10.00</td>
+                  <td data-row="15" data-col="9">21.00</td>
+                  <td data-row="15" data-col="10">185.00</td>
+                  <td data-row="15" data-col="11">105.00</td>
+                </tr>
+                <tr>
+                  <td data-row="16" data-col="1">Occupation-by-year</td>
+                  <td data-row="16" data-col="2">distinct occupation-years</td>
+                  <td data-row="16" data-col="3">674.00</td>
+                  <td data-row="16" data-col="4">480.00</td>
+                  <td data-row="16" data-col="5">208.00</td>
+                  <td data-row="16" data-col="6">226.00</td>
+                  <td data-row="16" data-col="7">201.00</td>
+                  <td data-row="16" data-col="8">26.00</td>
+                  <td data-row="16" data-col="9">61.00</td>
+                  <td data-row="16" data-col="10">752.00</td>
+                  <td data-row="16" data-col="11">363.00</td>
+                </tr>
+                <tr>
+                  <td data-row="17" data-col="1">Survey year</td>
+                  <td data-row="17" data-col="2">cells (occupation-industry-years)</td>
+                  <td data-row="17" data-col="3">674.00</td>
+                  <td data-row="17" data-col="4">480.00</td>
+                  <td data-row="17" data-col="5">208.00</td>
+                  <td data-row="17" data-col="6">226.00</td>
+                  <td data-row="17" data-col="7">201.00</td>
+                  <td data-row="17" data-col="8">26.00</td>
+                  <td data-row="17" data-col="9">61.00</td>
+                  <td data-row="17" data-col="10">1154.00</td>
+                  <td data-row="17" data-col="11">722.00</td>
+                </tr>
+                <tr>
+                  <td data-row="18" data-col="1">Employment</td>
+                  <td data-row="18" data-col="2">mean annual employment (analytic sample)</td>
+                  <td data-row="18" data-col="3">72166.00</td>
+                  <td data-row="18" data-col="4">36536.00</td>
+                  <td data-row="18" data-col="5">6402.00</td>
+                  <td data-row="18" data-col="6">10532.00</td>
+                  <td data-row="18" data-col="7">8184.00</td>
+                  <td data-row="18" data-col="8">626.00</td>
+                  <td data-row="18" data-col="9">1664.00</td>
+                  <td data-row="18" data-col="10">108702.00</td>
+                  <td data-row="18" data-col="11">27408.00</td>
+                </tr>
+                <tr>
+                  <td data-row="19" data-col="1">Relative standard error of mean wage</td>
+                  <td data-row="19" data-col="2">weighted mean (%)</td>
+                  <td data-row="19" data-col="3">1.58</td>
+                  <td data-row="19" data-col="4">0.78</td>
+                  <td data-row="19" data-col="5">3.58</td>
+                  <td data-row="19" data-col="6">6.08</td>
+                  <td data-row="19" data-col="7">3.04</td>
+                  <td data-row="19" data-col="8">2.96</td>
+                  <td data-row="19" data-col="9">4.00</td>
+                  <td data-row="19" data-col="10">1.31</td>
+                  <td data-row="19" data-col="11">4.39</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- postamble start -->
+  </body>
+
+</html>
+<!-- postamble end -->
+<!-- hack to avoid NA insertion in last line -->

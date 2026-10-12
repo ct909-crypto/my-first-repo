@@ -1,0 +1,168 @@
+{
+  "verdict": "PASS",
+  "source_engine": "scholar-journal",
+  "mode": "prepare",
+  "target_journal": "Energy Policy",
+  "paper_type": "full-length research article (descriptive empirical)",
+  "journal_profile_resolution": {
+    "requested_journal": "Energy Policy",
+    "resolved_profile_name": "Energy Policy",
+    "profile_origin": "imported_custom",
+    "profile_source_engine": "scholar-journal",
+    "source_strategy": "web_fetched_profile",
+    "web_lookup_attempted": true,
+    "fallback_used": false,
+    "fallback_reason": "",
+    "web_lookup_record": {
+      "attempted_at_utc": "2026-10-10T09:20:00Z",
+      "urls": [
+        "https://www.sciencedirect.com/journal/energy-policy/publish/guide-for-authors (HTTP 403)",
+        "https://manusights.com/blog/energy-policy-cover-letter (search result)"
+      ],
+      "extracted": "Full-length articles up to 8,000 words; abstract <= 250 words; 3-5 highlights; 1-7 keywords; Elsevier Harvard-style references; tables and figures numbered and cited in text."
+    },
+    "journal_structure": {
+      "profile_source": "web-fetched Energy Policy guide for authors (Elsevier)",
+      "section_sequence": [
+        "Abstract",
+        "Introduction",
+        "Literature Review and Hypotheses",
+        "Data and Methods",
+        "Results",
+        "Discussion",
+        "Conclusion and Policy Implications",
+        "References"
+      ],
+      "results_before_methods": false,
+      "theory_presentation": "standalone_literature_theory",
+      "methods_section_label": "Data and Methods",
+      "discussion_conclusion_policy": "split_required",
+      "supplement_policy": "journal_optional_appendix"
+    },
+    "display_architecture": {
+      "table_placement_policy": "embedded_near_first_callout",
+      "figure_placement_policy": "embedded_near_first_callout",
+      "descriptive_table_requirement": "table_1_required_for_quantitative",
+      "editable_text_tables": true,
+      "image_tables_forbidden": true,
+      "main_text_display_cap": null,
+      "main_text_table_cap": null,
+      "main_text_figure_cap": null,
+      "supplement_label_prefix": "Appendix",
+      "panel_label_style": "A_B_C",
+      "table_rendering_mode": "editable_text_embedded",
+      "figure_rendering_mode": "embedded_figures",
+      "table_title_position": "above_table",
+      "table_notes_policy": "below_table_notes",
+      "display_callout_style": "numbered_tables_and_figures"
+    }
+  },
+  "total_word_range": {
+    "min": 5500,
+    "max": 8000
+  },
+  "total_word_range_rationale": "Energy Policy full-length articles are capped at 8,000 words; the author's requested length (10-12 single-spaced pages including five tables and four figures) sets the working floor at 5,500 words of prose.",
+  "abstract_word_cap": 250,
+  "highlights": {
+    "required": true,
+    "count": "3-5",
+    "max_characters_each": 85
+  },
+  "keywords": {
+    "min": 1,
+    "max": 7
+  },
+  "section_word_budget": {
+    "abstract": {
+      "target_words": 230,
+      "min_words": 150,
+      "max_words": 250
+    },
+    "introduction": {
+      "target_words": 750,
+      "min_words": 500,
+      "max_words": 1100
+    },
+    "literature review and theory": {
+      "target_words": 1600,
+      "min_words": 1100,
+      "max_words": 2200
+    },
+    "data and methods": {
+      "target_words": 1200,
+      "min_words": 800,
+      "max_words": 1600
+    },
+    "results": {
+      "target_words": 1700,
+      "min_words": 1100,
+      "max_words": 3400
+    },
+    "discussion": {
+      "target_words": 680,
+      "min_words": 450,
+      "max_words": 1100
+    },
+    "conclusion": {
+      "target_words": 280,
+      "min_words": 200,
+      "max_words": 500
+    }
+  },
+  "numeric_reporting_policy": {
+    "policy_source": "auto-research default (Energy Policy guide gives no explicit rounding rule)",
+    "inferential_digits": 3,
+    "descriptive_digits": 2,
+    "p_value_rule": "exact p to 3 decimals; p < .001 below the floor",
+    "allow_scientific_notation": false,
+    "percent_digits": 1
+  },
+  "journal_structure": {
+    "profile_source": "web-fetched Energy Policy guide for authors (Elsevier)",
+    "section_sequence": [
+      "Abstract",
+      "Introduction",
+      "Literature Review and Hypotheses",
+      "Data and Methods",
+      "Results",
+      "Discussion",
+      "Conclusion and Policy Implications",
+      "References"
+    ],
+    "results_before_methods": false,
+    "theory_presentation": "standalone_literature_theory",
+    "methods_section_label": "Data and Methods",
+    "discussion_conclusion_policy": "split_required",
+    "supplement_policy": "journal_optional_appendix"
+  },
+  "display_architecture": {
+    "table_placement_policy": "embedded_near_first_callout",
+    "figure_placement_policy": "embedded_near_first_callout",
+    "descriptive_table_requirement": "table_1_required_for_quantitative",
+    "editable_text_tables": true,
+    "image_tables_forbidden": true,
+    "main_text_display_cap": null,
+    "main_text_table_cap": null,
+    "main_text_figure_cap": null,
+    "supplement_label_prefix": "Appendix",
+    "panel_label_style": "A_B_C",
+    "table_rendering_mode": "editable_text_embedded",
+    "figure_rendering_mode": "embedded_figures",
+    "table_title_position": "above_table",
+    "table_notes_policy": "below_table_notes",
+    "display_callout_style": "numbered_tables_and_figures"
+  },
+  "reference_style": "Elsevier author-date (Harvard)",
+  "engine_provenance": {
+    "task_invocation_id": "phase13-journal-energy-001",
+    "invoked_at_utc": "2026-10-10T10:55:00Z",
+    "input_artifacts": [
+      "idea/journal-fit.json",
+      "manuscript/manuscript-blueprint.json"
+    ],
+    "output_artifacts": [
+      "manuscript/journal-spec.json"
+    ]
+  },
+  "ready_for_drafting": true
+}

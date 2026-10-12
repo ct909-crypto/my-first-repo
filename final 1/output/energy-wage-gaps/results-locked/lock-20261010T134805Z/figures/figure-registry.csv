@@ -1,0 +1,9 @@
+figure_id,path,source_script,status,description
+F1,figures/fig1-wage-by-source-year.pdf,analysis/scripts/02_descriptives.R,completed,Employment-weighted mean real hourly wage by generation technology and year
+F2,figures/fig2-source-gaps.pdf,analysis/scripts/06_figures.R,completed,Within-occupation wage differences of each generation technology relative to fossil fuel (S04)
+F3,figures/fig3-gap-by-year.pdf,analysis/scripts/06_figures.R,completed,Renewable vs. non-renewable wage gap by year: within occupation (S06) and raw (S08)
+F4,figures/fig4-gap-by-occupation-group.pdf,analysis/scripts/06_figures.R,completed,Within-occupation renewable wage gap by broad occupation category (S05)
+F1-png,figures/fig1-wage-by-source-year.png,analysis/scripts/02_descriptives.R,completed,Employment-weighted mean real hourly wage by generation technology and year (PNG copy)
+F2-png,figures/fig2-source-gaps.png,analysis/scripts/06_figures.R,completed,Within-occupation wage differences of each generation technology relative to fossil fuel (S04) (PNG copy)
+F3-png,figures/fig3-gap-by-year.png,analysis/scripts/06_figures.R,completed,Renewable vs. non-renewable wage gap by year: within occupation (S06) and raw (S08) (PNG copy)
+F4-png,figures/fig4-gap-by-occupation-group.png,analysis/scripts/06_figures.R,completed,Within-occupation renewable wage gap by broad occupation category (S05) (PNG copy)

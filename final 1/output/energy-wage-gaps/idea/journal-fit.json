@@ -1,0 +1,124 @@
+{
+  "verdict": "PASS",
+  "target_source": "inferred",
+  "selected_rq_id": "RQ1",
+  "primary_target": "Energy Policy",
+  "journal_family": "energy and environmental policy",
+  "paper_type": "full-length research article (descriptive empirical)",
+  "journal_profile_resolution": {
+    "requested_journal": "Energy Policy",
+    "resolved_profile_name": "Energy Policy",
+    "profile_origin": "imported_custom",
+    "profile_source_engine": "scholar-journal",
+    "source_strategy": "web_fetched_profile",
+    "web_lookup_attempted": true,
+    "fallback_used": false,
+    "fallback_reason": "",
+    "web_lookup_record": {
+      "attempted_at_utc": "2026-10-10T09:20:00Z",
+      "urls": [
+        "https://www.sciencedirect.com/journal/energy-policy/publish/guide-for-authors (HTTP 403)",
+        "https://manusights.com/blog/energy-policy-cover-letter (search result)"
+      ],
+      "extracted": "Full-length articles up to 8,000 words; abstract <= 250 words; 3-5 highlights; 1-7 keywords; Elsevier Harvard-style references; tables and figures numbered and cited in text."
+    },
+    "journal_structure": {
+      "profile_source": "web-fetched Energy Policy guide for authors (Elsevier)",
+      "section_sequence": [
+        "Abstract",
+        "Introduction",
+        "Literature Review and Hypotheses",
+        "Data and Methods",
+        "Results",
+        "Discussion",
+        "Conclusion and Policy Implications",
+        "References"
+      ],
+      "results_before_methods": false,
+      "theory_presentation": "standalone_literature_theory",
+      "methods_section_label": "Data and Methods",
+      "discussion_conclusion_policy": "split_required",
+      "supplement_policy": "journal_optional_appendix"
+    },
+    "display_architecture": {
+      "table_placement_policy": "embedded_near_first_callout",
+      "figure_placement_policy": "embedded_near_first_callout",
+      "descriptive_table_requirement": "table_1_required_for_quantitative",
+      "editable_text_tables": true,
+      "image_tables_forbidden": true,
+      "main_text_display_cap": null,
+      "main_text_table_cap": null,
+      "main_text_figure_cap": null,
+      "supplement_label_prefix": "Appendix",
+      "panel_label_style": "A_B_C",
+      "table_rendering_mode": "editable_text_embedded",
+      "figure_rendering_mode": "embedded_figures",
+      "table_title_position": "above_table",
+      "table_notes_policy": "below_table_notes",
+      "display_callout_style": "numbered_tables_and_figures"
+    }
+  },
+  "candidates": [
+    {
+      "rq_id": "RQ1",
+      "primary_target": "Energy Policy",
+      "fit_score": 9,
+      "fit_dimensions": {
+        "audience": "strong",
+        "theory": "adequate",
+        "method": "strong",
+        "contribution": "strong"
+      },
+      "desk_reject_risks": [
+        "must state why industry-level OEWS cells add beyond postings and linked-admin studies"
+      ],
+      "recommended": true
+    },
+    {
+      "rq_id": "RQ2",
+      "primary_target": "Energy Policy",
+      "fit_score": 6,
+      "fit_dimensions": {
+        "audience": "adequate",
+        "theory": "weak",
+        "method": "strong",
+        "contribution": "adequate"
+      },
+      "desk_reject_risks": [
+        "decomposition-only contribution is thin"
+      ],
+      "recommended": false
+    },
+    {
+      "rq_id": "RQ3",
+      "primary_target": "Energy Policy",
+      "fit_score": 6,
+      "fit_dimensions": {
+        "audience": "adequate",
+        "theory": "adequate",
+        "method": "adequate",
+        "contribution": "adequate"
+      },
+      "desk_reject_risks": [
+        "percentiles within cells are noisy for small industries"
+      ],
+      "recommended": false
+    },
+    {
+      "rq_id": "RQ4",
+      "primary_target": "Energy Policy",
+      "fit_score": 3,
+      "fit_dimensions": {
+        "audience": "strong",
+        "theory": "adequate",
+        "method": "weak",
+        "contribution": "weak"
+      },
+      "desk_reject_risks": [
+        "causal claim not identified"
+      ],
+      "recommended": false
+    }
+  ],
+  "ready_for_phase_2": true
+}

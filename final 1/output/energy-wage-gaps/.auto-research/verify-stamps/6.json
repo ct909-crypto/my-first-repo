@@ -1,0 +1,17 @@
+{
+  "authority": "audit_only_not_completion_input",
+  "completed_at": "2026-10-10T13:47:05.273210+00:00",
+  "contract_sha256": "beb6125aa0b17e6505f99cc8950dc0a87a355f6ab5f886ef7b3f77b4702028f4",
+  "phase_id": "6",
+  "required_outputs": {
+    "review-evidence/phase-06": "f746101fbb554e70d5f59c7e4a9c8b9b1960bc7fabbc19e18cd4917b196781cf",
+    "review/pre-execution-fix-log.json": "778df42cd4a3891ad5832bcff7e9d246bc3903fc5716887e75103c3d6214ffd5",
+    "review/pre-execution-fix-log.md": "44fd2b8e8f48505f38403651695da2e459e04d47d334b4e266cb16b8fe6a2594",
+    "review/pre-execution-rereview.json": "219ea6ba1fb208d0034b5ed0c9d419acf813e8a260becd278ddcf71c61e62527",
+    "review/pre-execution-review.json": "d116c891b969d7db35da689a341ab53a9961b439101a6e3a0d13a4271326a11e",
+    "review/pre-execution-review.md": "dd9dc3ca75b5f6817e5c6796676d829de81984dd5caee394dab734936df86811"
+  },
+  "run_nonce": "cd87aa181cdcd508120914d6f9b648f4",
+  "schema_version": "scholar-auto-research-completion-audit/v1",
+  "verdict": "PASS"
+}

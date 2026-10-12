@@ -1,0 +1,824 @@
+{
+  "verdict": "PASS",
+  "degraded": false,
+  "blueprint_engine": {
+    "skill": "scholar-auto-research",
+    "mode": "manuscript_blueprint",
+    "lock_enforced": true,
+    "live_output_reads_forbidden": true
+  },
+  "lock_id": "lock-20261010T134805Z",
+  "lock_manifest_sha256": "57f6ea3b32e7365257191d47d83acfab997b88ada080a10918b7b3c8bf3c3756",
+  "source_hashes": {
+    "lock_manifest": "43da22b358fe9b9764dc6e3c3bd4cfdb1d6fdb2b3efd52a36190b011a6e6f1eb",
+    "stage1_verify": "7f69b156a9a4d7c0ae3008b2c695d5e7ac51f547f93ed2c6f79cf4dbbc39335b",
+    "research_question": "e8f58e0a8a1219172180a476071195faefe26aa88e4cfe8196705c68864aa6de",
+    "journal_fit": "82bee176c0d777bf5c231cb0239cbe0e7ba1641cb4322c218ce2622c39ac13c5",
+    "lit_theory": "f7a7cc2e75d2864fd9e4654fa379de70759fa2608dcc6f1191fe43b0a42c4c99",
+    "design_blueprint": "3fd4c84b753ebfe46c54a8890ae05a4e06eebb65d1053df9cc67a907894d4fe5",
+    "identification_strategy": "f073a51809e76598a80568ad2d57b67544b5fa717d49fdd222250a3c8b2dbf0d",
+    "analysis_plan": "d956ca8c4e7fe43fa46755f3bdcf3fbad4d83730e053b6fe8e705e475083044d",
+    "post_execution_review": "68000bf1f53dfe3d8e740704fa56d45c05237c40e172e4b7375446dbce6b466d",
+    "results_registry": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac",
+    "figure_registry": "893baca3b02f5be2f3295945d5db6d82cd13d7bd842ba62a4a5b33b89fe652c7"
+  },
+  "paper_type": "full-length research article (descriptive empirical)",
+  "target_journal": "Energy Policy",
+  "journal_profile_resolution": {
+    "requested_journal": "Energy Policy",
+    "resolved_profile_name": "Energy Policy",
+    "profile_origin": "imported_custom",
+    "profile_source_engine": "scholar-journal",
+    "source_strategy": "web_fetched_profile",
+    "web_lookup_attempted": true,
+    "fallback_used": false,
+    "fallback_reason": "",
+    "web_lookup_record": {
+      "attempted_at_utc": "2026-10-10T09:20:00Z",
+      "urls": [
+        "https://www.sciencedirect.com/journal/energy-policy/publish/guide-for-authors (HTTP 403)",
+        "https://manusights.com/blog/energy-policy-cover-letter (search result)"
+      ],
+      "extracted": "Full-length articles up to 8,000 words; abstract <= 250 words; 3-5 highlights; 1-7 keywords; Elsevier Harvard-style references; tables and figures numbered and cited in text."
+    },
+    "journal_structure": {
+      "profile_source": "web-fetched Energy Policy guide for authors (Elsevier)",
+      "section_sequence": [
+        "Abstract",
+        "Introduction",
+        "Literature Review and Hypotheses",
+        "Data and Methods",
+        "Results",
+        "Discussion",
+        "Conclusion and Policy Implications",
+        "References"
+      ],
+      "results_before_methods": false,
+      "theory_presentation": "standalone_literature_theory",
+      "methods_section_label": "Data and Methods",
+      "discussion_conclusion_policy": "split_required",
+      "supplement_policy": "journal_optional_appendix"
+    },
+    "display_architecture": {
+      "table_placement_policy": "embedded_near_first_callout",
+      "figure_placement_policy": "embedded_near_first_callout",
+      "descriptive_table_requirement": "table_1_required_for_quantitative",
+      "editable_text_tables": true,
+      "image_tables_forbidden": true,
+      "main_text_display_cap": null,
+      "main_text_table_cap": null,
+      "main_text_figure_cap": null,
+      "supplement_label_prefix": "Appendix",
+      "panel_label_style": "A_B_C",
+      "table_rendering_mode": "editable_text_embedded",
+      "figure_rendering_mode": "embedded_figures",
+      "table_title_position": "above_table",
+      "table_notes_policy": "below_table_notes",
+      "display_callout_style": "numbered_tables_and_figures"
+    }
+  },
+  "title": "Same Job, Lower Pay? Wage Gaps between Renewable and Non-Renewable Electric Power Generation in the United States, 2021-2025",
+  "paper_claim": "Between May 2021 and May 2025, U.S. renewable electricity generation industries paid about 11.5 percent less per hour than fossil fuel and nuclear generation for workers in the same detailed occupation; the gap was concentrated in solar, wind, geothermal and biomass (not hydroelectric) generation and in plant-operations and maintenance occupations, and it did not narrow while renewable generation employment doubled.",
+  "claim_strength": "descriptive",
+  "claim_change_note": "Relative to the Phase 1 framing, the final claim adds that composition does not explain the gap (H2 not supported) and that the gap did not narrow (H5 not supported).",
+  "publication_readiness": {
+    "status": "PASS",
+    "ready_for_drafting": true,
+    "route_back_if_not_ready": false,
+    "contribution_sentence": "Using five years of OEWS industry-by-occupation wage cells, we show that the same occupations pay roughly 11-12 percent less in U.S. renewable generation than in fossil and nuclear generation, that this gap is a within-occupation pay difference rather than an occupational-mix artifact, and that it persisted through the 2021-2025 renewable buildout.",
+    "novelty_claim": "First within-occupation, source-by-source comparison of renewable and non-renewable generation wages inside one industry, tracked through the IRA period; reconciles economy-wide green-premium findings with legacy-premium evidence for energy-transition policy readers of Energy Policy.",
+    "target_journal_fit": "Energy Policy publishes transparent empirical evidence on energy-transition labor outcomes; this paper gives policy-relevant, source-specific wage comparisons for just-transition and labor-standards debates.",
+    "mechanism_rival_matrix": [
+      {
+        "role": "mechanism",
+        "label": "Legacy establishment rent-sharing and wage-setting institutions",
+        "evidence_link": "Within-occupation gap persists (Table 2), largest in plant-operations occupations (Figure 4), hydro at parity and nuclear highest (Figure 2)",
+        "claim_implication": "Interpret the gap as consistent with establishment wage premia, not proven"
+      },
+      {
+        "role": "rival",
+        "label": "Green skills scarcity premium",
+        "evidence_link": "Predicts higher renewable pay within occupation; contradicted by negative gaps in Table 2",
+        "claim_implication": "State that the skills-scarcity account does not fit these data"
+      },
+      {
+        "role": "rival",
+        "label": "Compensating differentials for environmentally valued work",
+        "evidence_link": "Consistent with negative sign but not with hydro parity or concentration in plant-operations jobs",
+        "claim_implication": "Discuss as partly compatible, not testable here"
+      },
+      {
+        "role": "alternative",
+        "label": "Worker sorting and regional cost of living",
+        "evidence_link": "Not observable in national cells; disclosed limitation",
+        "claim_implication": "Keep estimates descriptive and name this as untested"
+      },
+      {
+        "role": "scope_condition",
+        "label": "Maturation and IRA labor standards over time",
+        "evidence_link": "No narrowing in year-specific gaps (Figure 3, Table 3)",
+        "claim_implication": "Do not claim convergence or policy effects"
+      }
+    ],
+    "evidence_claim_map": [
+      {
+        "claim": "Headline within-occupation renewable wage gap",
+        "evidence_type": "regression table and robustness table",
+        "claim_strength": "descriptive headline",
+        "artifact_path": "tables/table2-main-regression.html",
+        "hypothesis_id": "H1"
+      },
+      {
+        "claim": "Source ordering of wage gaps",
+        "evidence_type": "regression table and coefficient figure",
+        "claim_strength": "descriptive supporting",
+        "artifact_path": "figures/fig2-source-gaps.pdf",
+        "hypothesis_id": "H3"
+      },
+      {
+        "claim": "Gap concentrated in plant-operations occupations",
+        "evidence_type": "interaction model with joint test",
+        "claim_strength": "descriptive supporting",
+        "artifact_path": "figures/fig4-gap-by-occupation-group.pdf",
+        "hypothesis_id": "H4"
+      },
+      {
+        "claim": "Composition does not explain the gap",
+        "evidence_type": "Kitagawa decomposition with bootstrap",
+        "claim_strength": "null-compatible finding",
+        "artifact_path": "tables/table4-decomposition.csv",
+        "hypothesis_id": "H2"
+      },
+      {
+        "claim": "No narrowing between 2021 and 2025",
+        "evidence_type": "year interaction and trend models",
+        "claim_strength": "null-compatible finding",
+        "artifact_path": "figures/fig3-gap-by-year.pdf",
+        "hypothesis_id": "H5"
+      },
+      {
+        "claim": "Sorting, region and overtime limits",
+        "evidence_type": "accepted limitation",
+        "claim_strength": "limitation statement",
+        "limitation": "PM-01 regional composition; PM-03 overtime excluded; OEWS smoothing"
+      }
+    ],
+    "reviewer_risk_register": [
+      {
+        "risk_type": "strongest rejection reason",
+        "objection": "Gaps may reflect regional cost of living or worker sorting rather than establishment pay-setting",
+        "required_response": "Keep the estimand descriptive, use hydro and nuclear contrasts, and state the limitation with a concrete data agenda",
+        "route_back_phase": "13"
+      },
+      {
+        "risk_type": "measurement",
+        "objection": "OEWS discourages time-series comparisons, so trend conclusions are unreliable",
+        "required_response": "Frame trends as smoothed changes, report the balanced-set check, and avoid policy attribution",
+        "route_back_phase": "13"
+      },
+      {
+        "risk_type": "classification",
+        "objection": "The non-renewable group mixes fossil and nuclear, so the headline may be a nuclear premium",
+        "required_response": "Report the fossil-only contrast and source model prominently in Results",
+        "route_back_phase": "13"
+      },
+      {
+        "risk_type": "precision",
+        "objection": "Geothermal and biomass estimates rest on very few cells",
+        "required_response": "Report identifying cell counts and describe geothermal as imprecise",
+        "route_back_phase": "13"
+      }
+    ]
+  },
+  "contribution_stack": [
+    {
+      "rank": 1,
+      "contribution_type": "empirical",
+      "claim_text": "Same-occupation renewable wage gap of about 11.5% inside U.S. power generation, 2021-2025.",
+      "depends_on_results": true,
+      "evidence_specs": [
+        "S03",
+        "S11-S19"
+      ],
+      "scope_note": "descriptive, national cells"
+    },
+    {
+      "rank": 2,
+      "contribution_type": "heterogeneity",
+      "claim_text": "The gap is technology- and occupation-specific: hydro at parity, nuclear premium, largest gaps for plant-operations workers.",
+      "depends_on_results": true,
+      "evidence_specs": [
+        "S04",
+        "S05"
+      ],
+      "scope_note": "geothermal imprecise"
+    },
+    {
+      "rank": 3,
+      "contribution_type": "dynamic/null",
+      "claim_text": "No narrowing during a period of rapid renewable expansion and new labor standards.",
+      "depends_on_results": true,
+      "evidence_specs": [
+        "S06",
+        "S07",
+        "S20"
+      ],
+      "scope_note": "OEWS three-year pooling smooths trends"
+    },
+    {
+      "rank": 4,
+      "contribution_type": "theoretical",
+      "claim_text": "Reconciles green-premium and legacy-premium literatures by locating the energy-transition wage penalty in establishment wage-setting rather than occupational composition.",
+      "depends_on_results": true,
+      "evidence_specs": [
+        "S03",
+        "S08"
+      ],
+      "scope_note": "mechanism interpreted, not measured"
+    }
+  ],
+  "result_hierarchy": [
+    {
+      "artifact_path": "tables/table1-descriptives.html",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/table1-descriptives.html",
+      "artifact_role": "descriptive_table",
+      "narrative_role": "Table 1: analytic sample, wages, employment shares and occupational mix by generation technology",
+      "headline_status": "supporting"
+    },
+    {
+      "artifact_path": "tables/table2-main-regression.html",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/table2-main-regression.html",
+      "artifact_role": "main_regression_table",
+      "narrative_role": "Table 2: raw to within-occupation gap ladder and distributional gaps (Models 1-5)",
+      "headline_status": "headline",
+      "spec_id": "S01;S02;S03;S09;S10"
+    },
+    {
+      "artifact_path": "tables/table3-heterogeneity-regression.html",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/table3-heterogeneity-regression.html",
+      "artifact_role": "regression_table",
+      "narrative_role": "Table 3: gaps by generation technology, occupation category and year (Models 6-9)",
+      "headline_status": "headline",
+      "spec_id": "S04;S05;S06;S07"
+    },
+    {
+      "artifact_path": "tables/table4-decomposition.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/table4-decomposition.csv",
+      "artifact_role": "result_table",
+      "narrative_role": "Table 4: decomposition of the raw gap into composition, within-occupation and non-overlap components",
+      "headline_status": "supporting",
+      "spec_id": "S08"
+    },
+    {
+      "artifact_path": "tables/tableA1-robustness-regression.html",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/tableA1-robustness-regression.html",
+      "artifact_role": "sensitivity_regression_table",
+      "narrative_role": "Table A1: robustness of the headline gap",
+      "headline_status": "sensitivity",
+      "spec_id": "S11-S18"
+    },
+    {
+      "artifact_path": "tables/results-registry.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/results-registry.csv",
+      "artifact_role": "results_registry",
+      "narrative_role": "provenance registry; not a display",
+      "headline_status": "diagnostic"
+    },
+    {
+      "artifact_path": "figures/fig1-wage-by-source-year.pdf",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig1-wage-by-source-year.pdf",
+      "artifact_role": "figure_file",
+      "narrative_role": "Figure 1: wage levels by technology and year",
+      "headline_status": "supporting",
+      "figure_id": "F1"
+    },
+    {
+      "artifact_path": "figures/fig2-source-gaps.pdf",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig2-source-gaps.pdf",
+      "artifact_role": "figure_file",
+      "narrative_role": "Figure 2: within-occupation gaps by technology vs fossil fuel",
+      "headline_status": "headline",
+      "figure_id": "F2"
+    },
+    {
+      "artifact_path": "figures/fig3-gap-by-year.pdf",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig3-gap-by-year.pdf",
+      "artifact_role": "figure_file",
+      "narrative_role": "Figure 3: raw and within-occupation gap by year",
+      "headline_status": "headline",
+      "figure_id": "F3"
+    },
+    {
+      "artifact_path": "figures/fig4-gap-by-occupation-group.pdf",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig4-gap-by-occupation-group.pdf",
+      "artifact_role": "figure_file",
+      "narrative_role": "Figure 4: gap by broad occupation category",
+      "headline_status": "headline",
+      "figure_id": "F4"
+    },
+    {
+      "artifact_path": "figures/fig1-wage-by-source-year.png",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig1-wage-by-source-year.png",
+      "artifact_role": "figure_file",
+      "narrative_role": "PNG render of the same figure (embedded in manuscript)",
+      "headline_status": "diagnostic",
+      "figure_id": "F1-png"
+    },
+    {
+      "artifact_path": "figures/fig2-source-gaps.png",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig2-source-gaps.png",
+      "artifact_role": "figure_file",
+      "narrative_role": "PNG render of the same figure (embedded in manuscript)",
+      "headline_status": "diagnostic",
+      "figure_id": "F2-png"
+    },
+    {
+      "artifact_path": "figures/fig3-gap-by-year.png",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig3-gap-by-year.png",
+      "artifact_role": "figure_file",
+      "narrative_role": "PNG render of the same figure (embedded in manuscript)",
+      "headline_status": "diagnostic",
+      "figure_id": "F3-png"
+    },
+    {
+      "artifact_path": "figures/fig4-gap-by-occupation-group.png",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig4-gap-by-occupation-group.png",
+      "artifact_role": "figure_file",
+      "narrative_role": "PNG render of the same figure (embedded in manuscript)",
+      "headline_status": "diagnostic",
+      "figure_id": "F4-png"
+    }
+  ],
+  "hypothesis_resolution": [
+    {
+      "hypothesis_id": "H1",
+      "resolution_status": "supported",
+      "evidence_specs": [
+        "S02",
+        "S03",
+        "S09",
+        "S10",
+        "S11-S19"
+      ],
+      "manuscript_implication": "Headline: renewable industries pay about 11.5% less for the same occupation and year; robust to weighting, outcome, sample, classification and clustering."
+    },
+    {
+      "hypothesis_id": "H2",
+      "resolution_status": "null_compatible",
+      "evidence_specs": [
+        "S01",
+        "S02",
+        "S03",
+        "S08"
+      ],
+      "manuscript_implication": "Occupational composition does not explain the raw gap; renewable occupational mix slightly favors higher pay. Report as a substantive finding: the gap is a within-occupation pay difference plus occupations unique to one group."
+    },
+    {
+      "hypothesis_id": "H3",
+      "resolution_status": "supported",
+      "evidence_specs": [
+        "S04",
+        "S15",
+        "S16"
+      ],
+      "manuscript_implication": "Nuclear pays about 12% more than fossil; hydro is statistically indistinguishable from fossil; solar, wind, geothermal and biomass pay less. Geothermal rests on 26 identifying cells and is described as imprecise."
+    },
+    {
+      "hypothesis_id": "H4",
+      "resolution_status": "supported",
+      "evidence_specs": [
+        "S05",
+        "S09",
+        "S10"
+      ],
+      "manuscript_implication": "Gap largest in production/transportation (about -18%) and construction/installation/maintenance/repair (about -14%), smallest in professional/technical (about -2%, n.s.); joint test rejects equal gaps. Lower-tail (P10) gap larger than upper-tail (P90) gap."
+    },
+    {
+      "hypothesis_id": "H5",
+      "resolution_status": "null_compatible",
+      "evidence_specs": [
+        "S06",
+        "S07",
+        "S20"
+      ],
+      "manuscript_implication": "No narrowing: within-occupation gap -11% in 2021 and -13% in 2025; trend near zero and not significant. Framed under OEWS panel smoothing; no policy attribution."
+    }
+  ],
+  "mechanism_integration_plan": [
+    {
+      "mechanism_id": "M-rent",
+      "mechanism_label": "Legacy establishment rent-sharing and institutional wage-setting",
+      "theory_role": "primary interpretive framework",
+      "evidence_role": "pattern consistent: gap persists within occupation, largest in plant-based occupations, hydro (legacy-like) shows no gap, nuclear highest",
+      "integration_status": "tested_indirectly"
+    },
+    {
+      "mechanism_id": "M-skill",
+      "mechanism_label": "Green skills scarcity premium (rival)",
+      "theory_role": "rival",
+      "evidence_role": "predicts positive renewable gap; contradicted by negative within-occupation gaps",
+      "integration_status": "tested_indirectly"
+    },
+    {
+      "mechanism_id": "M-comp",
+      "mechanism_label": "Compensating differentials for green work (rival)",
+      "theory_role": "rival",
+      "evidence_role": "consistent with negative sign but not with concentration in plant-operations occupations or with hydro parity; cannot be tested directly",
+      "integration_status": "discussion_only"
+    },
+    {
+      "mechanism_id": "M-sort",
+      "mechanism_label": "Worker sorting and regional composition (alternative explanation)",
+      "theory_role": "alternative",
+      "evidence_role": "not testable with national cells; disclosed as limitation",
+      "integration_status": "discussion_only"
+    },
+    {
+      "mechanism_id": "M-mature",
+      "mechanism_label": "Maturation and IRA labor standards narrowing the gap",
+      "theory_role": "dynamic prediction (H5)",
+      "evidence_role": "no narrowing observed",
+      "integration_status": "drop_from_claim"
+    }
+  ],
+  "journal_structure": {
+    "profile_source": "web-fetched Energy Policy guide for authors (Elsevier)",
+    "section_sequence": [
+      "Abstract",
+      "Introduction",
+      "Literature Review and Hypotheses",
+      "Data and Methods",
+      "Results",
+      "Discussion",
+      "Conclusion and Policy Implications",
+      "References"
+    ],
+    "results_before_methods": false,
+    "theory_presentation": "standalone_literature_theory",
+    "methods_section_label": "Data and Methods",
+    "discussion_conclusion_policy": "split_required",
+    "supplement_policy": "journal_optional_appendix"
+  },
+  "display_architecture": {
+    "table_placement_policy": "embedded_near_first_callout",
+    "figure_placement_policy": "embedded_near_first_callout",
+    "descriptive_table_requirement": "table_1_required_for_quantitative",
+    "editable_text_tables": true,
+    "image_tables_forbidden": true,
+    "main_text_display_cap": null,
+    "main_text_table_cap": null,
+    "main_text_figure_cap": null,
+    "supplement_label_prefix": "Appendix",
+    "panel_label_style": "A_B_C",
+    "table_rendering_mode": "editable_text_embedded",
+    "figure_rendering_mode": "embedded_figures",
+    "table_title_position": "above_table",
+    "table_notes_policy": "below_table_notes",
+    "display_callout_style": "numbered_tables_and_figures"
+  },
+  "front_matter_policy": {
+    "title_form": "descriptive title with question hook",
+    "abstract_moves": [
+      "purpose",
+      "data",
+      "method",
+      "findings",
+      "implication"
+    ],
+    "abstract_word_cap": 250,
+    "keywords_required": true,
+    "keywords": [
+      "renewable energy",
+      "wage gap",
+      "green jobs",
+      "electric power generation",
+      "just transition",
+      "occupational wages"
+    ],
+    "highlights_required": true,
+    "abstract_display_labels_forbidden": true
+  },
+  "discussion_mode": "split",
+  "appendix_policy": {
+    "draft": [
+      "Appendix A: robustness (Table A1)",
+      "Appendix B: cell coverage"
+    ],
+    "final": [
+      "Appendix A: robustness (Table A1)"
+    ],
+    "submission": [
+      "Appendix A: robustness (Table A1)"
+    ],
+    "excluded_from_submission": [
+      "workflow, provenance, lock and reviewer-evidence material"
+    ]
+  },
+  "section_obligations": {
+    "abstract": {
+      "required_moves": [
+        "purpose and policy relevance",
+        "data (OEWS May 2021-2025, NAICS 2211 cells)",
+        "method (employment-weighted occupation-by-year fixed effects; decomposition)",
+        "headline gap and source/occupation heterogeneity",
+        "trend result (no narrowing)",
+        "implication for just transition"
+      ],
+      "required_artifacts": [],
+      "required_disclosures": [
+        "descriptive, not causal"
+      ],
+      "forbidden_moves": [
+        "Table/Figure callouts",
+        "causal verbs"
+      ]
+    },
+    "introduction": {
+      "required_moves": [
+        "puzzle: green-premium claims vs legacy pay",
+        "gap in literature naming closest prior work (Curtis and Marinescu 2023; Colmer et al. 2025; Godoy and Isaksen 2025)",
+        "contribution",
+        "data and method preview",
+        "headline findings preview",
+        "roadmap"
+      ],
+      "required_artifacts": [],
+      "required_disclosures": [
+        "descriptive design"
+      ],
+      "forbidden_moves": [
+        "overstated causal framing",
+        "claiming IRA effects"
+      ]
+    },
+    "literature_review_and_theory": {
+      "required_moves": [
+        "evaluate prior studies' strengths and weaknesses",
+        "rent-sharing framework",
+        "rival accounts",
+        "H1-H5 with derivation sentences (pre-results wording from Phase 2)"
+      ],
+      "required_artifacts": [],
+      "required_disclosures": [],
+      "forbidden_moves": [
+        "referring to results, tables, or estimates",
+        "rewriting hypotheses after results"
+      ]
+    },
+    "data_and_methods": {
+      "required_moves": [
+        "data source and OEWS design (six panels over three years, MB3)",
+        "sample construction with counts (2,096 cells -> 1,876 analytic)",
+        "variables: outcome, focal predictor, moderators, fixed effects, weights",
+        "estimating equations",
+        "inference (occupation clustering, two-way sensitivity)",
+        "decomposition",
+        "robustness plan"
+      ],
+      "required_artifacts": [
+        "tables/table1-descriptives.html"
+      ],
+      "required_disclosures": [
+        "top-coding and suppression",
+        "wages exclude overtime"
+      ],
+      "forbidden_moves": [
+        "internal spec IDs in prose"
+      ]
+    },
+    "results": {
+      "required_moves": [
+        "descriptive patterns (Table 1, Figure 1)",
+        "headline ladder (Table 2)",
+        "decomposition (Table 4)",
+        "sources (Table 3, Figure 2)",
+        "occupational heterogeneity (Figure 4)",
+        "trend (Figure 3)",
+        "distribution (P10/P90)",
+        "robustness (Table A1)"
+      ],
+      "required_artifacts": [
+        "tables/table2-main-regression.html",
+        "tables/table3-heterogeneity-regression.html",
+        "figures/fig2-source-gaps.pdf",
+        "figures/fig3-gap-by-year.pdf",
+        "figures/fig4-gap-by-occupation-group.pdf",
+        "tables/table1-descriptives.html",
+        "tables/table4-decomposition.csv",
+        "tables/tableA1-robustness-regression.html",
+        "figures/fig1-wage-by-source-year.pdf"
+      ],
+      "required_disclosures": [
+        "H2 and H5 not supported",
+        "geothermal imprecise",
+        "P90 conditional"
+      ],
+      "forbidden_moves": [
+        "causal verbs",
+        "ranking occupation groups by individual p-values"
+      ]
+    },
+    "discussion": {
+      "required_moves": [
+        "answer RQ",
+        "adjudicate rent-sharing vs skills-scarcity vs compensating differentials",
+        "reconcile with prior literature",
+        "limitations",
+        "scope"
+      ],
+      "required_artifacts": [
+        "tables/table2-main-regression.html",
+        "tables/table3-heterogeneity-regression.html",
+        "figures/fig2-source-gaps.pdf",
+        "figures/fig3-gap-by-year.pdf",
+        "figures/fig4-gap-by-occupation-group.pdf"
+      ],
+      "required_disclosures": [
+        "sorting and region not controlled",
+        "OEWS smoothing",
+        "overtime excluded"
+      ],
+      "forbidden_moves": [
+        "policy effect claims",
+        "restating coefficients without interpretation"
+      ]
+    },
+    "conclusion": {
+      "required_moves": [
+        "synthesis of contribution",
+        "policy implications for just-transition and labor standards",
+        "future research"
+      ],
+      "required_artifacts": [],
+      "required_disclosures": [
+        "descriptive scope"
+      ],
+      "forbidden_moves": [
+        "new results",
+        "table/model reporting"
+      ]
+    }
+  },
+  "required_disclosures": [
+    "descriptive design: sorting and regional composition not controlled",
+    "OEWS three-year pooled panels smooth trends",
+    "OEWS wages exclude overtime and shift differentials",
+    "P90 censoring",
+    "small geothermal and biomass samples",
+    "reviews carried out inline because independent subagents were unavailable (workflow disclosure, trace only)",
+    "descriptive design; estimates are not causal effects of working in renewables",
+    "worker sorting and regional composition not controlled",
+    "OEWS pools six semiannual panels over three years (trend smoothing)",
+    "OEWS wages exclude overtime and shift differentials",
+    "suppressed and top-coded cells excluded; P90 harmonized censoring",
+    "geothermal and biomass thin; geothermal imprecise",
+    "petroleum generation not separable from fossil fuel; transmission and distribution outside scope"
+  ],
+  "forbidden_moves": [
+    "causal language about renewable employment lowering wages",
+    "attributing trends to the Inflation Reduction Act",
+    "presenting H2 or H5 as supported",
+    "ranking occupation groups on individual p-values",
+    "using internal spec IDs (S01...) in prose or table headers",
+    "elevating registry or diagnostics to main displays"
+  ],
+  "table_figure_narrative_map": [
+    {
+      "artifact_path": "tables/table1-descriptives.html",
+      "display_expected": true,
+      "display_label": "Table 1",
+      "section": "Data and Methods",
+      "paragraph_role": "sample description",
+      "claim_role": "context"
+    },
+    {
+      "artifact_path": "figures/fig1-wage-by-source-year.pdf",
+      "display_expected": true,
+      "display_label": "Figure 1",
+      "section": "Results",
+      "paragraph_role": "descriptive patterns",
+      "claim_role": "context"
+    },
+    {
+      "artifact_path": "tables/table2-main-regression.html",
+      "display_expected": true,
+      "display_label": "Table 2",
+      "section": "Results",
+      "paragraph_role": "headline gap ladder",
+      "claim_role": "headline"
+    },
+    {
+      "artifact_path": "tables/table4-decomposition.csv",
+      "display_expected": true,
+      "display_label": "Table 4",
+      "section": "Results",
+      "paragraph_role": "composition decomposition",
+      "claim_role": "null-compatible (H2)"
+    },
+    {
+      "artifact_path": "tables/table3-heterogeneity-regression.html",
+      "display_expected": true,
+      "display_label": "Table 3",
+      "section": "Results",
+      "paragraph_role": "source, occupation and year heterogeneity",
+      "claim_role": "supporting"
+    },
+    {
+      "artifact_path": "figures/fig2-source-gaps.pdf",
+      "display_expected": true,
+      "display_label": "Figure 2",
+      "section": "Results",
+      "paragraph_role": "source gaps",
+      "claim_role": "supporting"
+    },
+    {
+      "artifact_path": "figures/fig4-gap-by-occupation-group.pdf",
+      "display_expected": true,
+      "display_label": "Figure 4",
+      "section": "Results",
+      "paragraph_role": "occupation heterogeneity",
+      "claim_role": "supporting"
+    },
+    {
+      "artifact_path": "figures/fig3-gap-by-year.pdf",
+      "display_expected": true,
+      "display_label": "Figure 3",
+      "section": "Results",
+      "paragraph_role": "trend",
+      "claim_role": "null-compatible (H5)"
+    },
+    {
+      "artifact_path": "figures/fig1-wage-by-source-year.png",
+      "display_expected": true,
+      "display_label": "Figure 1",
+      "section": "Results",
+      "paragraph_role": "embedded render of Figure 1",
+      "claim_role": "context"
+    },
+    {
+      "artifact_path": "figures/fig2-source-gaps.png",
+      "display_expected": true,
+      "display_label": "Figure 2",
+      "section": "Results",
+      "paragraph_role": "embedded render of Figure 2",
+      "claim_role": "supporting"
+    },
+    {
+      "artifact_path": "figures/fig3-gap-by-year.png",
+      "display_expected": true,
+      "display_label": "Figure 3",
+      "section": "Results",
+      "paragraph_role": "embedded render of Figure 3",
+      "claim_role": "null-compatible (H5)"
+    },
+    {
+      "artifact_path": "figures/fig4-gap-by-occupation-group.png",
+      "display_expected": true,
+      "display_label": "Figure 4",
+      "section": "Results",
+      "paragraph_role": "embedded render of Figure 4",
+      "claim_role": "supporting"
+    },
+    {
+      "artifact_path": "tables/tableA1-robustness-regression.html",
+      "display_expected": true,
+      "display_label": "Table 5",
+      "section": "Results",
+      "paragraph_role": "robustness",
+      "claim_role": "sensitivity"
+    }
+  ],
+  "model_label_policy": "Use Model 1-9 and Model A1-A8 labels in prose and tables; never internal spec IDs.",
+  "abstract_alignment": {
+    "elements_in_order": [
+      "policy question",
+      "data",
+      "method",
+      "headline gap",
+      "heterogeneity",
+      "trend",
+      "implication"
+    ]
+  },
+  "discussion_alignment": {
+    "answer_rq": "Gap exists, is within-occupation, technology/occupation specific, persistent",
+    "scope": "national OEWS cells, NAICS 2211 generation, 2021-2025",
+    "limitations": "sorting, region, overtime, smoothing, thin sources",
+    "theory_adjudication": "rent-sharing favored over skills-scarcity; compensating differentials not ruled out"
+  },
+  "null_result_framing": {
+    "status": "secondary_null_findings",
+    "items": [
+      {
+        "hypothesis_id": "H2",
+        "framing": "Occupational composition does not account for the gap; reported as informative (the penalty is a pay-setting difference)."
+      },
+      {
+        "hypothesis_id": "H5",
+        "framing": "No detectable narrowing over a smoothed five-release window; not evidence that policy had no effect."
+      }
+    ]
+  },
+  "route_back_phase": null,
+  "ready_for_phase_13": true
+}

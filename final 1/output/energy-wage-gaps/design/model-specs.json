@@ -1,0 +1,212 @@
+{
+  "models": [
+    {
+      "id": "M1",
+      "outcome": "log real mean hourly wage",
+      "predictors": [
+        "renewable generation industry"
+      ],
+      "estimator": "employment-weighted least squares",
+      "covariates": [
+        "survey year"
+      ],
+      "fixed_effects": [
+        "year"
+      ],
+      "hypothesis_ids": [
+        "H1",
+        "H2"
+      ],
+      "purpose": "raw (unadjusted) renewable/non-renewable gap within year; benchmark for composition",
+      "unit_of_analysis": "occupation-industry-year cell",
+      "uncertainty": "cluster-robust standard errors by detailed occupation",
+      "interpretation_target": "approximate percent difference in mean hourly wage across all cells"
+    },
+    {
+      "id": "M2",
+      "outcome": "log real mean hourly wage",
+      "predictors": [
+        "renewable generation industry"
+      ],
+      "estimator": "employment-weighted least squares",
+      "covariates": [
+        "detailed occupation",
+        "survey year"
+      ],
+      "fixed_effects": [
+        "occupation",
+        "year"
+      ],
+      "hypothesis_ids": [
+        "H1",
+        "H2"
+      ],
+      "purpose": "gap net of time-invariant occupational composition",
+      "unit_of_analysis": "occupation-industry-year cell",
+      "uncertainty": "cluster-robust by detailed occupation",
+      "interpretation_target": "within-occupation percent gap"
+    },
+    {
+      "id": "M3",
+      "outcome": "log real mean hourly wage",
+      "predictors": [
+        "renewable generation industry"
+      ],
+      "estimator": "employment-weighted least squares",
+      "covariates": [
+        "detailed occupation x year"
+      ],
+      "fixed_effects": [
+        "occupation x year"
+      ],
+      "hypothesis_ids": [
+        "H1",
+        "H2"
+      ],
+      "purpose": "primary within-occupation-year gap (headline estimate)",
+      "unit_of_analysis": "occupation-industry-year cell",
+      "uncertainty": "cluster-robust by detailed occupation",
+      "interpretation_target": "within-occupation-year percent gap"
+    },
+    {
+      "id": "M4",
+      "outcome": "log real mean hourly wage",
+      "predictors": [
+        "generation source"
+      ],
+      "estimator": "employment-weighted least squares",
+      "covariates": [
+        "detailed occupation x year"
+      ],
+      "fixed_effects": [
+        "occupation x year"
+      ],
+      "hypothesis_ids": [
+        "H3"
+      ],
+      "purpose": "source-specific gaps for nuclear, hydroelectric, solar, wind, geothermal, biomass relative to fossil fuel",
+      "unit_of_analysis": "occupation-industry-year cell",
+      "uncertainty": "cluster-robust by detailed occupation",
+      "interpretation_target": "percent gap for each source vs fossil within occupation"
+    },
+    {
+      "id": "M5",
+      "outcome": "log real mean hourly wage",
+      "predictors": [
+        "renewable generation industry",
+        "occupational group"
+      ],
+      "estimator": "employment-weighted least squares",
+      "covariates": [
+        "detailed occupation x year"
+      ],
+      "fixed_effects": [
+        "occupation x year"
+      ],
+      "hypothesis_ids": [
+        "H4"
+      ],
+      "purpose": "heterogeneity of the within-occupation gap across five occupational groups",
+      "unit_of_analysis": "occupation-industry-year cell",
+      "uncertainty": "cluster-robust by detailed occupation; joint Wald test of interaction terms",
+      "interpretation_target": "group-specific within-occupation gaps",
+      "interaction": "renewable generation industry x occupational group"
+    },
+    {
+      "id": "M6",
+      "outcome": "log real mean hourly wage",
+      "predictors": [
+        "renewable generation industry",
+        "survey year"
+      ],
+      "estimator": "employment-weighted least squares",
+      "covariates": [
+        "detailed occupation x year"
+      ],
+      "fixed_effects": [
+        "occupation x year"
+      ],
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "purpose": "year-specific within-occupation gaps and linear trend in the gap",
+      "unit_of_analysis": "occupation-industry-year cell",
+      "uncertainty": "cluster-robust by detailed occupation; joint Wald test of year interactions; linear-trend coefficient",
+      "interpretation_target": "change in gap 2021-2025",
+      "interaction": "renewable generation industry x survey year (plus linear-trend version)"
+    },
+    {
+      "id": "M7",
+      "outcome": "log real mean hourly wage",
+      "predictors": [
+        "renewable generation industry"
+      ],
+      "estimator": "Kitagawa-Oaxaca decomposition by year",
+      "covariates": [
+        "detailed occupation",
+        "cell employment"
+      ],
+      "fixed_effects": [],
+      "hypothesis_ids": [
+        "H2"
+      ],
+      "purpose": "split raw gap into occupational-composition and within-occupation wage components",
+      "unit_of_analysis": "renewable vs non-renewable group-year",
+      "uncertainty": "occupation-cluster bootstrap (500 replications)",
+      "interpretation_target": "share of raw gap due to composition",
+      "note": "group-level employment-weighted means decomposed into composition and within-occupation components"
+    },
+    {
+      "id": "M8",
+      "outcome": "log real 10th percentile hourly wage",
+      "predictors": [
+        "renewable generation industry"
+      ],
+      "estimator": "employment-weighted least squares",
+      "covariates": [
+        "detailed occupation x year"
+      ],
+      "fixed_effects": [
+        "occupation x year"
+      ],
+      "hypothesis_ids": [
+        "H1",
+        "H4"
+      ],
+      "purpose": "distributional check at the bottom of the within-cell wage distribution",
+      "unit_of_analysis": "occupation-industry-year cell",
+      "uncertainty": "cluster-robust by detailed occupation",
+      "interpretation_target": "gap at P10 and P90"
+    },
+    {
+      "id": "M9",
+      "outcome": "log real 90th percentile hourly wage",
+      "predictors": [
+        "renewable generation industry"
+      ],
+      "estimator": "employment-weighted least squares",
+      "covariates": [
+        "detailed occupation x year"
+      ],
+      "fixed_effects": [
+        "occupation x year"
+      ],
+      "hypothesis_ids": [
+        "H1",
+        "H4"
+      ],
+      "purpose": "distributional check at the top (harmonized $100 nominal censoring)",
+      "unit_of_analysis": "occupation-industry-year cell",
+      "uncertainty": "cluster-robust by detailed occupation",
+      "interpretation_target": "gap at P10 and P90"
+    }
+  ],
+  "analytic_strategy": {
+    "unit": "detailed SOC occupation x six-digit NAICS generation industry x survey year (May 2021-May 2025)",
+    "outcome_family": "continuous log wage",
+    "weights": "cell employment (TOT_EMP)",
+    "fixed_effects": "year; occupation; occupation x year",
+    "uncertainty": "cluster-robust SE by detailed occupation (about 150-200 clusters)",
+    "interaction_inference_policy": "joint_wald_test"
+  }
+}

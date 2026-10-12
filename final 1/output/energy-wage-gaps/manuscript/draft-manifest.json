@@ -1,0 +1,991 @@
+{
+  "verdict": "PASS",
+  "degraded": false,
+  "drafting_engine": {
+    "skill": "scholar-write",
+    "mode": "draft",
+    "section": "full paper",
+    "auto_research_contract": "phase_13",
+    "lock_enforced": true,
+    "live_output_reads_forbidden": true,
+    "task_invocation_id": "phase13-write-energy-001",
+    "invoked_at_utc": "2026-10-10T11:00:00Z",
+    "input_artifacts": [
+      "manuscript/manuscript-blueprint.json",
+      "results-locked/manifest.json",
+      "literature/references.bib",
+      "literature/lit-theory.md",
+      "manuscript/journal-spec.json"
+    ],
+    "output_artifacts": [
+      "manuscript/manuscript-draft.md",
+      "manuscript/draft-manifest.json"
+    ]
+  },
+  "journal_spec": {
+    "skill": "scholar-journal",
+    "mode": "prepare",
+    "path": "manuscript/journal-spec.json",
+    "sha256": "ee67158d5c6cee32d31a5fd44040492b1e6d925476d2309f68d8582fb3667d81",
+    "task_invocation_id": "phase13-journal-energy-001",
+    "invoked_at_utc": "2026-10-10T10:55:00Z",
+    "input_artifacts": [
+      "idea/journal-fit.json"
+    ],
+    "output_artifacts": [
+      "manuscript/journal-spec.json"
+    ]
+  },
+  "blueprint": {
+    "path": "manuscript/manuscript-blueprint.json",
+    "sha256": "ef0ca57a3572a0978053c1076c914ae9bf3019abb2dfb4e1e2423c249062a9b1"
+  },
+  "drafting_plan": {
+    "path": "manuscript/drafting-plan.json",
+    "sha256": "35f31ea6ce53a148ab9c5d7f478599f3148878d315e91ba2c2ae28cb5c90ac52"
+  },
+  "self_critique": {
+    "path": "manuscript/draft-self-critique.json",
+    "sha256": "891bc6ebab737cd4ce7bf2c67bd152130b83deea4207633eb021924ba9295a6a",
+    "ready_for_verification": true
+  },
+  "polish_report": {
+    "path": "manuscript/polish-report.json",
+    "skill": "scholar-polish",
+    "mode": "full",
+    "sha256": "538dd07542cd6d0dbebe10c2f6075f7aa8dbe1f7048f18eee2e3d4b7a337a731"
+  },
+  "lock_id": "lock-20261010T134805Z",
+  "selected_manuscript_hash": "78c749d6bb83a0e110bc51049d94489401e88cc86d4c80130c4451aaa835ace2",
+  "lock_manifest_sha256": "57f6ea3b32e7365257191d47d83acfab997b88ada080a10918b7b3c8bf3c3756",
+  "source_hashes": {
+    "lock_manifest": "43da22b358fe9b9764dc6e3c3bd4cfdb1d6fdb2b3efd52a36190b011a6e6f1eb",
+    "stage1_verify": "7f69b156a9a4d7c0ae3008b2c695d5e7ac51f547f93ed2c6f79cf4dbbc39335b",
+    "manuscript_blueprint": "ef0ca57a3572a0978053c1076c914ae9bf3019abb2dfb4e1e2423c249062a9b1",
+    "references_bib": "657cf3493e40fbfcba72a7a433d2ef61ad1cedfb1e28e1caa9ed98da94b1de66",
+    "lit_theory": "f7a7cc2e75d2864fd9e4654fa379de70759fa2608dcc6f1191fe43b0a42c4c99",
+    "research_question": "e8f58e0a8a1219172180a476071195faefe26aa88e4cfe8196705c68864aa6de",
+    "journal_fit": "82bee176c0d777bf5c231cb0239cbe0e7ba1641cb4322c218ce2622c39ac13c5",
+    "design_blueprint": "3fd4c84b753ebfe46c54a8890ae05a4e06eebb65d1053df9cc67a907894d4fe5",
+    "variable_dictionary": "151576958aa39aa310383c319314daca71c83bf2aa69cefe3bd88c1b1329a4ee",
+    "analysis_plan": "d956ca8c4e7fe43fa46755f3bdcf3fbad4d83730e053b6fe8e705e475083044d",
+    "post_execution_review": "68000bf1f53dfe3d8e740704fa56d45c05237c40e172e4b7375446dbce6b466d"
+  },
+  "section_word_budget": {
+    "abstract": {
+      "target_words": 230,
+      "min_words": 150,
+      "max_words": 250
+    },
+    "introduction": {
+      "target_words": 750,
+      "min_words": 500,
+      "max_words": 1100
+    },
+    "literature review and theory": {
+      "target_words": 1600,
+      "min_words": 1100,
+      "max_words": 2200
+    },
+    "data and methods": {
+      "target_words": 1200,
+      "min_words": 800,
+      "max_words": 1600
+    },
+    "results": {
+      "target_words": 1700,
+      "min_words": 1100,
+      "max_words": 3400
+    },
+    "discussion": {
+      "target_words": 680,
+      "min_words": 450,
+      "max_words": 1100
+    },
+    "conclusion": {
+      "target_words": 280,
+      "min_words": 200,
+      "max_words": 500
+    }
+  },
+  "section_word_counts": {
+    "abstract": 228,
+    "introduction": 687,
+    "literature review and theory": 1656,
+    "data and methods": 1332,
+    "results": 2986,
+    "discussion": 666,
+    "conclusion": 329
+  },
+  "section_prose_word_counts": {
+    "abstract": 228,
+    "introduction": 687,
+    "literature review and theory": 1611,
+    "data and methods": 1332,
+    "results": 1795,
+    "discussion": 623,
+    "conclusion": 329
+  },
+  "budget_compliance": {
+    "status": "PASS",
+    "abstract_within_cap": true,
+    "target_journal": "Energy Policy",
+    "total_word_count": 7915,
+    "main_text_word_count": 6605,
+    "total_word_range": {
+      "min": 5500,
+      "max": 8000
+    },
+    "abstract_word_count": 212,
+    "abstract_cap_status": "PASS",
+    "section_budget_status": {
+      "introduction": "PASS",
+      "literature review and theory": "PASS",
+      "data and methods": "PASS",
+      "results": "PASS",
+      "discussion": "PASS",
+      "conclusion": "PASS"
+    }
+  },
+  "reader_facing_language": {
+    "status": "PASS",
+    "workflow_jargon_hits": 0,
+    "evidence": "internal workflow terms appear only inside HTML trace comments"
+  },
+  "draft_quality_gate": {
+    "status": "PASS",
+    "anti_stub_checked": true,
+    "repetition_checked": true,
+    "section_substance_checked": true,
+    "locked_evidence_integrated": true,
+    "journal_fit_checked": true,
+    "polish_applied": true,
+    "repeated_sentence_limit": 2,
+    "max_repeated_sentence_count": 1,
+    "section_quality": {
+      "abstract": {
+        "status": "PASS",
+        "not_stub": true,
+        "section_specific_evidence": true,
+        "prose_words": 228,
+        "evidence": "The abstract states why same-job wage comparisons matter for transition policy, names the OEWS 2021-2025 national industry estimates, describes employment-weighted occupation-by-year fixed-effects regressions and a decomposition, reports the 11.5 percent gap, source and occupation differences, the absence of narrowing, and the labor-standards implication."
+      },
+      "introduction": {
+        "status": "PASS",
+        "not_stub": true,
+        "section_specific_evidence": true,
+        "prose_words": 687,
+        "evidence": "The introduction contrasts economy-wide green-premium evidence with linked-data legacy-premium evidence, explains why the comparisons differ, names Curtis and Marinescu, Colmer and coauthors and Godoy and Isaksen as closest prior work, previews the OEWS design, four findings, three contributions and the roadmap."
+      },
+      "literature review and theory": {
+        "status": "PASS",
+        "not_stub": true,
+        "section_specific_evidence": true,
+        "prose_words": 1611,
+        "evidence": "The section evaluates strengths and weaknesses of the nine supplied studies plus green-skills work, builds an establishment rent-sharing framework with skills-scarcity and compensating-differential rivals, specifies a three-link mechanism, and motivates each of the five hypotheses before stating it."
+      },
+      "data and methods": {
+        "status": "PASS",
+        "not_stub": true,
+        "section_specific_evidence": true,
+        "prose_words": 1332,
+        "evidence": "The methods section documents OEWS design, the sample descent from 2,096 generation cells through 144 other-generation and 76 suppressed cells to 1,876 analytic cells, role-labeled dependent and independent variables, the fixed-effects equations, decomposition, clustering choices and robustness list."
+      },
+      "results": {
+        "status": "PASS",
+        "not_stub": true,
+        "section_specific_evidence": true,
+        "prose_words": 1795,
+        "evidence": "Results interpret Table 1 descriptives and Figure 1 levels, the Table 2 ladder from raw to within-occupation gaps, the Table 4 decomposition, Table 3 with Figures 2 to 4 for sources, occupations and years, and Table 5 robustness, each returned to its hypothesis with uncertainty."
+      },
+      "discussion": {
+        "status": "PASS",
+        "not_stub": true,
+        "section_specific_evidence": true,
+        "prose_words": 623,
+        "evidence": "The discussion answers the research question, weighs rent-sharing against skills-scarcity and compensating-differential accounts using hydro parity and the occupation gradient, reconciles the green-premium and legacy-premium literatures, and lists sorting, region, overtime, smoothing and coverage limits with a data agenda."
+      },
+      "conclusion": {
+        "status": "PASS",
+        "not_stub": true,
+        "section_specific_evidence": true,
+        "prose_words": 329,
+        "evidence": "The conclusion synthesizes the persistent same-job penalty and its location in operations and maintenance work, interprets hydro parity as evidence that institutions rather than technology set pay, and draws implications for wage insurance, operating-workforce labor standards and like-with-like monitoring."
+      }
+    },
+    "substantive_paragraph_counts": {
+      "abstract": 1,
+      "introduction": 6,
+      "literature review and theory": 13,
+      "data and methods": 11,
+      "results": 13,
+      "discussion": 4,
+      "conclusion": 2
+    },
+    "results_prose_paragraph_count": 13,
+    "reader_facing_translation_checked": true,
+    "raw_variable_name_count": 0,
+    "theory_synthesis_checked": true,
+    "results_comparison_checked": true,
+    "results_theory_link_checked": true
+  },
+  "locked_result_coverage": [
+    {
+      "source_path": "analysis/execution-report.json",
+      "locked_path": "results-locked/lock-20261010T134805Z/analysis/execution-report.json",
+      "artifact_role": "execution_report",
+      "manuscript_anchor": "",
+      "used_in_manuscript": false
+    },
+    {
+      "source_path": "analysis/outputs/main-model-estimates.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/analysis/outputs/main-model-estimates.csv",
+      "artifact_role": "diagnostic",
+      "manuscript_anchor": "",
+      "used_in_manuscript": false
+    },
+    {
+      "source_path": "figures/fig1-wage-by-source-year.pdf",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig1-wage-by-source-year.pdf",
+      "artifact_role": "figure_file",
+      "manuscript_anchor": "<!-- LOCKED_ARTIFACT: figures/fig1-wage-by-source-year.pdf ; LOCKED_PATH: results-locked/lock-20261010T134805Z/figures/fig1-wage-by-source-year.pdf -->",
+      "used_in_manuscript": true,
+      "display_anchor": "<!-- DISPLAY_FIGURE: figures/fig1-wage-by-source-year.pdf -->",
+      "display_status": "rendered_inline",
+      "display_type": "markdown_image",
+      "caption_text": "Figure 1. Employment-weighted mean real hourly wage by technology and year",
+      "display_label": "Figure 1",
+      "results_callout": "Figure 1 plots these wage levels by year."
+    },
+    {
+      "source_path": "figures/fig1-wage-by-source-year.png",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig1-wage-by-source-year.png",
+      "artifact_role": "figure_file",
+      "manuscript_anchor": "<!-- LOCKED_ARTIFACT: figures/fig1-wage-by-source-year.png ; LOCKED_PATH: results-locked/lock-20261010T134805Z/figures/fig1-wage-by-source-year.png -->",
+      "used_in_manuscript": true,
+      "display_anchor": "<!-- DISPLAY_FIGURE: figures/fig1-wage-by-source-year.png -->",
+      "display_status": "rendered_inline",
+      "display_type": "markdown_image",
+      "caption_text": "Figure 1. Employment-weighted mean real hourly wage by technology and year",
+      "display_label": "Figure 1",
+      "results_callout": "Figure 1 plots these wage levels by year."
+    },
+    {
+      "source_path": "figures/fig2-source-gaps.pdf",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig2-source-gaps.pdf",
+      "artifact_role": "figure_file",
+      "manuscript_anchor": "<!-- LOCKED_ARTIFACT: figures/fig2-source-gaps.pdf ; LOCKED_PATH: results-locked/lock-20261010T134805Z/figures/fig2-source-gaps.pdf -->",
+      "used_in_manuscript": true,
+      "display_anchor": "<!-- DISPLAY_FIGURE: figures/fig2-source-gaps.pdf -->",
+      "display_status": "rendered_inline",
+      "display_type": "markdown_image",
+      "caption_text": "Figure 2. Wage difference relative to fossil fuel generation",
+      "display_label": "Figure 2",
+      "results_callout": "Table 3 and Figure 2 show that the renewable gap is not uniform across energy sources."
+    },
+    {
+      "source_path": "figures/fig2-source-gaps.png",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig2-source-gaps.png",
+      "artifact_role": "figure_file",
+      "manuscript_anchor": "<!-- LOCKED_ARTIFACT: figures/fig2-source-gaps.png ; LOCKED_PATH: results-locked/lock-20261010T134805Z/figures/fig2-source-gaps.png -->",
+      "used_in_manuscript": true,
+      "display_anchor": "<!-- DISPLAY_FIGURE: figures/fig2-source-gaps.png -->",
+      "display_status": "rendered_inline",
+      "display_type": "markdown_image",
+      "caption_text": "Figure 2. Wage difference relative to fossil fuel generation",
+      "display_label": "Figure 2",
+      "results_callout": "Table 3 and Figure 2 show that the renewable gap is not uniform across energy sources."
+    },
+    {
+      "source_path": "figures/fig3-gap-by-year.pdf",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig3-gap-by-year.pdf",
+      "artifact_role": "figure_file",
+      "manuscript_anchor": "<!-- LOCKED_ARTIFACT: figures/fig3-gap-by-year.pdf ; LOCKED_PATH: results-locked/lock-20261010T134805Z/figures/fig3-gap-by-year.pdf -->",
+      "used_in_manuscript": true,
+      "display_anchor": "<!-- DISPLAY_FIGURE: figures/fig3-gap-by-year.pdf -->",
+      "display_status": "rendered_inline",
+      "display_type": "markdown_image",
+      "caption_text": "Figure 3. Renewable versus non-renewable wage gap by survey year",
+      "display_label": "Figure 3",
+      "results_callout": "Figure 3 shows how the gap evolved."
+    },
+    {
+      "source_path": "figures/fig3-gap-by-year.png",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig3-gap-by-year.png",
+      "artifact_role": "figure_file",
+      "manuscript_anchor": "<!-- LOCKED_ARTIFACT: figures/fig3-gap-by-year.png ; LOCKED_PATH: results-locked/lock-20261010T134805Z/figures/fig3-gap-by-year.png -->",
+      "used_in_manuscript": true,
+      "display_anchor": "<!-- DISPLAY_FIGURE: figures/fig3-gap-by-year.png -->",
+      "display_status": "rendered_inline",
+      "display_type": "markdown_image",
+      "caption_text": "Figure 3. Renewable versus non-renewable wage gap by survey year",
+      "display_label": "Figure 3",
+      "results_callout": "Figure 3 shows how the gap evolved."
+    },
+    {
+      "source_path": "figures/fig4-gap-by-occupation-group.pdf",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig4-gap-by-occupation-group.pdf",
+      "artifact_role": "figure_file",
+      "manuscript_anchor": "<!-- LOCKED_ARTIFACT: figures/fig4-gap-by-occupation-group.pdf ; LOCKED_PATH: results-locked/lock-20261010T134805Z/figures/fig4-gap-by-occupation-group.pdf -->",
+      "used_in_manuscript": true,
+      "display_anchor": "<!-- DISPLAY_FIGURE: figures/fig4-gap-by-occupation-group.pdf -->",
+      "display_status": "rendered_inline",
+      "display_type": "markdown_image",
+      "caption_text": "Figure 4. Wage gap by broad occupation category",
+      "display_label": "Figure 4",
+      "results_callout": "Figure 4 displays the gap by broad occupation category."
+    },
+    {
+      "source_path": "figures/fig4-gap-by-occupation-group.png",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/fig4-gap-by-occupation-group.png",
+      "artifact_role": "figure_file",
+      "manuscript_anchor": "<!-- LOCKED_ARTIFACT: figures/fig4-gap-by-occupation-group.png ; LOCKED_PATH: results-locked/lock-20261010T134805Z/figures/fig4-gap-by-occupation-group.png -->",
+      "used_in_manuscript": true,
+      "display_anchor": "<!-- DISPLAY_FIGURE: figures/fig4-gap-by-occupation-group.png -->",
+      "display_status": "rendered_inline",
+      "display_type": "markdown_image",
+      "caption_text": "Figure 4. Wage gap by broad occupation category",
+      "display_label": "Figure 4",
+      "results_callout": "Figure 4 displays the gap by broad occupation category."
+    },
+    {
+      "source_path": "figures/figure-registry.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/figures/figure-registry.csv",
+      "artifact_role": "figure_registry",
+      "manuscript_anchor": "",
+      "used_in_manuscript": false
+    },
+    {
+      "source_path": "review/post-execution-review.json",
+      "locked_path": "results-locked/lock-20261010T134805Z/review/post-execution-review.json",
+      "artifact_role": "post_execution_review",
+      "manuscript_anchor": "",
+      "used_in_manuscript": false
+    },
+    {
+      "source_path": "tables/cell-coverage.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/cell-coverage.csv",
+      "artifact_role": "diagnostic",
+      "manuscript_anchor": "",
+      "used_in_manuscript": false
+    },
+    {
+      "source_path": "tables/model-fit-stats.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/model-fit-stats.csv",
+      "artifact_role": "diagnostic",
+      "manuscript_anchor": "",
+      "used_in_manuscript": false
+    },
+    {
+      "source_path": "tables/results-registry.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/results-registry.csv",
+      "artifact_role": "results_registry",
+      "manuscript_anchor": "",
+      "used_in_manuscript": false
+    },
+    {
+      "source_path": "tables/table1-descriptives.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/table1-descriptives.csv",
+      "artifact_role": "diagnostic",
+      "manuscript_anchor": "",
+      "used_in_manuscript": false
+    },
+    {
+      "source_path": "tables/table1-descriptives.html",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/table1-descriptives.html",
+      "artifact_role": "descriptive_table",
+      "manuscript_anchor": "<!-- LOCKED_ARTIFACT: tables/table1-descriptives.html ; LOCKED_PATH: results-locked/lock-20261010T134805Z/tables/table1-descriptives.html -->",
+      "used_in_manuscript": true,
+      "display_anchor": "<!-- DISPLAY_TABLE: tables/table1-descriptives.html -->",
+      "display_status": "rendered_inline",
+      "display_type": "markdown_table",
+      "caption_text": "Table 1. Descriptive statistics by electricity generation technology",
+      "display_label": "Table 1",
+      "results_callout": "Table 1 summarizes the analytic sample."
+    },
+    {
+      "source_path": "tables/table1b-wage-by-year.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/table1b-wage-by-year.csv",
+      "artifact_role": "diagnostic",
+      "manuscript_anchor": "",
+      "used_in_manuscript": false
+    },
+    {
+      "source_path": "tables/table2-main-regression.html",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/table2-main-regression.html",
+      "artifact_role": "main_regression_table",
+      "manuscript_anchor": "<!-- LOCKED_ARTIFACT: tables/table2-main-regression.html ; LOCKED_PATH: results-locked/lock-20261010T134805Z/tables/table2-main-regression.html -->",
+      "used_in_manuscript": true,
+      "display_anchor": "<!-- DISPLAY_TABLE: tables/table2-main-regression.html -->",
+      "display_status": "rendered_inline",
+      "display_type": "regression_table_markdown",
+      "caption_text": "Table 2. Renewable versus non-renewable hourly wage gaps",
+      "display_label": "Table 2",
+      "results_callout": "Table 2 presents the main estimates.",
+      "claim_source": {
+        "schema_version": 2,
+        "binding_type": "mapped_structured_source",
+        "source_path": "tables/results-registry.csv",
+        "locked_path": "results-locked/lock-20261010T134805Z/tables/results-registry.csv",
+        "sha256": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac",
+        "row_selector_field": "spec_id",
+        "rendered_table": {
+          "grammar": "markdown_pipe_v1",
+          "orientation": "models_as_columns",
+          "term_column": "Term",
+          "field_rows": {
+            "estimate_std_error": "Renewable generation industry, estimate (SE)",
+            "p_value": "p-value",
+            "n": "Cells (N)"
+          }
+        },
+        "selected_rows": [
+          {
+            "selector": "S01",
+            "display_column": "Model 1"
+          },
+          {
+            "selector": "S02",
+            "display_column": "Model 2"
+          },
+          {
+            "selector": "S03",
+            "display_column": "Model 3"
+          },
+          {
+            "selector": "S09",
+            "display_column": "Model 4 (P10)"
+          },
+          {
+            "selector": "S10",
+            "display_column": "Model 5 (P90)"
+          }
+        ]
+      }
+    },
+    {
+      "source_path": "tables/table3-heterogeneity-regression.html",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/table3-heterogeneity-regression.html",
+      "artifact_role": "regression_table",
+      "manuscript_anchor": "<!-- LOCKED_ARTIFACT: tables/table3-heterogeneity-regression.html ; LOCKED_PATH: results-locked/lock-20261010T134805Z/tables/table3-heterogeneity-regression.html -->",
+      "used_in_manuscript": true,
+      "display_anchor": "<!-- DISPLAY_TABLE: tables/table3-heterogeneity-regression.html -->",
+      "display_status": "rendered_inline",
+      "display_type": "regression_table_markdown",
+      "caption_text": "Table 3. Wage gaps by generation technology, occupation category and year",
+      "display_label": "Table 3",
+      "results_callout": "Table 3 and Figure 2 show that the renewable gap is not uniform across energy sources.",
+      "claim_source": {
+        "schema_version": 2,
+        "binding_type": "mapped_structured_source",
+        "source_path": "tables/results-registry.csv",
+        "locked_path": "results-locked/lock-20261010T134805Z/tables/results-registry.csv",
+        "sha256": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac",
+        "row_selector_field": "spec_id",
+        "rendered_table": {
+          "grammar": "markdown_pipe_v1",
+          "orientation": "models_as_columns",
+          "term_column": "Term",
+          "field_rows": {
+            "estimate_std_error": "Focal contrast, estimate (SE)",
+            "p_value": "Focal contrast, p-value",
+            "n": "Cells (N)"
+          }
+        },
+        "selected_rows": [
+          {
+            "selector": "S04",
+            "display_column": "Model 6: technologies"
+          },
+          {
+            "selector": "S05",
+            "display_column": "Model 7: occupation categories"
+          },
+          {
+            "selector": "S06",
+            "display_column": "Model 8: years"
+          },
+          {
+            "selector": "S07",
+            "display_column": "Model 9: trend"
+          }
+        ]
+      }
+    },
+    {
+      "source_path": "tables/table4-decomposition.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/table4-decomposition.csv",
+      "artifact_role": "result_table",
+      "manuscript_anchor": "<!-- LOCKED_ARTIFACT: tables/table4-decomposition.csv ; LOCKED_PATH: results-locked/lock-20261010T134805Z/tables/table4-decomposition.csv -->",
+      "used_in_manuscript": true,
+      "display_anchor": "<!-- DISPLAY_TABLE: tables/table4-decomposition.csv -->",
+      "display_status": "rendered_inline",
+      "display_type": "markdown_table",
+      "caption_text": "Table 4. Decomposition of the renewable/non-renewable gap",
+      "display_label": "Table 4",
+      "results_callout": "Table 4 shows why occupational composition does not account for the gap.",
+      "claim_source": {
+        "schema_version": 2,
+        "binding_type": "mapped_structured_source",
+        "source_path": "tables/results-registry.csv",
+        "locked_path": "results-locked/lock-20261010T134805Z/tables/results-registry.csv",
+        "sha256": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac",
+        "row_selector_field": "spec_id",
+        "rendered_table": {
+          "grammar": "markdown_pipe_v1",
+          "orientation": "models_as_columns",
+          "term_column": "Component",
+          "field_rows": {
+            "estimate_std_error": "Within-occupation pay difference, estimate (SE)",
+            "p_value": "p-value of within-occupation term",
+            "n": "Analytic cells (N)"
+          }
+        },
+        "selected_rows": [
+          {
+            "selector": "S08",
+            "display_column": "Decomposition"
+          }
+        ]
+      }
+    },
+    {
+      "source_path": "tables/tableA1-robustness-regression.html",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/tableA1-robustness-regression.html",
+      "artifact_role": "sensitivity_regression_table",
+      "manuscript_anchor": "<!-- LOCKED_ARTIFACT: tables/tableA1-robustness-regression.html ; LOCKED_PATH: results-locked/lock-20261010T134805Z/tables/tableA1-robustness-regression.html -->",
+      "used_in_manuscript": true,
+      "display_anchor": "<!-- DISPLAY_TABLE: tables/tableA1-robustness-regression.html -->",
+      "display_status": "rendered_inline",
+      "display_type": "regression_table_markdown",
+      "caption_text": "Table 5. Robustness of the within-occupation renewable wage gap",
+      "display_label": "Table 5",
+      "results_callout": "Table 5 shows that the main result does not depend on analytic choices.",
+      "claim_source": {
+        "schema_version": 2,
+        "binding_type": "mapped_structured_source",
+        "source_path": "tables/results-registry.csv",
+        "locked_path": "results-locked/lock-20261010T134805Z/tables/results-registry.csv",
+        "sha256": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac",
+        "row_selector_field": "spec_id",
+        "rendered_table": {
+          "grammar": "markdown_pipe_v1",
+          "orientation": "models_as_columns",
+          "term_column": "Specification",
+          "field_rows": {
+            "estimate_std_error": "Renewable generation industry, estimate (SE)",
+            "p_value": "p-value",
+            "n": "Cells (N)"
+          }
+        },
+        "selected_rows": [
+          {
+            "selector": "S11",
+            "display_column": "Model A1"
+          },
+          {
+            "selector": "S12",
+            "display_column": "Model A2"
+          },
+          {
+            "selector": "S13",
+            "display_column": "Model A3"
+          },
+          {
+            "selector": "S14",
+            "display_column": "Model A4"
+          },
+          {
+            "selector": "S15",
+            "display_column": "Model A5"
+          },
+          {
+            "selector": "S16",
+            "display_column": "Model A6"
+          },
+          {
+            "selector": "S17",
+            "display_column": "Model A7"
+          },
+          {
+            "selector": "S18",
+            "display_column": "Model A8"
+          }
+        ]
+      }
+    },
+    {
+      "source_path": "tables/tableA1-robustness.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/tableA1-robustness.csv",
+      "artifact_role": "diagnostic",
+      "manuscript_anchor": "",
+      "used_in_manuscript": false
+    }
+  ],
+  "display_evidence": {
+    "status": "PASS",
+    "table_display_count": 5,
+    "figure_display_count": 8,
+    "required_table_display_min": 1,
+    "required_figure_display_min": 1,
+    "displayed_sources": [
+      "figures/fig1-wage-by-source-year.pdf",
+      "figures/fig1-wage-by-source-year.png",
+      "figures/fig2-source-gaps.pdf",
+      "figures/fig2-source-gaps.png",
+      "figures/fig3-gap-by-year.pdf",
+      "figures/fig3-gap-by-year.png",
+      "figures/fig4-gap-by-occupation-group.pdf",
+      "figures/fig4-gap-by-occupation-group.png",
+      "tables/table1-descriptives.html",
+      "tables/table2-main-regression.html",
+      "tables/table3-heterogeneity-regression.html",
+      "tables/table4-decomposition.csv",
+      "tables/tableA1-robustness-regression.html"
+    ],
+    "results_table_callouts": [
+      "Table 1",
+      "Table 2",
+      "Table 3",
+      "Table 4",
+      "Table 5"
+    ],
+    "results_figure_callouts": [
+      "Figure 1",
+      "Figure 1",
+      "Figure 2",
+      "Figure 2",
+      "Figure 3",
+      "Figure 3",
+      "Figure 4",
+      "Figure 4"
+    ],
+    "all_display_items_called_out_in_results": true
+  },
+  "locked_result_claims_schema_version": 2,
+  "locked_result_claims": [
+    {
+      "schema_version": 2,
+      "binding_type": "mapped_structured_source",
+      "source_path": "tables/results-registry.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/results-registry.csv",
+      "display_source_path": "tables/table2-main-regression.html",
+      "display_locked_path": "results-locked/lock-20261010T134805Z/tables/table2-main-regression.html",
+      "row_count": 5,
+      "rows": [
+        {
+          "claim_id": "lrc2:90dc0de63e88caaf2b6b2addfe945f3dbaaf2e48141112bba3726e8509c7ea66",
+          "row_index": 0,
+          "spec_id": "S01",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Model 1",
+          "display_column": "Model 1",
+          "estimate": "-0.165324605944328",
+          "std_error": "0.0712979013519161",
+          "p_value": "0.0214648386420334",
+          "n": "1876",
+          "manuscript_anchor": "Across all cells in the raw comparison"
+        },
+        {
+          "claim_id": "lrc2:da6308b1b919cd047e9654e9bad9943258014041459d7964018d49aa4360f977",
+          "row_index": 1,
+          "spec_id": "S02",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Model 2",
+          "display_column": "Model 2",
+          "estimate": "-0.123799680175371",
+          "std_error": "0.0208196409138923",
+          "p_value": "0.0000000151805460704454",
+          "n": "1855",
+          "manuscript_anchor": "the separate occupation and year controls leave a lower renewable wage"
+        },
+        {
+          "claim_id": "lrc2:076d5312ab1e1d5acf8207c646f64a5b6f236175bae9f538824ff70fcce5f61f",
+          "row_index": 2,
+          "spec_id": "S03",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Model 3",
+          "display_column": "Model 3",
+          "estimate": "-0.122223007725594",
+          "std_error": "0.0212443304921749",
+          "p_value": "0.0000000673167911005523",
+          "n": "1577",
+          "manuscript_anchor": "The headline comparison of the same occupation in the same year"
+        },
+        {
+          "claim_id": "lrc2:f39a4107605d13683427d50ea053db6a4c05bfd28534e252936216cb45487dea",
+          "row_index": 8,
+          "spec_id": "S09",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Model 4 (P10)",
+          "display_column": "Model 4 (P10)",
+          "estimate": "-0.220380455285372",
+          "std_error": "0.0382077910318404",
+          "p_value": "0.0000000628594369082689",
+          "n": "1577",
+          "manuscript_anchor": "For the lower tail of each occupation's pay"
+        },
+        {
+          "claim_id": "lrc2:134fa0b4717be53c39cd64b9d4eef86c6645e004f9c964356ef726c407a68b78",
+          "row_index": 9,
+          "spec_id": "S10",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Model 5 (P90)",
+          "display_column": "Model 5 (P90)",
+          "estimate": "-0.0681203593989736",
+          "std_error": "0.0141952415152383",
+          "p_value": "0.000005103482430885",
+          "n": "1307",
+          "manuscript_anchor": "For the upper tail of each occupation's pay among uncensored cells"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "binding_type": "mapped_structured_source",
+      "source_path": "tables/results-registry.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/results-registry.csv",
+      "display_source_path": "tables/table3-heterogeneity-regression.html",
+      "display_locked_path": "results-locked/lock-20261010T134805Z/tables/table3-heterogeneity-regression.html",
+      "row_count": 4,
+      "rows": [
+        {
+          "claim_id": "lrc2:f3d735cd35be41129419393a554234286069312afe6b0a461f5a86effb9dc3a7",
+          "row_index": 3,
+          "spec_id": "S04",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Model 6: technologies",
+          "display_column": "Model 6: technologies",
+          "estimate": "-0.129237347621906",
+          "std_error": "0.0304243647844261",
+          "p_value": "0.0000426323141531285",
+          "n": "1577",
+          "manuscript_anchor": "the solar comparison is lower"
+        },
+        {
+          "claim_id": "lrc2:ba840866a75086ec3b2922eea974181320d72e772673fe131618445d39af9f88",
+          "row_index": 4,
+          "spec_id": "S05",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Model 7: occupation categories",
+          "display_column": "Model 7: occupation categories",
+          "estimate": "-0.201814592345279",
+          "std_error": "0.00834239119724029",
+          "p_value": "0.00000000000000000000000000000000000000000000000352478923663789",
+          "n": "1577",
+          "manuscript_anchor": "a group that includes power plant operators"
+        },
+        {
+          "claim_id": "lrc2:d8a85c54cd7f326e316a15c41319766cce4c2b169a8acb41f83dceb49ae78dd7",
+          "row_index": 5,
+          "spec_id": "S06",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Model 8: years",
+          "display_column": "Model 8: years",
+          "estimate": "-0.138984221387327",
+          "std_error": "0.0227917471443309",
+          "p_value": "0.0000000132471589325596",
+          "n": "1577",
+          "manuscript_anchor": "In the final survey year the within-occupation renewable wage stays lower"
+        },
+        {
+          "claim_id": "lrc2:a60448bc2d458eb94599e251e22ddc4adaef39f076f1a59d36563f28fc62f7bc",
+          "row_index": 6,
+          "spec_id": "S07",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Model 9: trend",
+          "display_column": "Model 9: trend",
+          "estimate": "-0.00498034722893389",
+          "std_error": "0.00455999270772357",
+          "p_value": "0.276922453222494",
+          "n": "1577",
+          "manuscript_anchor": "Summarizing the five years with a linear trend"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "binding_type": "mapped_structured_source",
+      "source_path": "tables/results-registry.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/results-registry.csv",
+      "display_source_path": "tables/table4-decomposition.csv",
+      "display_locked_path": "results-locked/lock-20261010T134805Z/tables/table4-decomposition.csv",
+      "row_count": 1,
+      "rows": [
+        {
+          "claim_id": "lrc2:7a86484beba05194ee3124803eede19099700d9bd90192ce3441f1e7f63cfa95",
+          "row_index": 7,
+          "spec_id": "S08",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Decomposition",
+          "display_column": "Decomposition",
+          "estimate": "-0.141006298169253",
+          "std_error": "0.0284124878692788",
+          "p_value": "0.000000694740041509879",
+          "n": "1876",
+          "manuscript_anchor": "in the decomposition of the gap among shared occupations"
+        }
+      ]
+    },
+    {
+      "schema_version": 2,
+      "binding_type": "mapped_structured_source",
+      "source_path": "tables/results-registry.csv",
+      "locked_path": "results-locked/lock-20261010T134805Z/tables/results-registry.csv",
+      "display_source_path": "tables/tableA1-robustness-regression.html",
+      "display_locked_path": "results-locked/lock-20261010T134805Z/tables/tableA1-robustness-regression.html",
+      "row_count": 8,
+      "rows": [
+        {
+          "claim_id": "lrc2:4165df003e2a72534ccfa11ff82e630bc3eb6ba442f25a65c605f0d4e92aeea9",
+          "row_index": 10,
+          "spec_id": "S11",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Model A1",
+          "display_column": "Model A1",
+          "estimate": "-0.122636794150928",
+          "std_error": "0.0155899867669418",
+          "p_value": "0.00000000000172094943396121",
+          "n": "1577",
+          "manuscript_anchor": "Without employment weights"
+        },
+        {
+          "claim_id": "lrc2:7c1d092877ac60d5c547594823eaff8177ac7888d1a127bc88ce1f449a81d956",
+          "row_index": 11,
+          "spec_id": "S12",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Model A2",
+          "display_column": "Model A2",
+          "estimate": "-0.126307907393584",
+          "std_error": "0.0262724661007664",
+          "p_value": "0.00000443765640753225",
+          "n": "1577",
+          "manuscript_anchor": "Weighting cells by the inverse of their sampling variance"
+        },
+        {
+          "claim_id": "lrc2:aa41fb0c58d55bc3538efe47cb1e3e092bfd08751e1c98132e71574aa9854adb",
+          "row_index": 12,
+          "spec_id": "S13",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Model A3",
+          "display_column": "Model A3",
+          "estimate": "-0.152568560623239",
+          "std_error": "0.023972067845081",
+          "p_value": "0.00000000365685434593979",
+          "n": "1570",
+          "manuscript_anchor": "Using the median instead of the mean"
+        },
+        {
+          "claim_id": "lrc2:26eac123c7724157916cc307c9b903e008532ae4f0c8c333b6e35bc2476d7094",
+          "row_index": 13,
+          "spec_id": "S14",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Model A4",
+          "display_column": "Model A4",
+          "estimate": "-0.118604633222984",
+          "std_error": "0.0240713081846614",
+          "p_value": "0.0000141709975907288",
+          "n": "915",
+          "manuscript_anchor": "Restricting to the balanced set of 42 occupations"
+        },
+        {
+          "claim_id": "lrc2:018ab4c7168db0654b1ca037965ee251996e03aa830aa2e9de68a0a88a50167c",
+          "row_index": 14,
+          "spec_id": "S15",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Model A5",
+          "display_column": "Model A5",
+          "estimate": "-0.10061499144825",
+          "std_error": "0.0240951830191585",
+          "p_value": "0.000066885988429352",
+          "n": "1030",
+          "manuscript_anchor": "Dropping nuclear plants so that renewables are compared with fossil fuel alone"
+        },
+        {
+          "claim_id": "lrc2:30096c838b0869a4243e335711eeacacb2a04531502e133b4b8980d534569b7e",
+          "row_index": 15,
+          "spec_id": "S16",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Model A6",
+          "display_column": "Model A6",
+          "estimate": "-0.168253476335329",
+          "std_error": "0.0278842727645192",
+          "p_value": "0.0000000196145739170516",
+          "n": "1362",
+          "manuscript_anchor": "Excluding hydroelectric plants widens the gap"
+        },
+        {
+          "claim_id": "lrc2:c9da2f40a10c5bc056f0ba5ceda0a6894ce1641502b49da8f980b4a331686769",
+          "row_index": 16,
+          "spec_id": "S17",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Model A7",
+          "display_column": "Model A7",
+          "estimate": "-0.114563742400097",
+          "std_error": "0.0237145619505823",
+          "p_value": "0.00000402321819809023",
+          "n": "1707",
+          "manuscript_anchor": "Adding other generation to the renewable group"
+        },
+        {
+          "claim_id": "lrc2:c7fa4d9dc215644430a920c21348bac44b3a25b63ee0f60f2b870876d14c32b1",
+          "row_index": 17,
+          "spec_id": "S18",
+          "display_coordinate_kind": "column",
+          "display_coordinate": "Model A8",
+          "display_column": "Model A8",
+          "estimate": "-0.121729050694715",
+          "std_error": "0.0222781803627027",
+          "p_value": "0.0000003202628762617",
+          "n": "1292",
+          "manuscript_anchor": "Keeping only cells with at least 50 workers"
+        }
+      ]
+    }
+  ],
+  "numeric_reporting_policy": {
+    "policy_source": "auto-research default (Energy Policy guide gives no explicit rounding rule)",
+    "inferential_digits": 3,
+    "descriptive_digits": 2,
+    "p_value_rule": "exact p to 3 decimals; p < .001 below the floor",
+    "allow_scientific_notation": false,
+    "percent_digits": 1
+  },
+  "citation_plan": {
+    "bib_entry_count": 43,
+    "unique_citations_in_draft": 40,
+    "unique_draft_citation_count": 40,
+    "all_citations_in_bib": true,
+    "unresolved_citation_count": 0
+  },
+  "claim_discipline": {
+    "phase9_constraints_used": true,
+    "overclaim_count": 0,
+    "required_disclosures_present": [
+      "descriptive design: sorting and regional composition not controlled",
+      "OEWS three-year pooled panels smooth trends",
+      "OEWS wages exclude overtime and shift differentials",
+      "P90 censoring",
+      "small geothermal and biomass samples",
+      "reviews carried out inline because independent subagents were unavailable (workflow disclosure, trace only)"
+    ]
+  },
+  "blueprint_execution": {
+    "headline_claim_rendered": true,
+    "contribution_stack_rendered": true,
+    "headline_results_covered": true,
+    "null_result_framing_applied": true,
+    "headline_claim_followed": true,
+    "contribution_stack_followed": true,
+    "result_hierarchy_followed": true,
+    "section_obligations_followed": true,
+    "discussion_mode": "split"
+  },
+  "content_alignment": {
+    "research_question_answered": true,
+    "answers_research_question": true,
+    "mechanism_integrated": true,
+    "limitations_discussed": true
+  },
+  "ready_for_phase_14": true
+}

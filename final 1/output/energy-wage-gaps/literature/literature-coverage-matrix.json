@@ -1,0 +1,623 @@
+{
+  "verdict": "PASS",
+  "engine_handoff": {
+    "lit_review_engine": {
+      "skill": "scholar-lit-review-hypothesis",
+      "mode": "integrated_literature_theory_hypotheses",
+      "task_invocation_id": "phase2-lrh-energy-001",
+      "invoked_at_utc": "2026-10-10T10:00:00Z",
+      "input_artifacts": [
+        "idea/research-question.json",
+        "idea/journal-fit.json",
+        "literature/local-library.bib"
+      ],
+      "output_artifacts": [
+        "literature/literature-coverage-matrix.json",
+        "literature/references.bib",
+        "literature/search-log.md",
+        "literature/review-protocol.json",
+        "evidence/claim-anchors.ndjson",
+        "evidence/claim-inventory.json"
+      ],
+      "protocol_artifacts": [
+        "literature/review-protocol.json",
+        "literature/search-log.md"
+      ],
+      "protocol_followed": true
+    },
+    "writing_engine": {
+      "skill": "scholar-write",
+      "mode": "draft",
+      "section": "Literature Review and Theory",
+      "task_invocation_id": "phase2-write-energy-001",
+      "invoked_at_utc": "2026-10-10T10:40:00Z",
+      "input_artifacts": [
+        "literature/literature-coverage-matrix.json",
+        "idea/journal-fit.json",
+        "evidence/claim-anchors.ndjson"
+      ],
+      "output_artifacts": [
+        "literature/lit-theory.md",
+        "literature/lit-theory-manifest.json"
+      ]
+    },
+    "target_journal": "Energy Policy"
+  },
+  "review_protocol": "literature/review-protocol.json",
+  "coverage_matrix": {
+    "constructs": [
+      "green/clean energy job",
+      "renewable vs non-renewable generation industry",
+      "within-occupation wage gap",
+      "establishment/firm wage premium",
+      "occupational composition"
+    ],
+    "theories": [
+      "inter-industry and firm wage premia / rent-sharing",
+      "union and internal-labor-market wage-setting",
+      "skills-scarcity (green skills) premium",
+      "compensating differentials"
+    ],
+    "methods": [
+      "occupation-level wage assignment (postings)",
+      "AKM worker-firm fixed effects",
+      "linked employer-employee earnings regressions",
+      "Oaxaca-Blinder/Kitagawa decomposition",
+      "cell-level weighted regression with fixed effects"
+    ],
+    "datasets_populations": [
+      "BLS OEWS national industry-specific estimates",
+      "Burning Glass/Lightcast job postings",
+      "US Census LEHD/W-2 linked data",
+      "Norwegian registers",
+      "Japan NIRA survey",
+      "UK ASHE-Census linked data",
+      "USEER employer survey"
+    ],
+    "competing_findings": [
+      "green wage premium (Curtis and Marinescu 2023; Kuai et al. 2025; IMF 2024; Whittard et al. 2024)",
+      "no clean premium or larger legacy/brown premium (Colmer et al. 2025; Godoy and Isaksen 2025)",
+      "declining low-carbon premium (Saussay et al. 2022)"
+    ]
+  },
+  "must_cite_coverage": [
+    {
+      "key": "abowd1999high",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "bls2025oewstech",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "bowen2018characterising",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "card2013workplace",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "card2018firms",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "colmer2025nice",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "consoli2016green",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "curtis2018loses",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "curtis2023green",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "curtis2024workers",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "doe2024useer",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "freeman1980unionism",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "gibbons1992does",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "godoy2025green",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "gray2023environmental",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "haerer2015employment",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "hafstead2018unemployment",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "imf2024green",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "ira2022",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "krueger1988efficiency",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "kuai2025estimating",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "lim2023location",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "mayfield2021influence",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "muro2019advancing",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "pollin2019economics",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "rosen1986theory",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "saussay2022whos",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "song2019firming",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "vona2018environmental",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "vona2019measures",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "walker2013transitional",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "wei2010putting",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "western2011unions",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    },
+    {
+      "key": "whittard2024working",
+      "covered": true,
+      "location": "literature/lit-theory.md"
+    }
+  ],
+  "source_role_matrix": [
+    {
+      "key": "abowd1999high",
+      "argument_role": "theory",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "bls2025oewstech",
+      "argument_role": "method",
+      "claim_supported": "OEWS pools six semiannual panels over three years; MB3 estimation.",
+      "target_section": "Data and Methods; Limitations",
+      "why_it_matters": "Defines measurement limits on trend claims."
+    },
+    {
+      "key": "bowen2018characterising",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "card2013workplace",
+      "argument_role": "theory",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "card2018firms",
+      "argument_role": "theory",
+      "claim_supported": "Firm wage premia and rent-sharing.",
+      "target_section": "Literature Review and Hypotheses (framework)",
+      "why_it_matters": "Core theory generating H1, H3, H4."
+    },
+    {
+      "key": "colmer2025nice",
+      "argument_role": "rival",
+      "claim_supported": "No clean-firm earnings premium in US linked data conditional on education.",
+      "target_section": "Literature Review and Hypotheses; Discussion",
+      "why_it_matters": "Closest US comparison of clean and legacy energy establishments."
+    },
+    {
+      "key": "consoli2016green",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "curtis2018loses",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "curtis2023green",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Solar and wind postings sit in occupations ~21% above average pay.",
+      "target_section": "Introduction; Literature Review section of the manuscript",
+      "why_it_matters": "Main US green-premium evidence; shows occupational (not establishment) premium."
+    },
+    {
+      "key": "curtis2024workers",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "doe2024useer",
+      "argument_role": "context",
+      "claim_supported": "Clean energy unionization and employment growth in 2023.",
+      "target_section": "Literature Review; Discussion section of the manuscript",
+      "why_it_matters": "Context for H5 and mechanism."
+    },
+    {
+      "key": "freeman1980unionism",
+      "argument_role": "theory",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "gibbons1992does",
+      "argument_role": "rival",
+      "claim_supported": "Unmeasured ability explains part of industry gaps.",
+      "target_section": "Alternative explanations; Limitations section of the manuscript",
+      "why_it_matters": "Sorting rival the design cannot exclude."
+    },
+    {
+      "key": "godoy2025green",
+      "argument_role": "rival",
+      "claim_supported": "Brown-firm premium about twice the green premium; premia absorbed by firm traits (rent-sharing).",
+      "target_section": "Literature Review and Hypotheses; Discussion",
+      "why_it_matters": "Closest prior estimate of green vs brown premia with worker FE; anchors the legacy-rent prediction."
+    },
+    {
+      "key": "gray2023environmental",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "haerer2015employment",
+      "argument_role": "context",
+      "claim_supported": "Employment trends across US electricity generation sources.",
+      "target_section": "Literature Review section of the manuscript",
+      "why_it_matters": "Prior sector-specific work without pay comparison (gap)."
+    },
+    {
+      "key": "hafstead2018unemployment",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "imf2024green",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "ira2022",
+      "argument_role": "context",
+      "claim_supported": "Prevailing wage and apprenticeship standards for clean energy credits.",
+      "target_section": "Literature Review; Discussion section of the manuscript",
+      "why_it_matters": "Policy context for H5."
+    },
+    {
+      "key": "krueger1988efficiency",
+      "argument_role": "theory",
+      "claim_supported": "Inter-industry wage differentials among similar workers.",
+      "target_section": "Framework section of the manuscript",
+      "why_it_matters": "Establishes industry premia as a wage-setting phenomenon."
+    },
+    {
+      "key": "kuai2025estimating",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "lim2023location",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "mayfield2021influence",
+      "argument_role": "mechanism",
+      "claim_supported": "High-road labor standards in renewable deployment.",
+      "target_section": "H5; Discussion section of the manuscript",
+      "why_it_matters": "Mechanism for gap narrowing."
+    },
+    {
+      "key": "muro2019advancing",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "pollin2019economics",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "rosen1986theory",
+      "argument_role": "rival",
+      "claim_supported": "Compensating differentials could yield lower green pay.",
+      "target_section": "Alternative explanations section of the manuscript",
+      "why_it_matters": "Rival mechanism for a negative renewable gap."
+    },
+    {
+      "key": "saussay2022whos",
+      "argument_role": "rival",
+      "claim_supported": "Low-carbon wage premium declined in job-ad data.",
+      "target_section": "Literature Review section of the manuscript",
+      "why_it_matters": "Trend evidence on premium erosion."
+    },
+    {
+      "key": "song2019firming",
+      "argument_role": "theory",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "vona2018environmental",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "vona2019measures",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "walker2013transitional",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "wei2010putting",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "western2011unions",
+      "argument_role": "mechanism",
+      "claim_supported": "Unions raise/compress wages and sustain norms.",
+      "target_section": "Framework; H4 section of the manuscript",
+      "why_it_matters": "Mechanism for occupational heterogeneity."
+    },
+    {
+      "key": "whittard2024working",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "kitagawa1955components",
+      "argument_role": "method",
+      "claim_supported": "Decomposing differences in rates into composition and rate components.",
+      "target_section": "Data and Methods section of the manuscript",
+      "why_it_matters": "Basis for composition decomposition (H2)."
+    },
+    {
+      "key": "oaxaca1973male",
+      "argument_role": "method",
+      "claim_supported": "Wage-gap decomposition (supports the manuscript argument)",
+      "target_section": "Data and Methods section of the manuscript",
+      "why_it_matters": "Decomposition logic for H2."
+    },
+    {
+      "key": "blinder1973wage",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "fortin2011decomposition",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Supports the literature synthesis claim attached to this source in literature/lit-theory.md.",
+      "target_section": "Literature Review and Hypotheses",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "bls2025oewsdata",
+      "argument_role": "data",
+      "claim_supported": "Provides the national occupation-by-industry wage estimates and CPI-U deflator used in the analysis.",
+      "target_section": "Data and Methods section",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    },
+    {
+      "key": "bls2025cpi",
+      "argument_role": "data",
+      "claim_supported": "Provides the national occupation-by-industry wage estimates and CPI-U deflator used in the analysis.",
+      "target_section": "Data and Methods section",
+      "why_it_matters": "Situates the contribution relative to established evidence."
+    }
+  ],
+  "mechanism_chain": [
+    {
+      "step": 1,
+      "link": "generation source -> establishment wage-setting environment",
+      "detail": "plant age, ownership, rents, safety regulation, bargaining coverage"
+    },
+    {
+      "step": 2,
+      "link": "wage-setting environment -> establishment wage premium",
+      "detail": "rent-sharing and institutional wage norms"
+    },
+    {
+      "step": 3,
+      "link": "establishment premium -> within-occupation wage gap across generation industries",
+      "detail": "observed in OEWS occupation-by-industry cells; moderated by occupation group and time"
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "text": "Within detailed occupations and years, mean hourly wages in renewable generation industries are lower than in non-renewable (fossil fuel and nuclear) generation industries.",
+      "direction": "negative",
+      "focal_variables": [
+        "renewable generation industry",
+        "log real mean hourly wage"
+      ],
+      "mechanism": "establishment rent-sharing and wage-setting institutions stronger in legacy generation",
+      "scope": "US NAICS 2211 generation industries, detailed occupations, 2021-2025",
+      "competing_prediction": "skills-scarcity account predicts positive"
+    },
+    {
+      "id": "H2",
+      "text": "Differences in occupational composition account for part, but not all, of the raw renewable/non-renewable gap in mean hourly wages.",
+      "direction": "partial attenuation (raw gap differs from within-occupation gap but within-occupation gap remains nonzero)",
+      "focal_variables": [
+        "occupational composition",
+        "renewable generation industry"
+      ],
+      "mechanism": "composition versus pay-setting",
+      "scope": "same as H1"
+    },
+    {
+      "id": "H3",
+      "text": "Relative to fossil fuel generation and within occupations, nuclear generation pays more, hydroelectric generation pays about the same, and solar and wind generation pay less.",
+      "direction": "nuclear positive; hydro null; solar and wind negative",
+      "focal_variables": [
+        "six-digit generation source"
+      ],
+      "mechanism": "institutional maturity, regulation and bargaining coverage by source",
+      "scope": "same as H1"
+    },
+    {
+      "id": "H4",
+      "text": "The within-occupation renewable wage penalty is larger in production, installation, maintenance, and repair occupations than in management, business, and professional occupations.",
+      "direction": "larger negative gap in plant-based occupations",
+      "focal_variables": [
+        "renewable generation industry",
+        "occupational group"
+      ],
+      "moderator": "occupational group (bargaining coverage and labor-market scope)",
+      "mechanism": "establishment premia matter most for occupations paid inside plant job ladders",
+      "scope": "same as H1"
+    },
+    {
+      "id": "H5",
+      "text": "The within-occupation renewable/non-renewable wage gap narrows between 2021 and 2025.",
+      "direction": "gap shrinks toward zero over time",
+      "focal_variables": [
+        "renewable generation industry",
+        "year"
+      ],
+      "moderator": "year",
+      "mechanism": "segment maturation, rising union representation, IRA prevailing-wage standards",
+      "scope": "same as H1"
+    }
+  ],
+  "gap_statement": "Economy-wide studies report green premia while direct clean-vs-legacy comparisons find parity or a legacy advantage; no study compares the same occupations across renewable and non-renewable generation within one industry, or tracks such gaps through 2021-2025.",
+  "novelty_contrast": "Unlike Curtis and Marinescu (2023), wages are industry-specific rather than economy-wide occupational medians; unlike Colmer et al. (2025) and Godoy and Isaksen (2025), comparison is within detailed occupation across generation sources for 2021-2025.",
+  "journal_calibration": {
+    "target_journal": "Energy Policy",
+    "paper_type": "full-length research article (descriptive empirical)",
+    "theory_depth": "compact framework (about 1,600 words) contrasting legacy rent-sharing with green skills-scarcity and compensating-differential accounts",
+    "citation_density": "about 34 sources in literature section; policy-relevant energy and labor economics sources prioritized",
+    "must_cite_strategy": "cite all nine user-supplied studies with strengths/weaknesses, core firm-premium theory, and US energy-employment context"
+  },
+  "ready_for_phase_3": true
+}

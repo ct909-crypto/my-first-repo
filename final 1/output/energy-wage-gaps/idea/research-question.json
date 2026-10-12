@@ -1,0 +1,72 @@
+{
+  "verdict": "PASS",
+  "engine": "scholar-idea",
+  "engine_provenance": {
+    "task_invocation_id": "phase1-idea-energy-wage-001",
+    "invoked_at_utc": "2026-10-10T09:25:00Z",
+    "input_artifacts": [
+      "user prompt (research topic and length request)",
+      "data/raw/nat5d_6d_M2021_dl.xlsx",
+      "data/raw/nat5d_6d_M2025_dl.xlsx",
+      "materials/ (nine literature PDFs)"
+    ],
+    "output_artifacts": [
+      "idea/candidate-rqs.json",
+      "idea/rq-evaluation-panel.json",
+      "idea/journal-fit.json",
+      "idea/rq-selection-rationale.md",
+      "idea/research-question.json",
+      "idea/research-question.md"
+    ]
+  },
+  "input_mode": "idea",
+  "selected_rq_id": "RQ1",
+  "selected_rq": "Within U.S. electric power generation (NAICS 2211), how large are the hourly wage gaps between renewable generation industries (solar, wind, hydroelectric, geothermal, biomass) and non-renewable generation industries (fossil fuel and nuclear), do these gaps persist within detailed occupations, how do they differ across individual energy sources and occupational groups, and how did they change between 2021 and 2025?",
+  "x": "renewable generation industries",
+  "y": "hourly wage",
+  "directional_relation": "Competing expectations: a green-premium account predicts renewable > non-renewable within occupation; a legacy rent-sharing account predicts renewable < non-renewable, with nuclear highest and hydro closest to fossil; the gap is expected to narrow over 2021-2025 if renewable segments mature.",
+  "mechanism": "Legacy fossil and nuclear generation is a mature, capital-intensive, heavily regulated and comparatively unionized segment with large incumbent firms and rent-sharing, whereas the newer solar and wind segments are younger, more contractor- and developer-based, less unionized and have flatter internal labor markets; establishment wage-setting rather than occupational skill should therefore produce within-occupation wage gaps that may narrow as renewable segments mature and as IRA prevailing-wage provisions take effect.",
+  "confounders": [
+    "occupational composition (detailed SOC mix)",
+    "year-specific wage levels and inflation",
+    "skill and education requirements embedded in occupations",
+    "geographic location of plants (not observable nationally)",
+    "firm size and union coverage (not observable)",
+    "sampling error of small cells"
+  ],
+  "scope": {
+    "population": "occupation-by-industry employment cells in U.S. electric power generation (NAICS 2211, eight six-digit generation industries)",
+    "place": "United States (national estimates)",
+    "time": "OEWS May 2021 through May 2025 estimates",
+    "unit": "detailed SOC occupation x six-digit generation industry x year cell"
+  },
+  "target_journal": {
+    "primary": "Energy Policy",
+    "journal_family": "energy and environmental policy",
+    "fit_rationale": "Just-transition wage implications of the shift from fossil to renewable generation are core to the journal's policy audience; the design is transparent and policy-relevant.",
+    "method_bar": "transparent descriptive regression design with occupation-by-year fixed effects, employment weights, clustered errors, decomposition, and robustness to sampling error and sector definitions",
+    "theory_bar": "clear statement of competing green-premium versus legacy-rent mechanisms and explicit scope limits",
+    "desk_reject_risks": [
+      "perceived as purely descriptive without policy hook",
+      "OEWS cell data lack worker controls"
+    ]
+  },
+  "paper_type": "full-length research article (descriptive empirical)",
+  "method_orientation": "observational quantitative panel of repeated occupation-by-industry cross-sections",
+  "recommended_dataset": "BLS Occupational Employment and Wage Statistics (OEWS) national industry-specific estimates, May 2021-May 2025, NAICS 221111-221118",
+  "claim_strength": "descriptive",
+  "rationale": "Policy debates assume the clean-energy transition creates better-paid jobs, yet the strongest evidence compares broad green and non-green jobs. Comparing the same occupations across generation sources within one industry shows whether workers moving from fossil plants to solar or wind farms face pay cuts, and how this changed during the IRA period.",
+  "selection_evidence": {
+    "candidate_count": 4,
+    "panel_consensus": "strong",
+    "fatal_flaw": false,
+    "data_feasible": true,
+    "novelty_risk": "low-medium",
+    "journal_fit": "strong",
+    "exploratory_signal_note": "Exploratory bivariate check (not causal): within occupation-year, renewable cells average roughly 12 log points below non-renewable cells; used only for feasibility.",
+    "panel_votes": "5 of 5 reviewers select RQ1"
+  },
+  "ready_for_phase_2": true,
+  "x_detail": "renewable (solar, wind, hydroelectric, geothermal, biomass) versus non-renewable (fossil fuel, nuclear) six-digit generation industry, and each individual generation source",
+  "y_detail": "log real mean hourly wage (2025 dollars) of detailed occupation-industry cells"
+}

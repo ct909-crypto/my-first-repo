@@ -1,0 +1,584 @@
+{
+  "verdict": "PASS",
+  "degraded": false,
+  "decision": "PROCEED_TO_RESULTS_LOCK",
+  "ready_for_phase_11": true,
+  "runtime_engine": {
+    "skill": "scholar-auto-research",
+    "mode": "runtime_sanity",
+    "auto_research_contract": "phase_10",
+    "deterministic_gate": true
+  },
+  "source_hashes": {
+    "spec_registry": "ecaad7c04f7d95fee77504207032ae59747066838f62a12593838676d5b72f04",
+    "execution_report": "936993a74238d19ed5d457c3d593a5fadf2bfdcd689486ed4f844a38908bb13c",
+    "results_registry": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac",
+    "figure_registry": "893baca3b02f5be2f3295945d5db6d82cd13d7bd842ba62a4a5b33b89fe652c7",
+    "post_execution_review": "68000bf1f53dfe3d8e740704fa56d45c05237c40e172e4b7375446dbce6b466d",
+    "post_execution_fix_log": "afd921e44c4ea35da50375b062a54ad0293a1ea334479e3444fd68be2bb55fba"
+  },
+  "phase9_status": {
+    "verdict": "PASS",
+    "decision": "PROCEED_TO_RUNTIME_SANITY",
+    "ready_for_phase_10": true,
+    "unresolved_blocking_count": 0,
+    "critical_count": 0
+  },
+  "phase9_constraint_carryforward": {
+    "unexpected_results_checked": true,
+    "claim_constraints_checked": true,
+    "unexpected_results": [
+      {
+        "spec_id": "S07",
+        "classification": "null",
+        "action": "carry_forward_with_constraints",
+        "manuscript_instruction": "State that the within-occupation gap did not narrow (point estimate slightly widening, not significant); H5 not supported."
+      },
+      {
+        "spec_id": "S08",
+        "classification": "conflicting",
+        "action": "carry_forward_with_constraints",
+        "manuscript_instruction": "State that occupational composition does not account for the raw gap (composition slightly favors renewables); H2 not supported as stated."
+      },
+      {
+        "spec_id": "S04",
+        "classification": "weak",
+        "action": "carry_forward_with_constraints",
+        "manuscript_instruction": "Hydro contrast is near zero and imprecise (consistent with H3); geothermal estimate rests on 26 identifying cells and is imprecise."
+      }
+    ],
+    "unexpected_result_spec_ids": [
+      "S04",
+      "S07",
+      "S08"
+    ],
+    "forbidden_claim_verbs": [
+      "causes",
+      "leads to",
+      "effect of",
+      "impact",
+      "drives",
+      "results in",
+      "because of the IRA",
+      "proves"
+    ],
+    "required_disclosures": [
+      "descriptive design: sorting and regional composition not controlled",
+      "OEWS three-year pooled panels smooth trends",
+      "OEWS wages exclude overtime and shift differentials",
+      "P90 censoring",
+      "small geothermal and biomass samples",
+      "reviews carried out inline because independent subagents were unavailable (workflow disclosure, trace only)"
+    ]
+  },
+  "plausibility": {
+    "verdict": "PASS",
+    "checks": [
+      {
+        "domain": "numeric_finite",
+        "status": "PASS",
+        "evidence": "all 20 estimates and SEs finite"
+      },
+      {
+        "domain": "sample_size",
+        "status": "PASS",
+        "evidence": "n ranges from 915 to 1876 cells"
+      },
+      {
+        "domain": "p_value_range",
+        "status": "PASS",
+        "evidence": "all p-values in [0, 1]"
+      },
+      {
+        "domain": "effect_magnitude",
+        "status": "PASS",
+        "evidence": "all log-point gaps below 1 in absolute value (largest about 0.30 for biomass in the source model; registry max |b| = 0.220)"
+      },
+      {
+        "domain": "interpretation_constraints",
+        "status": "PASS",
+        "evidence": "Phase 9 null (S07), conflicting (S08) and weak (S04 components) categorizations carried forward with claim constraints"
+      }
+    ]
+  },
+  "clean_room": {
+    "verdict": "PASS",
+    "artifact_hashes": {
+      "spec_registry": "ecaad7c04f7d95fee77504207032ae59747066838f62a12593838676d5b72f04",
+      "execution_report": "936993a74238d19ed5d457c3d593a5fadf2bfdcd689486ed4f844a38908bb13c",
+      "results_registry": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac",
+      "figure_registry": "893baca3b02f5be2f3295945d5db6d82cd13d7bd842ba62a4a5b33b89fe652c7",
+      "post_execution_review": "68000bf1f53dfe3d8e740704fa56d45c05237c40e172e4b7375446dbce6b466d",
+      "post_execution_fix_log": "afd921e44c4ea35da50375b062a54ad0293a1ea334479e3444fd68be2bb55fba",
+      "data/processed/oews-generation-cells.csv": "99f1aa9c1e36e1cbc1c969a4f6d6157d4f65803cb62cfd9106d13f403e2fec53",
+      "tables/cell-coverage.csv": "6b72d88a0b72cfb077a3aa83309ab37bbf7243fa6f05508b3ced370e286a067d",
+      "tables/table1-descriptives.csv": "a1a464753ff6a4a742394e013d8e37d1e4571a8f5a448c9ee4cc9a68f3359405",
+      "tables/table1-descriptives.html": "d02db54cf8752efdc97949acf8da1ea73b12d93b9038583e061dc1de710f0262",
+      "tables/table1b-wage-by-year.csv": "14288134130b379a965093041536fe8916e4a7ccbb1748cfc6ee7d922b55f2f8",
+      "figures/fig1-wage-by-source-year.pdf": "a036be90465df24f96810fa4616f7271335a4eaa9078d46defe1b60140423c96",
+      "figures/fig1-wage-by-source-year.png": "6f6a82e28c8414a3a796100b0a68e0ceaf19120d96c40a9f6fc73a9a8fe700a4",
+      "analysis/outputs/main-model-estimates.csv": "39b9002c6a08c24797f1d01fe6023ba9fa59adbc7b6ad2173a96dd305b1320c1",
+      "analysis/joint-tests.json": "b1e18a48dba0d6509ec0bc2076a581ceec4a08a42f8e9752a70535ec08ad592a",
+      "tables/table2-main-regression.html": "522c97859df70e25a348fe8315cc9296f6d0a62030817ce25959a1db332ab156",
+      "tables/table3-heterogeneity-regression.html": "8a3fd19ffcac7d43f6ac609cfd0448d5837757df32e28dd6f381ccdf4975a50b",
+      "analysis/outputs/fit-stats-main.csv": "557a872df635cb56d5ee3f5e0442cb45422ece5c2bd60b3c31f3a0d872ca0c60",
+      "analysis/outputs/identifying-cells.csv": "861be47f85af17f473446eefc6447a2411c1584d66231ace168042068b036d15",
+      "analysis/outputs/identifying-cells-by-source.csv": "82f012adc8c9c704cbd7db954bd1965276ffdf3a502d9c3c2296cabe1b85d2ee",
+      "analysis/outputs/se-sensitivity.csv": "e03c33fce7b11c2a7b1e45e73f80e51630aa8816292f80be9d6d9d0642e5584e",
+      "analysis/outputs/main-models.rds": "4f12c02656ae4d356d60bddbd19465ee78e87d8886172f33af32fbba73ad8c74",
+      "tables/table4-decomposition.csv": "05aad8ab437547cfc123a2b653b20671dea0e799043b55ff442449c744567376",
+      "tables/tableA1-robustness.csv": "492a413be6da59d26b54f3bb7b8b80fce131731cab6049db1c093dfbd0b23330",
+      "tables/tableA1-robustness-regression.html": "c8f01a838d7bbc1a1fd70d84f432b99dbdc38be51efe11f850d0e5dbd5a06e78",
+      "analysis/outputs/balanced-set.csv": "db0f499fe04e47e021dc792b7b9a2e697aff575333eb5899dddda2f91e2c744f",
+      "analysis/outputs/fit-stats-robustness.csv": "b1385f21436638c4cdc58769fd70b6a40c8907bd619ad2a35e54be8cafe48470",
+      "analysis/outputs/robustness-models.rds": "012fdb0daaea697367ffe56a49f69d478c50be06595aa514de26614a728dd5da",
+      "figures/fig2-source-gaps.pdf": "d6d37f424628ea683f677e4f70a8b10d198c1c510a32ab2c117ae4876cb06d3f",
+      "figures/fig2-source-gaps.png": "6d14f522385af923ef9806e99748f770dce319b0574682a6761cb2ce7e65c080",
+      "figures/fig3-gap-by-year.pdf": "1edc983b1c23547389044206649f26c26ed0c226648dcfd80deed15ec6f827fd",
+      "figures/fig3-gap-by-year.png": "5df1a85b661053a9933c300570d761c442d8e621df831b78b0f79c700177b597",
+      "figures/fig4-gap-by-occupation-group.pdf": "51297ef0fdfd78388b04cf87b1e5e58f609e6fe6473b37675f38c8a6bd662591",
+      "figures/fig4-gap-by-occupation-group.png": "b512e489dc4785cf0f05dda9adea61466230eee15e0f2bcfdabf8f1c96c53478",
+      "tables/results-registry.csv": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac",
+      "tables/model-fit-stats.csv": "444c0c4fef41c557b90369162ff8bd7b25d555eb016c73e90ea6552788fe90ad",
+      "figures/figure-registry.csv": "893baca3b02f5be2f3295945d5db6d82cd13d7bd842ba62a4a5b33b89fe652c7"
+    },
+    "reviewed_artifacts_match": true,
+    "byte_identical_artifacts": "31/31 (non-identical files differ only in embedded timestamps/IDs of HTML, PDF, PNG, or RDS serialization; numeric registry values identical)",
+    "run": {
+      "mode": "isolated copy of raw data + scripts, full rerun in script order",
+      "commands": [
+        "Rscript analysis/scripts/01_build_panel.R",
+        "Rscript analysis/scripts/02_descriptives.R",
+        "Rscript analysis/scripts/03_main_models.R",
+        "Rscript analysis/scripts/04_decomposition.R",
+        "Rscript analysis/scripts/05_robustness.R",
+        "Rscript analysis/scripts/06_figures.R",
+        "Rscript analysis/scripts/07_registry.R"
+      ],
+      "exit_codes": {
+        "analysis/scripts/01_build_panel.R": 0,
+        "analysis/scripts/02_descriptives.R": 0,
+        "analysis/scripts/03_main_models.R": 0,
+        "analysis/scripts/04_decomposition.R": 0,
+        "analysis/scripts/05_robustness.R": 0,
+        "analysis/scripts/06_figures.R": 0,
+        "analysis/scripts/07_registry.R": 0
+      },
+      "input_hashes": {
+        "nat5d_6d_M2021_dl.xlsx": "9269cc3956690762ab838b7c7fee87ec65c66373d55fb18ce9ec8a246485cde6",
+        "nat5d_6d_M2022_dl.xlsx": "6ccd38f2d0bc5e25b86544e0505e1939ed9334809019b07b97a9bbd1ab3d32e1",
+        "nat5d_6d_M2023_dl.xlsx": "3d69af43ef9df416834890346a67815a66670d0aab5be4265ca7d966babec3f3",
+        "nat5d_6d_M2024_dl.xlsx": "f5005fa75b634d73c7288cfb4886dc669bef65ba8a6e6c388ead40c030c3d87e",
+        "nat5d_6d_M2025_dl.xlsx": "dca9beafa91124701ea7afac6073cf491f926f47361e6c00a3f20c2e6a697419"
+      },
+      "output_hashes": {
+        "data/processed/oews-generation-cells.csv": "99f1aa9c1e36e1cbc1c969a4f6d6157d4f65803cb62cfd9106d13f403e2fec53",
+        "tables/cell-coverage.csv": "6b72d88a0b72cfb077a3aa83309ab37bbf7243fa6f05508b3ced370e286a067d",
+        "tables/table1-descriptives.csv": "a1a464753ff6a4a742394e013d8e37d1e4571a8f5a448c9ee4cc9a68f3359405",
+        "tables/table1-descriptives.html": "d02db54cf8752efdc97949acf8da1ea73b12d93b9038583e061dc1de710f0262",
+        "tables/table1b-wage-by-year.csv": "14288134130b379a965093041536fe8916e4a7ccbb1748cfc6ee7d922b55f2f8",
+        "figures/fig1-wage-by-source-year.pdf": "a036be90465df24f96810fa4616f7271335a4eaa9078d46defe1b60140423c96",
+        "figures/fig1-wage-by-source-year.png": "6f6a82e28c8414a3a796100b0a68e0ceaf19120d96c40a9f6fc73a9a8fe700a4",
+        "analysis/outputs/main-model-estimates.csv": "39b9002c6a08c24797f1d01fe6023ba9fa59adbc7b6ad2173a96dd305b1320c1",
+        "analysis/joint-tests.json": "b1e18a48dba0d6509ec0bc2076a581ceec4a08a42f8e9752a70535ec08ad592a",
+        "tables/table2-main-regression.html": "522c97859df70e25a348fe8315cc9296f6d0a62030817ce25959a1db332ab156",
+        "tables/table3-heterogeneity-regression.html": "8a3fd19ffcac7d43f6ac609cfd0448d5837757df32e28dd6f381ccdf4975a50b",
+        "analysis/outputs/fit-stats-main.csv": "557a872df635cb56d5ee3f5e0442cb45422ece5c2bd60b3c31f3a0d872ca0c60",
+        "analysis/outputs/identifying-cells.csv": "861be47f85af17f473446eefc6447a2411c1584d66231ace168042068b036d15",
+        "analysis/outputs/identifying-cells-by-source.csv": "82f012adc8c9c704cbd7db954bd1965276ffdf3a502d9c3c2296cabe1b85d2ee",
+        "analysis/outputs/se-sensitivity.csv": "e03c33fce7b11c2a7b1e45e73f80e51630aa8816292f80be9d6d9d0642e5584e",
+        "analysis/outputs/main-models.rds": "4f12c02656ae4d356d60bddbd19465ee78e87d8886172f33af32fbba73ad8c74",
+        "tables/table4-decomposition.csv": "05aad8ab437547cfc123a2b653b20671dea0e799043b55ff442449c744567376",
+        "tables/tableA1-robustness.csv": "492a413be6da59d26b54f3bb7b8b80fce131731cab6049db1c093dfbd0b23330",
+        "tables/tableA1-robustness-regression.html": "c8f01a838d7bbc1a1fd70d84f432b99dbdc38be51efe11f850d0e5dbd5a06e78",
+        "analysis/outputs/balanced-set.csv": "db0f499fe04e47e021dc792b7b9a2e697aff575333eb5899dddda2f91e2c744f",
+        "analysis/outputs/fit-stats-robustness.csv": "b1385f21436638c4cdc58769fd70b6a40c8907bd619ad2a35e54be8cafe48470",
+        "analysis/outputs/robustness-models.rds": "012fdb0daaea697367ffe56a49f69d478c50be06595aa514de26614a728dd5da",
+        "figures/fig2-source-gaps.pdf": "d6d37f424628ea683f677e4f70a8b10d198c1c510a32ab2c117ae4876cb06d3f",
+        "figures/fig2-source-gaps.png": "6d14f522385af923ef9806e99748f770dce319b0574682a6761cb2ce7e65c080",
+        "figures/fig3-gap-by-year.pdf": "1edc983b1c23547389044206649f26c26ed0c226648dcfd80deed15ec6f827fd",
+        "figures/fig3-gap-by-year.png": "5df1a85b661053a9933c300570d761c442d8e621df831b78b0f79c700177b597",
+        "figures/fig4-gap-by-occupation-group.pdf": "51297ef0fdfd78388b04cf87b1e5e58f609e6fe6473b37675f38c8a6bd662591",
+        "figures/fig4-gap-by-occupation-group.png": "b512e489dc4785cf0f05dda9adea61466230eee15e0f2bcfdabf8f1c96c53478",
+        "tables/results-registry.csv": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac",
+        "tables/model-fit-stats.csv": "444c0c4fef41c557b90369162ff8bd7b25d555eb016c73e90ea6552788fe90ad",
+        "figures/figure-registry.csv": "893baca3b02f5be2f3295945d5db6d82cd13d7bd842ba62a4a5b33b89fe652c7"
+      },
+      "numeric_tolerance": 1e-08,
+      "numeric_differences": [],
+      "seed": "20261010",
+      "session_info": "R version 4.6.1 (2026-06-24) | readxl 1.5.0.1; ggplot2 4.0.3; modelsummary 2.6.0; fixest 0.14.2; data.table 1.18.6.1",
+      "verdict": "PASS"
+    }
+  },
+  "invariants": {
+    "verdict": "PASS",
+    "checks": [
+      {
+        "name": "planned_specs_equal_results",
+        "status": "PASS",
+        "evidence": "20 planned spec IDs equal 20 registry spec IDs"
+      },
+      {
+        "name": "execution_report_matches_registries",
+        "status": "PASS",
+        "evidence": "execution report row counts equal results (20) and figure (8) registries"
+      },
+      {
+        "name": "expected_outputs_exist",
+        "status": "PASS",
+        "evidence": "all Phase 7 handoff expected outputs present"
+      },
+      {
+        "name": "figure_registry_complete",
+        "status": "PASS",
+        "evidence": "all 8 registered figure files exist"
+      },
+      {
+        "name": "post_execution_review_current",
+        "status": "PASS",
+        "evidence": "Phase 9 source hashes equal current registry and execution report"
+      },
+      {
+        "name": "phase8_artifact_manifest_current",
+        "status": "PASS",
+        "evidence": "all 31 Phase 8 manifest hashes equal current files"
+      },
+      {
+        "name": "phase9_constraints_current",
+        "status": "PASS",
+        "evidence": "Phase 9 claim constraints and 3 unexpected results present"
+      }
+    ]
+  },
+  "pap_drift": {
+    "verdict": "PASS",
+    "planned_spec_ids": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19",
+      "S20"
+    ],
+    "executed_spec_ids": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19",
+      "S20"
+    ],
+    "spec_fingerprints": {
+      "S01": "f45ca468c93013433de9cb356c2c24592cb93217cd5a11c311bc8d3591ad53d8",
+      "S02": "c5a81d6b90ee42423157b4c5bac7286b468da97c8ba979aa678280e08dfb073f",
+      "S03": "39ca1267a24df900ed7870a4fdf2b503c1240442fe8d6dbcc3f0f6c34ec26636",
+      "S04": "9228a6e6c57bfc8a87db048a4a1af3e39f65081db512c05532d836243089babc",
+      "S05": "a810ffc1fbdb12dabceb303cdd606a7fe89fdf173ebea52267aab1eac11ad85c",
+      "S06": "8cae850cb2a201190f342b8887397688bb0d0b55ec608eebf034c665054e375d",
+      "S07": "3a5ddb8356ece696e48ce1df51ffce9ac69929afa4b3a99077a36a75edc4cc77",
+      "S08": "2213489f33db9e74bb06146b49fe72c855bee526e6b8761a48ec390e048ecad7",
+      "S09": "2feb7cb7a7974431ea2a2d00bbe21c5a2a4158489c33d2b8a02eb95b35fcaf4f",
+      "S10": "51b9e759db2b3266db6b08c666725f8ca80962432e8a1c27b6f734179ebbbc73",
+      "S11": "405f2044d05a33f3ae8a6e7b6d3cb5cc5f09ea8ec2a3592f885e34d42755b5a9",
+      "S12": "816e06bea254f97e87b81f6b740e9904e6f03c3d1b0dfa00283cd68f3cc9548f",
+      "S13": "377b37ce4efaa83842ec58f120b3ac8f99fb0c1f50762b2f78050ba03f5c54b8",
+      "S14": "3d4ed8fa051e6e6e326848d55acfb03f096d8b37dd7e5f082e67ce7f7f966757",
+      "S15": "a2413e83a7ad324e83354193833480dc2206042331b49953dd065883e8042271",
+      "S16": "2ca206ddfaec3186f2a026066800de9659c358a645529b99cdf42beeaa4992d0",
+      "S17": "803f070910a2e98a0e897247ba54d70ae5503bb3dce52b50923e3dbc92d475e3",
+      "S18": "43f47ba9aa2943e828187a68c5a0ddecdc1fd7ec002c58179cfdcf7735bfd3a3",
+      "S19": "fc34e48bc6c2ae54e91c4811000a718f9505f07eca624069a315641ebf3e5ab3",
+      "S20": "866fdeb47a26063c3e6851c10919bdacd2a16de89294f903381713906261c363"
+    },
+    "unresolved_drift_count": 0,
+    "drift_items": [],
+    "notes": "Spec registry unchanged since Phase 5; Phase 8 deviations limited to figure device/font/label and registry PNG listing (no estimation change)."
+  },
+  "artifact_inventory": [
+    {
+      "path": "analysis/execution-report.json",
+      "sha256": "936993a74238d19ed5d457c3d593a5fadf2bfdcd689486ed4f844a38908bb13c",
+      "lock_candidate": true
+    },
+    {
+      "path": "analysis/outputs/main-model-estimates.csv",
+      "sha256": "39b9002c6a08c24797f1d01fe6023ba9fa59adbc7b6ad2173a96dd305b1320c1",
+      "lock_candidate": true
+    },
+    {
+      "path": "figures/fig1-wage-by-source-year.pdf",
+      "sha256": "a036be90465df24f96810fa4616f7271335a4eaa9078d46defe1b60140423c96",
+      "lock_candidate": true
+    },
+    {
+      "path": "figures/fig1-wage-by-source-year.png",
+      "sha256": "6f6a82e28c8414a3a796100b0a68e0ceaf19120d96c40a9f6fc73a9a8fe700a4",
+      "lock_candidate": true
+    },
+    {
+      "path": "figures/fig2-source-gaps.pdf",
+      "sha256": "d6d37f424628ea683f677e4f70a8b10d198c1c510a32ab2c117ae4876cb06d3f",
+      "lock_candidate": true
+    },
+    {
+      "path": "figures/fig2-source-gaps.png",
+      "sha256": "6d14f522385af923ef9806e99748f770dce319b0574682a6761cb2ce7e65c080",
+      "lock_candidate": true
+    },
+    {
+      "path": "figures/fig3-gap-by-year.pdf",
+      "sha256": "1edc983b1c23547389044206649f26c26ed0c226648dcfd80deed15ec6f827fd",
+      "lock_candidate": true
+    },
+    {
+      "path": "figures/fig3-gap-by-year.png",
+      "sha256": "5df1a85b661053a9933c300570d761c442d8e621df831b78b0f79c700177b597",
+      "lock_candidate": true
+    },
+    {
+      "path": "figures/fig4-gap-by-occupation-group.pdf",
+      "sha256": "51297ef0fdfd78388b04cf87b1e5e58f609e6fe6473b37675f38c8a6bd662591",
+      "lock_candidate": true
+    },
+    {
+      "path": "figures/fig4-gap-by-occupation-group.png",
+      "sha256": "b512e489dc4785cf0f05dda9adea61466230eee15e0f2bcfdabf8f1c96c53478",
+      "lock_candidate": true
+    },
+    {
+      "path": "figures/figure-registry.csv",
+      "sha256": "893baca3b02f5be2f3295945d5db6d82cd13d7bd842ba62a4a5b33b89fe652c7",
+      "lock_candidate": true
+    },
+    {
+      "path": "review/post-execution-review.json",
+      "sha256": "68000bf1f53dfe3d8e740704fa56d45c05237c40e172e4b7375446dbce6b466d",
+      "lock_candidate": true
+    },
+    {
+      "path": "tables/cell-coverage.csv",
+      "sha256": "6b72d88a0b72cfb077a3aa83309ab37bbf7243fa6f05508b3ced370e286a067d",
+      "lock_candidate": true
+    },
+    {
+      "path": "tables/model-fit-stats.csv",
+      "sha256": "444c0c4fef41c557b90369162ff8bd7b25d555eb016c73e90ea6552788fe90ad",
+      "lock_candidate": true
+    },
+    {
+      "path": "tables/results-registry.csv",
+      "sha256": "6222b126c90cc6b2d650abe450b23d405855f76fbfadccb28edb69e6d81b62ac",
+      "lock_candidate": true
+    },
+    {
+      "path": "tables/table1-descriptives.csv",
+      "sha256": "a1a464753ff6a4a742394e013d8e37d1e4571a8f5a448c9ee4cc9a68f3359405",
+      "lock_candidate": true
+    },
+    {
+      "path": "tables/table1-descriptives.html",
+      "sha256": "d02db54cf8752efdc97949acf8da1ea73b12d93b9038583e061dc1de710f0262",
+      "lock_candidate": true
+    },
+    {
+      "path": "tables/table1b-wage-by-year.csv",
+      "sha256": "14288134130b379a965093041536fe8916e4a7ccbb1748cfc6ee7d922b55f2f8",
+      "lock_candidate": true
+    },
+    {
+      "path": "tables/table2-main-regression.html",
+      "sha256": "522c97859df70e25a348fe8315cc9296f6d0a62030817ce25959a1db332ab156",
+      "lock_candidate": true
+    },
+    {
+      "path": "tables/table3-heterogeneity-regression.html",
+      "sha256": "8a3fd19ffcac7d43f6ac609cfd0448d5837757df32e28dd6f381ccdf4975a50b",
+      "lock_candidate": true
+    },
+    {
+      "path": "tables/table4-decomposition.csv",
+      "sha256": "05aad8ab437547cfc123a2b653b20671dea0e799043b55ff442449c744567376",
+      "lock_candidate": true
+    },
+    {
+      "path": "tables/tableA1-robustness-regression.html",
+      "sha256": "c8f01a838d7bbc1a1fd70d84f432b99dbdc38be51efe11f850d0e5dbd5a06e78",
+      "lock_candidate": true
+    },
+    {
+      "path": "tables/tableA1-robustness.csv",
+      "sha256": "492a413be6da59d26b54f3bb7b8b80fce131731cab6049db1c093dfbd0b23330",
+      "lock_candidate": true
+    }
+  ],
+  "non_lock_exclusions": [
+    {
+      "path": "analysis/joint-tests.json",
+      "reason": "intermediate diagnostic or model object; hash-bound in the Phase 8 artifact manifest but not a reader-facing lock candidate"
+    },
+    {
+      "path": "analysis/outputs/balanced-set.csv",
+      "reason": "intermediate diagnostic or model object; hash-bound in the Phase 8 artifact manifest but not a reader-facing lock candidate"
+    },
+    {
+      "path": "analysis/outputs/fit-stats-main.csv",
+      "reason": "intermediate diagnostic or model object; hash-bound in the Phase 8 artifact manifest but not a reader-facing lock candidate"
+    },
+    {
+      "path": "analysis/outputs/fit-stats-robustness.csv",
+      "reason": "intermediate diagnostic or model object; hash-bound in the Phase 8 artifact manifest but not a reader-facing lock candidate"
+    },
+    {
+      "path": "analysis/outputs/identifying-cells-by-source.csv",
+      "reason": "intermediate diagnostic or model object; hash-bound in the Phase 8 artifact manifest but not a reader-facing lock candidate"
+    },
+    {
+      "path": "analysis/outputs/identifying-cells.csv",
+      "reason": "intermediate diagnostic or model object; hash-bound in the Phase 8 artifact manifest but not a reader-facing lock candidate"
+    },
+    {
+      "path": "analysis/outputs/main-models.rds",
+      "reason": "intermediate diagnostic or model object; hash-bound in the Phase 8 artifact manifest but not a reader-facing lock candidate"
+    },
+    {
+      "path": "analysis/outputs/robustness-models.rds",
+      "reason": "intermediate diagnostic or model object; hash-bound in the Phase 8 artifact manifest but not a reader-facing lock candidate"
+    },
+    {
+      "path": "analysis/outputs/se-sensitivity.csv",
+      "reason": "intermediate diagnostic or model object; hash-bound in the Phase 8 artifact manifest but not a reader-facing lock candidate"
+    },
+    {
+      "path": "data/processed/oews-generation-cells.csv",
+      "reason": "intermediate diagnostic or model object; hash-bound in the Phase 8 artifact manifest but not a reader-facing lock candidate"
+    },
+    {
+      "path": "review/post-execution-fix-log.json",
+      "reason": "intermediate diagnostic or model object; hash-bound in the Phase 8 artifact manifest but not a reader-facing lock candidate"
+    },
+    {
+      "path": "review/post-execution-review.md",
+      "reason": "intermediate diagnostic or model object; hash-bound in the Phase 8 artifact manifest but not a reader-facing lock candidate"
+    }
+  ],
+  "lock_candidate_reconciliation": {
+    "status": "PASS",
+    "required_paths": [
+      "analysis/execution-report.json",
+      "analysis/outputs/main-model-estimates.csv",
+      "figures/fig1-wage-by-source-year.pdf",
+      "figures/fig1-wage-by-source-year.png",
+      "figures/fig2-source-gaps.pdf",
+      "figures/fig2-source-gaps.png",
+      "figures/fig3-gap-by-year.pdf",
+      "figures/fig3-gap-by-year.png",
+      "figures/fig4-gap-by-occupation-group.pdf",
+      "figures/fig4-gap-by-occupation-group.png",
+      "figures/figure-registry.csv",
+      "review/post-execution-review.json",
+      "tables/cell-coverage.csv",
+      "tables/model-fit-stats.csv",
+      "tables/results-registry.csv",
+      "tables/table1-descriptives.csv",
+      "tables/table1-descriptives.html",
+      "tables/table1b-wage-by-year.csv",
+      "tables/table2-main-regression.html",
+      "tables/table3-heterogeneity-regression.html",
+      "tables/table4-decomposition.csv",
+      "tables/tableA1-robustness-regression.html",
+      "tables/tableA1-robustness.csv"
+    ],
+    "inventory_paths": [
+      "analysis/execution-report.json",
+      "analysis/outputs/main-model-estimates.csv",
+      "figures/fig1-wage-by-source-year.pdf",
+      "figures/fig1-wage-by-source-year.png",
+      "figures/fig2-source-gaps.pdf",
+      "figures/fig2-source-gaps.png",
+      "figures/fig3-gap-by-year.pdf",
+      "figures/fig3-gap-by-year.png",
+      "figures/fig4-gap-by-occupation-group.pdf",
+      "figures/fig4-gap-by-occupation-group.png",
+      "figures/figure-registry.csv",
+      "review/post-execution-review.json",
+      "tables/cell-coverage.csv",
+      "tables/model-fit-stats.csv",
+      "tables/results-registry.csv",
+      "tables/table1-descriptives.csv",
+      "tables/table1-descriptives.html",
+      "tables/table1b-wage-by-year.csv",
+      "tables/table2-main-regression.html",
+      "tables/table3-heterogeneity-regression.html",
+      "tables/table4-decomposition.csv",
+      "tables/tableA1-robustness-regression.html",
+      "tables/tableA1-robustness.csv"
+    ],
+    "extra_paths": [],
+    "missing_paths": [],
+    "phase8_manifest_paths_checked": [
+      "analysis/joint-tests.json",
+      "analysis/outputs/balanced-set.csv",
+      "analysis/outputs/fit-stats-main.csv",
+      "analysis/outputs/fit-stats-robustness.csv",
+      "analysis/outputs/identifying-cells-by-source.csv",
+      "analysis/outputs/identifying-cells.csv",
+      "analysis/outputs/main-model-estimates.csv",
+      "analysis/outputs/main-models.rds",
+      "analysis/outputs/robustness-models.rds",
+      "analysis/outputs/se-sensitivity.csv",
+      "data/processed/oews-generation-cells.csv",
+      "figures/fig1-wage-by-source-year.pdf",
+      "figures/fig1-wage-by-source-year.png",
+      "figures/fig2-source-gaps.pdf",
+      "figures/fig2-source-gaps.png",
+      "figures/fig3-gap-by-year.pdf",
+      "figures/fig3-gap-by-year.png",
+      "figures/fig4-gap-by-occupation-group.pdf",
+      "figures/fig4-gap-by-occupation-group.png",
+      "figures/figure-registry.csv",
+      "tables/cell-coverage.csv",
+      "tables/model-fit-stats.csv",
+      "tables/results-registry.csv",
+      "tables/table1-descriptives.csv",
+      "tables/table1-descriptives.html",
+      "tables/table1b-wage-by-year.csv",
+      "tables/table2-main-regression.html",
+      "tables/table3-heterogeneity-regression.html",
+      "tables/table4-decomposition.csv",
+      "tables/tableA1-robustness-regression.html",
+      "tables/tableA1-robustness.csv"
+    ]
+  },
+  "critical_count": 0,
+  "unresolved_blocking_count": 0,
+  "route_back_phase": null
+}

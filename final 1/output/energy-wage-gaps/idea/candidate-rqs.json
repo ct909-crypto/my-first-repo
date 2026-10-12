@@ -1,0 +1,101 @@
+{
+  "engine": "scholar-idea",
+  "candidates": [
+    {
+      "rq_id": "RQ1",
+      "question": "Within U.S. electric power generation (NAICS 2211), how large are the hourly wage gaps between renewable generation industries (solar, wind, hydroelectric, geothermal, biomass) and non-renewable generation industries (fossil fuel and nuclear), do these gaps persist within detailed occupations, how do they differ across individual energy sources and occupational groups, and how did they change between 2021 and 2025?",
+      "x": "renewable generation industries",
+      "y": "hourly wage",
+      "mechanism": "Legacy fossil and nuclear generation is a mature, capital-intensive, heavily regulated and comparatively unionized segment with large incumbent firms and rent-sharing, whereas the newer solar and wind segments are younger, more contractor- and developer-based, less unionized and have flatter internal labor markets; establishment wage-setting rather than occupational skill should therefore produce within-occupation wage gaps that may narrow as renewable segments mature and as IRA prevailing-wage provisions take effect.",
+      "confounders": [
+        "occupational composition (detailed SOC mix)",
+        "year-specific wage levels and inflation",
+        "skill and education requirements embedded in occupations",
+        "geographic location of plants (not observable nationally)",
+        "firm size and union coverage (not observable)",
+        "sampling error of small cells"
+      ],
+      "scope": {
+        "population": "occupation-by-industry employment cells in U.S. electric power generation (NAICS 2211, eight six-digit generation industries)",
+        "place": "United States (national estimates)",
+        "time": "OEWS May 2021 through May 2025 estimates",
+        "unit": "detailed SOC occupation x six-digit generation industry x year cell"
+      },
+      "claim_strength": "descriptive",
+      "recommended_dataset": "BLS Occupational Employment and Wage Statistics (OEWS) national industry-specific estimates, May 2021-May 2025, NAICS 221111-221118",
+      "novelty_risk": "low-medium: prior U.S. work compares green vs. non-green jobs economy-wide or via postings and linked admin data (Curtis and Marinescu; Colmer et al.), not within-occupation gaps across generation sources inside one industry over 2021-2025",
+      "data_feasible": true,
+      "fatal_flaw": false
+    },
+    {
+      "rq_id": "RQ2",
+      "question": "How much of the raw wage gap between renewable and non-renewable power generation industries is explained by differences in occupational composition versus within-occupation pay differences, and has that split changed from 2021 to 2025?",
+      "x": "renewable industry status",
+      "y": "employment-weighted mean hourly wage",
+      "mechanism": "Renewable plants employ more sales, construction and technician occupations and fewer high-paid plant operators and engineers; composition versus wage-setting.",
+      "confounders": [
+        "occupational mix",
+        "year"
+      ],
+      "scope": {
+        "population": "occupation-by-industry employment cells in U.S. electric power generation (NAICS 2211, eight six-digit generation industries)",
+        "place": "United States (national estimates)",
+        "time": "OEWS May 2021 through May 2025 estimates",
+        "unit": "detailed SOC occupation x six-digit generation industry x year cell"
+      },
+      "claim_strength": "descriptive",
+      "recommended_dataset": "BLS OEWS national industry-specific estimates 2021-2025",
+      "novelty_risk": "medium: decomposition alone is a narrower contribution",
+      "data_feasible": true,
+      "fatal_flaw": false
+    },
+    {
+      "rq_id": "RQ3",
+      "question": "Is within-occupation wage dispersion (90/10 percentile ratio) larger in renewable than in fossil and nuclear generation, and did dispersion converge over 2021-2025?",
+      "x": "renewable industry status",
+      "y": "log 90/10 hourly wage ratio within occupation-industry cells",
+      "mechanism": "Less standardized pay structures and lower union coverage in new segments produce wider dispersion.",
+      "confounders": [
+        "occupational mix",
+        "cell size"
+      ],
+      "scope": {
+        "population": "occupation-by-industry employment cells in U.S. electric power generation (NAICS 2211, eight six-digit generation industries)",
+        "place": "United States (national estimates)",
+        "time": "OEWS May 2021 through May 2025 estimates",
+        "unit": "detailed SOC occupation x six-digit generation industry x year cell"
+      },
+      "claim_strength": "descriptive",
+      "recommended_dataset": "BLS OEWS national industry-specific estimates 2021-2025",
+      "novelty_risk": "medium",
+      "data_feasible": true,
+      "fatal_flaw": false
+    },
+    {
+      "rq_id": "RQ4",
+      "question": "Did faster employment growth in solar and wind generation between 2021 and 2025 raise relative wages in those industries (a labor-demand effect)?",
+      "x": "industry employment growth",
+      "y": "relative wage change",
+      "mechanism": "Demand-driven wage pressure in expanding segments.",
+      "confounders": [
+        "simultaneity of employment and wages",
+        "overlapping OEWS three-year panels",
+        "few industry units"
+      ],
+      "scope": {
+        "population": "occupation-by-industry employment cells in U.S. electric power generation (NAICS 2211, eight six-digit generation industries)",
+        "place": "United States (national estimates)",
+        "time": "OEWS May 2021 through May 2025 estimates",
+        "unit": "detailed SOC occupation x six-digit generation industry x year cell"
+      },
+      "claim_strength": "causal",
+      "recommended_dataset": "BLS OEWS national industry-specific estimates 2021-2025",
+      "novelty_risk": "medium",
+      "data_feasible": false,
+      "fatal_flaw": true,
+      "fatal_flaw_reason": "Eight industries and overlapping three-year OEWS sample panels cannot identify a causal demand effect; causal claim exceeds design."
+    }
+  ],
+  "verdict": "PASS",
+  "input_mode": "idea"
+}

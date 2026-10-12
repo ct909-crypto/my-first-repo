@@ -1,0 +1,132 @@
+{
+  "design_type": "descriptive repeated cross-sectional panel of occupation-by-industry wage cells",
+  "claim_strength": "descriptive",
+  "estimand": "employment-weighted difference in log real mean hourly wage between renewable and non-renewable generation industries for workers in the same detailed occupation and survey year (and its variation by generation source, occupational group, and year)",
+  "identification_strategy": "no causal identification; descriptive adjustment by occupation x year fixed effects isolates within-occupation comparisons across generation industries; composition decomposition separates occupational mix from within-occupation pay differences",
+  "outcome_mechanism_alignment": "prevalence-stock",
+  "journal_method_bar": "Energy Policy expects transparent, reproducible empirical analysis with clearly stated data limitations, robustness checks, and policy-relevant interpretation; descriptive designs are acceptable when claims are bounded.",
+  "hypothesis_model_coverage": [
+    {
+      "hypothesis_id": "H1",
+      "model_ids": [
+        "M2",
+        "M3",
+        "M8",
+        "M9"
+      ],
+      "coverage": "within-occupation gap sign and size"
+    },
+    {
+      "hypothesis_id": "H2",
+      "model_ids": [
+        "M1",
+        "M3",
+        "M7"
+      ],
+      "coverage": "raw vs within-occupation gap and decomposition"
+    },
+    {
+      "hypothesis_id": "H3",
+      "model_ids": [
+        "M4"
+      ],
+      "coverage": "source-specific gaps vs fossil"
+    },
+    {
+      "hypothesis_id": "H4",
+      "model_ids": [
+        "M5",
+        "M8",
+        "M9"
+      ],
+      "coverage": "occupational-group heterogeneity"
+    },
+    {
+      "hypothesis_id": "H5",
+      "model_ids": [
+        "M6"
+      ],
+      "coverage": "year-specific gaps and linear trend"
+    }
+  ],
+  "power_or_feasibility_assessment": {
+    "status": "feasible_existing_data",
+    "rationale": "Five annual OEWS files yield about 2,000 detailed occupation-industry cells with published wages across 7 analytic generation industries; roughly 150-200 occupations appear in multiple industries, giving within-occupation contrasts. Geothermal (4-8 cells per year) and biomass (12-14) are thin, so their source-specific estimates are feasibility-limited and will be reported with that caveat. Year-to-year trend precision is limited because OEWS pools three years of survey panels."
+  },
+  "causal_gate": {
+    "required": true,
+    "invoked": true,
+    "skill": "scholar-causal",
+    "reason": "Design uses occupation x year fixed effects; scholar-causal audited it and confirmed FE serve as descriptive adjustment only (open backdoor paths via worker sorting and region), so claim strength stays descriptive.",
+    "audit_artifacts": [
+      "design/causal-audit.md",
+      "design/diagnostic_plan.json"
+    ]
+  },
+  "method_specialist_routing": {
+    "method_orientation": "observational quantitative panel of repeated occupation-by-industry cross-sections",
+    "primary_execution_skill": "scholar-analyze",
+    "premortem_skill": "scholar-analyze",
+    "supporting_skills": [],
+    "rationale": "Standard quantitative regression and decomposition on published aggregate statistics; no computational, qualitative, or linguistic component."
+  },
+  "assumptions": [
+    "OEWS cell means are unbiased estimates of the employment-weighted mean wage for each occupation-industry-year (subject to reported relative standard errors)",
+    "Detailed SOC occupations (2018 SOC) and six-digit NAICS generation industries are defined consistently across May 2021-May 2025 releases",
+    "Within a detailed occupation, job content is comparable enough across generation industries that wage differences reflect pay-setting and unobserved worker/plant differences rather than different jobs under one title",
+    "CPI-U (May values) adequately converts nominal wages to constant 2025 dollars"
+  ],
+  "measures": {
+    "x": {
+      "name": "renewable generation industry",
+      "operationalization": "1 for NAICS 221111 hydroelectric, 221114 solar, 221115 wind, 221116 geothermal, 221117 biomass; 0 for 221112 fossil fuel and 221113 nuclear; 221118 other excluded from main contrast"
+    },
+    "y": {
+      "name": "log real mean hourly wage",
+      "operationalization": "natural log of OEWS H_MEAN converted to May 2025 dollars with CPI-U (CUUR0000SA0, May of each year)"
+    },
+    "moderators": {
+      "generation_source": "seven six-digit categories",
+      "occupational_group": "five groups from SOC major codes",
+      "year": "2021-2025"
+    },
+    "weights": "cell employment TOT_EMP"
+  },
+  "threats": [
+    "Worker sorting on unmeasured skill within occupations across industries",
+    "Regional composition and cost-of-living differences across industries (unobserved in national cells)",
+    "Small, noisy cells in geothermal and biomass, and suppressed cells",
+    "Three-year pooled OEWS samples smooth and overlap year-to-year estimates",
+    "Top-coding of very high wages",
+    "Job-title heterogeneity within detailed occupations (e.g., sales roles in solar)"
+  ],
+  "robustness_plan": [
+    "Unweighted estimates with equal cell weights",
+    "Inverse sampling-variance weights based on reported mean-wage relative standard errors",
+    "Median hourly wage as outcome",
+    "Restrict to occupations observed in both renewable and non-renewable industries in every year (balanced set)",
+    "Alternative categorization: nuclear excluded (renewable vs fossil only)",
+    "Alternative categorization: hydroelectric excluded from renewable group",
+    "Include 221118 other generation as renewable",
+    "Drop cells with employment below 50",
+    "Leave-one-source-out for the renewable group"
+  ],
+  "measurement_strategy": {
+    "weights_policy": "apply_published_weights",
+    "weights_justification": "OEWS cell estimates are already design-weighted by BLS; regressions weight cells by estimated employment so estimates represent workers, with unweighted and inverse-variance alternatives as robustness."
+  },
+  "analytic_strategy": {
+    "interaction_inference_policy": "joint_wald_test"
+  },
+  "adjustment_set": [
+    "detailed occupation x year fixed effects"
+  ],
+  "mediators_excluded": [
+    "establishment rents",
+    "bargaining coverage",
+    "internal job ladders"
+  ],
+  "colliders_excluded": [
+    "cell publication/suppression status (assessed via robustness)"
+  ]
+}

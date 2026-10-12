@@ -1,0 +1,79 @@
+{
+  "overall_verdict": "PASS",
+  "unresolved_critical_count": 0,
+  "reviewers": [
+    {
+      "role": "identification",
+      "verdict": "PASS",
+      "critical_issues_count": 0,
+      "reviewed": [
+        "claim_strength",
+        "causal_gate"
+      ],
+      "recommendations": [
+        "keep claim descriptive; FE are adjustment not identification",
+        "state that within-occupation gaps can reflect sorting",
+        "causal audit (design/causal-audit.md) completed; manuscript identification paragraph template adopted"
+      ]
+    },
+    {
+      "role": "measurement",
+      "verdict": "PASS",
+      "critical_issues_count": 0,
+      "reviewed": [
+        "outcome_mechanism_alignment",
+        "measures"
+      ],
+      "recommendations": [
+        "use May CPI-U deflator",
+        "handle top-coded and suppressed cells explicitly",
+        "add median outcome robustness"
+      ]
+    },
+    {
+      "role": "theory_mechanism",
+      "verdict": "PASS",
+      "critical_issues_count": 0,
+      "reviewed": [
+        "hypothesis_model_coverage"
+      ],
+      "recommendations": [
+        "H3 needs source-specific model (M4)",
+        "H4 requires occupational-group grouping fixed ex ante"
+      ]
+    },
+    {
+      "role": "feasibility_data",
+      "verdict": "PASS",
+      "critical_issues_count": 0,
+      "reviewed": [
+        "power_or_feasibility_assessment"
+      ],
+      "recommendations": [
+        "flag thin geothermal/biomass cells",
+        "exclude 221118 from main contrast"
+      ]
+    },
+    {
+      "role": "journal_skeptic",
+      "verdict": "PASS",
+      "critical_issues_count": 0,
+      "reviewed": [
+        "journal_method_bar"
+      ],
+      "recommendations": [
+        "address OEWS caution on time-series comparisons",
+        "show robustness to nuclear categorization"
+      ]
+    }
+  ],
+  "checks": {
+    "claim_strength": "descriptive, consistent with Phase 1",
+    "outcome_mechanism_alignment": "prevalence-stock appropriate for wage levels",
+    "journal_method_fit": "adequate for Energy Policy",
+    "hypothesis_model_coverage": "all five hypotheses mapped",
+    "power_feasibility": "feasible; thin sources flagged",
+    "causal_gate": "not required; descriptive"
+  },
+  "final_round_note": "Re-evaluated after round 2: scholar-causal audit added (causal gate required and invoked); identification reviewer confirmed FE are descriptive adjustment and backdoor paths via sorting and region remain open, consistent with descriptive claim strength. Round 3 naming alignment reviewed; no substantive change."
+}

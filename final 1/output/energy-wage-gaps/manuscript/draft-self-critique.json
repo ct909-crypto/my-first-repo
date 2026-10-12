@@ -1,0 +1,48 @@
+{
+  "verdict": "PASS",
+  "ready_for_verification": true,
+  "strongest_rejection_reason": "Reviewers may argue that national OEWS cells cannot separate establishment pay-setting from worker sorting or regional cost of living, so the 'same job' gap could partly reflect who works where.",
+  "response_to_rejection_reason": "The manuscript states the estimand as a descriptive same-occupation pay difference. It relies on hydroelectric parity and the occupational gradient as patterns that location alone would not easily produce, and it names worker-level and state-level data as the needed next test.",
+  "unsupported_leap_scan": {
+    "status": "REVISED",
+    "summary": "Mechanism language in the Discussion was softened to most consistent with, and the text states that rents, unions and preferences are not measured."
+  },
+  "missing_rival_scan": {
+    "status": "PASS",
+    "summary": "Compensating differentials, regional cost of living, worker sorting and a nuclear premium are each discussed, the last with a fossil-only comparison."
+  },
+  "claim_strength_scan": {
+    "status": "PASS",
+    "summary": "No causal verbs about renewable employment; estimates described as same-occupation differences in average pay.",
+    "causal_terms_found": 0
+  },
+  "workflow_language_scan": {
+    "status": "PASS",
+    "summary": "Internal workflow vocabulary appears only inside HTML trace comments, never in visible prose.",
+    "internal_terms_in_visible_prose": 0
+  },
+  "revision_actions_text": [
+    "Corrected sample-flow counts (other generation 144 cells; 76 suppressed or unweighted cells; 257 censored P90 cells) against the locked coverage table",
+    "Corrected leave-one-out range and cluster count",
+    "Moved robustness table into Results as Table 5 so every display is called out in Results",
+    "Kept Theory and Hypotheses wording identical to the theory-stage statements"
+  ],
+  "revision_actions": [
+    {
+      "action": "Corrected sample-flow counts (other generation 144 cells; 76 suppressed or unweighted cells; 257 censored P90 cells) against the locked coverage table",
+      "status": "completed"
+    },
+    {
+      "action": "Corrected leave-one-out range and cluster count",
+      "status": "completed"
+    },
+    {
+      "action": "Moved robustness table into Results as Table 5 so every display is called out in Results",
+      "status": "completed"
+    },
+    {
+      "action": "Kept Theory and Hypotheses wording identical to the theory-stage statements",
+      "status": "completed"
+    }
+  ]
+}

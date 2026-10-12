@@ -1,0 +1,55 @@
+{
+  "strategy": "FE",
+  "usage": "descriptive adjustment (no causal identification)",
+  "required_diagnostics": [
+    {
+      "id": "suppression_topcode_share",
+      "purpose": "selection into published cells (collider check)",
+      "tool": "tabulate suppressed/top-coded cells by industry-year",
+      "pass_criterion": "suppressed share reported; robustness unchanged when restricting to balanced set",
+      "execute_at": "analysis_execution",
+      "blocks_publication_if_failed": false
+    },
+    {
+      "id": "balanced_occupation_set",
+      "purpose": "composition change over time",
+      "tool": "fixest re-estimation on balanced occupations",
+      "pass_criterion": "sign of headline gap unchanged",
+      "execute_at": "analysis_execution",
+      "blocks_publication_if_failed": false
+    },
+    {
+      "id": "weighting_sensitivity",
+      "purpose": "dependence on large cells / sampling error",
+      "tool": "unweighted and inverse-variance weighted fixest",
+      "pass_criterion": "sign unchanged",
+      "execute_at": "analysis_execution",
+      "blocks_publication_if_failed": false
+    },
+    {
+      "id": "categorization_sensitivity",
+      "purpose": "nuclear/hydro/other categorization",
+      "tool": "alternative renewable indicators",
+      "pass_criterion": "report all; frame headline accordingly",
+      "execute_at": "analysis_execution",
+      "blocks_publication_if_failed": false
+    },
+    {
+      "id": "interaction_joint_wald",
+      "purpose": "heterogeneity inference for M5 and M6",
+      "tool": "fixest::wald",
+      "pass_criterion": "report p-value",
+      "execute_at": "analysis_execution",
+      "blocks_publication_if_failed": false
+    }
+  ],
+  "pre_design_diagnostics": [
+    {
+      "id": "cell_coverage_table",
+      "tool": "counts of cells by industry-year",
+      "purpose": "feasibility",
+      "execute_at": "design_finalization",
+      "result": "about 2,075 detailed cells with wages; geothermal 4-8 and biomass 12-14 per year"
+    }
+  ]
+}

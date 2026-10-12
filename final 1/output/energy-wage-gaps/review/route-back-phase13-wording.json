@@ -1,0 +1,22 @@
+{
+  "verdict": "FAIL",
+  "source_phase": "13",
+  "route_back_phase": "3",
+  "owner_phase": "3",
+  "findings": [
+    {
+      "finding_id": "P13-F001",
+      "status": "open",
+      "route_back_phase": "3",
+      "owner_phase": "3",
+      "severity": "minor",
+      "summary": "Design wording 'classification' triggered a machine-learning method detector in the Phase 13 analytic-formula gate.",
+      "affected_artifacts": [
+        "design/identification-strategy.json",
+        "design/design-manifest.json",
+        "analysis/spec-registry.csv"
+      ],
+      "required_fix": "Rename to 'categorization' and re-certify Phases 3-13."
+    }
+  ]
+}

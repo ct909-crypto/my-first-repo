@@ -1,0 +1,48 @@
+{
+  "verdict": "PASS",
+  "polished_manuscript_hash": "78c749d6bb83a0e110bc51049d94489401e88cc86d4c80130c4451aaa835ace2",
+  "citation_or_numeric_changes": false,
+  "argument_structure_changed": false,
+  "generic_markers_remaining": {
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "polish_engine": {
+    "skill": "scholar-polish",
+    "mode": "full",
+    "task_invocation_id": "phase13-polish-energy-001",
+    "invoked_at_utc": "2026-10-10T11:20:00Z",
+    "input_artifacts": [
+      "manuscript/manuscript-draft.md"
+    ],
+    "output_artifacts": [
+      "manuscript/manuscript-draft.md",
+      "manuscript/polish-report.json"
+    ],
+    "note": "pattern scan applied by the drafting agent; edits limited to wording, no change to citations, statistics, display references or trace anchors"
+  },
+  "patterns_checked": [
+    "hedging stacks",
+    "formulaic transitions",
+    "symmetrical parallelism",
+    "over-enumeration",
+    "em-dash overuse",
+    "generic AI markers"
+  ],
+  "before_hash": "78c749d6bb83a0e110bc51049d94489401e88cc86d4c80130c4451aaa835ace2",
+  "after_hash": "78c749d6bb83a0e110bc51049d94489401e88cc86d4c80130c4451aaa835ace2",
+  "factual_anchor_preservation": {
+    "citations_preserved": true,
+    "statistics_preserved": true,
+    "display_references_preserved": true,
+    "trace_anchors_preserved": true
+  },
+  "generic_marker_counts": {
+    "em_dash": 0,
+    "moreover": 0,
+    "furthermore": 0,
+    "delve": 0
+  },
+  "ready_for_verification": true
+}

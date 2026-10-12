@@ -1,0 +1,74 @@
+{
+  "selected_rq_id": "RQ1",
+  "ready_for_selection": true,
+  "verdict": "PASS",
+  "fatal_flaw_selected": false,
+  "reviewers": [
+    {
+      "role": "theorist",
+      "selected_rq_id": "RQ1",
+      "assessment": "RQ1 directly adjudicates two rival accounts in the literature: a green wage premium (Curtis and Marinescu; Godoy and Isaksen; IMF) versus a legacy/brown premium rooted in rent-sharing and unions (Godoy and Isaksen brown premium; Colmer et al. conditional parity). Within-occupation comparison inside one industry isolates establishment wage-setting from occupational skill.",
+      "fatal_flaw_ids": [
+        "RQ4"
+      ],
+      "scores": {
+        "RQ1": 9,
+        "RQ2": 7,
+        "RQ3": 6,
+        "RQ4": 3
+      }
+    },
+    {
+      "role": "methodologist",
+      "selected_rq_id": "RQ1",
+      "assessment": "Cell-level OEWS data support employment-weighted regressions with occupation-by-year fixed effects and clustered errors by occupation. Overlapping three-year OEWS samples mean year-to-year changes are smoothed; trend claims must be cautious and descriptive. RQ2 and RQ3 can be absorbed as components of RQ1. RQ4 has a fatal identification flaw.",
+      "fatal_flaw_ids": [
+        "RQ4"
+      ],
+      "scores": {
+        "RQ1": 8,
+        "RQ2": 8,
+        "RQ3": 7,
+        "RQ4": 2
+      }
+    },
+    {
+      "role": "domain_expert",
+      "selected_rq_id": "RQ1",
+      "assessment": "Energy-workforce reports (USEER 2024; Brookings 2019) emphasize the job-quality of clean energy but rarely compare like-for-like occupations across generation sources. 2021-2025 brackets the IRA prevailing wage and apprenticeship provisions, making the trend substantively timely.",
+      "fatal_flaw_ids": [],
+      "scores": {
+        "RQ1": 9,
+        "RQ2": 7,
+        "RQ3": 6,
+        "RQ4": 5
+      }
+    },
+    {
+      "role": "journal_editor",
+      "selected_rq_id": "RQ1",
+      "assessment": "Energy Policy readers care about just-transition wage implications; a short, transparent descriptive paper with clear policy relevance fits the journal's full-length article format (<= 8,000 words).",
+      "fatal_flaw_ids": [],
+      "scores": {
+        "RQ1": 9,
+        "RQ2": 6,
+        "RQ3": 6,
+        "RQ4": 5
+      }
+    },
+    {
+      "role": "devils_advocate",
+      "selected_rq_id": "RQ1",
+      "assessment": "Risks: (a) no worker-level controls, so gaps may reflect unobserved worker quality or regional cost of living; (b) small cells for geothermal and biomass; (c) top-coding of high wages; (d) OEWS discourages time-series comparison. None is fatal if the paper frames estimates as descriptive establishment-side gaps, reports cell counts, uses sampling-error weights in robustness, and treats trends as smoothed.",
+      "fatal_flaw_ids": [
+        "RQ4"
+      ],
+      "scores": {
+        "RQ1": 7,
+        "RQ2": 6,
+        "RQ3": 5,
+        "RQ4": 2
+      }
+    }
+  ]
+}

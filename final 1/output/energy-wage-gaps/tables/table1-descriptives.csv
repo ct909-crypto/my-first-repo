@@ -1,0 +1,20 @@
+variable,statistic,Fossil fuel,Nuclear,Hydroelectric,Solar,Wind,Geothermal,Biomass,All non-renewable,All renewable
+Log real mean hourly wage,weighted mean,3.964,4.074,3.95,3.816,3.802,3.734,3.707,4.001,3.835
+Log real mean hourly wage,weighted SD,0.226,0.271,0.219,0.438,0.37,0.203,0.313,0.247,0.371
+Real mean hourly wage (2025 $),weighted mean,54.026,60.842,53.168,50.158,48.282,42.782,42.977,56.317,49.697
+Log real median hourly wage,weighted mean,3.965,4.06,3.943,3.719,3.745,3.715,3.665,3.997,3.776
+Log real 10th percentile wage,weighted mean,3.614,3.754,3.491,3.303,3.463,3.462,3.344,3.661,3.401
+Log real 90th percentile wage,weighted mean (uncensored cells),4.185,4.249,4.247,4.005,3.974,3.942,3.952,4.206,4.053
+Log real 90th percentile wage,share of cells censored,0.092,0.15,0.087,0.248,0.209,0.077,0.082,0.116,0.17
+Renewable generation,share of employment,0,0,1,1,1,1,1,0,1
+Electricity generation technology,share of all generation employment,0.53,0.268,0.047,0.077,0.06,0.005,0.012,0.799,0.201
+"Broad occupation category: Construction, installation, maintenance, and repair",share of employment,0.317,0.141,0.334,0.36,0.536,0.198,0.189,0.258,0.393
+"Broad occupation category: Management, business, and financial",share of employment,0.161,0.179,0.145,0.355,0.276,0.077,0.171,0.167,0.265
+"Broad occupation category: Office, sales, and service",share of employment,0.094,0.16,0.062,0.142,0.048,0,0.013,0.117,0.084
+Broad occupation category: Production and transportation,share of employment,0.264,0.19,0.338,0.039,0.056,0.725,0.623,0.239,0.165
+Broad occupation category: Professional and technical,share of employment,0.164,0.329,0.121,0.103,0.083,0,0.005,0.219,0.093
+Detailed occupation,distinct occupations,166,123,62,74,61,10,21,185,105
+Occupation-by-year,distinct occupation-years,674,480,208,226,201,26,61,752,363
+Survey year,cells (occupation-industry-years),674,480,208,226,201,26,61,1154,722
+Employment,mean annual employment (analytic sample),72166,36536,6402,10532,8184,626,1664,108702,27408
+Relative standard error of mean wage,weighted mean (%),1.576,0.778,3.576,6.084,3.035,2.959,4.003,1.308,4.39
