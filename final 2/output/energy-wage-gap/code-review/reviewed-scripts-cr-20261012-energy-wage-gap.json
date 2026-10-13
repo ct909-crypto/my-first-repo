@@ -1,0 +1,55 @@
+{
+  "schema": "code-review-manifest/v1",
+  "review_id": "cr-20261012-energy-wage-gap",
+  "report": "code-review/code-review-report-2026-10-12.md",
+  "mode": "full (delivered as single-reviewer fallback; all 12 agent dispatches failed with API errors)",
+  "phase_tag": "standalone",
+  "ts": "2026-10-12T19:15:32-04:00",
+  "scripts": [
+    {
+      "path": "analysis/scripts/00_functions.R",
+      "sha256": "7359ca29beef0cc51f4a8ac534d00af2b3f3b68c3933eaab176c70c474a53c8d"
+    },
+    {
+      "path": "analysis/scripts/01_build_analytic_data.R",
+      "sha256": "ee3f48f7bdb777f5adae9b2e2907fa7516d9a4db61dfa2eb1d90d864c5725d57"
+    },
+    {
+      "path": "analysis/scripts/02_descriptives.R",
+      "sha256": "7350543721c429cdd4e4414dcd86da2d55b7db8947a6e533a76ead17980d6217"
+    },
+    {
+      "path": "analysis/scripts/03_main_models.R",
+      "sha256": "2000d79844175b16a0b66cdc13fc1fd7d8c4edd5aa3d26a5a0b6fcadecc58151"
+    },
+    {
+      "path": "analysis/scripts/04_decomposition.R",
+      "sha256": "f6c55bd65bde5873edf55f9701c64c3568bde847e40dcdccf936e8a55af8ffe3"
+    },
+    {
+      "path": "analysis/scripts/05_robustness.R",
+      "sha256": "8d6fa3cdae44d3b13ae84e84ea1756cffcbeb27d624a92c7d0b57d75af848840"
+    },
+    {
+      "path": "analysis/scripts/06_figures.R",
+      "sha256": "22da382998390e684cbbf9ccf7a6e0cf31cd7275aadac4a86665aa3ed3cbb232"
+    },
+    {
+      "path": "analysis/scripts/07_registries.R",
+      "sha256": "aa25551d36d8b669f266460858dc1d2c0e1966f12ee0c7efb65519fd465d4fa0"
+    },
+    {
+      "path": "analysis/scripts/08_manuscript_tables.R",
+      "sha256": "c2005db2a960f52e403a9216b8c7815718047e24d35ec3fd79e4f3992c55e3b9"
+    },
+    {
+      "path": "analysis/scripts/viz_setting.R",
+      "sha256": "43de20cd0ce84b23e99d84930026b78cff7e5022ae925ccf7551632f81fd8daf"
+    }
+  ],
+  "out_of_scope": [],
+  "supersedes_review_id": null,
+  "fixed_finding_ids": [],
+  "remaining_blocking_count": 0,
+  "independent_agent_review_completed": false
+}

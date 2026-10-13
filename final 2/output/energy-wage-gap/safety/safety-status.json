@@ -1,0 +1,71 @@
+{
+  "counts": {
+    "anonymized": 0,
+    "cleared": 0,
+    "halted": 0,
+    "local_mode": 0,
+    "needs_review": 0,
+    "other": 0,
+    "override": 6
+  },
+  "files_scanned": 6,
+  "high_risk_unresolved": 0,
+  "imported_at": "2026-09-30T19:51:02.268825+00:00",
+  "meta": {},
+  "no_data_declared": false,
+  "policy": {
+    "halted_blocks": true,
+    "local_mode_allowed": true,
+    "needs_review_blocks": true,
+    "override_requires_scholar_init_rationale": true
+  },
+  "safety_status": "PASS",
+  "schema_version": "2.0.0",
+  "source": "scholar-init",
+  "source_path": ".claude/safety-status.json",
+  "status_by_file": {
+    "data/raw/nat5d_6d_M2021_dl.xlsx": {
+      "category": "override",
+      "content_sha256": "9269cc3956690762ab838b7c7fee87ec65c66373d55fb18ce9ec8a246485cde6",
+      "destination_identity": "data/raw/nat5d_6d_M2021_dl.xlsx",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/lab5/output/energy-wage-gap/data/raw/nat5d_6d_M2021_dl.xlsx",
+      "source_status": "OVERRIDE: public BLS OEWS aggregate industry-by-occupation wage tables, no individual-level records (user-approved 2026-09-30)"
+    },
+    "data/raw/nat5d_6d_M2022_dl.xlsx": {
+      "category": "override",
+      "content_sha256": "6ccd38f2d0bc5e25b86544e0505e1939ed9334809019b07b97a9bbd1ab3d32e1",
+      "destination_identity": "data/raw/nat5d_6d_M2022_dl.xlsx",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/lab5/output/energy-wage-gap/data/raw/nat5d_6d_M2022_dl.xlsx",
+      "source_status": "OVERRIDE: public BLS OEWS aggregate industry-by-occupation wage tables, no individual-level records (user-approved 2026-09-30)"
+    },
+    "data/raw/nat5d_6d_M2023_dl.xlsx": {
+      "category": "override",
+      "content_sha256": "3d69af43ef9df416834890346a67815a66670d0aab5be4265ca7d966babec3f3",
+      "destination_identity": "data/raw/nat5d_6d_M2023_dl.xlsx",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/lab5/output/energy-wage-gap/data/raw/nat5d_6d_M2023_dl.xlsx",
+      "source_status": "OVERRIDE: public BLS OEWS aggregate industry-by-occupation wage tables, no individual-level records (user-approved 2026-09-30)"
+    },
+    "data/raw/nat5d_6d_M2024_dl.xlsx": {
+      "category": "override",
+      "content_sha256": "f5005fa75b634d73c7288cfb4886dc669bef65ba8a6e6c388ead40c030c3d87e",
+      "destination_identity": "data/raw/nat5d_6d_M2024_dl.xlsx",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/lab5/output/energy-wage-gap/data/raw/nat5d_6d_M2024_dl.xlsx",
+      "source_status": "OVERRIDE: public BLS OEWS aggregate industry-by-occupation wage tables, no individual-level records (user-approved 2026-09-30)"
+    },
+    "data/raw/nat5d_6d_M2025_dl.xlsx": {
+      "category": "override",
+      "content_sha256": "dca9beafa91124701ea7afac6073cf491f926f47361e6c00a3f20c2e6a697419",
+      "destination_identity": "data/raw/nat5d_6d_M2025_dl.xlsx",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/lab5/output/energy-wage-gap/data/raw/nat5d_6d_M2025_dl.xlsx",
+      "source_status": "OVERRIDE: public BLS OEWS aggregate industry-by-occupation wage tables, no individual-level records (user-approved 2026-09-30)"
+    },
+    "docs/proposal-draft.docx": {
+      "category": "override",
+      "content_sha256": "5a8804d16959c1ab8f07732621b066f1d84e9c16a686b4dd8adc2759af5623c6",
+      "destination_identity": "docs/proposal-draft.docx",
+      "source_identity": "/Users/tu/Documents/GitHub/my-first-repo/lab5/output/energy-wage-gap/docs/proposal-draft.docx",
+      "source_status": "OVERRIDE: author own proposal draft text, no participant data (user-approved 2026-09-30)"
+    }
+  },
+  "unresolved_files": []
+}

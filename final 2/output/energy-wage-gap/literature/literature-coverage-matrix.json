@@ -1,0 +1,582 @@
+{
+  "verdict": "PASS",
+  "engine_handoff": {
+    "lit_review_engine": {
+      "skill": "scholar-lit-review-hypothesis",
+      "mode": "integrated_literature_theory_hypotheses",
+      "task_invocation_id": "scholar-lit-review-hypothesis-phase2-2026-09-30",
+      "invoked_at_utc": "2026-09-30T20:00:00Z",
+      "input_artifacts": [
+        "idea/research-question.json",
+        "idea/journal-fit.json",
+        "literature/local-library/proposal-library.bib"
+      ],
+      "output_artifacts": [
+        "literature/lit-theory-draft-lrh.md",
+        "literature/references.bib",
+        "logs/scholar-search-log-energy-wage-gap-2026-09-30.md",
+        "evidence/claim-anchors.ndjson"
+      ],
+      "protocol_followed": true,
+      "protocol_artifacts": [
+        "literature/review-protocol.json",
+        "literature/search-log.md"
+      ]
+    },
+    "writing_engine": {
+      "skill": "scholar-write",
+      "mode": "revise",
+      "section": "Literature Review and Theory",
+      "task_invocation_id": "scholar-write-phase2-revise-2026-09-30",
+      "invoked_at_utc": "2026-09-30T20:00:00Z",
+      "input_artifacts": [
+        "literature/lit-theory-draft-lrh.md",
+        "evidence/claim-anchors.ndjson"
+      ],
+      "output_artifacts": [
+        "literature/lit-theory.md"
+      ]
+    },
+    "target_journal": "Energy Research & Social Science"
+  },
+  "review_protocol": "literature/review-protocol.json",
+  "coverage_matrix": {
+    "constructs": [
+      "within-occupation sectoral wage gap",
+      "job quality / good jobs",
+      "just transition",
+      "occupational composition vs pay-setting"
+    ],
+    "theories": [
+      "relational inequality / durable inequality (primary)",
+      "interindustry wage differentials and rent sharing",
+      "ecological modernization (rival)",
+      "union wage compression",
+      "politics of technology (Winner)"
+    ],
+    "methods": [
+      "weighted regression on industry-by-occupation cells with occupation fixed effects",
+      "Kitagawa/Oaxaca-type decomposition",
+      "non-overlapping estimate-window comparison"
+    ],
+    "datasets_populations": [
+      "BLS OEWS national industry-by-occupation estimates (NAICS 221111-221118), May 2021-2025",
+      "USEER 2024 (union coverage by technology)",
+      "Burning Glass postings (Curtis & Marinescu)",
+      "LEHD (Colmer et al.)"
+    ],
+    "competing_findings": [
+      "green wage premium (Vona et al.; Kuai et al.) vs no clean-firm premium conditional on education (Colmer et al.)",
+      "occupation-level premium for solar/wind (Curtis & Marinescu) vs lower sector medians for solar (Lehmann)"
+    ]
+  },
+  "must_cite_coverage": [
+    {
+      "key": "abowd1999high",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "barth2016where",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "beckfield2023social",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "bls2025oews",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "bls2025oewsfaq",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "bradley2025empirical",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "burke2018political",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "card2013workplace",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "carley2020justice",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "cha2020just",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "cohen2003individuals",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "colmer2025nice",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "curtis2023green",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "curtis2024workers",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "diprete2010compensation",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "doe2024useer",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "godoy2025green",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "hanna2024job",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "healy2017politicizing",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "hess2012good",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "huffman2004racial",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "ilo2014just",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "kalleberg2011good",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "knuth2019whatever",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "krueger1988efficiency",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "kuai2025estimating",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "lehmann2020wages",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "mayer2018just",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "mccauley2018just",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "newell2013political",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "pearse2022labour",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "petersen1995separate",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "raimi2022mapping",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "rosenfeld2014unions",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "sicotte2022necessary",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "sicotte2025labor",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "song2019firming",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "sovacool2019decarbonization",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "spaargaren1992sociology",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "stevis2015global",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "tilly1998durable",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "tomaskovicdevey2019relational",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "tomaskovicdevey2020rising",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "vachon2023clean",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "vona2019measures",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "weeden2002why",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "western2011unions",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "wilmers2021consolidated",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "winner1980artifacts",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "york2003key",
+      "covered": true,
+      "section": "Background and theory"
+    },
+    {
+      "key": "kitagawa1955components",
+      "covered": true,
+      "section": "Data and methods"
+    },
+    {
+      "key": "oaxaca1973male",
+      "covered": true,
+      "section": "Data and methods"
+    },
+    {
+      "key": "blinder1973wage",
+      "covered": true,
+      "section": "Data and methods"
+    },
+    {
+      "key": "fortin2011decomposition",
+      "covered": true,
+      "section": "Data and methods"
+    }
+  ],
+  "source_role_matrix": [
+    {
+      "key": "krueger1988efficiency",
+      "argument_role": "theory",
+      "claim_supported": "Industries pay persistently different wages to equally skilled workers",
+      "target_section": "Background: Why the same job pays differently",
+      "why_it_matters": "Anchors H1: sector-specific pay net of occupation"
+    },
+    {
+      "key": "abowd1999high",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Employer effects are a large component of wage variation",
+      "target_section": "Background: Why the same job pays differently",
+      "why_it_matters": "Establishes employer/sector effects beyond worker traits"
+    },
+    {
+      "key": "card2013workplace",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Workplace pay premia contribute to rising wage inequality",
+      "target_section": "Background: Why the same job pays differently",
+      "why_it_matters": "Shows between-workplace pay heterogeneity matters for inequality"
+    },
+    {
+      "key": "barth2016where",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Rising US earnings dispersion occurred largely between establishments",
+      "target_section": "Background: Why the same job pays differently",
+      "why_it_matters": "US evidence for between-establishment pay dispersion"
+    },
+    {
+      "key": "tomaskovicdevey2019relational",
+      "argument_role": "theory",
+      "claim_supported": "Pay is allocated through relational claims-making inside organizations",
+      "target_section": "Background: Why the same job pays differently",
+      "why_it_matters": "Primary sociological framework for organizational pay-setting"
+    },
+    {
+      "key": "tilly1998durable",
+      "argument_role": "theory",
+      "claim_supported": "Categorical inequalities persist when embedded in organizational routines",
+      "target_section": "Background: Technologies, occupations, and time",
+      "why_it_matters": "Grounds H4 persistence prediction"
+    },
+    {
+      "key": "western2011unions",
+      "argument_role": "mechanism",
+      "claim_supported": "Unions raise and compress wages and sustain wage norms",
+      "target_section": "Background: Technologies, occupations, and time",
+      "why_it_matters": "Mechanism for H3: institutional protections benefit manual workers most"
+    },
+    {
+      "key": "doe2024useer",
+      "argument_role": "context",
+      "claim_supported": "Union and project-labor coverage is lower in solar and wind than coal, gas, nuclear generation",
+      "target_section": "Background: Why the same job pays differently",
+      "why_it_matters": "Only technology-specific evidence on institutional coverage"
+    },
+    {
+      "key": "winner1980artifacts",
+      "argument_role": "theory",
+      "claim_supported": "Energy technologies are bound up with distinct forms of social organization",
+      "target_section": "Background: Why the same job pays differently",
+      "why_it_matters": "Links technology to organizational form; motivates H2"
+    },
+    {
+      "key": "spaargaren1992sociology",
+      "argument_role": "rival",
+      "claim_supported": "Ecological modernization treats environmental reform as economic upgrading",
+      "target_section": "Background: Technologies, occupations, and time",
+      "why_it_matters": "Rival prediction for H4 (narrowing)"
+    },
+    {
+      "key": "york2003key",
+      "argument_role": "competing_explanation",
+      "claim_supported": "Ecological modernization claims face empirical challenges",
+      "target_section": "Background: Technologies, occupations, and time",
+      "why_it_matters": "Critique supporting persistence prediction"
+    },
+    {
+      "key": "curtis2023green",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Solar and wind jobs are in occupations about 21 percent higher paying than average",
+      "target_section": "Background: What we know about green and renewable wages",
+      "why_it_matters": "Closest prior; occupation-level measure motivates H5 and the gap"
+    },
+    {
+      "key": "colmer2025nice",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Conditional on education, clean-firm workers do not earn more than legacy-firm workers",
+      "target_section": "Background: What we know about green and renewable wages",
+      "why_it_matters": "Employer-based evidence contradicting a clean-energy pay premium"
+    },
+    {
+      "key": "vona2019measures",
+      "argument_role": "empirical_prior",
+      "claim_supported": "Green task-intensive employment commands about a 4 percent premium",
+      "target_section": "Background: What we know about green and renewable wages",
+      "why_it_matters": "Green premium evidence (rival expectation)"
+    },
+    {
+      "key": "petersen1995separate",
+      "argument_role": "method",
+      "claim_supported": "Wage gaps can be partitioned into between-job and within-job components",
+      "target_section": "Background: Why the same job pays differently; Data and methods",
+      "why_it_matters": "Design logic of within-occupation comparison"
+    },
+    {
+      "key": "kitagawa1955components",
+      "argument_role": "method",
+      "claim_supported": "Differences in rates decompose into composition and rate components",
+      "target_section": "Data and methods: analytic strategy subsection",
+      "why_it_matters": "Decomposition of raw gap (H5)"
+    },
+    {
+      "key": "bls2025oewsfaq",
+      "argument_role": "design",
+      "claim_supported": "OEWS estimates pool three years and are not designed as time series",
+      "target_section": "Data and methods: analytic strategy subsection",
+      "why_it_matters": "Justifies non-overlapping-window trend test (H4)"
+    },
+    {
+      "key": "bls2025oews",
+      "argument_role": "data",
+      "claim_supported": "May estimates rest on six semiannual panels over three years",
+      "target_section": "Data and methods: analytic strategy subsection",
+      "why_it_matters": "Defines which estimate years share panels"
+    },
+    {
+      "key": "sicotte2022necessary",
+      "argument_role": "domain",
+      "claim_supported": "Energy workers judge transition by effects on skills and bargaining power",
+      "target_section": "Background: Good jobs in the energy transition?",
+      "why_it_matters": "Motivates focus on pay as a transition outcome"
+    },
+    {
+      "key": "beckfield2023social",
+      "argument_role": "journal_canon",
+      "claim_supported": "Sociology of supply-side decarbonization calls for distributional analysis",
+      "target_section": "Background: Good jobs in the energy transition?",
+      "why_it_matters": "Annual Review framing of the gap"
+    },
+    {
+      "key": "mccauley2018just",
+      "argument_role": "domain",
+      "claim_supported": "Just transition integrates climate, energy and environmental justice",
+      "target_section": "Background: Good jobs in the energy transition?",
+      "why_it_matters": "Anchors the paper in the ERSS just-transition canon"
+    },
+    {
+      "key": "godoy2025green",
+      "argument_role": "competing_explanation",
+      "claim_supported": "Green-firm premium smaller than high-carbon industry premium",
+      "target_section": "Background: What we know about green and renewable wages",
+      "why_it_matters": "Evidence that green premia may fall short of legacy pay"
+    }
+  ],
+  "mechanism_chain": [
+    {
+      "step": 1,
+      "from": "generation technology",
+      "to": "organizational form (ownership, plant scale, contracting, bargaining coverage)",
+      "link": "Legacy technologies were built under the regulated utility model with internal labor markets and denser collective bargaining; wind and solar are more often owned by independent, project-financed producers with small operations staffs."
+    },
+    {
+      "step": 2,
+      "from": "organizational form",
+      "to": "pay for a given occupation",
+      "link": "Rent sharing, bargaining power and internal wage norms raise pay for equally classified workers in legacy plants (relational pay-setting)."
+    },
+    {
+      "step": 3,
+      "from": "pay-setting institutions",
+      "to": "heterogeneity and persistence",
+      "link": "Institutional protections matter most for manual/craft occupations and adjust slowly, so gaps concentrate in blue-collar jobs and persist despite employment growth."
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "text": "Within the same detailed occupation, renewable generation establishments pay lower mean wages than nonrenewable (fossil fuel and nuclear) generation establishments.",
+      "direction": "negative",
+      "focal_variables": [
+        "renewable_sector",
+        "log_real_mean_wage"
+      ],
+      "mechanism": "institutional pay-setting (rent sharing, bargaining, internal labor markets) differs by technology's organizational form",
+      "scope": "private-sector U.S. power generation, OEWS May 2021-2025"
+    },
+    {
+      "id": "H2",
+      "text": "Relative to fossil fuel generation, the within-occupation gap is largest for solar and wind generation, near zero for hydroelectric generation, and non-negative for nuclear generation.",
+      "direction": "negative for solar/wind (and biomass/geothermal); approximately zero for hydro; zero or positive for nuclear",
+      "focal_variables": [
+        "technology",
+        "log_real_mean_wage"
+      ],
+      "moderator": "technology maturity / organizational form",
+      "scope": "same"
+    },
+    {
+      "id": "H3",
+      "text": "The renewable within-occupation gap is larger in blue-collar occupational groups (construction and extraction; installation, maintenance, and repair; production) than in professional and managerial groups.",
+      "direction": "more negative for blue-collar",
+      "focal_variables": [
+        "renewable_sector x occupational_class"
+      ],
+      "moderator": "occupational class",
+      "scope": "same"
+    },
+    {
+      "id": "H4",
+      "text": "The within-occupation renewable gap does not narrow between estimates built from non-overlapping survey panels (May 2021 versus May 2024) or over May 2021-2025 (durable-inequality prediction; the ecological-modernization rival predicts narrowing).",
+      "direction": "no narrowing (change in gap <= 0 in absolute terms)",
+      "focal_variables": [
+        "renewable_sector x period"
+      ],
+      "scope": "same"
+    },
+    {
+      "id": "H5",
+      "text": "Occupational composition does not account for the raw renewable pay disadvantage: the within-occupation renewable gap is at least as large as the raw employment-weighted gap.",
+      "direction": "within-occupation gap magnitude >= raw gap magnitude (composition component >= 0 for renewables)",
+      "focal_variables": [
+        "renewable_sector",
+        "occupation composition"
+      ],
+      "scope": "same"
+    }
+  ],
+  "journal_calibration": {
+    "target_journal": "Energy Research & Social Science",
+    "paper_type": "original research article (quantitative, descriptive)",
+    "theory_depth": "moderate: one primary framework (relational/durable inequality) against one rival (ecological modernization), tied to just-transition debates; ~1,700 words",
+    "citation_density": "high in background (45-55 works), interdisciplinary mix of sociology, labor economics and energy social science",
+    "must_cite_strategy": "cite ERSS/energy-justice canon (McCauley & Heffron; Sicotte et al.; Burke & Stephens; Cha), closest green-wage priors (Curtis & Marinescu; Colmer et al.; Vona et al.), and wage-structure canon (Krueger & Summers; Card et al.; Tomaskovic-Devey & Avent-Holt; Western & Rosenfeld)"
+  },
+  "ready_for_phase_3": true
+}

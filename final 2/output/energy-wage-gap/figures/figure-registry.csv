@@ -1,0 +1,5 @@
+"figure_id","path_pdf","path_png","spec_ids","producer","placement"
+"fig1","figures/fig1-gap-trend.pdf","figures/fig1-gap-trend.png","S07;S09;S03","analysis/scripts/06_figures.R","main"
+"fig2","figures/fig2-technology.pdf","figures/fig2-technology.png","S04;S08","analysis/scripts/06_figures.R","main"
+"fig3","figures/fig3-occupation.pdf","figures/fig3-occupation.png","S05;S06","analysis/scripts/06_figures.R","main"
+"figA1","figures/figA1-robustness.pdf","figures/figA1-robustness.png","R01;R02;R03;R04;R05a;R05b;R06;R07;R08;R09;R10;R11;R12;R13;R14;R15;R16","analysis/scripts/06_figures.R","appendix"

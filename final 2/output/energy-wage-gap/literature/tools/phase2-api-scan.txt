@@ -1,0 +1,73 @@
+=== QUERY: inter-industry wage differentials efficiency wage
+  [openalex] 1988 | Alan B. Krueger, Lawrence H. Summers | Efficiency Wages and the Inter-Industry Wage Structure | Econometrica | doi:10.2307/1911072 | cites:1695
+  [openalex] 1987 | William T. Dickens, Lawrence F. Katz | Inter-Industry Wage Differences and Theories of Wage Determination | National Bureau of Economic Research | doi:10.3386/w2271 | cites:256
+  [openalex] 1986 | Alan B. Krueger, Lawrence H. Summers | Reflections on the Inter-Industry Wage Structure | National Bureau of Economic Research | doi:10.3386/w1968 | cites:281
+  [openalex] 2006 | Pierre Cahuc, Fabien Postel‐Vinay, Jean‐Marc Robin | Wage Bargaining with On-the-Job Search: Theory and Evidence | Econometrica | doi:10.1111/j.1468-0262.2006.00665.x | cites:679
+  [openalex] 2018 | SERGIO PINHEIRO FIRPO, Nicole M. Fortin, Thomas Lemieux | Decomposing Wage Distributions Using Recentered Influence Function Regressions | Econometrics | doi:10.3390/econometrics6020028 | cites:658
+  [openalex] 1986 | William T. Dickens, Lawrence F. Katz | Interindustry Wage Differences and Industry Characteristics | National Bureau of Economic Research | doi:10.3386/w2014 | cites:298
+  ERROR crossref HTTP Error 429: Too Many Requests
+=== QUERY: union wage premium wage inequality United States decline
+  [openalex] 2017 | Francine D. Blau, Lawrence M. Kahn | The Gender Wage Gap: Extent, Trends, and Explanations | Journal of Economic Literature | doi:10.1257/jel.20160995 | cites:3055
+  [openalex] 1997 | Nicole M. Fortin, Thomas Lemieux | Institutional Changes and Rising Wage Inequality: Is There a Linkage? | The Journal of Economic Perspectives | doi:10.1257/jep.11.2.75 | cites:512
+  [openalex] 2008 | Enrico Moretti | Real Wage Inequality | American Economic Journal Applied Economics | doi:10.1257/app.5.1.65 | cites:355
+  [openalex] 2009 | Jonathan Heathcote, Fabrizio Perri, Giovanni L. Violante | Unequal we stand: An empirical analysis of economic inequality in the United States, 1967–2006 | Review of Economic Dynamics | doi:10.1016/j.red.2009.10.010 | cites:900
+  [openalex] 2008 | Jonathan Heathcote, Kjetil Storesletten, Giovanni L. Violante | The Macroeconomic Implications of Rising Wage Inequality in the United States | National Bureau of Economic Research | doi:10.3386/w14052 | cites:218
+  [openalex] 1996 | Michael R. Kremer, Eric S. Maskin | Wage Inequality and Segregation by Skill | National Bureau of Economic Research | doi:10.3386/w5718 | cites:279
+  [crossref] 2020 | Edward Conard | The Economics of Inequality in High-Wage Economies | United States Income, Wealth, Consumption, and Inequality | doi:10.1093/oso/9780197518199.003.0011 | cites:0
+  [crossref] None |  | Table 1.3. Education wage premium drives inequality in Costa Rica |  | doi:10.1787/888933591537 | cites:0
+  [crossref] 2020 | June O’Neill, Dave O’Neill | Explaining Race and Gender Wage Gaps | United States Income, Wealth, Consumption, and Inequality | doi:10.1093/oso/9780197518199.003.0008 | cites:0
+  [crossref] 2025 | Godpower O. Okereke | Racial Wage Gap, Gender Wage Gap, and Income Inequality in the United States | The Routledge Handbook on Marginalized Groups in the United States and their Challenges | doi:10.4324/9781003646457-10 | cites:0
+  [crossref] 2017 | Patricia Jones, Olivia D’Aoust, Louise Bernard | The Urban Wage Premium in Africa | Wage Inequality in Africa | doi:10.1007/978-3-319-51565-6_3 | cites:3
+  [crossref] None | Robert A. Margo | Wages and Wage Inequality | Historical Statistics of the United States: Millennial Edition Online | doi:10.1017/isbn-9780511132971.ba.ess.04 | cites:0
+=== QUERY: just transition energy workers coal renewable
+  [openalex] 2022 | Moses Jeremiah Barasa Kabeyi, Oludolapo Akanni Olanrewaju | Sustainable Energy Transition for Renewable and Low Carbon Grid Electricity Generation and Supply | Frontiers in Energy Research | doi:10.3389/fenrg.2021.743114 | cites:1162
+  [openalex] 2018 | Darren McCauley, Raphael James Heffron | Just transition: Integrating climate, energy and environmental justice | Energy Policy | doi:10.1016/j.enpol.2018.04.014 | cites:1180
+  [openalex] 2017 | Noel Healy, John Barry | Politicizing energy justice and energy system transitions: Fossil fuel divestment and a “just transition” | Energy Policy | doi:10.1016/j.enpol.2017.06.014 | cites:862
+  [openalex] 2017 | Matthew J. Burke, Jennie C. Stephens | Political power and renewable energy futures: A critical review | Energy Research & Social Science | doi:10.1016/j.erss.2017.10.018 | cites:829
+  [openalex] 2018 | Adam Mayer | A just transition for coal miners? Community identity and support from local policy actors | Environmental Innovation and Societal Transitions | doi:10.1016/j.eist.2018.03.006 | cites:163
+  [openalex] 2016 | Benjamin Kenneth Sovacool | How long will it take? Conceptualizing the temporal dynamics of energy transitions | Energy Research & Social Science | doi:10.1016/j.erss.2015.12.020 | cites:1152
+  [crossref] 2025 | M. Peretto, W. Eichhammer, D. Süsser | Just energy transition in coal regions: Innovative framework for assessing territorial just transition plans | Renewable and Sustainable Energy Transition | doi:10.1016/j.rset.2024.100101 | cites:11
+  [crossref] 2021 | Elianor Gerrard, Peter Westoby | What Is a Just Transition? | Coal and Energy in South Africa | doi:10.3366/edinburgh/9781474487054.003.0002 | cites:6
+  [crossref] 2025 | Fabio Teixeira Ferreira da Silva, Thiago Aquino, Fernando Zancan | A just transition pathway for the coal industry from its ashes | Renewable and Sustainable Energy Transition | doi:10.1016/j.rset.2025.100117 | cites:1
+  [crossref] 2021 | Lochner Marais, Philippe Burger, Maléne Campbell | Is a Just Transition Possible? | Coal and Energy in South Africa | doi:10.3366/edinburgh/9781474487054.003.0017 | cites:0
+  [crossref] None |  | Unions applaud Canada’s commitment to a just transition for coal workers | Climate Change and Law Collection | doi:10.1163/9789004322714_cclc_2017-0041-001 | cites:0
+  [crossref] None |  | Canada’s unions will help shape a just transition for coal workers | Climate Change and Law Collection | doi:10.1163/9789004322714_cclc_2018-0041-001 | cites:0
+=== QUERY: ecological modernization theory
+  [openalex] 2003 | Richard York, Eugene A. Rosa | Key Challenges to Ecological Modernization Theory | Organization & Environment | doi:10.1177/1086026603256299 | cites:453
+  [openalex] 1996 | ARTHUR P. J. MOL | The Refinement of Production: Ecological Modernization Theory and the Chemical Industry | Socio-Environmental Systems Modeling | doi: | cites:287
+  [openalex] 2000 | Frederick H. Buttel | Ecological modernization as social theory | Geoforum | doi:10.1016/s0016-7185(99)00044-5 | cites:555
+  [openalex] 1996 | John R. Ehrenfeld | The refinement of production: Ecological modernization theory and the chemical industry | Environmental Impact Assessment Review | doi:10.1016/0195-9255(96)90005-0 | cites:217
+  [openalex] 1992 | Gert Spaargaren, ARTHUR P. J. MOL | Sociology, environment, and modernity: Ecological modernization as a theory of social change | Society & Natural Resources | doi:10.1080/08941929209380797 | cites:710
+  [openalex] 2010 | Richard York, Eugene A. Rosa, Thomas M. Dietz | Ecological Modernization Theory: Theoretical and Empirical Challenges | Edward Elgar Publishing eBooks | doi:10.4337/9781849805520.00014 | cites:115
+  [crossref] 2021 | Dylan Bugden | Science, technology, and ecological crisis:  Examining ecological modernization theory through patent data |  | doi:10.31235/osf.io/sedf9 | cites:0
+  [crossref] 2020 | F.H. Buttel | Ecological Modernization as Social Theory | The Ecological Modernisation Reader | doi:10.4324/9781003061069-10 | cites:2
+  [crossref] 2020 | Martin Jänicke | On Ecological and Political Modernization | The Ecological Modernisation Reader | doi:10.4324/9781003061069-5 | cites:3
+  [crossref] None |  Er Ah Choy | A quantitative methodology to test ecological modernization theory in the Malaysian context |  | doi:10.18174/121913 | cites:0
+  [crossref] 2020 | George A. Gonzalez | Democratic Ethics and Ecological Modernization | The Ecological Modernisation Reader | doi:10.4324/9781003061069-15 | cites:0
+  [crossref] 2020 | Joseph Huber | Ecological Modernization: Beyond Scarcity and Bureaucracy | The Ecological Modernisation Reader | doi:10.4324/9781003061069-6 | cites:5
+=== QUERY: firm pay premium wage inequality establishments
+  [openalex] 2013 | David Card, Jörg Heining, Patrick Kline | Workplace Heterogeneity and the Rise of West German Wage Inequality* | The Quarterly Journal of Economics | doi:10.1093/qje/qjt006 | cites:1358
+  [openalex] 2017 | Francine D. Blau, Lawrence M. Kahn | The Gender Wage Gap: Extent, Trends, and Explanations | Journal of Economic Literature | doi:10.1257/jel.20160995 | cites:3055
+  [openalex] 2007 | Andrew B. Bernard, J. Bradford Jensen, Stephen J Redding | Firms in International Trade | The Journal of Economic Perspectives | doi:10.1257/jep.21.3.105 | cites:2581
+  [openalex] 1997 | Nicole M. Fortin, Thomas Lemieux | Institutional Changes and Rising Wage Inequality: Is There a Linkage? | The Journal of Economic Perspectives | doi:10.1257/jep.11.2.75 | cites:512
+  [openalex] 1999 | Kenneth R. Troske | Evidence on the Employer Size-Wage Premium from Worker-Establishment Matched Data | The Review of Economics and Statistics | doi:10.1162/003465399557950 | cites:299
+  [openalex] 2019 | Péter Harasztosi, Attila Lindner | Who Pays for the Minimum Wage? | American Economic Review | doi:10.1257/aer.20171445 | cites:302
+  [crossref] 2024 | Agata Maida, Vincenzo Pezone | CEO Pay Disclosure and Within-Firm Wage Inequality |  | doi:10.2139/ssrn.4939155 | cites:0
+  [crossref] 2026 | yuwei liu, Guitian Huang | Data Element Utilization, Pay-Performance Sensitivity, and Intra-Firm Wage Inequality |  | doi:10.2139/ssrn.7498982 | cites:0
+  [crossref] 2009 | Erling Barth, Bernt Bratsberg, Torbjorn Haegeland | Performance Pay and Within-Firm Wage Inequality |  | doi:10.2139/ssrn.1395244 | cites:4
+  [crossref] None |  | Table 1.3. Education wage premium drives inequality in Costa Rica |  | doi:10.1787/888933591537 | cites:0
+  [crossref] 2025 | Ruting Huang, Shanshan Duan, Xiyan Li | Environmental regulation and intra-firm wage inequality: A skill premium perspective | Energy Economics | doi:10.1016/j.eneco.2025.108679 | cites:2
+  [crossref] 2025 | Daniel Robbins | Firm Heterogeneity and the College Wage Premium |  | doi:10.2139/ssrn.5962434 | cites:0
+=== QUERY: clean energy jobs wages unionization United States solar
+  [openalex] 2017 | Noel Healy, John Barry | Politicizing energy justice and energy system transitions: Fossil fuel divestment and a “just transition” | Energy Policy | doi:10.1016/j.enpol.2017.06.014 | cites:862
+  [openalex] 2008 | Michael Renner, Sean Sweeney, Jill Kubit | Green Jobs: Towards Decent Work in a Sustainable, Low-Carbon World | University of North Texas Digital Library (University of North Texas) | doi: | cites:449
+  [openalex] 2021 | Andrea Brock, Benjamin Kenneth Sovacool, Andrew Hook | Volatile Photovoltaics: Green Industrialization, Sacrifice Zones, and the Political Ecology of Solar Energy in Germany | Annals of the American Association of Geographers | doi:10.1080/24694452.2020.1856638 | cites:128
+  [openalex] 2022 | Diane M. Sicotte, Kelly Ann Joyce, Arielle Hesse | Necessary, welcome or dreaded? Insights on low-carbon transitions from unionized energy workers in the United States | Energy Research & Social Science | doi:10.1016/j.erss.2022.102511 | cites:31
+  [openalex] 2022 | Salma Elmallah, Tony Gerard Reames, C. Anna Spurlock | Frontlining energy justice: Visioning principles for energy transitions from community-based organizations in the United States | Energy Research & Social Science | doi:10.1016/j.erss.2022.102855 | cites:64
+  [openalex] 2019 | Sarah Knuth | Whatever Happened to Green Collar Jobs? Populism and Clean Energy Transition | Annals of the American Association of Geographers | doi:10.1080/24694452.2018.1523001 | cites:21
+  [crossref] 2016 |  , Bart Rupert,   | National Community Solar Platform |  | doi:10.2172/1259871 | cites:0
+  [crossref] 2019 |  | 3. Whipsawed! Local Unions Fight for Jobs in the United States | When Good Jobs Go Bad | doi:10.36019/9780813576084-004 | cites:0
+  [crossref] 2018 |  , Nate Hausman,   | Sustainable Solar Education Project - Final Project Report |  | doi:10.2172/1467590 | cites:1
+  [crossref] 2024 |  , Joseph Azzolini,   | AI for Clean Energy Integration |  | doi:10.2172/2585808 | cites:0
+  [crossref] 2010 |  | Pew comparative analysis of clean energy jobs and investments in the United States, 1998–2007 | A Global Green New Deal | doi:10.1017/cbo9780511844607.019 | cites:0
+  [crossref] 1996 |  , T Veziroglu,   | Solar hydrogen energy system. Annual report, 1995--1996 |  | doi:10.2172/674638 | cites:1

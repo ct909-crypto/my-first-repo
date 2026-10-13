@@ -1,0 +1,15 @@
+{
+  "verdict": "FAIL",
+  "source_phase": "6",
+  "owner_phase": "4",
+  "route_back_phase": "4",
+  "findings": [
+    {
+      "finding_id": "PX-data-001",
+      "severity": "major",
+      "summary": "Measurement plan reported 16 wage-suppressed detailed cells; the Phase 4 audit table sums to 19.",
+      "affected_artifacts": ["data/measurement-plan.md", "analysis/scripts/01_build_analytic_data.R"],
+      "required_fix": "Correct the count to 19 in the measurement plan and the build-script assertion; refresh Phase 4 and Phase 5 manifests."
+    }
+  ]
+}

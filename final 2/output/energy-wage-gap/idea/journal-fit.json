@@ -1,0 +1,79 @@
+{
+  "verdict": "PASS",
+  "target_source": "user_provided",
+  "selected_rq_id": "RQ-A",
+  "primary_target": "Energy Research & Social Science",
+  "journal_family": "interdisciplinary energy social science (Elsevier)",
+  "paper_type": "original research article (quantitative, descriptive)",
+  "journal_profile_resolution": {
+    "requested_journal": "Energy Research & Social Science",
+    "resolved_profile_name": "Energy Research & Social Science",
+    "profile_origin": "imported_custom",
+    "profile_source_engine": "scholar-journal",
+    "source_strategy": "web_fetched_profile",
+    "web_lookup_attempted": true,
+    "fallback_used": false,
+    "fallback_reason": "",
+    "journal_structure": {
+      "profile_source": "ERSS Guide for Authors (Elsevier), web lookup 2026-09-30; standard ERSS research-article practice",
+      "section_sequence": [
+        "Introduction",
+        "Background and theory",
+        "Data and methods",
+        "Results",
+        "Discussion",
+        "Conclusion"
+      ],
+      "results_before_methods": false,
+      "theory_presentation": "background_section",
+      "methods_section_label": "Data and methods",
+      "discussion_conclusion_policy": "split_allowed",
+      "supplement_policy": "Supplementary material permitted as online appendix; main-text tables and figures must be self-contained"
+    },
+    "display_architecture": {
+      "table_placement_policy": "embedded near first callout in submitted manuscript (editable Word tables)",
+      "figure_placement_policy": "embedded near first callout; high-resolution files also supplied separately",
+      "descriptive_table_requirement": "recommended: descriptive table of sample cells, employment and wages by sector and year",
+      "editable_text_tables": true,
+      "image_tables_forbidden": true,
+      "main_text_display_cap": 8,
+      "main_text_table_cap": 5,
+      "main_text_figure_cap": 4,
+      "supplement_label_prefix": "A",
+      "panel_label_style": "(a), (b)",
+      "table_rendering_mode": "markdown_pipe_table",
+      "figure_rendering_mode": "embedded_image_with_caption",
+      "table_title_position": "above",
+      "table_notes_policy": "notes below table beginning 'Note:'",
+      "display_callout_style": "Table 1 / Fig. 1"
+    },
+    "web_lookup_notes": "Guide for authors (sciencedirect.com, direct fetch returned 403; content obtained via web search snippets): research articles 6,000-10,000 words including references; abstract <=250 words; highlights required; keywords required; artwork supplied as separate files; Perspectives 2,000-5,000 words."
+  },
+  "candidates": [
+    {
+      "rq_id": "RQ-A",
+      "fit_score": 8,
+      "recommended": true,
+      "rationale": "core just-transition job-quality question"
+    },
+    {
+      "rq_id": "RQ-B",
+      "fit_score": 6,
+      "recommended": false,
+      "rationale": "methodological; best as bridging component"
+    },
+    {
+      "rq_id": "RQ-C",
+      "fit_score": 8,
+      "recommended": false,
+      "rationale": "folded into RQ-A as heterogeneity core"
+    },
+    {
+      "rq_id": "RQ-D",
+      "fit_score": 3,
+      "recommended": false,
+      "rationale": "ecological inference risk; robustness only"
+    }
+  ],
+  "ready_for_phase_2": true
+}

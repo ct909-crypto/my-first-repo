@@ -1,0 +1,122 @@
+{
+  "verdict": "PASS",
+  "selected_rq_id": "RQ-A",
+  "fatal_flaw_selected": false,
+  "ready_for_selection": true,
+  "reviewers": [
+    {
+      "role": "theorist",
+      "agent": "general-purpose subagent (theorist lens)",
+      "ratings": {
+        "RQ-A": "Adequate/Weak/Adequate",
+        "RQ-B": "Strong/Adequate/Adequate",
+        "RQ-C": "Adequate/Adequate/Adequate",
+        "RQ-D": "Weak/Weak/Adequate"
+      },
+      "rank": [
+        "RQ-B",
+        "RQ-C",
+        "RQ-A",
+        "RQ-D"
+      ],
+      "key_points": [
+        "Derive distinct observable predictions from ecological modernization vs durable inequality rather than an IRA periodization",
+        "Frame composition vs within-occupation as allocation vs pay-setting processes",
+        "Map subtypes onto theorized dimensions (legacy/utility vs new/merchant)"
+      ]
+    },
+    {
+      "role": "methodologist",
+      "agent": "general-purpose subagent (methodologist lens)",
+      "ratings": {
+        "RQ-A": "Weak/Adequate/Adequate",
+        "RQ-B": "Adequate/Adequate/Adequate",
+        "RQ-C": "Weak/Weak/Adequate",
+        "RQ-D": "Weak/Weak/Weak"
+      },
+      "rank": [
+        "RQ-B",
+        "RQ-A",
+        "RQ-C",
+        "RQ-D"
+      ],
+      "key_points": [
+        "Use detailed SOC rows only (proposal mixes aggregation levels)",
+        "Cluster on detailed occupation; occupation x year FE",
+        "Primary contrast non-overlapping estimate windows; deflate wages",
+        "Pool geothermal and biomass; precision-weight robustness; report cell counts"
+      ]
+    },
+    {
+      "role": "domain_expert",
+      "agent": "general-purpose subagent (labor stratification / energy-transition lens)",
+      "ratings": {
+        "RQ-A": "Adequate/Adequate/Weak-Adequate",
+        "RQ-B": "Adequate/Adequate/Adequate",
+        "RQ-C": "Strong/Adequate/Adequate",
+        "RQ-D": "Weak/Weak/Weak"
+      },
+      "rank": [
+        "RQ-C",
+        "RQ-B",
+        "RQ-A",
+        "RQ-D"
+      ],
+      "key_points": [
+        "Add interindustry wage differential and establishment pay literature",
+        "Add union wage-compression literature",
+        "Soften absolute novelty claim; frame as descriptive benchmark for just transition"
+      ]
+    },
+    {
+      "role": "journal_editor",
+      "agent": "general-purpose subagent (ERSS associate-editor lens)",
+      "ratings": {
+        "RQ-A": "Strong/Adequate/Strong",
+        "RQ-B": "Adequate/Adequate/Adequate",
+        "RQ-C": "Strong/Strong/Adequate",
+        "RQ-D": "Weak/Weak/Weak"
+      },
+      "rank": [
+        "RQ-C",
+        "RQ-A",
+        "RQ-B",
+        "RQ-D"
+      ],
+      "key_points": [
+        "Bundle as one argument: is renewable generation a good-jobs transition?",
+        "Avoid IRA-effect language; describe persistence",
+        "Address OEWS time-series caveat and generation-only NAICS scope explicitly"
+      ]
+    },
+    {
+      "role": "devils_advocate",
+      "agent": "general-purpose subagent (devil's advocate lens)",
+      "ratings": {
+        "RQ-A": "AT RISK",
+        "RQ-B": "AT RISK",
+        "RQ-C": "AT RISK",
+        "RQ-D": "AT RISK (borderline fatal as standalone)"
+      },
+      "rank": [
+        "RQ-B",
+        "RQ-A",
+        "RQ-C",
+        "RQ-D"
+      ],
+      "key_points": [
+        "Adjacent May estimates share two-thirds of panels; compare non-overlapping windows",
+        "Balanced fixed-occupation panel to separate publication changes from real change",
+        "Subtype-by-year convergence for tiny subtypes would be a fatal flaw - avoid"
+      ]
+    }
+  ],
+  "cross_agent_agreement": [
+    "(5/5) Fix SOC aggregation double counting; detailed occupations only",
+    "(4/5) OEWS 3-year pooling: use non-overlapping May 2021 vs May 2024 windows as primary trend contrast; describe as persistence not IRA effect",
+    "(4/5) Pool or flag geothermal/biomass; no subtype convergence claims",
+    "(5/5) Demote distributional RQ to robustness",
+    "(4/5) Claims descriptive; mechanisms interpretive"
+  ],
+  "consensus": "mixed-to-strong: bundle RQ-A (headline) + RQ-C (core heterogeneity) + RQ-B (bridging decomposition); RQ-D robustness"
+}

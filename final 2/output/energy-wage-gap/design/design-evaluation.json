@@ -1,0 +1,61 @@
+{
+  "overall_verdict": "PASS",
+  "unresolved_critical_count": 0,
+  "rounds": 2,
+  "final_evaluation": "design/reviews/fix-verifier.md",
+  "reviewers": [
+    {
+      "role": "identification",
+      "report": "design/reviews/R1-identification.md",
+      "initial_critical_issues": 2,
+      "initial_summary": "panel overlap error (2025 vs 2021 also non-overlapping); H4 null-as-support logic",
+      "verdict": "PASS",
+      "critical_issues_count": 0,
+      "final_status": "all critical issues resolved or accepted as limitations per fix-verifier round 2"
+    },
+    {
+      "role": "measurement",
+      "report": "design/reviews/R3-measurement.md",
+      "initial_critical_issues": 0,
+      "initial_summary": "suppression coverage; class mapping; percentile censoring; hydro/nuclear robustness; weighting estimand",
+      "verdict": "PASS",
+      "critical_issues_count": 0,
+      "final_status": "all critical issues resolved or accepted as limitations per fix-verifier round 2"
+    },
+    {
+      "role": "theory_mechanism",
+      "report": "design/reviews/R-theory-mechanism.md",
+      "initial_critical_issues": 2,
+      "initial_summary": "mechanism unobserved; H4 cannot discriminate without equivalence test",
+      "verdict": "PASS",
+      "critical_issues_count": 0,
+      "final_status": "all critical issues resolved or accepted as limitations per fix-verifier round 2"
+    },
+    {
+      "role": "feasibility_data",
+      "report": "design/reviews/R5-feasibility.md",
+      "initial_critical_issues": 2,
+      "initial_summary": "identifying clusters overstated; MDES optimistic",
+      "verdict": "PASS",
+      "critical_issues_count": 0,
+      "final_status": "all critical issues resolved or accepted as limitations per fix-verifier round 2"
+    },
+    {
+      "role": "journal_skeptic",
+      "report": "design/reviews/R4-journal-skeptic.md",
+      "initial_critical_issues": 2,
+      "initial_summary": "reads as data note without theory mapping; generation-only scope",
+      "verdict": "PASS",
+      "critical_issues_count": 0,
+      "final_status": "all critical issues resolved or accepted as limitations per fix-verifier round 2"
+    }
+  ],
+  "panel_checks": {
+    "claim_strength": "descriptive confirmed; causal gate invoked (design/causal-gate.md)",
+    "outcome_mechanism_alignment": "prevalence-stock confirmed",
+    "journal_method_fit": "ERSS: descriptive with calibrated claims, scope in title/abstract, theory-to-test mapping",
+    "hypothesis_model_coverage": "H1-H5 each mapped to models",
+    "power_feasibility": "feasibility_limited; MDES for trend 0.07-0.10 disclosed; H4 may be inconclusive",
+    "causal_gate_compliance": "required true, invoked true"
+  }
+}

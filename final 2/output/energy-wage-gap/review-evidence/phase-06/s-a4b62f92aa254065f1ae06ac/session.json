@@ -1,0 +1,59 @@
+{
+  "attempt_epoch": 2,
+  "host_backend": "claude-code",
+  "phase_id": "6",
+  "project_run_nonce": "6421032fc272348dd947a79b966e7baa",
+  "registered_at": "2026-09-30T20:35:28.382159+00:00",
+  "requested_profile": "normal",
+  "reservations": [
+    {
+      "dispatch_id": "d-756f37ae0ad4be06793c7734",
+      "report_path": "review-evidence/phase-06/s-a4b62f92aa254065f1ae06ac/reports/correctness.md",
+      "role": "correctness",
+      "trace_path": "review-evidence/phase-06/s-a4b62f92aa254065f1ae06ac/traces/correctness.trace.ndjson"
+    },
+    {
+      "dispatch_id": "d-4577c87698732fcedcf1ded5",
+      "report_path": "review-evidence/phase-06/s-a4b62f92aa254065f1ae06ac/reports/robustness.md",
+      "role": "robustness",
+      "trace_path": "review-evidence/phase-06/s-a4b62f92aa254065f1ae06ac/traces/robustness.trace.ndjson"
+    },
+    {
+      "dispatch_id": "d-4deb782e06cb3d5bf96d52b0",
+      "report_path": "review-evidence/phase-06/s-a4b62f92aa254065f1ae06ac/reports/statistical.md",
+      "role": "statistical",
+      "trace_path": "review-evidence/phase-06/s-a4b62f92aa254065f1ae06ac/traces/statistical.trace.ndjson"
+    },
+    {
+      "dispatch_id": "d-c775e42c008ab24d3f50b52c",
+      "report_path": "review-evidence/phase-06/s-a4b62f92aa254065f1ae06ac/reports/reproducibility.md",
+      "role": "reproducibility",
+      "trace_path": "review-evidence/phase-06/s-a4b62f92aa254065f1ae06ac/traces/reproducibility.trace.ndjson"
+    },
+    {
+      "dispatch_id": "d-4dfe5d535ab6c70ae481abd4",
+      "report_path": "review-evidence/phase-06/s-a4b62f92aa254065f1ae06ac/reports/style_ai_patterns.md",
+      "role": "style_ai_patterns",
+      "trace_path": "review-evidence/phase-06/s-a4b62f92aa254065f1ae06ac/traces/style_ai_patterns.trace.ndjson"
+    },
+    {
+      "dispatch_id": "d-0f54bf928552d76052d2b0f3",
+      "report_path": "review-evidence/phase-06/s-a4b62f92aa254065f1ae06ac/reports/data_handling.md",
+      "role": "data_handling",
+      "trace_path": "review-evidence/phase-06/s-a4b62f92aa254065f1ae06ac/traces/data_handling.trace.ndjson"
+    }
+  ],
+  "reviewed_inputs": {
+    "analysis/analysis-plan-manifest.json": "c029e833bd55530957d0b21ed5173e1e8b7b934b607f7781bd742f6f3311a37e",
+    "analysis/analysis-plan.md": "1ae1e932dca0d6c5a076b813ca31669310ec2da333a60e28cc62c4f8617c312f",
+    "analysis/scripts-inventory.json": "d2050072a5c789934876c31501e2d72219be41c387efccf0f1309ddd97df7e53",
+    "analysis/spec-registry.csv": "640ae676ddbce71923ea24913a8c7dfd3ce5d004509644981626db737ceaa06e",
+    "data/data-measurement-manifest.json": "9e136208b825d8a9f460df7c6e7520f93bc0dc03d72c1e2d58aa8801416c6383",
+    "data/variable-dictionary.csv": "60cba07df3b9d421b3cebde63c4ad18cfc256ddb62e50d4ac96b9126a4214d14",
+    "design/identification-strategy.json": "1b2ff868518dfde85438b69d93c7ba32aef37da657a5fcac1df13f24a5d3d1b4",
+    "design/model-specs.json": "cd89fe50ba6027284625423ad43dccd3246541cbbbc84be22ec52db8786e0d04"
+  },
+  "round": "initial_panel",
+  "schema_version": "scholar-auto-research-review-evidence/v1",
+  "session_id": "s-a4b62f92aa254065f1ae06ac"
+}

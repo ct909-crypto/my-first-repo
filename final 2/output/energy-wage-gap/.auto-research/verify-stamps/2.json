@@ -1,0 +1,17 @@
+{
+  "authority": "audit_only_not_completion_input",
+  "completed_at": "2026-09-30T20:16:44.796775+00:00",
+  "contract_sha256": "beb6125aa0b17e6505f99cc8950dc0a87a355f6ab5f886ef7b3f77b4702028f4",
+  "phase_id": "2",
+  "required_outputs": {
+    "literature/lit-theory-manifest.json": "76fb556152b8e6f0dedf5c4e66c2c04922c3b1b81123a63181d9bd40419b8a75",
+    "literature/lit-theory.md": "f944606d66bfa3fbfd4bc5992b369aa2c241b28492848b5e02471b7f40c04d7f",
+    "literature/literature-coverage-matrix.json": "d55361579f492d88c48d49f49980a15b8463ef1596994f11439923beeb8cf2c7",
+    "literature/references.bib": "dd4037428001a82fe27f4d593a5adbff72dec5a5d352e23499b73636337864b9",
+    "literature/review-protocol.json": "3ea55c3c69c2358101c760149a38a6f5352da7aebcd99a4ef4955341f2191051",
+    "literature/search-log.md": "3a214cf792a10118b5f8b43fb4125506b71bc5672f350d70c7f4beb48c28e446"
+  },
+  "run_nonce": "6421032fc272348dd947a79b966e7baa",
+  "schema_version": "scholar-auto-research-completion-audit/v1",
+  "verdict": "PASS"
+}

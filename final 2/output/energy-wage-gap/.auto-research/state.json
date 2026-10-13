@@ -1,0 +1,383 @@
+{
+  "contract_migration_history": [],
+  "contract_sha256": "beb6125aa0b17e6505f99cc8950dc0a87a355f6ab5f886ef7b3f77b4702028f4",
+  "created_at": "2026-09-30T19:51:02.254304+00:00",
+  "halt": null,
+  "halt_history": [],
+  "halted": false,
+  "pending_transition": null,
+  "phase_records": {
+    "0": {
+      "artifacts": [
+        {
+          "path": "safety/safety-status.json",
+          "sha256": "dc9c3feac189c51f366aa5e477b58c25c33de2d675ce7f322c78a92540a2dbac"
+        }
+      ],
+      "auxiliary_inputs": {},
+      "completed_at": "2026-09-30T19:51:06.525013+00:00",
+      "contract_sha256": "beb6125aa0b17e6505f99cc8950dc0a87a355f6ab5f886ef7b3f77b4702028f4",
+      "dependencies": [],
+      "phase_id": "0",
+      "phase_name": "Safety",
+      "required_outputs": {
+        "safety/safety-status.json": "dc9c3feac189c51f366aa5e477b58c25c33de2d675ce7f322c78a92540a2dbac"
+      },
+      "run_nonce": "6421032fc272348dd947a79b966e7baa",
+      "verdict": "PASS",
+      "verification_authority": "internal_verifier",
+      "verifier_sha256": "543c9891e168931d99b79604255372eb94deafae022e6eaeb6733c31decf26eb"
+    },
+    "1": {
+      "artifacts": [
+        {
+          "path": "idea/candidate-rqs.json",
+          "sha256": "dfba15ef082ba1f1234f8569de72176f661c1c9a76197fa06ad0918b7253bd5f"
+        },
+        {
+          "path": "idea/journal-fit.json",
+          "sha256": "7cf4702feb0d89fdb64de8299327e05399c75fb5a102e84059df3252b890e864"
+        },
+        {
+          "path": "idea/research-question.json",
+          "sha256": "344d691db1af834d672347f9e19ce141668a1d741ff3715119bce180884aac7a"
+        },
+        {
+          "path": "idea/research-question.md",
+          "sha256": "3916d599eaa39552c4b1def24b1d9fd690bb62ba9f62295df1684bad50862b46"
+        },
+        {
+          "path": "idea/rq-evaluation-panel.json",
+          "sha256": "59b2381f2fad347c90f8cc6d1ca8f83df47cf9dbb497e3f97156e3948d506bae"
+        },
+        {
+          "path": "idea/rq-selection-rationale.md",
+          "sha256": "fe913c280a4643c93894fa3afda6c12b9f8eba40c3cedf335143c30f4d7a8857"
+        }
+      ],
+      "auxiliary_inputs": {
+        "safety/safety-status.json": "dc9c3feac189c51f366aa5e477b58c25c33de2d675ce7f322c78a92540a2dbac"
+      },
+      "completed_at": "2026-09-30T20:02:00.178647+00:00",
+      "contract_sha256": "beb6125aa0b17e6505f99cc8950dc0a87a355f6ab5f886ef7b3f77b4702028f4",
+      "dependencies": [
+        "0"
+      ],
+      "phase_id": "1",
+      "phase_name": "Research Question",
+      "required_outputs": {
+        "idea/candidate-rqs.json": "dfba15ef082ba1f1234f8569de72176f661c1c9a76197fa06ad0918b7253bd5f",
+        "idea/journal-fit.json": "7cf4702feb0d89fdb64de8299327e05399c75fb5a102e84059df3252b890e864",
+        "idea/research-question.json": "344d691db1af834d672347f9e19ce141668a1d741ff3715119bce180884aac7a",
+        "idea/research-question.md": "3916d599eaa39552c4b1def24b1d9fd690bb62ba9f62295df1684bad50862b46",
+        "idea/rq-evaluation-panel.json": "59b2381f2fad347c90f8cc6d1ca8f83df47cf9dbb497e3f97156e3948d506bae",
+        "idea/rq-selection-rationale.md": "fe913c280a4643c93894fa3afda6c12b9f8eba40c3cedf335143c30f4d7a8857"
+      },
+      "run_nonce": "6421032fc272348dd947a79b966e7baa",
+      "verdict": "PASS",
+      "verification_authority": "internal_verifier",
+      "verifier_sha256": "543c9891e168931d99b79604255372eb94deafae022e6eaeb6733c31decf26eb"
+    },
+    "2": {
+      "artifacts": [
+        {
+          "path": "literature/lit-theory-manifest.json",
+          "sha256": "76fb556152b8e6f0dedf5c4e66c2c04922c3b1b81123a63181d9bd40419b8a75"
+        },
+        {
+          "path": "literature/lit-theory.md",
+          "sha256": "f944606d66bfa3fbfd4bc5992b369aa2c241b28492848b5e02471b7f40c04d7f"
+        },
+        {
+          "path": "literature/literature-coverage-matrix.json",
+          "sha256": "d55361579f492d88c48d49f49980a15b8463ef1596994f11439923beeb8cf2c7"
+        },
+        {
+          "path": "literature/references.bib",
+          "sha256": "dd4037428001a82fe27f4d593a5adbff72dec5a5d352e23499b73636337864b9"
+        },
+        {
+          "path": "literature/review-protocol.json",
+          "sha256": "3ea55c3c69c2358101c760149a38a6f5352da7aebcd99a4ef4955341f2191051"
+        },
+        {
+          "path": "literature/search-log.md",
+          "sha256": "3a214cf792a10118b5f8b43fb4125506b71bc5672f350d70c7f4beb48c28e446"
+        }
+      ],
+      "auxiliary_inputs": {
+        "idea/journal-fit.json": "7cf4702feb0d89fdb64de8299327e05399c75fb5a102e84059df3252b890e864",
+        "idea/research-question.json": "344d691db1af834d672347f9e19ce141668a1d741ff3715119bce180884aac7a"
+      },
+      "completed_at": "2026-09-30T20:16:44.796775+00:00",
+      "contract_sha256": "beb6125aa0b17e6505f99cc8950dc0a87a355f6ab5f886ef7b3f77b4702028f4",
+      "dependencies": [
+        "1"
+      ],
+      "phase_id": "2",
+      "phase_name": "Literature and Theory",
+      "required_outputs": {
+        "literature/lit-theory-manifest.json": "76fb556152b8e6f0dedf5c4e66c2c04922c3b1b81123a63181d9bd40419b8a75",
+        "literature/lit-theory.md": "f944606d66bfa3fbfd4bc5992b369aa2c241b28492848b5e02471b7f40c04d7f",
+        "literature/literature-coverage-matrix.json": "d55361579f492d88c48d49f49980a15b8463ef1596994f11439923beeb8cf2c7",
+        "literature/references.bib": "dd4037428001a82fe27f4d593a5adbff72dec5a5d352e23499b73636337864b9",
+        "literature/review-protocol.json": "3ea55c3c69c2358101c760149a38a6f5352da7aebcd99a4ef4955341f2191051",
+        "literature/search-log.md": "3a214cf792a10118b5f8b43fb4125506b71bc5672f350d70c7f4beb48c28e446"
+      },
+      "run_nonce": "6421032fc272348dd947a79b966e7baa",
+      "verdict": "PASS",
+      "verification_authority": "internal_verifier",
+      "verifier_sha256": "543c9891e168931d99b79604255372eb94deafae022e6eaeb6733c31decf26eb"
+    },
+    "3": {
+      "artifacts": [
+        {
+          "path": "design/design-blueprint.md",
+          "sha256": "620e86abbdffd0a22baf224d657b57d7f933229d0b795f43fab6c0f7a93d1dba"
+        },
+        {
+          "path": "design/design-evaluation.json",
+          "sha256": "519fa1c8c6082cd5575eb6a49ce93077b551db7d3ea1554fcb43a16ac5a5298d"
+        },
+        {
+          "path": "design/design-evaluation.md",
+          "sha256": "17882596c165c45985641dbc47cacae0a2a3340d9895d7a701dca0737c664061"
+        },
+        {
+          "path": "design/design-manifest.json",
+          "sha256": "ff7372ac2aa189c6a57af6af4ef9bc8ac959bd1e6b3cac0caa97f77cbfba8816"
+        },
+        {
+          "path": "design/design-revision-log.json",
+          "sha256": "9558eac51dc681bc305568a79bd982116e0ce8ae99c877e76ac8d8fade19d71c"
+        },
+        {
+          "path": "design/design-revision-log.md",
+          "sha256": "1ad006e123f3b80a66edd6f93cafd29e6a95b866d9e5678dfdbffb0c0ac0be6e"
+        },
+        {
+          "path": "design/identification-strategy.json",
+          "sha256": "1b2ff868518dfde85438b69d93c7ba32aef37da657a5fcac1df13f24a5d3d1b4"
+        },
+        {
+          "path": "design/model-specs.json",
+          "sha256": "cd89fe50ba6027284625423ad43dccd3246541cbbbc84be22ec52db8786e0d04"
+        }
+      ],
+      "auxiliary_inputs": {
+        "idea/journal-fit.json": "7cf4702feb0d89fdb64de8299327e05399c75fb5a102e84059df3252b890e864",
+        "idea/research-question.json": "344d691db1af834d672347f9e19ce141668a1d741ff3715119bce180884aac7a",
+        "literature/lit-theory-manifest.json": "76fb556152b8e6f0dedf5c4e66c2c04922c3b1b81123a63181d9bd40419b8a75",
+        "literature/lit-theory.md": "f944606d66bfa3fbfd4bc5992b369aa2c241b28492848b5e02471b7f40c04d7f",
+        "literature/literature-coverage-matrix.json": "d55361579f492d88c48d49f49980a15b8463ef1596994f11439923beeb8cf2c7"
+      },
+      "completed_at": "2026-09-30T20:26:11.082023+00:00",
+      "contract_sha256": "beb6125aa0b17e6505f99cc8950dc0a87a355f6ab5f886ef7b3f77b4702028f4",
+      "dependencies": [
+        "1",
+        "2"
+      ],
+      "phase_id": "3",
+      "phase_name": "Design",
+      "required_outputs": {
+        "design/design-blueprint.md": "620e86abbdffd0a22baf224d657b57d7f933229d0b795f43fab6c0f7a93d1dba",
+        "design/design-evaluation.json": "519fa1c8c6082cd5575eb6a49ce93077b551db7d3ea1554fcb43a16ac5a5298d",
+        "design/design-evaluation.md": "17882596c165c45985641dbc47cacae0a2a3340d9895d7a701dca0737c664061",
+        "design/design-manifest.json": "ff7372ac2aa189c6a57af6af4ef9bc8ac959bd1e6b3cac0caa97f77cbfba8816",
+        "design/design-revision-log.json": "9558eac51dc681bc305568a79bd982116e0ce8ae99c877e76ac8d8fade19d71c",
+        "design/design-revision-log.md": "1ad006e123f3b80a66edd6f93cafd29e6a95b866d9e5678dfdbffb0c0ac0be6e",
+        "design/identification-strategy.json": "1b2ff868518dfde85438b69d93c7ba32aef37da657a5fcac1df13f24a5d3d1b4",
+        "design/model-specs.json": "cd89fe50ba6027284625423ad43dccd3246541cbbbc84be22ec52db8786e0d04"
+      },
+      "run_nonce": "6421032fc272348dd947a79b966e7baa",
+      "verdict": "PASS",
+      "verification_authority": "internal_verifier",
+      "verifier_sha256": "543c9891e168931d99b79604255372eb94deafae022e6eaeb6733c31decf26eb"
+    },
+    "4": {
+      "artifacts": [
+        {
+          "path": "data/data-measurement-manifest.json",
+          "sha256": "9e136208b825d8a9f460df7c6e7520f93bc0dc03d72c1e2d58aa8801416c6383"
+        },
+        {
+          "path": "data/data-status.json",
+          "sha256": "f4840c8e93c7de9ad3ce608ade73aa492ab1798ba778ebc3bce91e5410c5f7b5"
+        },
+        {
+          "path": "data/measurement-plan.md",
+          "sha256": "d8aaf3787b5cd61103ef84ac23ea5b9149a8de6af1684c54200ea7a847df4cbf"
+        },
+        {
+          "path": "data/variable-dictionary.csv",
+          "sha256": "60cba07df3b9d421b3cebde63c4ad18cfc256ddb62e50d4ac96b9126a4214d14"
+        }
+      ],
+      "auxiliary_inputs": {
+        "design/design-blueprint.md": "620e86abbdffd0a22baf224d657b57d7f933229d0b795f43fab6c0f7a93d1dba",
+        "design/design-manifest.json": "ff7372ac2aa189c6a57af6af4ef9bc8ac959bd1e6b3cac0caa97f77cbfba8816",
+        "design/identification-strategy.json": "1b2ff868518dfde85438b69d93c7ba32aef37da657a5fcac1df13f24a5d3d1b4",
+        "design/model-specs.json": "cd89fe50ba6027284625423ad43dccd3246541cbbbc84be22ec52db8786e0d04",
+        "safety/safety-status.json": "dc9c3feac189c51f366aa5e477b58c25c33de2d675ce7f322c78a92540a2dbac"
+      },
+      "completed_at": "2026-09-30T20:33:09.108698+00:00",
+      "contract_sha256": "beb6125aa0b17e6505f99cc8950dc0a87a355f6ab5f886ef7b3f77b4702028f4",
+      "dependencies": [
+        "3"
+      ],
+      "phase_id": "4",
+      "phase_name": "Data and Measurement",
+      "required_outputs": {
+        "data/data-measurement-manifest.json": "9e136208b825d8a9f460df7c6e7520f93bc0dc03d72c1e2d58aa8801416c6383",
+        "data/data-status.json": "f4840c8e93c7de9ad3ce608ade73aa492ab1798ba778ebc3bce91e5410c5f7b5",
+        "data/measurement-plan.md": "d8aaf3787b5cd61103ef84ac23ea5b9149a8de6af1684c54200ea7a847df4cbf",
+        "data/variable-dictionary.csv": "60cba07df3b9d421b3cebde63c4ad18cfc256ddb62e50d4ac96b9126a4214d14"
+      },
+      "run_nonce": "6421032fc272348dd947a79b966e7baa",
+      "verdict": "PASS",
+      "verification_authority": "internal_verifier",
+      "verifier_sha256": "543c9891e168931d99b79604255372eb94deafae022e6eaeb6733c31decf26eb"
+    },
+    "5": {
+      "artifacts": [
+        {
+          "path": "analysis/analysis-plan-manifest.json",
+          "sha256": "c029e833bd55530957d0b21ed5173e1e8b7b934b607f7781bd742f6f3311a37e"
+        },
+        {
+          "path": "analysis/analysis-plan.md",
+          "sha256": "1ae1e932dca0d6c5a076b813ca31669310ec2da333a60e28cc62c4f8617c312f"
+        },
+        {
+          "path": "analysis/scripts-inventory.json",
+          "sha256": "d2050072a5c789934876c31501e2d72219be41c387efccf0f1309ddd97df7e53"
+        },
+        {
+          "path": "analysis/spec-registry.csv",
+          "sha256": "640ae676ddbce71923ea24913a8c7dfd3ce5d004509644981626db737ceaa06e"
+        }
+      ],
+      "auxiliary_inputs": {
+        "data/data-measurement-manifest.json": "9e136208b825d8a9f460df7c6e7520f93bc0dc03d72c1e2d58aa8801416c6383",
+        "data/data-status.json": "f4840c8e93c7de9ad3ce608ade73aa492ab1798ba778ebc3bce91e5410c5f7b5",
+        "data/measurement-plan.md": "d8aaf3787b5cd61103ef84ac23ea5b9149a8de6af1684c54200ea7a847df4cbf",
+        "data/variable-dictionary.csv": "60cba07df3b9d421b3cebde63c4ad18cfc256ddb62e50d4ac96b9126a4214d14",
+        "design/design-manifest.json": "ff7372ac2aa189c6a57af6af4ef9bc8ac959bd1e6b3cac0caa97f77cbfba8816",
+        "design/identification-strategy.json": "1b2ff868518dfde85438b69d93c7ba32aef37da657a5fcac1df13f24a5d3d1b4",
+        "design/model-specs.json": "cd89fe50ba6027284625423ad43dccd3246541cbbbc84be22ec52db8786e0d04"
+      },
+      "completed_at": "2026-09-30T20:33:09.351515+00:00",
+      "contract_sha256": "beb6125aa0b17e6505f99cc8950dc0a87a355f6ab5f886ef7b3f77b4702028f4",
+      "dependencies": [
+        "3",
+        "4"
+      ],
+      "phase_id": "5",
+      "phase_name": "Analysis Plan",
+      "required_outputs": {
+        "analysis/analysis-plan-manifest.json": "c029e833bd55530957d0b21ed5173e1e8b7b934b607f7781bd742f6f3311a37e",
+        "analysis/analysis-plan.md": "1ae1e932dca0d6c5a076b813ca31669310ec2da333a60e28cc62c4f8617c312f",
+        "analysis/scripts-inventory.json": "d2050072a5c789934876c31501e2d72219be41c387efccf0f1309ddd97df7e53",
+        "analysis/spec-registry.csv": "640ae676ddbce71923ea24913a8c7dfd3ce5d004509644981626db737ceaa06e"
+      },
+      "run_nonce": "6421032fc272348dd947a79b966e7baa",
+      "verdict": "PASS",
+      "verification_authority": "internal_verifier",
+      "verifier_sha256": "543c9891e168931d99b79604255372eb94deafae022e6eaeb6733c31decf26eb"
+    }
+  },
+  "phases_completed": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "review_assurance_profile": "normal",
+  "review_attempt_epochs": {
+    "14": 2,
+    "18": 2,
+    "20": 2,
+    "6": 2,
+    "7": 2,
+    "9": 2
+  },
+  "review_evidence_history": [
+    {
+      "attempt_epoch": 2,
+      "event": "review_session_registered",
+      "phase_id": "6",
+      "project_run_nonce": "6421032fc272348dd947a79b966e7baa",
+      "recorded_at": "2026-09-30T20:35:28.382467+00:00",
+      "reservation_sha256": "2858667358cdb46624076116058415ea9061c2c0a08eb5888dce11dc4253807a",
+      "round": "initial_panel",
+      "session_id": "s-a4b62f92aa254065f1ae06ac"
+    }
+  ],
+  "route_back_history": [],
+  "route_back_retry_counts": {},
+  "run_mode": {
+    "mode": "autonomous",
+    "note": "user requested autonomous run",
+    "previous_mode": "unset",
+    "selected_at": "2026-09-30T19:51:02.306739+00:00",
+    "selected_by": "user"
+  },
+  "run_nonce": "6421032fc272348dd947a79b966e7baa",
+  "safety_blocked": null,
+  "safety_inventory": {
+    "content_sha256": {
+      "data/raw/nat5d_6d_M2021_dl.xlsx": "9269cc3956690762ab838b7c7fee87ec65c66373d55fb18ce9ec8a246485cde6",
+      "data/raw/nat5d_6d_M2022_dl.xlsx": "6ccd38f2d0bc5e25b86544e0505e1939ed9334809019b07b97a9bbd1ab3d32e1",
+      "data/raw/nat5d_6d_M2023_dl.xlsx": "3d69af43ef9df416834890346a67815a66670d0aab5be4265ca7d966babec3f3",
+      "data/raw/nat5d_6d_M2024_dl.xlsx": "f5005fa75b634d73c7288cfb4886dc669bef65ba8a6e6c388ead40c030c3d87e",
+      "data/raw/nat5d_6d_M2025_dl.xlsx": "dca9beafa91124701ea7afac6073cf491f926f47361e6c00a3f20c2e6a697419"
+    },
+    "digest": "c919c06136543ac4ce708b5bb27a2f2b99785e7d3083436cec761733a8951a5b",
+    "issues": [],
+    "paths": [
+      "data/raw/nat5d_6d_M2021_dl.xlsx",
+      "data/raw/nat5d_6d_M2022_dl.xlsx",
+      "data/raw/nat5d_6d_M2023_dl.xlsx",
+      "data/raw/nat5d_6d_M2024_dl.xlsx",
+      "data/raw/nat5d_6d_M2025_dl.xlsx"
+    ],
+    "safety_sha256": "dc9c3feac189c51f366aa5e477b58c25c33de2d675ce7f322c78a92540a2dbac"
+  },
+  "schema_version": "1.3.0",
+  "scholar_init_import": {
+    "dest": "/Users/tu/Documents/GitHub/my-first-repo/lab5/output/energy-wage-gap/safety/safety-status.json",
+    "high_risk_unresolved": 0,
+    "imported_at": "2026-09-30T19:51:02.268825+00:00",
+    "safety_status": "PASS",
+    "source": "/Users/tu/Documents/GitHub/my-first-repo/lab5/output/energy-wage-gap/.claude/safety-status.json"
+  },
+  "stale_phases": [
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20"
+  ],
+  "transition_decisions": [
+    {
+      "decision": "set_mode",
+      "mode": "autonomous",
+      "note": "user requested autonomous run",
+      "previous_mode": "unset",
+      "recorded_at": "2026-09-30T19:51:02.306739+00:00"
+    }
+  ],
+  "updated_at": "2026-09-30T20:35:28.382478+00:00"
+}

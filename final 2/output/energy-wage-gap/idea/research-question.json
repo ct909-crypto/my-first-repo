@@ -1,0 +1,77 @@
+{
+  "verdict": "PASS",
+  "engine": "scholar-idea",
+  "engine_provenance": {
+    "task_invocation_id": "scholar-idea-phase1-2026-09-30-panel5",
+    "invoked_at_utc": "2026-09-30T20:01:33Z",
+    "input_artifacts": [
+      "docs/proposal-draft.docx",
+      "idea/panel-input-package.md",
+      "literature/tools/phase1-scan.txt"
+    ],
+    "output_artifacts": [
+      "idea/candidate-rqs.json",
+      "idea/rq-evaluation-panel.json",
+      "idea/journal-fit.json",
+      "idea/research-question.json",
+      "idea/research-question.md",
+      "idea/rq-selection-rationale.md"
+    ]
+  },
+  "input_mode": "idea",
+  "selected_rq_id": "RQ-A",
+  "selected_rq": "Among U.S. electric power generation workers in 2021-2025, how large is the gap in occupation-specific mean annual wage between the renewable versus nonrenewable generation sector when detailed occupation is held constant, how does that gap differ across generation technologies and occupational classes, and did it narrow, widen, or persist as renewable employment roughly doubled?",
+  "x": "renewable versus nonrenewable generation sector",
+  "y": "occupation-specific mean annual wage",
+  "directional_relation": "negative: renewable-sector cells pay less than nonrenewable cells in the same detailed occupation; expected larger for blue-collar occupations and newer technologies (solar, wind), near zero for hydro; trend expected to persist rather than close",
+  "mechanism": "Legacy generation (fossil, nuclear, large hydro) is organized in utility-owned, capital-intensive plants with high union coverage, internal labor markets and regulated cost recovery that support rent sharing; newer wind, solar and biomass generation is organized in smaller, merchant or project-financed firms with contracted, weakly unionized operations labor, so equally classified workers are paid less (durable-inequality / institutional pay-setting). Rival: ecological-modernization and subsidy-driven labor demand (IRA) that should raise renewable pay, especially for scarce skilled trades.",
+  "confounders": [
+    "occupational composition (detailed SOC mix)",
+    "within-occupation seniority/experience and task mix",
+    "regional labor-market wage levels (plant location)",
+    "establishment size and ownership form",
+    "OEWS 3-year panel pooling and wage aging",
+    "cell suppression and changing publication of small cells"
+  ],
+  "scope": {
+    "population": "Wage-and-salary workers employed in U.S. electric power generation establishments (NAICS 221111-221118)",
+    "place": "United States (national estimates)",
+    "time": "OEWS May 2021 through May 2025 reference periods (survey panels Nov 2018 - May 2025)",
+    "unit": "Industry-by-detailed-occupation-by-year cell (employment-weighted mean annual wage)"
+  },
+  "target_journal": {
+    "primary": "Energy Research & Social Science",
+    "journal_family": "interdisciplinary energy social science (Elsevier)",
+    "fit_rationale": "ERSS publishes social-science analyses of energy transitions including labor, job quality and just-transition questions; the paper asks whether the U.S. generation transition creates good jobs",
+    "method_bar": "transparent descriptive quantitative analysis with robustness; causal identification not required if claims are calibrated",
+    "theory_bar": "engage just-transition and energy-labor literatures with a clear conceptual contribution",
+    "desk_reject_risks": [
+      "reads as a data note without conceptual contribution",
+      "naive time-series use of OEWS pooled estimates",
+      "scope limited to generation NAICS not representative of all renewable jobs",
+      "mechanisms asserted but not measured",
+      "thin literature relying on working papers"
+    ]
+  },
+  "paper_type": "original research article (quantitative, descriptive)",
+  "method_orientation": "quantitative observational panel of aggregate industry-by-occupation cells (repeated cross-sections), weighted regression with occupation fixed effects and decomposition",
+  "recommended_dataset": "BLS OEWS May 2021-2025 national industry-specific (5-/6-digit NAICS) occupational employment and wage estimates",
+  "claim_strength": "descriptive",
+  "rationale": "Renewable generation employment roughly doubled in 2021-2025 while raw renewable/nonrenewable pay ratios stayed flat; whether new renewable jobs pay like the fossil and nuclear jobs they partially replace is central to just-transition debates, and the author's 2025 cross-section needs to be extended into a defensible trend analysis that corrects aggregation, clustering and inflation problems.",
+  "selection_evidence": {
+    "candidate_count": 4,
+    "panel_consensus": "mixed",
+    "fatal_flaw": false,
+    "data_feasible": true,
+    "novelty_risk": "moderate",
+    "journal_fit": "strong",
+    "notes": "RQ-A selected and refined to absorb RQ-C (heterogeneity) and RQ-B (decomposition); RQ-D demoted to robustness per 4/5 reviewers."
+  },
+  "refinements": [
+    "Trend primary contrast uses non-overlapping OEWS estimate windows (May 2021 vs May 2024) plus all-year models",
+    "Detailed SOC only; occupation-clustered SEs; CPI-U deflation",
+    "Geothermal and biomass pooled for subtype-by-period estimates",
+    "Claims descriptive; institutional mechanisms interpretive"
+  ],
+  "ready_for_phase_2": true
+}

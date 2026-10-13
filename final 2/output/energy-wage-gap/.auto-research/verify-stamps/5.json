@@ -1,0 +1,15 @@
+{
+  "authority": "audit_only_not_completion_input",
+  "completed_at": "2026-09-30T20:33:09.351515+00:00",
+  "contract_sha256": "beb6125aa0b17e6505f99cc8950dc0a87a355f6ab5f886ef7b3f77b4702028f4",
+  "phase_id": "5",
+  "required_outputs": {
+    "analysis/analysis-plan-manifest.json": "c029e833bd55530957d0b21ed5173e1e8b7b934b607f7781bd742f6f3311a37e",
+    "analysis/analysis-plan.md": "1ae1e932dca0d6c5a076b813ca31669310ec2da333a60e28cc62c4f8617c312f",
+    "analysis/scripts-inventory.json": "d2050072a5c789934876c31501e2d72219be41c387efccf0f1309ddd97df7e53",
+    "analysis/spec-registry.csv": "640ae676ddbce71923ea24913a8c7dfd3ce5d004509644981626db737ceaa06e"
+  },
+  "run_nonce": "6421032fc272348dd947a79b966e7baa",
+  "schema_version": "scholar-auto-research-completion-audit/v1",
+  "verdict": "PASS"
+}

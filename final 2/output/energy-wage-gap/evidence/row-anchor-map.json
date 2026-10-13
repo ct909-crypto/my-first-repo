@@ -1,0 +1,75 @@
+{
+ "established-1": [
+  "krueger1988efficiency-1e79b136",
+  "abowd1999high-741f5722",
+  "krueger1988efficiency-24268d09"
+ ],
+ "established-2": [
+  "card2013workplace-9192c57b",
+  "barth2016where-47597c57"
+ ],
+ "established-3": [
+  "western2011unions-27a5653b"
+ ],
+ "established-4": [
+  "curtis2023green-0682269e",
+  "curtis2023green-1fd7f723"
+ ],
+ "contested-1": [
+  "vona2019measures-1f401b7f",
+  "kuai2025estimating-9721025d",
+  "godoy2025green-b81793c8",
+  "colmer2025nice-04e9fa2f",
+  "colmer2025nice-93aec07f",
+  "vona2019measures-9730eaa5"
+ ],
+ "contested-2": [
+  "lehmann2020wages-95736805"
+ ],
+ "mechanism-1": [
+  "doe2024useer-7867bd4b",
+  "doe2024useer-d6a78790"
+ ],
+ "mechanism-2": [
+  "tilly1998durable-b841e35f",
+  "tomaskovicdevey2019relational-8b181d62"
+ ],
+ "mechanism-3": [
+  "spaargaren1992sociology-d20a6358",
+  "york2003key-927ecfc9"
+ ],
+ "gap-1": [
+  "beckfield2023social-45b1338a",
+  "sicotte2022necessary-7a825122",
+  "carley2020justice-66729c5a",
+  "sicotte2022necessary-a6e0c50a"
+ ],
+ "method-1": [
+  "bls2025oewsfaq-2b53f70b",
+  "bls2025oews-4b53ed44"
+ ],
+ "method-2": [
+  "kitagawa1955components-4097bd04",
+  "petersen1995separate-36edeb4f"
+ ],
+ "derivation-h1": [
+  "krueger1988efficiency-1e79b136",
+  "krueger1988efficiency-24268d09"
+ ],
+ "derivation-h2": [
+  "doe2024useer-d6a78790"
+ ],
+ "derivation-h3": [
+  "western2011unions-27a5653b"
+ ],
+ "derivation-h4": [
+  "bls2025oewsfaq-2b53f70b"
+ ],
+ "derivation-h5": [
+  "curtis2023green-0682269e",
+  "curtis2023green-1fd7f723"
+ ],
+ "established-5": [
+  "curtis2024workers-9034f59e"
+ ]
+}

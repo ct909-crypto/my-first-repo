@@ -1,0 +1,254 @@
+{
+  "no_execution_yet": true,
+  "scripts": [
+    {
+      "path": "analysis/scripts/00_functions.R",
+      "purpose": "Shared helpers: CPI deflation, class mapping, WCR wild cluster bootstrap, TOST, Kitagawa decomposition, Holm",
+      "uses": [
+        "analysis/reference/cpi_u_may.csv"
+      ],
+      "produces": [
+        "(sourced functions)"
+      ],
+      "status": "planned",
+      "language": "R"
+    },
+    {
+      "path": "analysis/scripts/01_build_analytic_data.R",
+      "purpose": "Read five OEWS files, keep NAICS 2211xx detailed cells, construct variables, sample flow and coverage",
+      "uses": [
+        "data/raw/nat5d_6d_M2021_dl.xlsx..M2025",
+        "analysis/reference/cpi_u_may.csv"
+      ],
+      "produces": [
+        "analysis/output/cells.rds",
+        "tables/tableA1-sample-flow.csv",
+        "tables/tableA2-coverage.csv"
+      ],
+      "status": "planned",
+      "language": "R"
+    },
+    {
+      "path": "analysis/scripts/02_descriptives.R",
+      "purpose": "Table 1 descriptives by sector and year",
+      "uses": [
+        "analysis/output/cells.rds"
+      ],
+      "produces": [
+        "tables/table1-descriptives.csv",
+        "tables/table1-descriptives.html"
+      ],
+      "status": "planned",
+      "language": "R"
+    },
+    {
+      "path": "analysis/scripts/03_main_models.R",
+      "purpose": "M1-M7 models, WCR bootstrap, Holm, TOST, main regression table",
+      "uses": [
+        "analysis/output/cells.rds"
+      ],
+      "produces": [
+        "tables/table2-main-regressions.html",
+        "tables/table2-main-regressions.csv",
+        "analysis/output/main-contrasts.csv",
+        "analysis/output/joint-tests.json"
+      ],
+      "status": "planned",
+      "language": "R"
+    },
+    {
+      "path": "analysis/scripts/04_decomposition.R",
+      "purpose": "D1 and D2 Kitagawa decompositions with occupation bootstrap",
+      "uses": [
+        "analysis/output/cells.rds"
+      ],
+      "produces": [
+        "tables/table3-decomposition.csv",
+        "analysis/output/d2-change.csv"
+      ],
+      "status": "planned",
+      "language": "R"
+    },
+    {
+      "path": "analysis/scripts/05_robustness.R",
+      "purpose": "R1-R16 robustness specifications",
+      "uses": [
+        "analysis/output/cells.rds"
+      ],
+      "produces": [
+        "tables/tableA3-robustness.csv"
+      ],
+      "status": "planned",
+      "language": "R"
+    },
+    {
+      "path": "analysis/scripts/06_figures.R",
+      "purpose": "Figures 1-3 and robustness forest",
+      "uses": [
+        "analysis/output/main-contrasts.csv",
+        "tables/table3-decomposition.csv",
+        "tables/tableA3-robustness.csv"
+      ],
+      "produces": [
+        "figures/fig1-gap-trend.pdf/png",
+        "figures/fig2-technology.pdf/png",
+        "figures/fig3-occupation.pdf/png",
+        "figures/figA1-robustness.pdf/png"
+      ],
+      "status": "planned",
+      "language": "R"
+    },
+    {
+      "path": "analysis/scripts/07_registries.R",
+      "purpose": "Write results registry (one row per spec) and figure registry",
+      "uses": [
+        "analysis/output/*"
+      ],
+      "produces": [
+        "tables/results-registry.csv",
+        "figures/figure-registry.csv"
+      ],
+      "status": "planned",
+      "language": "R"
+    }
+  ],
+  "script_order": [
+    "analysis/scripts/00_functions.R",
+    "analysis/scripts/01_build_analytic_data.R",
+    "analysis/scripts/02_descriptives.R",
+    "analysis/scripts/03_main_models.R",
+    "analysis/scripts/04_decomposition.R",
+    "analysis/scripts/05_robustness.R",
+    "analysis/scripts/06_figures.R",
+    "analysis/scripts/07_registries.R"
+  ],
+  "dependency_graph": {
+    "analysis/scripts/00_functions.R": [],
+    "analysis/scripts/01_build_analytic_data.R": [
+      "analysis/scripts/00_functions.R"
+    ],
+    "analysis/scripts/02_descriptives.R": [
+      "analysis/scripts/01_build_analytic_data.R"
+    ],
+    "analysis/scripts/03_main_models.R": [
+      "analysis/scripts/01_build_analytic_data.R"
+    ],
+    "analysis/scripts/04_decomposition.R": [
+      "analysis/scripts/01_build_analytic_data.R"
+    ],
+    "analysis/scripts/05_robustness.R": [
+      "analysis/scripts/03_main_models.R"
+    ],
+    "analysis/scripts/06_figures.R": [
+      "analysis/scripts/04_decomposition.R",
+      "analysis/scripts/05_robustness.R"
+    ],
+    "analysis/scripts/07_registries.R": [
+      "analysis/scripts/06_figures.R"
+    ]
+  },
+  "test_inventory": [
+    {
+      "id": "T01",
+      "category": "data_loading",
+      "target": "analysis/scripts/01_build_analytic_data.R",
+      "assertion": "all five files read; 8 NAICS codes per year; OWN_CODE all 5",
+      "status": "planned"
+    },
+    {
+      "id": "T02",
+      "category": "analytic_sample",
+      "target": "analysis/scripts/01_build_analytic_data.R",
+      "assertion": "only O_GROUP == detailed; no duplicate NAICS x OCC x year keys; usable cell count equals audit (2,006 incl. 221118)",
+      "status": "planned"
+    },
+    {
+      "id": "T03",
+      "category": "variable_construction",
+      "target": "analysis/scripts/01_build_analytic_data.R",
+      "assertion": "renewable = 1 exactly for 221111, 221114-221117; ln_real_wage finite; CPI ratio 2025 = 1; occ_class covers all SOC majors",
+      "status": "planned"
+    },
+    {
+      "id": "T04",
+      "category": "missingness",
+      "target": "analysis/scripts/01_build_analytic_data.R",
+      "assertion": "suppressed-cell counts match audit; no NA in analysis variables after restriction; top-coded flag count matches",
+      "status": "planned"
+    },
+    {
+      "id": "T05",
+      "category": "model_spec",
+      "target": "analysis/scripts/03_main_models.R",
+      "assertion": "each model uses emp weights, occ-clustered vcov, correct FE; identifying occupation counts reported; WCR reproduces CR1 t-stat sign",
+      "spec_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "T06",
+      "category": "model_spec",
+      "target": "analysis/scripts/04_decomposition.R",
+      "assertion": "composition + within + off-support equals raw gap to 1e-8 each year; shares renormalized",
+      "spec_ids": [
+        "S09",
+        "S10",
+        "S11"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "T07",
+      "category": "model_spec",
+      "target": "analysis/scripts/05_robustness.R",
+      "assertion": "each robustness spec differs from S03 only by its declared change; N reported",
+      "spec_ids": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05a",
+        "R05b",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "T08",
+      "category": "output_registry",
+      "target": "analysis/scripts/07_registries.R",
+      "assertion": "results-registry has one row per spec_id in spec-registry; figure-registry lists every figure file",
+      "status": "planned"
+    }
+  ],
+  "environment": {
+    "language": "R",
+    "packages": [
+      "readxl",
+      "dplyr",
+      "tidyr",
+      "fixest",
+      "modelsummary",
+      "ggplot2"
+    ],
+    "seed": 20260930
+  }
+}

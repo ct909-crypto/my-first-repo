@@ -1,0 +1,191 @@
+{
+  "verdict": "PASS",
+  "source_phase": "3",
+  "design_engine": {
+    "skill": "scholar-design",
+    "task_invocation_id": "scholar-design-phase3-2026-09-30",
+    "invoked_at_utc": "2026-09-30T20:25:31Z",
+    "input_artifacts": [
+      "idea/research-question.json",
+      "literature/lit-theory.md",
+      "literature/literature-coverage-matrix.json"
+    ],
+    "output_artifacts": [
+      "design/design-blueprint.md",
+      "design/model-specs.json",
+      "design/identification-strategy.json"
+    ]
+  },
+  "causal_engine": {
+    "required": true,
+    "invoked": true,
+    "skill": "scholar-causal",
+    "task_invocation_id": "scholar-causal-phase3-2026-09-30",
+    "invoked_at_utc": "2026-09-30T20:25:31Z",
+    "input_artifacts": [
+      "design/design-blueprint.md"
+    ],
+    "output_artifacts": [
+      "design/causal-gate.md"
+    ]
+  },
+  "method_specialist_engines": [],
+  "target_journal": "Energy Research & Social Science",
+  "claim_strength": "descriptive",
+  "source_hashes": {
+    "research_question": "344d691db1af834d672347f9e19ce141668a1d741ff3715119bce180884aac7a",
+    "journal_fit": "7cf4702feb0d89fdb64de8299327e05399c75fb5a102e84059df3252b890e864",
+    "lit_theory": "f944606d66bfa3fbfd4bc5992b369aa2c241b28492848b5e02471b7f40c04d7f",
+    "lit_theory_manifest": "76fb556152b8e6f0dedf5c4e66c2c04922c3b1b81123a63181d9bd40419b8a75",
+    "literature_coverage_matrix": "d55361579f492d88c48d49f49980a15b8463ef1596994f11439923beeb8cf2c7"
+  },
+  "output_hashes": {
+    "design_blueprint": "620e86abbdffd0a22baf224d657b57d7f933229d0b795f43fab6c0f7a93d1dba",
+    "identification_strategy": "1b2ff868518dfde85438b69d93c7ba32aef37da657a5fcac1df13f24a5d3d1b4",
+    "model_specs": "cd89fe50ba6027284625423ad43dccd3246541cbbbc84be22ec52db8786e0d04"
+  },
+  "claim_continuity": {
+    "claim_strength": "descriptive",
+    "mechanisms_carried_forward": true,
+    "hypotheses_carried_forward": true,
+    "robustness_carried_forward": true,
+    "limitations_carried_forward": true,
+    "manuscript_claim_boundary": "The manuscript describes within-occupation pay differences between renewable and nonrenewable private generation establishments and their change across non-overlapping OEWS estimates; institutional mechanisms are interpretations consistent with, not tests of, the patterns; no causal effect of technology or policy is claimed."
+  },
+  "mechanism_result_matrix": [
+    {
+      "mechanism": "institutional pay-setting differs by technology organizational form",
+      "model_or_spec": "M3 and D1 within-occupation gap",
+      "expected_pattern": "negative renewable gap within occupation",
+      "manuscript_implication": "renewable plants pay less for same classified job; interpret as consistent with institutional account"
+    },
+    {
+      "mechanism": "legacy organization of hydro and nuclear",
+      "model_or_spec": "M4 technology contrasts with hydro TOST",
+      "expected_pattern": "solar/wind negative, hydro near zero, nuclear non-negative",
+      "manuscript_implication": "renewable label is not the relevant category; technology maturity is"
+    },
+    {
+      "mechanism": "institutional protections benefit manual trades most",
+      "model_or_spec": "M5 class contrast",
+      "expected_pattern": "larger gap for blue-collar trades",
+      "manuscript_implication": "transition pay costs concentrated on workers most likely displaced from fossil plants"
+    },
+    {
+      "mechanism": "slow adjustment of organizational pay structures",
+      "model_or_spec": "M6 2025-2021 contrast, D2",
+      "expected_pattern": "no narrowing (or inconclusive)",
+      "manuscript_implication": "rapid growth did not close gap within detectable range"
+    }
+  ],
+  "robustness_claim_matrix": [
+    {
+      "robustness_check": "R1 balanced industry-occupation cells present in all five years",
+      "claim_implication": "strengthens H1 headline if sign and magnitude preserved",
+      "weaken_or_bound_rule": "if sign flips or magnitude halves, report H1 as sensitive to this choice"
+    },
+    {
+      "robustness_check": "R2 precision weights emp/PRSE^2",
+      "claim_implication": "strengthens H1 headline if sign and magnitude preserved",
+      "weaken_or_bound_rule": "if sign flips or magnitude halves, report H1 as sensitive to this choice"
+    },
+    {
+      "robustness_check": "R3 unweighted cell regression",
+      "claim_implication": "strengthens H1 headline if sign and magnitude preserved",
+      "weaken_or_bound_rule": "if sign flips or magnitude halves, report H1 as sensitive to this choice"
+    },
+    {
+      "robustness_check": "R4 log real median wage outcome",
+      "claim_implication": "strengthens H1 headline if sign and magnitude preserved",
+      "weaken_or_bound_rule": "if sign flips or magnitude halves, report H1 as sensitive to this choice"
+    },
+    {
+      "robustness_check": "R5 log real P10 and P90 (descriptive; censoring)",
+      "claim_implication": "strengthens H1 headline if sign and magnitude preserved",
+      "weaken_or_bound_rule": "if sign flips or magnitude halves, report H1 as sensitive to this choice"
+    },
+    {
+      "robustness_check": "R6 other generation as renewable",
+      "claim_implication": "strengthens H1 headline if sign and magnitude preserved",
+      "weaken_or_bound_rule": "if sign flips or magnitude halves, report H1 as sensitive to this choice"
+    },
+    {
+      "robustness_check": "R7 other generation as nonrenewable",
+      "claim_implication": "strengthens H1 headline if sign and magnitude preserved",
+      "weaken_or_bound_rule": "if sign flips or magnitude halves, report H1 as sensitive to this choice"
+    },
+    {
+      "robustness_check": "R8 drop top-coded cells",
+      "claim_implication": "strengthens H1 headline if sign and magnitude preserved",
+      "weaken_or_bound_rule": "if sign flips or magnitude halves, report H1 as sensitive to this choice"
+    },
+    {
+      "robustness_check": "R9 drop cells with mean PRSE > 10",
+      "claim_implication": "strengthens H1 headline if sign and magnitude preserved",
+      "weaken_or_bound_rule": "if sign flips or magnitude halves, report H1 as sensitive to this choice"
+    },
+    {
+      "robustness_check": "R10 nominal wages",
+      "claim_implication": "strengthens H1 headline if sign and magnitude preserved",
+      "weaken_or_bound_rule": "if sign flips or magnitude halves, report H1 as sensitive to this choice"
+    },
+    {
+      "robustness_check": "R11 two-period sample 2021 and 2025 only",
+      "claim_implication": "strengthens H1 headline if sign and magnitude preserved",
+      "weaken_or_bound_rule": "if sign flips or magnitude halves, report H1 as sensitive to this choice"
+    },
+    {
+      "robustness_check": "R12 new renewables vs legacy (hydro grouped with fossil and nuclear)",
+      "claim_implication": "strengthens H1 headline if sign and magnitude preserved",
+      "weaken_or_bound_rule": "if sign flips or magnitude halves, report H1 as sensitive to this choice"
+    },
+    {
+      "robustness_check": "R13 exclude nuclear",
+      "claim_implication": "strengthens H1 headline if sign and magnitude preserved",
+      "weaken_or_bound_rule": "if sign flips or magnitude halves, report H1 as sensitive to this choice"
+    },
+    {
+      "robustness_check": "R14 log real hourly mean wage",
+      "claim_implication": "strengthens H1 headline if sign and magnitude preserved",
+      "weaken_or_bound_rule": "if sign flips or magnitude halves, report H1 as sensitive to this choice"
+    },
+    {
+      "robustness_check": "R15 drop five largest identifying occupations",
+      "claim_implication": "strengthens H1 headline if sign and magnitude preserved",
+      "weaken_or_bound_rule": "if sign flips or magnitude halves, report H1 as sensitive to this choice"
+    },
+    {
+      "robustness_check": "R16 standard errors clustered by industry x occupation cell",
+      "claim_implication": "strengthens H1 headline if sign and magnitude preserved",
+      "weaken_or_bound_rule": "if sign flips or magnitude halves, report H1 as sensitive to this choice"
+    }
+  ],
+  "limitation_scope_matrix": [
+    {
+      "limitation": "private ownership and in-house employees only",
+      "scope_language": "private generation establishments; excludes public utilities and construction contractors",
+      "affected_claim": "all headline claims"
+    },
+    {
+      "limitation": "unobserved within-occupation composition and region",
+      "scope_language": "pay for a classified job, not identical work or causal effect",
+      "affected_claim": "H1 to H3 interpretation of within-occupation gaps"
+    },
+    {
+      "limitation": "OEWS pooled panels and wage aging",
+      "scope_language": "change between three-year pooled estimate windows",
+      "affected_claim": "H4 trend over 2021 to 2025"
+    },
+    {
+      "limitation": "suppression of small renewable cells",
+      "scope_language": "published cells cover 45-92 percent of renewable employment",
+      "affected_claim": "H1, H2, H5"
+    },
+    {
+      "limitation": "sparse biomass and geothermal cells",
+      "scope_language": "pooled and interpreted cautiously",
+      "affected_claim": "H2 technology-specific biomass and geothermal estimates"
+    }
+  ],
+  "ready_for_phase_4": true
+}
